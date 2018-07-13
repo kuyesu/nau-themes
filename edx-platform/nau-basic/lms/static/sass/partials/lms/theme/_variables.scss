@@ -1,0 +1,8 @@
+// Sample NAU-basic theme to demonstrate SASS overrides
+
+
+// Make a new primary color
+$primary: #005853;
+
+// Initialize the Open edX Bootstrap theme
+@import 'edx-bootstrap/sass/open-edx/theme';
