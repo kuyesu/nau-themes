@@ -1,0 +1,17 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Contact")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>
+            <%block name="pageheader">${page_header or _("Contact")}</%block>
+        </h1>
+        <p>
+           A page with information to contact the team behind the site. Note that Open edX does not include a solution for contact form.
+
+        </p>
+    </section>
+</main>

@@ -1,0 +1,21 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Privacy Policy")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>
+            <%block name="pageheader">${page_header or _("Privacy Policy")}</%block>
+        </h1>
+        <p>
+           Destined to address any privacy policy, in accordance with local legislation, including for example:
+			Personal information management.
+			Disclosure to third parties
+			Security Affairs.
+
+        </p>
+    </section>
+</main>

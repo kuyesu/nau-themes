@@ -1,0 +1,24 @@
+
+
+/*** Navigation ***/
+.window-wrap .global-header .nav-links .main .nav-tab a{
+	color: #10297C;
+
+	&:hover{
+		color: #081C5F;
+	}
+}
+
+/*** Home **/
+.window-wrap .home>header .title{
+	background: #ffffffc2;
+}
+
+/*** Footer ***/
+.window-wrap .wrapper-footer{
+	padding: 25px 35px;
+
+	.footer-about-openedx img{
+		padding: 30px;
+	}
+}

@@ -1,0 +1,22 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_("Honor Code")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about">
+        <h1>
+            <%block name="pageheader">${page_header or _("Honor Code")}</%block>
+        </h1>
+        <p>
+            This page intended cover:
+			Agreed rules for online behavior
+			Using personal accounts and passwords
+			Online Safety Guidelines 
+			Collaboration guidelines
+			Rules or guidelines for user messages in the discussions.
+
+        </p>
+    </section>
+</main>
