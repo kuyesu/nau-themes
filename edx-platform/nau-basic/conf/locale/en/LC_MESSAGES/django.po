@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2018-07-23 18:28-0500\n"
+"POT-Creation-Date: 2018-07-27 16:21-0500\n"
 "PO-Revision-Date: 2018-07-23 18:24-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -20,9 +20,15 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/footer.html:17
 #: edx-platform/nau-basic/lms/templates/footer.html:72
+#: edx-platform/nau-basic/lms/templates/footer.html:75
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:5
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:10
 msgid "About"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/footer.html:28
+#: edx-platform/nau-basic/lms/templates/footer.html:106
+msgid "All rights reserved"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/footer.html:30
@@ -34,17 +40,25 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
+#: edx-platform/nau-basic/lms/templates/footer.html:81
+msgid "Contacts"
+msgstr ""
+
 #: edx-platform/nau-basic/lms/templates/footer.html:111
 msgid "Terms and conditions"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:114
+#: edx-platform/nau-basic/lms/templates/footer.html:115
 msgid "Honor code"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/footer.html:117
+msgid "Code of honor"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/index.html:27
 #: edx-platform/nau-basic/lms/templates/index.html:28
-msgid "Eu quero saber mais sobre"
+msgid "I want to know more about"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/index.html:31
@@ -52,11 +66,11 @@ msgid "Search"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/index_overlay.html:9
-msgid "Plataforma NAU"
+msgid "Platform NAU"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/index_overlay.html:11
-msgid "Tudo em Portugues, Portugal em todas as linguas."
+msgid "All in Portuguese, Portugal in all languages."
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/static_templates/contact.html:5
