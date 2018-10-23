@@ -16,7 +16,7 @@ help: ## Display this help message
 # TODO: make dynamic
 theme = edx-platform/nau-basic
 # TODO: define somewhere else
-lang_targets = en pt_BR
+lang_targets = en pt_PT
 create_translations_catalogs: ## Create the initial configuration of .mo files for translation
 	pybabel extract -F $(theme)/conf/locale/babel.cfg -o  $(theme)/conf/locale/django.pot --msgid-bugs-address=support@edunext.co --copyright-holder=eduNEXT $(theme)/*
 	for lang in $(lang_targets) ; do \
