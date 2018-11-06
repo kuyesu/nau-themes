@@ -122,19 +122,21 @@
       ## The OpenEdX link may be hidden when this view is served
       ## through an API to partner sites (such as marketing sites or blogs),
       ## which are not technically powered by OpenEdX.
-      % if not hide_openedx_link:
-      <div class="footer-about-openedx">
-        <p>
-          <a href="${footer['openedx_link']['url']}">
-            <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
+      <div class="footer-container-logos">
+        % if not hide_openedx_link:
+        <div class="footer-about-openedx">
+          <p>
+            <a href="${footer['openedx_link']['url']}">
+              <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
+            </a>
+          </p>
+        </div>
+        % endif
+        <div class="footer-logo-partner">
+          <a href="#">
+            <img src="${static.url('images/3logos-feder_small.png')}">
           </a>
-        </p>
-      </div>
-      % endif
-      <div class="footer-logo-partner">
-        <a href="#">
-          <img src="${static.url('images/3logos-feder_small.png')}">
-        </a>
+        </div>
       </div>
     </footer>
   </div>
