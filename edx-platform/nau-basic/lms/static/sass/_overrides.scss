@@ -14,17 +14,63 @@
 	background: #ffffffc2;
 }
 
+.home .outer-wrapper {
+	display: none;
+}
+
 /*** Footer ***/
 .window-wrap .wrapper-footer{
 	padding: 25px 35px;
 
 	.footer-about-openedx img{
-		padding: 30px;
+		padding: 12px 0;
 	}
+}
+
+.window-wrap .wrapper-footer footer#footer-openedx .colophon {
+	width: 40%;
+}
+
+.footer-container-logos {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+}
+
+.window-wrap .wrapper-footer footer#footer-openedx .footer-about-openedx {
+	width: 100%;
 }
 
 /**** Register ***/
 
 .window-wrap .login-register .form-field label.focus-out{
 	position: relative;
+}
+
+@media screen and (max-width: 992px) {
+	.window-wrap .wrapper-footer footer#footer-openedx .colophon {
+		width: 100%;
+		float: none;
+
+		.copyright,
+		.wrapper-logo, 
+		.nav-legal{
+			text-align: center;
+		}
+	}
+
+	.footer-container-logos {
+		text-align: center;
+		display: block;
+	}
+
+	.window-wrap .wrapper-footer footer#footer-openedx .footer-about-openedx {
+		text-align: center;
+		width: 100%;
+
+		a {
+			float: none;
+			padding-top: 20px;
+		}
+	} 
 }
