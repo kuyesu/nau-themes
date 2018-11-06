@@ -14,6 +14,10 @@
 	background: #ffffffc2;
 }
 
+.home .outer-wrapper {
+	display: none;
+}
+
 /*** Footer ***/
 .window-wrap .wrapper-footer{
 	padding: 25px 35px;
@@ -27,4 +31,22 @@
 
 .window-wrap .login-register .form-field label.focus-out{
 	position: relative;
+}
+
+/******* List logo partners  ***/
+.list-logo-partners {
+	display: flex;
+	padding: 0;
+	flex-wrap: wrap;
+}
+
+.item-logo-partner {
+	width: 17%;
+	list-style: none;
+	padding: 20px;
+
+	img {
+		height: 100px;
+		max-width: 100%;
+	}
 }
