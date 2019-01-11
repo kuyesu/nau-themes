@@ -1,79 +1,4 @@
-/* general */
 
-:hover, :active {
-  transition: all 0.25s ease-in-out;
-}
-
-/* course card */
-
-#content .course {
-  background-color: #0857ff;
-  border: 0;
-  border-radius: 4px;
-  box-shadow: 0 0;
-  h2 {
-    .course-code {
-      color: rgba(255, 255, 255, 0.5);
-      text-transform: uppercase;
-    }
-    .course-title {
-      color: #fff;
-      font-size: 18px;
-      font-weight: bold;
-    }
-    .course-organization {
-      color: #ffce35;
-      font-size: 14px;
-      font-weight: bold;
-    }
-  }
-  .course-date {
-    color: #fff;
-  }
-  .learn-more {
-    background-color: #0857ff;
-    border-radius: 4px;
-    font-weight: bold;
-  }
-}
-
-/* header */
-
-.global-header {
-  border: 0;
-  box-shadow: 0 0;
-  a {
-    color: #fff;
-  }
-  .nav-links {
-    .main {
-      margin-top: 25px;
-    }
-    .secondary a {
-      &.register-btn {
-        background-color: #ffce35 !important;
-        border-color: #ffce35 !important;
-        color: #0857ff !important;
-        font-weight: bold !important;
-      }
-      &:hover, &:active {
-        background-color: #0857ff !important;
-        border-color: #0857ff !important;
-        color: #fff !important;
-      }
-    }
-  }
-  #settings-language-value {
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    color: rgba(255, 255, 255, 0.7);
-    cursor: pointer;
-    &:hover, &:active {
-      border-color: rgba(255, 255, 255, 0.8);
-      color: rgba(255, 255, 255, 1);
-    }
-  }
-}
 
 /*** Navigation ***/
 .window-wrap .global-header .nav-links .main .nav-tab a{
@@ -149,4 +74,3 @@
 		}
 	} 
 }
-
