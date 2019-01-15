@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2019-01-15 18:51+0000\n"
-"PO-Revision-Date: 2019-01-15 15:02-0400\n"
+"POT-Creation-Date: 2019-01-15 20:34+0000\n"
+"PO-Revision-Date: 2019-01-15 16:38-0400\n"
 "Last-Translator: \n"
 "Language-Team: pt_BR <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
@@ -37,7 +37,7 @@ msgstr "Curso"
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:50
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:158
 msgid "Course Navigation"
-msgstr ""
+msgstr "Navegação do Curso"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:53
 msgid "Content"
@@ -65,7 +65,7 @@ msgstr "Manuais"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:75
 msgid "Video Uploads"
-msgstr ""
+msgstr "Carregamentos de Vídeo"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:84
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:162
@@ -78,7 +78,7 @@ msgstr "Calendário e Detalhes"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:93
 msgid "Grading"
-msgstr ""
+msgstr "Classificação"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:96
 msgid "Course Team"
@@ -113,7 +113,7 @@ msgstr "Exportar"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:127
 msgid "Export to Git"
-msgstr ""
+msgstr "Exportar para o Git"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:132
 msgid "Checklists"
@@ -129,11 +129,11 @@ msgstr "Biblioteca"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:167
 msgid "User Access"
-msgstr ""
+msgstr "Acesso do Utilizador"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:198
 msgid "Language preference"
-msgstr ""
+msgstr "Preferência de idioma"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:206
 msgid "Choose Language"
@@ -147,7 +147,7 @@ msgstr "Conta"
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:223
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:236
 msgid "Account Navigation"
-msgstr ""
+msgstr "Navegação da Conta"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:226
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:239
@@ -157,8 +157,9 @@ msgstr "Ajuda de Contexto"
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:226
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:239
 #: edx-platform/nau-basic/lms/templates/footer.html:78
-#: edx-platform/nau-basic/lms/templates/static_templates/help.html:5
-#: edx-platform/nau-basic/lms/templates/static_templates/help.html:10
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:71
+#: edx-platform/nau-basic/lms/templates/static_templates/help.html:7
+#: edx-platform/nau-basic/lms/templates/static_templates/help.html:12
 msgid "Help"
 msgstr "Ajuda"
 
@@ -218,6 +219,30 @@ msgstr "Tudo em Português, Portugal em todas as línguas."
 msgid "{platform_name} Home Page"
 msgstr "{platform_name} Página Inicial"
 
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:34
+msgid "Courses"
+msgstr "Cursos"
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:40
+msgid "Programs"
+msgstr "Programas"
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:46
+msgid "Profile"
+msgstr "Perfil"
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:52
+msgid "Explore Courses"
+msgstr "Explorar Cursos"
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:58
+msgid "Sysadmin"
+msgstr "Sysadmin"
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:66
+msgid "Shopping Cart"
+msgstr "Carrinho de Compras"
+
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:13
 msgid ""
 "NAU - Always Learning is a technical infrastructure which publishes  and "
@@ -270,7 +295,7 @@ msgstr "Contacto"
 msgid "FAQ"
 msgstr "Perguntas frequentes"
 
-#: edx-platform/nau-basic/lms/templates/static_templates/help.html:12
+#: edx-platform/nau-basic/lms/templates/static_templates/help.html:14
 msgid ""
 "The NAU team is always available to help you. Search through our "
 "{link_start} knoledge base{link_end} or contact us through:"

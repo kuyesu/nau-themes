@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2019-01-15 18:51+0000\n"
+"POT-Creation-Date: 2019-01-15 20:34+0000\n"
 "PO-Revision-Date: 2018-11-09 18:08+0000\n"
 "Last-Translator: \n"
 "Language-Team: en <LL@li.org>\n"
@@ -155,8 +155,9 @@ msgstr ""
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:226
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:239
 #: edx-platform/nau-basic/lms/templates/footer.html:78
-#: edx-platform/nau-basic/lms/templates/static_templates/help.html:5
-#: edx-platform/nau-basic/lms/templates/static_templates/help.html:10
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:71
+#: edx-platform/nau-basic/lms/templates/static_templates/help.html:7
+#: edx-platform/nau-basic/lms/templates/static_templates/help.html:12
 msgid "Help"
 msgstr ""
 
@@ -216,6 +217,30 @@ msgstr ""
 msgid "{platform_name} Home Page"
 msgstr "Plataforma NAU"
 
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:34
+msgid "Courses"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:40
+msgid "Programs"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:46
+msgid "Profile"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:52
+msgid "Explore Courses"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:58
+msgid "Sysadmin"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:66
+msgid "Shopping Cart"
+msgstr ""
+
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:13
 msgid ""
 "NAU - Always Learning is a technical infrastructure which publishes  and "
@@ -257,7 +282,7 @@ msgstr ""
 msgid "FAQ"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/static_templates/help.html:12
+#: edx-platform/nau-basic/lms/templates/static_templates/help.html:14
 msgid ""
 "The NAU team is always available to help you. Search through our "
 "{link_start} knoledge base{link_end} or contact us through:"
