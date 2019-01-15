@@ -7,16 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2018-11-10 00:09+0000\n"
+"POT-Creation-Date: 2019-01-15 18:51+0000\n"
 "PO-Revision-Date: 2018-11-09 18:08+0000\n"
 "Last-Translator: \n"
-"Language: en\n"
 "Language-Team: en <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 1.3\n"
+
+#: edx-platform/nau-basic/cms/templates/force-translations.html:1
+msgid "XXXTerms and conditions"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:42
 msgid "Current Course:"
@@ -152,6 +155,8 @@ msgstr ""
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:226
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:239
 #: edx-platform/nau-basic/lms/templates/footer.html:78
+#: edx-platform/nau-basic/lms/templates/static_templates/help.html:5
+#: edx-platform/nau-basic/lms/templates/static_templates/help.html:10
 msgid "Help"
 msgstr ""
 
@@ -172,24 +177,20 @@ msgid "About"
 msgstr "Acerca da NAU"
 
 #: edx-platform/nau-basic/lms/templates/footer.html:28
-#: edx-platform/nau-basic/lms/templates/footer.html:106
+#: edx-platform/nau-basic/lms/templates/footer.html:103
 msgid "All rights reserved"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/footer.html:30
-#: edx-platform/nau-basic/lms/templates/footer.html:108
+#: edx-platform/nau-basic/lms/templates/footer.html:105
 msgid "Legal"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:81
-msgid "Contacts"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/footer.html:111
+#: edx-platform/nau-basic/lms/templates/footer.html:108
 msgid "Terms and conditions"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:114
+#: edx-platform/nau-basic/lms/templates/footer.html:111
 msgid "Honor code"
 msgstr ""
 
@@ -215,6 +216,37 @@ msgstr ""
 msgid "{platform_name} Home Page"
 msgstr "Plataforma NAU"
 
+#: edx-platform/nau-basic/lms/templates/static_templates/about.html:13
+msgid ""
+"NAU - Always Learning is a technical infrastructure which publishes  and "
+"provides support to Massive Open courses aimed at public administration "
+"and Higher Education."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/static_templates/about.html:16
+msgid ""
+"This platform was created within the scope of NAU Project launched in "
+"October 1st 2017 with the following partners:"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/static_templates/about.html:27
+msgid "NAU Project"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/static_templates/about.html:29
+msgid ""
+"A national iniciative, led by the Foundation for Science and Technology, "
+"to build and operate a technical infrastructure which supports and "
+"operates a platform that publishes content to big audiences, such as MOOC"
+" courses. This initiative, cross-sectional to several ministries and open"
+" to society, will facilitate training to a larger number of civil "
+"servants and citizens."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/static_templates/about.html:31
+msgid "Explore the NAU Project at: https://www.fccn.pt/projeto-nau/"
+msgstr ""
+
 #: edx-platform/nau-basic/lms/templates/static_templates/contact.html:5
 #: edx-platform/nau-basic/lms/templates/static_templates/contact.html:10
 msgid "Contact"
@@ -223,6 +255,12 @@ msgstr ""
 #: edx-platform/nau-basic/lms/templates/static_templates/faq.html:5
 #: edx-platform/nau-basic/lms/templates/static_templates/faq.html:10
 msgid "FAQ"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/static_templates/help.html:12
+msgid ""
+"The NAU team is always available to help you. Search through our "
+"{link_start} knoledge base{link_end} or contact us through:"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/static_templates/honor.html:5
@@ -240,6 +278,6 @@ msgstr ""
 msgid "Terms of Service"
 msgstr ""
 
-#~ msgid "XXXTerms and conditions"
+#~ msgid "Contacts"
 #~ msgstr ""
 
