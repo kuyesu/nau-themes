@@ -1,0 +1,22 @@
+@media only screen and (max-width: 992px) {
+	.window-wrap .wrapper-footer footer#footer-openedx {
+		.colophon {
+			float: none;
+			width: 100%;
+			text-align: center;
+
+			.nav-colophon {
+				display: flex;
+				justify-content: center;
+			}
+
+			.copyright {
+				text-align: center;
+			}
+		}
+
+		.footer-container-logos {
+			text-align: center;
+		}
+	}
+}
