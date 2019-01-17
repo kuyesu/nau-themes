@@ -7,15 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2019-01-15 20:34+0000\n"
+"POT-Creation-Date: 2019-01-17 18:04-0500\n"
 "PO-Revision-Date: 2018-11-09 18:08+0000\n"
 "Last-Translator: \n"
+"Language: en\n"
 "Language-Team: en <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 1.3\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:1
 msgid "XXXTerms and conditions"
@@ -154,7 +155,8 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:226
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:239
-#: edx-platform/nau-basic/lms/templates/footer.html:78
+#: edx-platform/nau-basic/lms/templates/footer.html:29
+#: edx-platform/nau-basic/lms/templates/footer.html:115
 #: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:71
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:7
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:12
@@ -169,29 +171,32 @@ msgstr ""
 msgid "Sign In"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:17
-#: edx-platform/nau-basic/lms/templates/footer.html:72
-#: edx-platform/nau-basic/lms/templates/footer.html:75
+#: edx-platform/nau-basic/lms/templates/footer.html:23
+#: edx-platform/nau-basic/lms/templates/footer.html:26
+#: edx-platform/nau-basic/lms/templates/footer.html:109
+#: edx-platform/nau-basic/lms/templates/footer.html:112
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:5
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:10
 msgid "About"
 msgstr "Acerca da NAU"
 
-#: edx-platform/nau-basic/lms/templates/footer.html:28
-#: edx-platform/nau-basic/lms/templates/footer.html:103
+#: edx-platform/nau-basic/lms/templates/footer.html:54
+#: edx-platform/nau-basic/lms/templates/footer.html:140
 msgid "All rights reserved"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:30
-#: edx-platform/nau-basic/lms/templates/footer.html:105
+#: edx-platform/nau-basic/lms/templates/footer.html:56
+#: edx-platform/nau-basic/lms/templates/footer.html:142
 msgid "Legal"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:108
+#: edx-platform/nau-basic/lms/templates/footer.html:59
+#: edx-platform/nau-basic/lms/templates/footer.html:145
 msgid "Terms and conditions"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:111
+#: edx-platform/nau-basic/lms/templates/footer.html:62
+#: edx-platform/nau-basic/lms/templates/footer.html:148
 msgid "Honor code"
 msgstr ""
 
@@ -269,7 +274,7 @@ msgid ""
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:31
-msgid "Explore the NAU Project at: https://www.fccn.pt/projeto-nau/"
+msgid "Explore the NAU Project at: "
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/static_templates/contact.html:5
@@ -304,5 +309,8 @@ msgid "Terms of Service"
 msgstr ""
 
 #~ msgid "Contacts"
+#~ msgstr ""
+
+#~ msgid "Explore the NAU Project at: https://www.fccn.pt/projeto-nau/"
 #~ msgstr ""
 
