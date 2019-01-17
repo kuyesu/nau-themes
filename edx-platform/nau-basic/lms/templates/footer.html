@@ -10,50 +10,87 @@
 <%namespace name='static' file='static_content.html'/>
 
 % if uses_bootstrap:
-  <div class="container-fluid wrapper-footer">
-    <footer>
-      <div class="row">
-        <div class="col-md-9">
-          <nav class="navbar site-nav navbar-expand-sm" aria-label="${_('About')}">
-            <ul class="navbar-nav">
-              % for item_num, link in enumerate(footer['navigation_links'], start=1):
-                <li class="nav-item">
-                  <a class="nav-link" href="${link['url']}">${link['title']}</a>
-                </li>
-              % endfor
-            </ul>
-          </nav>
-
-          ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-          <p class="copyright">© 2018 - FCT | FCCN, ${_('All rights reserved')}</p>
-
-          <nav class="navbar legal-nav navbar-expand-sm" aria-label="${_('Legal')}">
-            <ul class="navbar-nav">
-              % for item_num, link in enumerate(footer['legal_links'], start=1):
-                <li class="nav-item">
-                  <a class="nav-link" href="${link['url']}">${link['title']}</a>
-                </li>
-              % endfor
-              <li class="nav-item">
-                <a class="nav-link" href="${footer['edx_org_link']['url']}">${footer['edx_org_link']['text']}</a>
+  <div class="wrapper wrapper-footer">
+    <footer id="footer-openedx" class="grid-container"
+      ## When rendering the footer through the branding API,
+      ## the direction may not be set on the parent element,
+      ## so we set it here.
+      % if bidi:
+        dir=${bidi}
+      % endif
+    >
+      <div class="colophon">
+        <nav class="nav-colophon" aria-label="${_('About')}">
+          <ol>
+              <li class="nav-colophon-01">
+                <a id="about" href="/about">${_('About')}</a>
               </li>
-            </ul>
-          </nav>
+              <li class="nav-colophon-02">
+                <a id="help" href="/help">${_('Help')}</a>
+              </li>
+          </ol>
+        </nav>
+
+        % if context.get('include_language_selector', footer_language_selector_is_enabled()):
+            <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
+        % endif
+
+        <div class="wrapper-logo">
+          <p>
+            <a href="/">
+              ## The default logo is a placeholder.
+              ## You can either replace this link entirely or update
+              ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
+              ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
+              ## can be included in the footer on other sites
+              ## (e.g. a blog or marketing front-end) to provide a consistent
+              ## user experience.  See the branding app for details.
+              <img alt="organization logo" src="${static.url('images/nau_sempre_aprender.svg')}">
+            </a>
+          </p>
         </div>
-        <div class="col-md-3">
-          ## Please leave this link and use one of the logos provided
-          ## The OpenEdX link may be hidden when this view is served
-          ## through an API to partner sites (such as marketing sites or blogs),
-          ## which are not technically powered by Open edX.
-          % if not hide_openedx_link:
-            <div class="footer-about-openedx">
-              <p>
-                <a href="${footer['openedx_link']['url']}">
-                  <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
-                </a>
-              </p>
-            </div>
-          % endif
+
+        ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
+        <p class="copyright">© 2018 - FCT | FCCN, ${_('All rights reserved')}</p>
+
+        <nav class="nav-legal" aria-label="${_('Legal')}">
+          <ul>
+            <li class="nav-legal-01">
+                <a href="/tos">${_('Terms and conditions')}</a>
+              </li>
+              <li class="nav-legal-02">
+                <a href="/honor">${_('Honor code')}</a>
+              </li>
+
+          </ul>
+        </nav>
+      </div>
+
+      ## Please leave this link and use one of the logos provided
+      ## The OpenEdX link may be hidden when this view is served
+      ## through an API to partner sites (such as marketing sites or blogs),
+      ## which are not technically powered by OpenEdX.
+      <div class="footer-container-logos">
+        % if not hide_openedx_link:
+        <div class="footer-about-openedx">
+          <p>
+            <a href="${footer['openedx_link']['url']}">
+              <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
+            </a>
+          </p>
+        </div>
+        % endif
+        <div class="footer-logo-partner">
+          <p>       
+            <a href="http://www.incode2030.gov.pt/">
+              <img src="${static.url('images/logo_incode2030_v3.png')}">
+            </a>
+          </p>
+          <p>
+            <a href="#">
+              <img src="${static.url('images/3logos-feder_small.png')}">
+            </a>
+          </p>
         </div>
       </div>
     </footer>
