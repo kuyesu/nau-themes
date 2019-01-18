@@ -1,22 +1,43 @@
 @media only screen and (max-width: 992px) {
-	.window-wrap .wrapper-footer footer#footer-openedx {
-		.colophon {
-			float: none;
-			width: 100%;
-			text-align: center;
+  body .wrapper-footer footer#footer-openedx {
+    .colophon {
+      float: none;
+      text-align: center;
+      width: 100%;
 
-			.nav-colophon {
-				display: flex;
-				justify-content: center;
+      .nav-colophon {
+        display: flex;
+        justify-content: center;
 			}
 
-			.copyright {
-				text-align: center;
+      .copyright,
+      .wrapper-logo,
+        .nav-legal {
+        text-align: center;
 			}
 		}
 
-		.footer-container-logos {
-			text-align: center;
-		}
-	}
+    .footer-container-logos {
+      align-items: center;
+
+      p {
+        text-align: center;
+      }
+    }
+
+    .footer-about-openedx {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .content-wrapper .course-info .container {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .window-wrap .content-wrapper {
+    padding: 0 20px 10px;
+  }
 }
