@@ -1,4 +1,7 @@
-
+/*** General ***/
+.window-wrap .content-wrapper {
+  margin-top: 0;
+}
 
 /*** Navigation ***/
 .window-wrap .global-header .nav-links .main .nav-tab a {
@@ -65,4 +68,22 @@
   .container {
     padding-top: 0;
 	}
+}
+
+/**** Language selector ***/
+
+.language-selector.select {
+  background: #fff;
+  border: 1px solid #04345B;
+  padding: 5px;
+  border-radius: 5px;
+  text-align-last: center;
+}
+
+.window-wrap .settings-language-form {
+  float: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+  padding-bottom: 0;
 }
