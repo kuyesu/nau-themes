@@ -1,65 +1,68 @@
 
 
 /*** Navigation ***/
-.window-wrap .global-header .nav-links .main .nav-tab a{
-	color: #10297C;
+.window-wrap .global-header .nav-links .main .nav-tab a {
+  color: #10297C;
 
-	&:hover{
-		color: #081C5F;
+  &:hover {
+    color: #081C5F;
 	}
 }
 
 /*** Home **/
-.window-wrap .home>header .title{
-	background: #ffffffc2;
+.window-wrap .home>header .title {
+  background: #ffffffc2;
 }
 
 .home .outer-wrapper {
-	display: none;
+  display: none;
 }
 
 /**** Register ***/
 
 .window-wrap .login-register .form-field label.focus-out{
-	position: relative;
-}
-
-@media screen and (max-width: 992px) {
-	.window-wrap .wrapper-footer footer#footer-openedx .colophon {
-		width: 100%;
-		float: none;
-
-		.copyright,
-		.wrapper-logo, 
-		.nav-legal{
-			text-align: center;
-		}
-	}
-
-	.footer-container-logos {
-		text-align: center;
-		display: block;
-	}
-
-	.window-wrap .wrapper-footer footer#footer-openedx .footer-about-openedx {
-		text-align: center;
-		width: 100%;
-
-		a {
-			float: none;
-			padding-top: 20px;
-		}
-	} 
+  position: relative;
 }
 
 /**** Courses ***/
 
 .course-sidebar .section-handouts .section-title {
-	display: none;
+  display: none;
 }
 
 /**** Static page ***/
 
 .container.about {
-	line-height: 1.4em;
+  line-height: 1.4em;
+}
+
+/**** About page ***/
+
+.content-wrapper .course-info {
+  margin: 0 auto;
+  max-width: 1180px;
+
+  header.course-profile {
+    background: none;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+
+    .intro-inner-wrapper {
+      border: 0;
+      box-shadow: none;
+    }  
+
+    .intro-inner-wrapper .intro {
+      padding: 0;
+			}
+
+    .intro-inner-wrapper  .media {
+      padding-right: 0;
+		}
+	}
+
+  .container {
+    padding-top: 0;
+	}
 }
