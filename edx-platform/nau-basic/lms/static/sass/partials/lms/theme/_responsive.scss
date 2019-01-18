@@ -12,10 +12,11 @@
 
       .copyright,
       .wrapper-logo,
-        .nav-legal {
-        text-align: center;
-			}
-		}
+      .nav-legal {
+        display: flex;
+        justify-content: center;
+      }
+    }
 
     .footer-container-logos {
       align-items: center;
@@ -39,5 +40,19 @@
 @media only screen and (max-width: 768px) {
   .window-wrap .content-wrapper {
     padding: 0 20px 10px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .window-wrap .settings-language-form {
+    padding: 10px 20px 0 20px;
+
+    label {
+      width: 100%;
+    }
+
+    select {
+      width: 100%;
+    }
   }
 }
