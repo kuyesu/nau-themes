@@ -54,7 +54,7 @@
     .intro-inner-wrapper {
       border: 0;
       box-shadow: none;
-    }  
+    }
 
     .intro-inner-wrapper .intro {
       padding: 0;
@@ -68,22 +68,44 @@
   .container {
     padding-top: 0;
 	}
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h4,
+  h5 {
+    color: $black;
+    font-size: 1.13rem;
+  }
+
+  h2,
+  .details .inner-wrapper .course-staff .teacher h3,
+  h3,
+  h4 {
+    color: $black;
+    font-weight: bold;
+  }
 }
 
 /**** Language selector ***/
 
 .language-selector.select {
-  background: #fff;
+  background: $white;
   border: 1px solid #04345B;
-  padding: 5px;
   border-radius: 5px;
+  padding: 5px;
   text-align-last: center;
 }
 
 .window-wrap .settings-language-form {
-  float: none;
   display: flex;
+  float: none;
   justify-content: flex-end;
-  padding-right: 40px;
   padding-bottom: 0;
+  padding-right: 40px;
 }
