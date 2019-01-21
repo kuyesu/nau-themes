@@ -1,0 +1,11 @@
+//Footer
+
+.footer-logo-partner {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+
+  .footer-about-openedx img {
+    padding: 12px 0;
+	}
+}

@@ -1,3 +1,4 @@
+<%namespace name='static' file='../static_content.html'/>
 <%!
 from django.utils.translation import ugettext as _
 from django.urls import reverse
@@ -50,12 +51,20 @@ from cms.djangoapps.contentstore.config.waffle import waffle, ENABLE_ACCESSIBILI
           )}
         </p>
       </div>
-
-      <div class="footer-about-openedx">
+      <div class="footer-logo-partner">
+        <div class="footer-about-openedx">
         <a href="http://open.edx.org" title="${_("Powered by Open edX")}">
           <img alt="${_("Powered by Open edX")}" src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag.png">
         </a>
+        </div>
+         <a href="http://www.incode2030.gov.pt/">
+         <img src="${static.url('images/logo_incode2030_v3.png')}">
+        </a>
+        <a href="#">
+        <img src="${static.url('images/3logos-feder_small.png')}">
+        </a>
       </div>
+        
     </div>
   </footer>
 </div>
