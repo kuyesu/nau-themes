@@ -1,3 +1,7 @@
+/* --------------------------------
+This file is a copy from edx-platform and only change the color of progress bar
+-------------------------------- */
+
 <%page args="grade_summary, grade_cutoffs, graph_div_id, show_grade_breakdown = True, show_grade_cutoffs = True, **kwargs"/>
 <%!
     import bleach
@@ -39,7 +43,7 @@ $(function () {
   /* -------------------------------- Grade detail bars -------------------------------- */
     
   <%
-  colors = ["#b72121", "#600101", "#666666", "#333333"]
+  colors = ["#3900d4", "#240186", "#666666", "#333333"]
   categories = {}
 
   tickIndex = 1
