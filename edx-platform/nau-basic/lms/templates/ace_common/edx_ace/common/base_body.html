@@ -1,6 +1,5 @@
 {% load i18n %}
 {% load ace %}
-{% load static %}
 
 {% get_current_language as LANGUAGE_CODE %}
 {% get_current_language_bidi as LANGUAGE_BIDI %}
@@ -62,7 +61,7 @@
                     <tr>
                         <td width="70">
                             <a href="{% with_link_tracking homepage_url %}"><img
-                                    src="{% static 'images/letras_nau_w200.png' %}" width="100"
+                                    src="https://lms.nau.edu.pt/static/nau-basic/images/letras_nau_w200.png" width="100"
                                     height="30" alt="{% blocktrans %}Go to {{ platform_name }} Home Page{% endblocktrans %}"/></a>
                         </td>
                         <td align="right" style="text-align: {{ LANGUAGE_BIDI|yesno:"left,right" }};">
