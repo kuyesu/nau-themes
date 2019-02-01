@@ -33,6 +33,25 @@
   display: none;
 }
 
+.content-wrapper .course-tabs.navbar,
+.content-wrapper .wrapper-course-material .course-material {
+  overflow: hidden;
+}
+
+.content-wrapper .course-tabs .navbar-nav {
+  flex-wrap: wrap;
+}
+
+.wrapper-course-material .course-tabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.course-content .xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-list-wrapper {
+  overflow: inherit;
+}
+
 /**** Static page ***/
 
 .container.about {

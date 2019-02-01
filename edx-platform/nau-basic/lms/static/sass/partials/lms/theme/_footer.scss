@@ -1,78 +1,79 @@
 
 body .wrapper-footer {
-	padding: 25px 35px;
-	box-shadow: none;
+  box-shadow: none;
+  padding: 25px 35px;
 
-	.footer-about-openedx img {
-		padding: 12px 0;
+  .footer-about-openedx img {
+    padding: 12px 0;
 	}
 }
 
 body .wrapper-footer footer#footer-openedx {
 
-	p {
-		margin: 0;
+  p {
+    margin: 0;
 	}
 
-	.colophon {
-		width: 40%;
-		margin-right: 2.35765%;
-		display: flex;
+  .colophon {
+    display: flex;
     flex-direction: column;
     float: left;
+    margin-right: 2.35765%;
     margin-top: 30px;
+    width: 40%;
 
-		.nav-colophon {
-			margin: 0;
+    .nav-colophon {
+      margin: 0;
 		}
 
-		ol, ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
+    ol,
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
 		}
 
-		ol li {
-			float: left;
-			margin-right: 15px;
+    ol li {
+      float: left;
+      margin-right: 15px;
 		}
 
-		a {
-			color: $black-t3;
-		}
-	}
-
-	.wrapper-logo {
-		margin: 15px 0;
-	}
-
-	.copyright {
-		margin: -2px 0 8px 0;
-		font-size: 0.6875em;
-		color: $black-t2;
-		text-align: left;
-	}
-
-	.nav-legal li {
-		display: inline-block;
-		font-size: 0.6875em;
-
-		a {
-			color: $primary;
+    a {
+      color: $black-t3;
 		}
 	}
 
-	.footer-about-openedx {
-		width: 100%;
+  .wrapper-logo {
+    margin: 15px 0;
 	}
-} 
+
+  .copyright {
+    color: $black-t2;
+    font-size: 0.6875em;
+    margin: -2px 0 8px 0;
+    text-align: left;
+	}
+
+  .nav-legal li {
+    display: inline-block;
+    font-size: 0.6875em;
+
+    a {
+      color: $primary;
+		}
+	}
+
+  .footer-about-openedx {
+    width: 100%;
+	}
+}
 
 .footer-container-logos {
-	display: flex;
-	flex-direction: column;
-	text-align: right;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 
-	p {
-		text-align: right;
+  p {
+    text-align: right;
 	}
 }
