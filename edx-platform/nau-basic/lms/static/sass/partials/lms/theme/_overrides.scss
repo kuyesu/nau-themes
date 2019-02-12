@@ -52,6 +52,52 @@
   overflow: inherit;
 }
 
+.find-courses {
+  background: #fff;
+
+  .search-facets.phone-menu {
+    box-shadow: none;
+    border: 1px solid #bebebe;
+    margin-top: 53px;
+    width: 100%;
+  }
+
+  .courses-container {
+    padding-top: 0;
+  }
+
+  .title-courses {
+    text-align: left;
+    width: 70%;
+    margin: 0;
+    float: left;
+  }
+
+  #filter-bar {
+    width: 74.41059%;
+    float: left;
+  }
+}
+
+.find-courses .wrapper-search-context {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+
+  .wrapper-search-input {
+    width: auto;
+  }
+
+  .search-status-label {
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    font-weight: bold;
+    box-sizing: border-box;
+    float: none;
+  }
+}
+
 /**** Static page ***/
 
 .container.about {
