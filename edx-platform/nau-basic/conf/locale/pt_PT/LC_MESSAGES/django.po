@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
 "POT-Creation-Date: 2019-02-12 11:32-0500\n"
-"PO-Revision-Date: 2019-02-12 11:37-0500\n"
+"PO-Revision-Date: 2019-02-12 14:03-0400\n"
 "Last-Translator: \n"
 "Language: pt_PT\n"
 "Language-Team: pt_BR <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:1
 msgid "XXXTerms and conditions"
@@ -25,7 +25,7 @@ msgstr "TERMOS E CONDIÇÕES"
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:19
 msgid "Policies"
-msgstr ""
+msgstr "Painel"
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:23
 #: edx-platform/nau-basic/lms/templates/static_templates/tos.html:5
@@ -41,11 +41,11 @@ msgstr "Política de Privacidade"
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:33
 msgid "Accessibility Accommodation Request"
-msgstr ""
+msgstr "Acessibilidade pedido de alojamento"
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:37
 msgid "LMS"
-msgstr ""
+msgstr "LMS"
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:43
 #: edx-platform/nau-basic/lms/templates/footer.html:56
@@ -58,11 +58,13 @@ msgid ""
 "EdX, Open edX, Studio, and the edX and Open edX logos are registered "
 "trademarks or trademarks of {link_start}edX Inc.{link_end}"
 msgstr ""
+"EDX, Open EDX, Studio e os logotipos EDX e Open edX são marcas registradas ou "
+"marcas registradas da {link_start} edX Inc. {link_end}"
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:56
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:57
 msgid "Powered by Open edX"
-msgstr ""
+msgstr "Com a tecnologia Open EDX"
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:42
 msgid "Current Course:"
@@ -257,20 +259,20 @@ msgstr "Resultados de Pesquisa"
 
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:45
 msgid "List of Courses"
-msgstr ""
+msgstr "Lista de Cursos"
 
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:60
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:61
 msgid "Search for a course"
-msgstr ""
+msgstr "Localizar um curso"
 
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:67
 msgid "Loading"
-msgstr ""
+msgstr "A carregar"
 
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:73
 msgid "Refine Your Search"
-msgstr ""
+msgstr "Refinar a sua Pesquisa"
 
 #: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:38
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:39
@@ -295,27 +297,27 @@ msgstr "{platform_name} Página Inicial"
 
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:26
 msgid "Dashboard for:"
-msgstr ""
+msgstr "Painel para:"
 
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:31
 msgid "Options Menu"
-msgstr ""
+msgstr "Menu de opções"
 
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:34
 msgid "More Options"
-msgstr ""
+msgstr "Mais Opções"
 
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:36
 msgid "Resume your last course"
-msgstr ""
+msgstr "Voltar ao último curso"
 
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:38
 msgid "Dashboard"
-msgstr ""
+msgstr "Painel"
 
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:41
 msgid "Sign Out"
-msgstr ""
+msgstr "Terminar Sessão"
 
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:13
 msgid ""
