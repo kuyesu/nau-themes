@@ -308,11 +308,11 @@ msgstr "Número do Curso"
 
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:239
 msgid "Course Begins"
-msgstr ""
+msgstr "Início do Curso"
 
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:259
 msgid "Course Ends"
-msgstr ""
+msgstr "Fim do Curso"
 
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:272
 msgid "Estimated Effort"
