@@ -5,13 +5,15 @@
 <%block name="pagetitle">${_("Contact")}</%block>
 
 <main id="main" aria-label="Content" tabindex="-1">
-    <section class="container about">
+    <section class="container contact">
         <h1>
             <%block name="pageheader">${page_header or _("Contact")}</%block>
         </h1>
-        <p>
-           A page with information to contact the team behind the site. Note that Open edX does not include a solution for contact form.
-
-        </p>
+        <p>${Text(_("The NAU team is always available to help you. Search through our {link_start} knoledge base{link_end} or contact us through:")).format(link_start=HTML('<a href="https://ajuda.nau.edu.pt">'), link_end=HTML('</a>'))}</p>
+        <ul>
+          <li>${_("E-mail")}: <a href="mailto:ajuda@nau.edu.pt">ajuda@nau.edu.pt</a></li>
+          <li>${_("Telephone")}: 300012000</li>
+        </ul>
+        </p>        
     </section>
 </main>
