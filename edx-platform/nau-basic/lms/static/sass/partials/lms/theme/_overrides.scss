@@ -12,6 +12,16 @@
 	}
 }
 
+.global-header {
+  min-height: 75px;
+  overflow: inherit;
+  position: relative;
+}
+
+.global-header .nav-links .secondary .dropdown-user-menu {
+  z-index: 100;
+}
+
 /*** Home **/
 .window-wrap .home>header .title {
   background: #ffffffc2;
