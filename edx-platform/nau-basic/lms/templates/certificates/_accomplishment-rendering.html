@@ -15,6 +15,7 @@ course_mode_class = course_mode if course_mode else ''
         return value
     %>
 </%def>
+
 <% 
 if nau_logo_x:
     nau_logo_margin_left = validateValue(value=nau_logo_x,maxValue='29', minValue='0')
@@ -28,6 +29,10 @@ if meta_x:
     meta_margin_left = validateValue(value=meta_x,maxValue='29', minValue='0')
 if meta_y:
     meta_margin_top = validateValue(value=meta_y,maxValue='20', minValue='0')
+if debug:
+    class_box_zone = "border-zone"
+else:
+    class_box_zone = "no-border-zone"
 %>
 <style>
 .accomplishment-rendering {
@@ -70,6 +75,9 @@ if meta_y:
     font-size: 0.8rem;
     font-weight: bold;
 }
+.border-zone {
+    border: 1px solid #000;
+}
 @media print {
     body {
         margin: 1.875rem 1.875rem 0!important
@@ -83,74 +91,75 @@ if meta_y:
     margin-bottom: 0
 }
 </style>
+
 <main class="accomplishment accomplishment-main">
 
     <div class="wrapper-accomplishment-rendering">
         <div class="accomplishment-rendering" 
-            style="background-image: url(${background_url if background_url else ''});">
+        style="background-image: url(${background_url if background_url else ''});">
 
-            <img class="nau-logo" src="${static.url('images/logo_nau_w600.png')}"
+            <img class="nau-logo" src="/static/nau-basic/images/logo_nau_w600.png"
             style="width: ${nau_logo_width+'cm' if nau_logo_width else 0};
             margin-left: ${nau_logo_margin_left+'cm' if nau_logo_x else 0};
             margin-top:  ${nau_logo_margin_top+'cm' if nau_logo_y else 0};">
-            <img class="compete-logo" src="${static.url('images/3logos-feder.png')}"
+            <img class="compete-logo" src="/static/nau-basic/images/3logos-feder.png"
             style="width: ${compete_logo_width+'cm' if compete_logo_width else 0};
             margin-left: ${compete_logo_margin_left+'cm' if compete_logo_x else 0};
             margin-top:  ${compete_logo_margin_top+'cm' if compete_logo_y else 0};">
 
-            <div class="certificate-zona-a" 
+            <div class="certificate-zona-a ${class_box_zone}" 
             style="width: ${zona_a_width+'cm' if zona_a_width else 0};
             height: ${zona_a_height+'cm' if zona_a_height else 0};
             margin-left: ${zona_a_x+'cm' if zona_a_x else 0};
             margin-top:  ${zona_a_y+'cm' if zona_a_y else 0};
             ${zona_a_style if zona_a_style else ''}">
-                %if zona_a_elements:
-                    %for element in zona_a_elements:
-                        ${context.get(element, '')}
-                    %endfor
-                %endif
+            %if zona_a_elements:
+            %for element in zona_a_elements:
+            ${context.get(element, '')}
+            %endfor
+            %endif
             </div>
 
-            <div class="certificate-zona-b" 
+            <div class="certificate-zona-b ${class_box_zone}" 
             style="width: ${zona_b_width+'cm' if zona_b_width else 0};
             height: ${zona_b_height+'cm' if zona_b_height else 0};
             margin-left: ${zona_b_x+'cm' if zona_b_x else 0};
             margin-top:  ${zona_b_y+'cm' if zona_b_y else 0};
             ${zona_b_style if zona_b_style else ''}">
-                %if zona_b_elements:
-                    %for element in zona_b_elements:
-                        ${context.get(element, '')}
-                    %endfor
-                %endif
+            %if zona_b_elements:
+            %for element in zona_b_elements:
+            ${context.get(element, '')}
+            %endfor
+            %endif
             </div>
 
-            <div class="certificate-zona-c" 
+            <div class="certificate-zona-c ${class_box_zone}" 
             style="width: ${zona_c_width+'cm' if zona_c_width else 0};
             height: ${zona_c_height+'cm' if zona_c_height else 0};
             margin-left: ${zona_c_x+'cm' if zona_c_x else 0};
             margin-top:  ${zona_c_y+'cm' if zona_c_y else 0};
             ${zona_c_style if zona_c_style else ''}">
-                %if zona_c_elements:
-                    %for element in zona_c_elements:
-                        ${context.get(element, '')}
-                    %endfor
-                %endif
+            %if zona_c_elements:
+            %for element in zona_c_elements:
+            ${context.get(element, '')}
+            %endfor
+            %endif
             </div>
-            
+
 
             <div class="certificate-metadata" 
             style="margin-left: ${meta_margin_left+'cm' if meta_x else 0};
             margin-top:  ${meta_margin_top+'cm' if meta_y else 0};">
                 <div class="certificate-date">
-                <span class="title">${certificate_date_issued_title}</span>
-                <span class="value">${certificate_date_issued}</span>
-              </div>
-              <div class="certificate-id">
-                <span class="title">${certificate_id_number_title}${certificate_id_number_separator if certificate_id_number_separator else ':'}</span>
+                    <span class="title">${certificate_date_issued_title}</span>
+                    <span class="value">${certificate_date_issued}</span>
+                </div>
+                <div class="certificate-id">
+                    <span class="title">
+                        ${certificate_id_number_title}${certificate_id_number_separator if certificate_id_number_separator else ':' }</span>
                 <span class="value"><a href="${logo_url}/certificates/${certificate_id_number}">${certificate_id_number}</a></span>
-              </div>
+                </div>
             </div>
         </div>
     </div>
-
 </main>

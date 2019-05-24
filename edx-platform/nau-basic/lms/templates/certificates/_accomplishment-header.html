@@ -1,15 +1,57 @@
-<%page expression_filter="h"/>
-<%! from django.utils.translation import ugettext as _ %>
+<style>
+.accomplishment-rendering {
+    background-position: center;
+    background-size: contain;
+    padding: 0;
+    height: -webkit-fill-available;
+    border: 0;
+        max-width: 29cm;
+    max-height: 21cm;
+}
+.certificate-metadata{
+    float: left;
+}
+.certificate-date,
+.certificate-id {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.certificate-date .title,
+.certificate-id .title{
+    color: #a7a4a4;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: .03125rem;
+}
+.nau-logo,
+.compete-logo,
+.certificate-zona-a,
+.certificate-zona-b,
+.certificate-zona-c,
+.certificate-metadata {
+    position: absolute;
+}
+.wrapper-banner-user {
+    margin-top: 0;
+}
+.certificate-metadata {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.border-zone {
+    border: 1px solid #000;
+}
+@media print {
+    body {
+        margin: 1.875rem 1.875rem 0!important
+    }
+}
 
-<div class="wrapper-header">
-
-    <header class="header-app" role="banner">
-        <h1 class="header-app-title">
-            <a class="logo" href="${logo_url}">
-                <img class="logo-img" src="${logo_src}" alt="${_('{platform_name} Home').format(platform_name=platform_name)}" />
-            </a>
-            <span class="sr-only">${logo_subtitle}</span>
-        </h1>
-    </header>
-
-</div>
+@page {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0
+}
+</style>

@@ -46,7 +46,7 @@ from openedx.core.djangolib.js_utils import js_escaped_string
                 <p class="message-copy copy copy-base emphasized">${accomplishment_banner_congrats}</p>
                 <div class="message-actions">
                     <h3 class="sr-only">${_("Print or share your certificate:")}</h3>
-                    % if facebook_share_enabled:
+                    % if share_facebook:
                       <button class="action action-share-facebook btn-inverse btn-small icon-only" id="action-share-facebook"
                          onclick="FaceBook.share({
                           share_text: '${facebook_share_text | n, js_escaped_string}', ## xss-lint: disable=mako-invalid-html-filter
@@ -58,7 +58,7 @@ from openedx.core.djangolib.js_utils import js_escaped_string
                           <span class="action-label">${_("Post on Facebook")}</span>
                       </button>
                     %endif
-                    % if twitter_share_enabled:
+                    % if share_twitter:
                       <button data-tooltip="${_('Share on Twitter')}"
                         class="action action-share-twitter btn-inverse btn-small icon-only"
                         title="${_('Share on Twitter')}"
@@ -82,11 +82,13 @@ from openedx.core.djangolib.js_utils import js_escaped_string
                         ${_("Add to Mozilla Backpack")}
                     </button>
                     %endif
-
+                      
+                    % if allow_print:
                     <button class="action action-print btn-inverse btn-small" id="action-print-view">
                         <span class="icon fa fa-print" aria-hidden="true"></span>
                         ${_("Print Certificate")}
                     </button>
+                    %endif
                 </div>
             </div>
         </div>
