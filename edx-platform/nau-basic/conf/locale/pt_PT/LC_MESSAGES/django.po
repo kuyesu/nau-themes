@@ -7,17 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2019-02-22 17:45-0400\n"
-"PO-Revision-Date: 2019-02-22 17:46-0400\n"
+"POT-Creation-Date: 2019-06-11 16:34-0400\n"
+"PO-Revision-Date: 2019-06-11 15:44-0400\n"
 "Last-Translator: \n"
 "Language: pt_PT\n"
 "Language-Team: pt_BR <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
-"X-Generator: Poedit 1.8.7.1\n"
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:1
 msgid "XXXTerms and conditions"
@@ -58,8 +57,8 @@ msgid ""
 "EdX, Open edX, Studio, and the edX and Open edX logos are registered "
 "trademarks or trademarks of {link_start}edX Inc.{link_end}"
 msgstr ""
-"EDX, Open EDX, Studio e os logotipos EDX e Open edX são marcas registradas ou "
-"marcas registradas da {link_start} edX Inc. {link_end}"
+"EDX, Open EDX, Studio e os logotipos EDX e Open edX são marcas "
+"registradas ou marcas registradas da {link_start} edX Inc. {link_end}"
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:56
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:57
@@ -248,6 +247,124 @@ msgstr "Plataforma NAU"
 msgid "All in Portuguese, Portugal in all languages."
 msgstr "Tudo em Português, Portugal em todas as línguas."
 
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:48
+msgid "Print or share your certificate:"
+msgstr "Imprimir ou partilhar o seu certificado:"
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:55
+msgid "Click the link to see my certificate."
+msgstr "Clicar no link para ver o meu certificado."
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:58
+msgid "Post on Facebook"
+msgstr "Publicar no Facebook"
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:62
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:64
+msgid "Share on Twitter"
+msgstr "Partilhar no Twitter"
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:68
+msgid "Tweet this Accomplishment. Pop up window."
+msgstr "Partilhe esta concretização no Twitter. Janela pop-up."
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:73
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:75
+msgid "Add to LinkedIn Profile"
+msgstr "Adicionar ao Perfil do LinkedIn"
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:82
+msgid "Add to Mozilla Backpack"
+msgstr "Adicionar ao Mozilla Backpack"
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:88
+msgid "Print Certificate"
+msgstr "Imprimir Certificado"
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-header.html:9
+msgid "{platform_name} Home"
+msgstr "Página Inicial {platform_name}"
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-rendering.html:43
+msgid "Noted by"
+msgstr "Anotado por"
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-rendering.html:67
+msgid "Supported by the following organizations"
+msgstr "Apoiado pelas seguintes organizações"
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-rendering.html:94
+msgid "Awarded to:"
+msgstr "Atribuído a:"
+
+#: edx-platform/nau-basic/lms/templates/certificates/_edx-accomplishment-print-help.html:10
+msgid ""
+"For tips and tricks on printing your certificate, view the "
+"{link_start}Web Certificates help documentation{link_end}."
+msgstr ""
+"Para obter dicas e truques para a impressão do seu certificado, consulte "
+"a documentação de ajuda {link_start}Certificados Web{link_end}."
+
+#: edx-platform/nau-basic/lms/templates/certificates/invalid.html:9
+msgid "Cannot Find Certificate"
+msgstr "Não foi possível localizar Certificado"
+
+#: edx-platform/nau-basic/lms/templates/certificates/invalid.html:11
+msgid ""
+"We cannot find a certificate with this URL or ID number. If you are "
+"trying to validate a certificate, make sure that the URL or ID number is "
+"correct. If you are sure that the URL or ID number is correct, contact "
+"support."
+msgstr ""
+"Não conseguimos localizar um certificado com este URL ou número de ID. Se"
+" está a tentar validar um certificado, verifique se o URL ou número de "
+"identificação está correto. Se tiver a certeza de que o URL ou o número "
+"de ID estão corretos, contacte o suporte."
+
+#: edx-platform/nau-basic/lms/templates/certificates/invalid.html:15
+msgid "About {platform_name} Certificates"
+msgstr "Sobre os certificados de {platform_name}"
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:5
+msgid "Invalid Certificate Configuration."
+msgstr "Configuração de Certificado Inválido."
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:9
+msgid "There is a problem with this certificate."
+msgstr "Existe um problema com este Certificado."
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:14
+msgid ""
+"To resolve the problem, your partner manager should verify that the "
+"following information is correct."
+msgstr ""
+"Para resolver o problema, o seu gestor parceiro deve verificar se as "
+"seguintes informações estão corretas."
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:17
+msgid "The institution's logo."
+msgstr "O logotipo da instituição."
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:18
+msgid "The institution that is linked to the course."
+msgstr "A instituição que está vinculada ao curso."
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:19
+msgid "The course information in the Course Administration tool."
+msgstr "A informação do curso no recurso Administração do Curso."
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:22
+msgid ""
+"If all of the information is correct and the problem persists, contact "
+"technical support."
+msgstr ""
+"Se toda a informação estiver correta e o problema persistir, contacte o "
+"suporte técnico."
+
+#: edx-platform/nau-basic/lms/templates/certificates/valid.html:12
+msgid "About edX Certificates"
+msgstr "Acerca dos Certificados edX"
+
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:38
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:76
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:95
@@ -256,15 +373,16 @@ msgstr "Ocorreu um erro. Por favor tente novamente."
 
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:60
 msgid ""
-"The currently logged-in user account does not have permission to enroll in "
-"this course. You may need to {start_logout_tag}log out{end_tag} then try the "
-"enroll button again. Please visit the {start_help_tag}help page{end_tag} for "
-"a possible solution."
+"The currently logged-in user account does not have permission to enroll "
+"in this course. You may need to {start_logout_tag}log out{end_tag} then "
+"try the enroll button again. Please visit the {start_help_tag}help "
+"page{end_tag} for a possible solution."
 msgstr ""
 "A conta de utilizador utilizada de momento não possui permissão para se "
-"inscrever neste curso. Talvez seja necessário {start_logout_tag}sair{end_tag} "
-"e, em seguida, tentar novamente o botão de inscrição. Visite a "
-"{start_help_tag}página de ajuda{end_tag} para obter uma possível solução."
+"inscrever neste curso. Talvez seja necessário "
+"{start_logout_tag}sair{end_tag} e, em seguida, tentar novamente o botão "
+"de inscrição. Visite a {start_help_tag}página de ajuda{end_tag} para "
+"obter uma possível solução."
 
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:131
 msgid "You are enrolled in this course"
@@ -328,8 +446,8 @@ msgstr "Pré-requisitos"
 
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:293
 msgid ""
-"You must successfully complete {link_start}{prc_display}{link_end} before you "
-"begin this course."
+"You must successfully complete {link_start}{prc_display}{link_end} before"
+" you begin this course."
 msgstr ""
 "Deve concluir com sucesso {link_start}{prc_display}{link_end} antes de "
 "iniciar este curso. "
@@ -426,20 +544,20 @@ msgstr "Terminar Sessão"
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:13
 msgid ""
 "NAU - Always Learning is a technical infrastructure which publishes  and "
-"provides support to Massive Open courses aimed at public administration and "
-"Higher Education."
+"provides support to Massive Open courses aimed at public administration "
+"and Higher Education."
 msgstr ""
-"A NAU - Sempre a Aprender é a infraestrutura técnica de publicação e serviços "
-"de acompanhamento de cursos para grandes audiências orientado para a "
-"Administração Pública e Ensino Superior."
+"A NAU - Sempre a Aprender é a infraestrutura técnica de publicação e "
+"serviços de acompanhamento de cursos para grandes audiências orientado "
+"para a Administração Pública e Ensino Superior."
 
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:16
 msgid ""
-"This platform was created within the scope of NAU Project launched in October "
-"1st 2017 with the following partners:"
+"This platform was created within the scope of NAU Project launched in "
+"October 1st 2017 with the following partners:"
 msgstr ""
-"Esta plataforma foi criada no âmbito do Projeto NAU, iniciado em 1 de Outubro "
-"2017 com os parceiros:"
+"Esta plataforma foi criada no âmbito do Projeto NAU, iniciado em 1 de "
+"Outubro 2017 com os parceiros:"
 
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:27
 msgid "NAU Project"
@@ -447,18 +565,19 @@ msgstr "Projeto NAU"
 
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:29
 msgid ""
-"A national iniciative, led by the Foundation for Science and Technology, to "
-"build and operate a technical infrastructure which supports and operates a "
-"platform that publishes content to big audiences, such as MOOC courses. This "
-"initiative, cross-sectional to several ministries and open to society, will "
-"facilitate training to a larger number of civil servants and citizens."
+"A national iniciative, led by the Foundation for Science and Technology, "
+"to build and operate a technical infrastructure which supports and "
+"operates a platform that publishes content to big audiences, such as MOOC"
+" courses. This initiative, cross-sectional to several ministries and open"
+" to society, will facilitate training to a larger number of civil "
+"servants and citizens."
 msgstr ""
-"Iniciativa nacional, liderada pela FCT, para construção e operação de uma "
-"infraestrutura técnica e operacional de suporte à publicação e dinamização de "
-"conteúdos para grandes audiências, nomeadamente, em formato MOOC. Esta "
-"iniciativa, transversal a diversos ministérios e aberta à sociedade, "
-"permitirá desenvolver ações de formação para um maior número de funcionários "
-"e cidadãos."
+"Iniciativa nacional, liderada pela FCT, para construção e operação de uma"
+" infraestrutura técnica e operacional de suporte à publicação e "
+"dinamização de conteúdos para grandes audiências, nomeadamente, em "
+"formato MOOC. Esta iniciativa, transversal a diversos ministérios e "
+"aberta à sociedade, permitirá desenvolver ações de formação para um maior"
+" número de funcionários e cidadãos."
 
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:31
 msgid "Explore the NAU Project at: "
@@ -472,12 +591,12 @@ msgstr "Contacto"
 #: edx-platform/nau-basic/lms/templates/static_templates/contact.html:14
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:14
 msgid ""
-"The NAU team is always available to help you. Search through our {link_start} "
-"knoledge base{link_end} or contact us through:"
+"The NAU team is always available to help you. Search through our "
+"{link_start} knoledge base{link_end} or contact us through:"
 msgstr ""
-"A equipa da Plataforma NAU está sempre disponível para o ajudar. Consulte a "
-"nossa  {link_start}base de conhecimento{link_end}  ou entre em contacto "
-"conosco através dos seguintes contactos:"
+"A equipa da Plataforma NAU está sempre disponível para o ajudar. Consulte"
+" a nossa  {link_start}base de conhecimento{link_end}  ou entre em "
+"contacto conosco através dos seguintes contactos:"
 
 #: edx-platform/nau-basic/lms/templates/static_templates/contact.html:16
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:16
@@ -516,3 +635,4 @@ msgstr "Código de Honra"
 
 #~ msgid "Programs"
 #~ msgstr "Programas"
+

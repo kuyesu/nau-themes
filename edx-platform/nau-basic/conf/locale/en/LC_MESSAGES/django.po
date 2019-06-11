@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2019-02-22 17:45-0400\n"
+"POT-Creation-Date: 2019-06-11 16:34-0400\n"
 "PO-Revision-Date: 2018-11-09 18:08+0000\n"
 "Last-Translator: \n"
 "Language: en\n"
@@ -243,6 +243,114 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/index_overlay.html:11
 msgid "All in Portuguese, Portugal in all languages."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:48
+msgid "Print or share your certificate:"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:55
+msgid "Click the link to see my certificate."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:58
+msgid "Post on Facebook"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:62
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:64
+msgid "Share on Twitter"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:68
+msgid "Tweet this Accomplishment. Pop up window."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:73
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:75
+msgid "Add to LinkedIn Profile"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:82
+msgid "Add to Mozilla Backpack"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:88
+msgid "Print Certificate"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-header.html:9
+msgid "{platform_name} Home"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-rendering.html:43
+msgid "Noted by"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-rendering.html:67
+msgid "Supported by the following organizations"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-rendering.html:94
+msgid "Awarded to:"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_edx-accomplishment-print-help.html:10
+msgid ""
+"For tips and tricks on printing your certificate, view the "
+"{link_start}Web Certificates help documentation{link_end}."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/invalid.html:9
+msgid "Cannot Find Certificate"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/invalid.html:11
+msgid ""
+"We cannot find a certificate with this URL or ID number. If you are "
+"trying to validate a certificate, make sure that the URL or ID number is "
+"correct. If you are sure that the URL or ID number is correct, contact "
+"support."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/invalid.html:15
+msgid "About {platform_name} Certificates"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:5
+msgid "Invalid Certificate Configuration."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:9
+msgid "There is a problem with this certificate."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:14
+msgid ""
+"To resolve the problem, your partner manager should verify that the "
+"following information is correct."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:17
+msgid "The institution's logo."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:18
+msgid "The institution that is linked to the course."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:19
+msgid "The course information in the Course Administration tool."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/server-error.html:22
+msgid ""
+"If all of the information is correct and the problem persists, contact "
+"technical support."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/valid.html:12
+msgid "About edX Certificates"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:38
