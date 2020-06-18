@@ -2,6 +2,7 @@
 
 <%page expression_filter="h" args="online_help_token"/>
 
+
 <%namespace name='static' file='../static_content.html'/>
 <%!
 from django.urls import reverse
@@ -11,11 +12,13 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 
 %>
 
+% if 0:
+
 <h1 class="header-logo">
   <a href="/">
     <%block name="navigation_logo">
-    <img  class="logo" src="${static.url('images/letras_nau_w200.png')}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
-    </%block>
+    <img  class="logo" src="${static.url('images/logo_nau_w600.png')}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+    </%block>  
   </a>
   % if course:
     <div class="course-header">
@@ -40,3 +43,92 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     % endif
   </div>
 % endif
+
+% endif
+
+ <div id="branding-top-nav">
+    <a id="open-menu-arrow" href="javascript:void()" onclick="openNav()" title="Abrir">&#9776;</a>  
+    <a href="https://www.stage.nau.fccn.pt"><img id="logo" src="/static/nau-basic/images/nau_sempre_aprender.svg" alt="NAU logo"></a> 
+
+    <!-- starts menu container -->
+    <div id="menu-container">
+
+      <!-- starts top nav menu -->
+      <a id="close-menu-arrow" href="javascript:void()" onclick="closeNav()" title="Fechar">&#10005;</a>
+      <div class="nav-icon"></div>
+      <ul id="about-categories-entities" class="menu"><li id="menu-item-1743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1743"><a href="https://www.stage.nau.fccn.pt/sobre/">Sobre</a>
+<ul class="sub-nav menu-depth-0">
+	<li id="menu-item-1744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1744"><a href="https://www.stage.nau.fccn.pt/sobre/plataforma-nau/">Plataforma NAU</a></li>
+	<li id="menu-item-431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-431"><a href="https://www.stage.nau.fccn.pt/entidades/">Entidades Promotoras</a></li>
+	<li id="menu-item-430" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-430"><a href="https://www.stage.nau.fccn.pt/sobre/comunidades-nau/">Comunidades NAU</a></li>
+	<li id="menu-item-423" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-423"><a href="https://www.stage.nau.fccn.pt/ajuda/">Serviços de Apoio</a></li>
+	<li id="menu-item-429" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-429"><a href="https://www.stage.nau.fccn.pt/sobre/material-de-divulgacao/">Material de Divulgação</a></li>
+	<li id="menu-item-424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-424"><a href="https://www.stage.nau.fccn.pt/noticias/">Notícias</a></li>
+</ul>
+</li>
+<li id="menu-item-1070" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1070"><a href="https://www.stage.nau.fccn.pt/entidades/">Entidades</a>
+<ul class="sub-nav menu-depth-0">
+	<li id="menu-item-964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-964"><a href="https://www.stage.nau.fccn.pt/entidades/administracao-publica/">Administração Pública</a></li>
+	<li id="menu-item-966" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-966"><a href="https://www.stage.nau.fccn.pt/entidades/ensino-superior/">Ensino Superior</a></li>
+	<li id="menu-item-965" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-965"><a href="https://www.stage.nau.fccn.pt/entidades/privados/">Privadas</a></li>
+</ul>
+</li>
+<li id="menu-item-1758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1758"><a href="https://www.stage.nau.fccn.pt/cursos/">Cursos</a>
+<ul class="sub-nav menu-depth-0">
+	<li id="menu-item-1071" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1071"><a href="https://www.stage.nau.fccn.pt/categorias/">Categorias</a></li>
+	<li id="menu-item-2483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2483"><a href="https://www.stage.nau.fccn.pt/nacoes-unidas/">Nações Unidas</a></li>
+</ul>
+</li>
+</ul>  
+
+      <!-- starts top nav action container -->
+      <div id="actions_container"> 
+  
+          <!-- starts top nav search bar -->          
+          <form id="search-form" action="https://www.stage.nau.fccn.pt" role="search" method="get">
+            <input id="s" name="s" type="search" placeholder="Pesquisar Cursos..." value="">
+            <input name="submit-search" type="submit">
+          </form>
+          <!-- ends top nav search bar -->
+      
+      <!-- starts menu languages --> 
+      
+            <div id="languages-actions-container">
+        <ul id="menu_languages">
+          <li><a href="https://en-www.stage.nau.fccn.pt" title="English">en</a></li><li class="current_language">pt</li>         </ul>
+      </div>
+        
+        <!-- starts login and register -->      
+        <ul id="menu_login_register" class="login_menu"><li id="menu-item-1720" class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link login_or_dash_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-login_openedx menu-item-1720">
+<a href="https://lms.stage.nau.fccn.pt/login" id="register">Entrar</a>
+</li>
+<li id="menu-item-1721" class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link register_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-register_openedx menu-item-1721">
+<a href="https://lms.stage.nau.fccn.pt/register" id="login_image">Registar</a>
+</li>
+</ul>  
+        
+        <!-- ends login and register -->     
+        </div>  
+  <!-- ends top nav action container --> 
+    </div>    
+<!-- ends menu container -->     
+</div>
+<!-- ends branding container -->
+<div id="menu-overlay" onclick="closeNav()"></div>
+
+
+
+  % if course:
+    <div class="course-header">
+      <span class="provider">${course.display_org_with_default}:</span>
+      <span class="course-number">${course.display_number_with_default}</span>
+      <%
+      display_name = course.display_name_with_default
+      if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
+        ccx = get_current_ccx(course.id)
+        if ccx:
+          display_name = ccx.display_name
+      %>
+      <span class="course-name">${display_name}</span>
+    </div>
+  % endif
