@@ -20,6 +20,12 @@ from six import string_types
   <meta property="og:description" content="${get_course_about_section(request, course, 'short_description')}" />
 </%block>
 
+<%!
+try:
+    currency = settings.PAID_COURSE_REGISTRATION_CURRENCY[0].upper()
+except:
+    currency = 'USD'
+%>
 <%block name="js_extra">
   <script type="text/javascript">
   (function() {
@@ -164,8 +170,8 @@ from six import string_types
               reg_element_id = ""
           %>
           <a href="${reg_href}" class="add-to-cart" id="${reg_element_id}">
-            ${_("Add {course_name} to Cart <span>({price} USD)</span>")\
-              .format(course_name=course.display_number_with_default, price=course_price)}
+		  ${_("Add {course_name} to Cart <span>({price} {currency})</span>")\
+              .format(course_name=course.display_number_with_default, price=course_price, currency=currency)}
           </a>
           <div id="register_error"></div>
         %else:
