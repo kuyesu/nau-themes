@@ -1,6 +1,6 @@
 ## mako
 <%page expression_filter="h"/>
-<%namespace name='static' file='static_content.html'/>
+<%namespace name='static' file='../static_content.html'/>
 
 <%!
 from django.urls import reverse
@@ -20,13 +20,76 @@ resume_block = retrieve_last_sitewide_block_completed(username)
 displayname = get_enterprise_learner_generic_name(request) or username
 %>
 
-<div class="nav-item hidden-mobile">
+
+
+<% header_menu = static.get_value('NAU_HEADER_MENU')["pt-pt"] %>
+
+      <ul id="menu_login_register" class="login_menu" aria-label=${_("Supplemental Links")}>      
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+            <a href="${reverse('learner_profile', args=[self.real_user.username])}" class="menu-title">${_("Profile")}
+            <ul class="sub-nav menu-depth-0">
+
+              % if resume_block:
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${resume_block}">${_("Resume your last course")}</a></li>
+              % endif
+              <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${reverse('dashboard')}">${_("Dashboard")}</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${reverse('account_settings')}">${_("Account")}</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page"><a class="${'active ' if '/u/' in request.path  else ''}tab-nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">${_("Profile")}</a></li>
+            
+              % if show_sysadmin_dashboard:
+              <li class="menu-item menu-item-type-post_type menu-item-object-page">            
+                ## Translators: This is short for "System administration".
+                <a class="menu-item menu-item-type-post_type menu-item-object-page" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
+              </li>
+              % endif
+
+            </ul>
+          </li>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="${reverse('logout')}" role="menuitem">${_("Exit")}</a>
+          </li>
+      </ul>
+
+<!--
+<ul id="menu_login_register" class="login_menu">
+  <li class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link login_or_dash_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-login_openedx">
+    <a href="${reverse('dashboard')}" class="menu-title">
+        ${displayname}
+        <ul class="sub-nav menu-depth-0">
+
+            % if resume_block:
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${resume_block}" role="menuitem">${_("Resume your last course")}</a></li>
+            % endif
+            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${reverse('dashboard')}" role="menuitem">${_("Dashboard")}</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${reverse('account_settings')}" role="menuitem">${_("Account")}</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a class="${'active ' if '/u/' in request.path  else ''}tab-nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">${_("Profile")}</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${reverse('logout')}" role="menuitem">${_("Exit")}</a></li>
+            
+            % if show_sysadmin_dashboard:
+            <li class="menu-item menu-item-type-post_type menu-item-object-page">            
+                ## Translators: This is short for "System administration".
+                <a class="tab-nav-link" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
+            </li>
+            % endif
+
+        </ul>
+    </a>
+  </li>
+  <li id="menu-item-1721" class="menu-item menu-item-type-custom menu-item-object-custom open-edx-link register_openedx menu-item-type-wp-edunext-marketing-site menu-item-object-register_openedx menu-item-1721">
+    <a href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a>
+   </li>
+</ul>
+-->
+
+<!---
+<div class="nav-item hidden-mobile move_away">
     <a href="${reverse('dashboard')}" class="menu-title">
         <img class="user-image-frame" src="${profile_image_url}" alt="">
         <span class="sr-only">${_("Dashboard for:")}</span>
         <span class="username">${displayname}</span>
     </a>
 </div>
+
 <div class="nav-item hidden-mobile nav-item-dropdown" tabindex="-1">
     <div class="toggle-user-dropdown" role="button" aria-label=${_("Options Menu")} aria-expanded="false" tabindex="0" aria-controls="user-menu">
         <span class="fa fa-caret-down" aria-hidden="true"></span>
@@ -38,6 +101,16 @@ displayname = get_enterprise_learner_generic_name(request) or username
         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('dashboard')}" role="menuitem">${_("Dashboard")}</a></div>
         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('learner_profile', kwargs={'username': username})}" role="menuitem">${_("Profile")}</a></div>
         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('account_settings')}" role="menuitem">${_("Account")}</a></div>
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a class="${'active ' if '/u/' in request.path  else ''}tab-nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">${_("Profile")}</a></div>
         <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a></div>
+        
+        % if show_sysadmin_dashboard:
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item">
+            ## Translators: This is short for "System administration".
+            <a class="tab-nav-link" href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
+        </div>
+        % endif
+
     </div>
 </div>
+--->

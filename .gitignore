@@ -9,3 +9,9 @@ venv/
 # Python artifacts
 *.pyc
 tests/collected_assets/
+
+# joe backup files
+*~
+
+# ignore .vscode
+.vscode

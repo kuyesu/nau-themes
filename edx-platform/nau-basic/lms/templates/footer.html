@@ -9,160 +9,359 @@
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
 
-% if uses_bootstrap:
-  <div class="wrapper wrapper-footer">
-    <footer id="footer-openedx" class="grid-container"
-      ## When rendering the footer through the branding API,
-      ## the direction may not be set on the parent element,
-      ## so we set it here.
-      % if bidi:
-        dir=${bidi}
-      % endif
-    >
-      <div class="colophon">
-        <nav class="nav-colophon" aria-label="${_('About')}">
-          <ol>
-              <li class="nav-colophon-01">
-                <a id="about" href="/about">${_('About')}</a>
-              </li>
-              <li class="nav-colophon-02">
-                <a id="help" href="/help">${_('Help')}</a>
-              </li>
-          </ol>
-        </nav>
+<%
+    www_pt = static.get_value('NAU_MARKETING_BASE_HREF')["pt-pt"]
+    www_en = static.get_value('NAU_MARKETING_BASE_HREF')["en"]
 
-        % if context.get('include_language_selector', footer_language_selector_is_enabled()):
-            <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
-        % endif
+    if LANGUAGE_CODE == "pt-pt":
+        footer_menu = static.get_value('NAU_FOOTER_MENU')["pt-pt"]
+    else:
+        footer_menu = static.get_value('NAU_FOOTER_MENU')["en"]
+    endif 
+%> 
 
-        <div class="wrapper-logo">
-          <p>
-            <a href="/">
-              ## The default logo is a placeholder.
-              ## You can either replace this link entirely or update
-              ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
-              ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
-              ## can be included in the footer on other sites
-              ## (e.g. a blog or marketing front-end) to provide a consistent
-              ## user experience.  See the branding app for details.
-              <img alt="organization logo" src="${static.url('images/logo_nau_w220.png')}">
-            </a>
-          </p>
+
+<footer> 
+
+    <!-- starts footer links -->
+    <section id="footer-links">        
+        <!-- starts quick links -->
+
+        <div id="quick-links-section">
+
+            <ul id="footer" class="menu">
+                
+                % for title in footer_menu:
+                <li class='footer-links-structure'>
+                  <h5>${title}</h5>
+                  <ul>
+                    %for label in footer_menu[title]:
+                      <% link = footer_menu[title][label] %>
+                      <li><a href='${link}'>${label}</a></li>
+                    %endfor
+                  </ul>
+                </li>
+                % endfor
+
+            <!-- starts social media -->
+            <ul>
+                <li class="footer-links-structure">
+                    <h5>Redes Sociais</h5>
+                    <ul id="social-media">
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["twitter"]}"><img src="/static/nau-basic/images/twitter.svg" alt="twitter logo" title="${_('Share on Twitter')}"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["linkedin"]}"><img src="/static/nau-basic/images/linkedin.svg" alt="Linkedin logo" title="${_('Share on LinkedIn')}"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["facebook"]}" id="facebook-share-btt" rel="nofollow" target="_blank" title="${_('Share on Facebook')}" class=""><img src="/static/nau-basic/images/facebook.svg" alt="Facebook logo" title="Share on Facebook"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["instagram"]}"><img src="/static/nau-basic/images/instagram.svg" alt="Instagram logo" title="${_('Share on Instagram')}"></a></li>
+                        <!--- <li><a href=""><img src="/static/nau-basic/images/more-share.svg" alt="Share list" title="${_('Share')}"></a></li> --->
+                        <li id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="/static/nau-basic/images/openedx.svg" alt="Powered by OpenEdX" title="${_('Visit OpenEdx webiste')}"></a></li>      
+                    </ul>
+                </li>
+            </ul>      
+        <!-- ends social media -->     
         </div>
+    </section>
+    <!-- ends footer links -->  
 
-        ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-        <p class="copyright">© 2018 - FCT | FCCN, ${_('All rights reserved')}</p>
+% if LANGUAGE_CODE == "pt-ptx":
 
-        <nav class="nav-legal" aria-label="${_('Legal')}">
-        </nav>
+    <!-- starts footer links -->
+    <section id="footer-links">        
+        <!-- starts quick links -->
+
+        <div id="quick-links-section">
+
+            <ul id="footer" class="menu">
+            
+            
+                <li class='footer-links-structure'>
+                    <h5>Ligações Rápidas</h5>
+                    <ul>
+                        <li><a href='${www_pt}/entidades/'>Entidade</a></li>
+                        <li><a href='${www_pt}/categorias/'>Categorias</a></li>
+                        <li><a href='${www_pt}/cursos/'>Cursos</a></li>
+                    </ul>
+                </li>
+
+                <li class='footer-links-structure'>
+                    <h5>Ajuda</h5>
+                    <ul>
+                        <li><a href='${www_pt}/ajuda/'>Serviços de Suporte</a></li>
+                        <li><a href='${www_pt}/ajuda/perguntas-frequentes/'>Perguntas Frequentes</a></li></a></li>
+                        <li><a href='${www_pt}/42-2/formacoes/'>Formação</a></li>
+                        <li><a href='${www_pt}/sobre/comunidades-nau/'>Comunidades NAU</a></li>
+                    </ul>
+                </li>
+
+                <li class='footer-links-structure'>
+                    <h5>Acerca</h5>
+                    <ul>
+                        <li><a href='${www_pt}/sobre/'>Acerca da NAU</a></li>
+                        <li><a href='${www_pt}/noticias/'>Noticias</a></li>
+                        <li><a href='${www_pt}/sobre/material-de-divulgacao/'>Marketing Digital</a></li>
+                        <li><a href='${www_pt}/sobre/contactos/'>Contactos</a></li>
+                        <li><a href='${www_pt}/sobre/politica-de-privacidade/'>Política de Privacidade</a></li>
+                        <li><a href='${www_pt}/sobre/termos-e-condicoes/'>Termos e Condições</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- starts social media -->
+            <ul>
+                <li class="footer-links-structure">
+                    <h5>Redes Sociais</h5>
+                    <ul id="social-media">
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["twitter"]}"><img src="/static/nau-basic/images/twitter.svg" alt="twitter logo" title="${_('Share on Twitter')}"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["linkedin"]}"><img src="/static/nau-basic/images/linkedin.svg" alt="Linkedin logo" title="${_('Share on LinkedIn')}"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["facebook"]}" id="facebook-share-btt" rel="nofollow" target="_blank" title="${_('Share on Facebook')}" class=""><img src="/static/nau-basic/images/facebook.svg" alt="Facebook logo" title="Share on Facebook"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["instagram"]}"><img src="/static/nau-basic/images/instagram.svg" alt="Instagram logo" title="${_('Share on Instagram')}"></a></li>
+                        <!--- <li><a href=""><img src="/static/nau-basic/images/more-share.svg" alt="Share list" title="${_('Share')}"></a></li> --->
+                        <li id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="/static/nau-basic/images/openedx.svg" alt="Powered by OpenEdX" title="${_('Visit OpenEdx webiste')}"></a></li>      
+                    </ul>
+                </li>
+            </ul>      
+        <!-- ends social media -->     
+        </div>
+    </section>
+    <!-- ends footer links -->   
+  
+% endif  
+  
+% if LANGUAGE_CODE == "enx":
+
+    <!-- starts footer links -->
+    <section id="footer-links">        
+        <!-- starts quick links -->
+
+        <div id="quick-links-section">
+
+            <ul id="footer" class="menu">
+                <li class='footer-links-structure'>
+                    <h5>${_('Quick Links')}</h5>
+                    <ul>
+                        <li><a href='${www_en}/entidades/'>Entities</a></li>
+                        <li><a href='${www_en}/categorias/'>Categories</a></li>
+                        <li><a href='${www_en}/cursos/'>Courses</a></li>
+                    </ul>
+                </li>
+
+                <li class='footer-links-structure'>
+                    <h5>${_('Help')}</h5>
+                    <ul>
+                        <li><a href='${www_en}/ajuda/'>Support Services</a></li>
+                        <li><a href='${www_en}/ajuda/perguntas-frequentes/'>Frequent Asked Questions</a></li></a></li>
+                        <li><a href='${www_en}/42-2/formacoes/'>Trainning</a></li>
+                        <li><a href='${www_en}/sobre/comunidades-nau/'>NAU Communities</a></li>
+                    </ul>
+                </li>
+
+                <li class='footer-links-structure'>
+                    <h5>${_('About')}</h5>
+                    <ul>
+                        <li><a href='${www_en}/sobre/'>About NAU</a></li>
+                        <li><a href='${www_en}/noticias/'>News</a></li>
+                        <li><a href='${www_en}/sobre/material-de-divulgacao/'>Marketing Materials</a></li>
+                        <li><a href='${www_en}/sobre/contactos/'>Contacts</a></li>
+                        <li><a href='${www_en}/sobre/politica-de-privacidade/'>Privacy Policy</a></li>
+                        <li><a href='${www_en}/sobre/termos-e-condicoes/'>Terms & Conditions</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- starts social media -->
+            <ul>
+                <li class="footer-links-structure">
+                    <h5>${_('Social Media')}</h5>
+                    <ul id="social-media">
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["twitter"]}"><img src="/static/nau-basic/images/twitter.svg" alt="twitter logo" title="Share on Twitter"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["linkedin"]}"><img src="/static/nau-basic/images/linkedin.svg" alt="Linkedin logo" title="Share on LinkedIn"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["facebook"]}" id="facebook-share-btt" rel="nofollow" target="_blank" title="Share on Facebook" class=""><img src="/static/nau-basic/images/facebook.svg" alt="Facebook logo" title="Share on Facebook"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["instagram"]}"><img src="/static/nau-basic/images/instagram.svg" alt="Instagram logo" title="Share on Instagram"></a></li>
+                        <!--- <li><a href=""><img src="/static/nau-basic/images/more-share.svg" alt="Share list" title="${_('Share')}"></a></li> --->
+                        <li id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="/static/nau-basic/images/openedx.svg" alt="Powered by OpenEdX" title="Visit OpenEdx webiste"></a></li>
+                    </ul>
+                </li>
+            </ul>      
+        <!-- ends social media -->     
+        </div>
+    </section>
+    <!-- ends footer links -->   
+  
+% endif    
+
+
+
+    
+    
+    <!-- starts corporate entities -->
+    <section id="entities-quick-links">        
+    <ul class="flex-row">
+    <li><a href="https://nau.edu.pt"><img id="logo-nau" src="/static/nau-basic/images/nau_sempre_aprender.svg" alt="Logo NAU" title="NAU - Sempre a Aprender"></a>
+    <span id="copyright" >&copy; 2020 - FCT|FCCN. Todos os direitos reservados.</span>
+    </li>
+    <li><a id="logo-compete" href="https://www.fccn.pt/financiamento-projeto-nau/"><img src="/static/nau-basic/images/co-financed.png" alt="Logos: Compete, Portugal 2020 e União Europeia - Fundo Europeu de Desenvolvimento Regional"  title="Compete 2020, Portugal 2020 e União Europeia - Fundo Europeu de Desenvolvimento Regional"></a></li>
+    <li><a id="logo-incode2030" href="https://www.incode2030.gov.pt/" target="_blank"><img src="/static/nau-basic/images/incode.png" alt="Portugal - INcode2030" title="Visitar o site INcode.2030"></a></li>  
+    </ul>
+    </section>
+    <!-- ends corporate entities --> 
+</footer>
+
+
+% if 0:
+    % if uses_bootstrap:
+      <div class="wrapper wrapper-footer">
+        <footer id="footer-openedx" class="grid-container"
+          ## When rendering the footer through the branding API,
+          ## the direction may not be set on the parent element,
+          ## so we set it here.
+          % if bidi:
+            dir=${bidi}
+          % endif
+        >
+          <div class="colophon">
+            <nav class="nav-colophon" aria-label="${_('About')}">
+              <ol>
+                  <li class="nav-colophon-01">
+                    <a id="about" href="/about">${_('About')}</a>
+                  </li>
+                  <li class="nav-colophon-02">
+                    <a id="help" href="/help">${_('Help')}</a>
+                  </li>
+              </ol>
+            </nav>
+
+            % if context.get('include_language_selector', footer_language_selector_is_enabled()):
+                <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
+            % endif
+
+            <div class="wrapper-logo">
+              <p>
+                <a href="/">
+                  ## The default logo is a placeholder.
+                  ## You can either replace this link entirely or update
+                  ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
+                  ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
+                  ## can be included in the footer on other sites
+                  ## (e.g. a blog or marketing front-end) to provide a consistent
+                  ## user experience.  See the branding app for details.
+                  <img alt="organization logo" src="${static.url('images/logo_nau_w220.png')}">
+                </a>
+              </p>
+            </div>
+
+            ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
+            <p class="copyright">© 2018 - FCT | FCCN, ${_('All rights reserved')}</p>
+
+            <nav class="nav-legal" aria-label="${_('Legal')}">
+            </nav>
+          </div>
+
+          ## Please leave this link and use one of the logos provided
+          ## The OpenEdX link may be hidden when this view is served
+          ## through an API to partner sites (such as marketing sites or blogs),
+          ## which are not technically powered by OpenEdX.
+          <div class="footer-container-logos">
+            % if not hide_openedx_link:
+            <div class="footer-about-openedx">
+              <p>
+                <a href="${footer['openedx_link']['url']}">
+                  <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
+                </a>
+              </p>
+            </div>
+            % endif
+            <div class="footer-logo-partner">
+              <p>       
+                <a href="http://www.incode2030.gov.pt/">
+                  <img src="${static.url('images/logo_incode2030_v3.png')}">
+                </a>
+              </p>
+              <p>
+                <a href="#">
+                  <img src="${static.url('images/3logos-feder_small.png')}">
+                </a>
+              </p>
+            </div>
+          </div>
+        </footer>
       </div>
+    % else:
+      <div class="wrapper wrapper-footer">
+        <footer id="footer-openedx" class="grid-container"
+          ## When rendering the footer through the branding API,
+          ## the direction may not be set on the parent element,
+          ## so we set it here.
+          % if bidi:
+            dir=${bidi}
+          % endif
+        >
+          <div class="colophon">
+            <nav class="nav-colophon" aria-label="${_('About')}">
+              <ol>
+                  <li class="nav-colophon-01">
+                    <a id="about" href="/about">${_('About')}</a>
+                  </li>
+                  <li class="nav-colophon-02">
+                    <a id="help" href="/help">${_('Help')}</a>
+                  </li>
+              </ol>
+            </nav>
 
-      ## Please leave this link and use one of the logos provided
-      ## The OpenEdX link may be hidden when this view is served
-      ## through an API to partner sites (such as marketing sites or blogs),
-      ## which are not technically powered by OpenEdX.
-      <div class="footer-container-logos">
-        % if not hide_openedx_link:
-        <div class="footer-about-openedx">
-          <p>
-            <a href="${footer['openedx_link']['url']}">
-              <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
-            </a>
-          </p>
-        </div>
-        % endif
-        <div class="footer-logo-partner">
-          <p>       
-            <a href="http://www.incode2030.gov.pt/">
-              <img src="${static.url('images/logo_incode2030_v3.png')}">
-            </a>
-          </p>
-          <p>
-            <a href="#">
-              <img src="${static.url('images/3logos-feder_small.png')}">
-            </a>
-          </p>
-        </div>
+            % if context.get('include_language_selector', footer_language_selector_is_enabled()):
+                <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
+            % endif
+
+            <div class="wrapper-logo">
+              <p>
+                <a href="/">
+                  ## The default logo is a placeholder.
+                  ## You can either replace this link entirely or update
+                  ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
+                  ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
+                  ## can be included in the footer on other sites
+                  ## (e.g. a blog or marketing front-end) to provide a consistent
+                  ## user experience.  See the branding app for details.
+                  <img alt="organization logo" src="${static.url('images/logo_nau_w220.png')}">
+                </a>
+              </p>
+            </div>
+
+            ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
+            <p class="copyright">© 2018 - FCT | FCCN, ${_('All rights reserved')}</p>
+
+            <nav class="nav-legal" aria-label="${_('Legal')}">
+            </nav>
+          </div>
+
+          ## Please leave this link and use one of the logos provided
+          ## The OpenEdX link may be hidden when this view is served
+          ## through an API to partner sites (such as marketing sites or blogs),
+          ## which are not technically powered by OpenEdX.
+          <div class="footer-container-logos">
+            % if not hide_openedx_link:
+            <div class="footer-about-openedx">
+              <p>
+                <a href="${footer['openedx_link']['url']}">
+                  <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
+                </a>
+              </p>
+            </div>
+            % endif
+            <div class="footer-logo-partner">
+              <p>       
+                <a href="http://www.incode2030.gov.pt/">
+                  <img src="${static.url('images/logo_incode2030_v3.png')}">
+                </a>
+              </p>
+              <p>
+                <a href="#">
+                  <img src="${static.url('images/3logos-feder_small.png')}">
+                </a>
+              </p>
+            </div>
+          </div>
+        </footer>
       </div>
-    </footer>
-  </div>
-% else:
-  <div class="wrapper wrapper-footer">
-    <footer id="footer-openedx" class="grid-container"
-      ## When rendering the footer through the branding API,
-      ## the direction may not be set on the parent element,
-      ## so we set it here.
-      % if bidi:
-        dir=${bidi}
-      % endif
-    >
-      <div class="colophon">
-        <nav class="nav-colophon" aria-label="${_('About')}">
-          <ol>
-              <li class="nav-colophon-01">
-                <a id="about" href="/about">${_('About')}</a>
-              </li>
-              <li class="nav-colophon-02">
-                <a id="help" href="/help">${_('Help')}</a>
-              </li>
-          </ol>
-        </nav>
-
-        % if context.get('include_language_selector', footer_language_selector_is_enabled()):
-            <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
-        % endif
-
-        <div class="wrapper-logo">
-          <p>
-            <a href="/">
-              ## The default logo is a placeholder.
-              ## You can either replace this link entirely or update
-              ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
-              ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
-              ## can be included in the footer on other sites
-              ## (e.g. a blog or marketing front-end) to provide a consistent
-              ## user experience.  See the branding app for details.
-              <img alt="organization logo" src="${static.url('images/logo_nau_w220.png')}">
-            </a>
-          </p>
-        </div>
-
-        ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-        <p class="copyright">© 2018 - FCT | FCCN, ${_('All rights reserved')}</p>
-
-        <nav class="nav-legal" aria-label="${_('Legal')}">
-        </nav>
-      </div>
-
-      ## Please leave this link and use one of the logos provided
-      ## The OpenEdX link may be hidden when this view is served
-      ## through an API to partner sites (such as marketing sites or blogs),
-      ## which are not technically powered by OpenEdX.
-      <div class="footer-container-logos">
-        % if not hide_openedx_link:
-        <div class="footer-about-openedx">
-          <p>
-            <a href="${footer['openedx_link']['url']}">
-              <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
-            </a>
-          </p>
-        </div>
-        % endif
-        <div class="footer-logo-partner">
-          <p>       
-            <a href="http://www.incode2030.gov.pt/">
-              <img src="${static.url('images/logo_incode2030_v3.png')}">
-            </a>
-          </p>
-          <p>
-            <a href="#">
-              <img src="${static.url('images/3logos-feder_small.png')}">
-            </a>
-          </p>
-        </div>
-      </div>
-    </footer>
-  </div>
+    % endif
 % endif
 
 ## Service Desk Widget
