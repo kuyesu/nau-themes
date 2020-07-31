@@ -1,5 +1,6 @@
 ## mako
 
+
 <%page expression_filter="h" args="online_help_token, use_cookie_banner=False"/>
 
 <%namespace name='static' file='../static_content.html'/>
@@ -29,6 +30,7 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
     </%block>
 % endif
 
+
 <header class="global-header ${'slim' if course else ''}">
     % if use_cookie_banner:
         ${static.renderReact(
@@ -37,19 +39,9 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
             props={}
         )}
     % endif
-    <div class="main-header">
+    
+    <div class="main-header">        
         <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
-        <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </div>
-        % if user.is_authenticated:
-            <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
-        % else:
-            <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
-        % endif
     </div>
     <div class="mobile-menu hidden" aria-label=${_("More Options")} role="menu" id="mobile-menu"></div>
 </header>
@@ -65,12 +57,13 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
 <![endif]-->
 % endif
 
-% if settings.FEATURES.get('ENABLE_COOKIE_CONSENT', False):
+
+% if settings.FEATURES.get('ENABLE_COOKIE_CONSENT', False) and False:
   <%include file="../widgets/cookie-consent.html" />
 % endif
 
 
-% if header_language_selector_is_enabled() and False:
+% if header_language_selector_is_enabled():
     <% languages = released_languages() %>
     % if len(languages) > 1:
         <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
@@ -79,7 +72,7 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
                 <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
             % else:
                 <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
-            % endif
+            % endif            
             <label><span class="sr">${_("Choose Language")}</span>
             <select class="input select language-selector" id="settings-language-value" name="language">
                 % for language in languages:
@@ -95,7 +88,3 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
     % endif
 % endif
 
-% if header_language_selector_is_enabled() and False:
-  <a href="/i18n/setlang/pt">PT</a> |
-  <a href="/i18n/setlang/en">EN</a>
-% endif

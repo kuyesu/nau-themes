@@ -10,11 +10,124 @@
 <%namespace name='static' file='static_content.html'/>
 
 <%
- assets = "https://www.stage.nau.fccn.pt/wp-content/themes/wp-nau-theme/"
- www = "https://www.stage.nau.fccn.pt"
+    www_pt = static.get_value('NAU_MARKETING_BASE_HREF')["pt-pt"]
+    www_en = static.get_value('NAU_MARKETING_BASE_HREF')["en"]
+
+    if LANGUAGE_CODE == "pt-pt":
+        footer_menu = static.get_value('NAU_FOOTER_MENU')["pt-pt"]
+    else:
+        footer_menu = static.get_value('NAU_FOOTER_MENU')["en"]
+    endif 
 %> 
 
+
 <footer> 
+
+    <!-- starts footer links -->
+    <section id="footer-links">        
+        <!-- starts quick links -->
+
+        <div id="quick-links-section">
+
+            <ul id="footer" class="menu">
+                
+                % for title in footer_menu:
+                <li class='footer-links-structure'>
+                  <h5>${title}</h5>
+                  <ul>
+                    %for label in footer_menu[title]:
+                      <% link = footer_menu[title][label] %>
+                      <li><a href='${link}'>${label}</a></li>
+                    %endfor
+                  </ul>
+                </li>
+                % endfor
+
+            <!-- starts social media -->
+            <ul>
+                <li class="footer-links-structure">
+                    <h5>Redes Sociais</h5>
+                    <ul id="social-media">
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["twitter"]}"><img src="/static/nau-basic/images/twitter.svg" alt="twitter logo" title="${_('Share on Twitter')}"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["linkedin"]}"><img src="/static/nau-basic/images/linkedin.svg" alt="Linkedin logo" title="${_('Share on LinkedIn')}"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["facebook"]}" id="facebook-share-btt" rel="nofollow" target="_blank" title="${_('Share on Facebook')}" class=""><img src="/static/nau-basic/images/facebook.svg" alt="Facebook logo" title="Share on Facebook"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["instagram"]}"><img src="/static/nau-basic/images/instagram.svg" alt="Instagram logo" title="${_('Share on Instagram')}"></a></li>
+                        <!--- <li><a href=""><img src="/static/nau-basic/images/more-share.svg" alt="Share list" title="${_('Share')}"></a></li> --->
+                        <li id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="/static/nau-basic/images/openedx.svg" alt="Powered by OpenEdX" title="${_('Visit OpenEdx webiste')}"></a></li>      
+                    </ul>
+                </li>
+            </ul>      
+        <!-- ends social media -->     
+        </div>
+    </section>
+    <!-- ends footer links -->  
+
+% if LANGUAGE_CODE == "pt-ptx":
+
+    <!-- starts footer links -->
+    <section id="footer-links">        
+        <!-- starts quick links -->
+
+        <div id="quick-links-section">
+
+            <ul id="footer" class="menu">
+            
+            
+                <li class='footer-links-structure'>
+                    <h5>Ligações Rápidas</h5>
+                    <ul>
+                        <li><a href='${www_pt}/entidades/'>Entidade</a></li>
+                        <li><a href='${www_pt}/categorias/'>Categorias</a></li>
+                        <li><a href='${www_pt}/cursos/'>Cursos</a></li>
+                    </ul>
+                </li>
+
+                <li class='footer-links-structure'>
+                    <h5>Ajuda</h5>
+                    <ul>
+                        <li><a href='${www_pt}/ajuda/'>Serviços de Suporte</a></li>
+                        <li><a href='${www_pt}/ajuda/perguntas-frequentes/'>Perguntas Frequentes</a></li></a></li>
+                        <li><a href='${www_pt}/42-2/formacoes/'>Formação</a></li>
+                        <li><a href='${www_pt}/sobre/comunidades-nau/'>Comunidades NAU</a></li>
+                    </ul>
+                </li>
+
+                <li class='footer-links-structure'>
+                    <h5>Acerca</h5>
+                    <ul>
+                        <li><a href='${www_pt}/sobre/'>Acerca da NAU</a></li>
+                        <li><a href='${www_pt}/noticias/'>Noticias</a></li>
+                        <li><a href='${www_pt}/sobre/material-de-divulgacao/'>Marketing Digital</a></li>
+                        <li><a href='${www_pt}/sobre/contactos/'>Contactos</a></li>
+                        <li><a href='${www_pt}/sobre/politica-de-privacidade/'>Política de Privacidade</a></li>
+                        <li><a href='${www_pt}/sobre/termos-e-condicoes/'>Termos e Condições</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- starts social media -->
+            <ul>
+                <li class="footer-links-structure">
+                    <h5>Redes Sociais</h5>
+                    <ul id="social-media">
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["twitter"]}"><img src="/static/nau-basic/images/twitter.svg" alt="twitter logo" title="${_('Share on Twitter')}"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["linkedin"]}"><img src="/static/nau-basic/images/linkedin.svg" alt="Linkedin logo" title="${_('Share on LinkedIn')}"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["facebook"]}" id="facebook-share-btt" rel="nofollow" target="_blank" title="${_('Share on Facebook')}" class=""><img src="/static/nau-basic/images/facebook.svg" alt="Facebook logo" title="Share on Facebook"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["instagram"]}"><img src="/static/nau-basic/images/instagram.svg" alt="Instagram logo" title="${_('Share on Instagram')}"></a></li>
+                        <!--- <li><a href=""><img src="/static/nau-basic/images/more-share.svg" alt="Share list" title="${_('Share')}"></a></li> --->
+                        <li id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="/static/nau-basic/images/openedx.svg" alt="Powered by OpenEdX" title="${_('Visit OpenEdx webiste')}"></a></li>      
+                    </ul>
+                </li>
+            </ul>      
+        <!-- ends social media -->     
+        </div>
+    </section>
+    <!-- ends footer links -->   
+  
+% endif  
+  
+% if LANGUAGE_CODE == "enx":
+
     <!-- starts footer links -->
     <section id="footer-links">        
         <!-- starts quick links -->
@@ -25,31 +138,31 @@
                 <li class='footer-links-structure'>
                     <h5>${_('Quick Links')}</h5>
                     <ul>
-                        <li><a href='${www}/entidades/'>${_('Entities')}</a></li>
-                        <li><a href='${www}/categorias/'>${_('Categories')}</a></li>
-                        <li><a href='${www}/cursos/'>${_('Courses')}</a></li>
+                        <li><a href='${www_en}/entidades/'>Entities</a></li>
+                        <li><a href='${www_en}/categorias/'>Categories</a></li>
+                        <li><a href='${www_en}/cursos/'>Courses</a></li>
                     </ul>
                 </li>
 
                 <li class='footer-links-structure'>
                     <h5>${_('Help')}</h5>
                     <ul>
-                        <li><a href='${www}/ajuda/'>${_('Support Services')}</a></li>
-                        <li><a href='${www}/ajuda/perguntas-frequentes/'>${_('Frequent Asked Questions')}</a></li></a></li>
-                        <li><a href='${www}/42-2/formacoes/'>${_('Trainning')}</a></li>
-                        <li><a href='${www}/sobre/comunidades-nau/'>${_('NAU Communities')}</a></li>
+                        <li><a href='${www_en}/ajuda/'>Support Services</a></li>
+                        <li><a href='${www_en}/ajuda/perguntas-frequentes/'>Frequent Asked Questions</a></li></a></li>
+                        <li><a href='${www_en}/42-2/formacoes/'>Trainning</a></li>
+                        <li><a href='${www_en}/sobre/comunidades-nau/'>NAU Communities</a></li>
                     </ul>
                 </li>
 
                 <li class='footer-links-structure'>
                     <h5>${_('About')}</h5>
                     <ul>
-                        <li><a href='${www}/sobre/'>${_('About NAU')}</a></li>
-                        <li><a href='${www}/noticias/'>${_('News')}</a></li>
-                        <li><a href='${www}/sobre/material-de-divulgacao/'>${_('Marketing Materials')}</a></li>
-                        <li><a href='${www}/sobre/contactos/'>${_('Contacts')}</a></li>
-                        <li><a href='${www}/sobre/politica-de-privacidade/'>${_('Privacy Policy')}</a></li>
-                        <li><a href='${www}/sobre/termos-e-condicoes/'>${_('Terms & Conditions')}</a></li>
+                        <li><a href='${www_en}/sobre/'>About NAU</a></li>
+                        <li><a href='${www_en}/noticias/'>News</a></li>
+                        <li><a href='${www_en}/sobre/material-de-divulgacao/'>Marketing Materials</a></li>
+                        <li><a href='${www_en}/sobre/contactos/'>Contacts</a></li>
+                        <li><a href='${www_en}/sobre/politica-de-privacidade/'>Privacy Policy</a></li>
+                        <li><a href='${www_en}/sobre/termos-e-condicoes/'>Terms & Conditions</a></li>
                     </ul>
                 </li>
             </ul>
@@ -59,12 +172,12 @@
                 <li class="footer-links-structure">
                     <h5>${_('Social Media')}</h5>
                     <ul id="social-media">
-                        <li><a href=""><img src="${assets}assets/img/twitter.svg" alt="twitter logo" title="${_('Share on Twitter')}"></a></li>
-                        <li><a href=""><img src="${assets}assets/img/linkedin.svg" alt="Linkedin logo" title="${_('Share on LinkedIn')}"></a></li>
-                        <li><a href="https://facebook/nau" id="facebook-share-btt" rel="nofollow" target="_blank" title="${_('Share on Facebook')}" class=""><img src="${assets}assets/img/facebook.svg" alt="Facebook logo" title="Share on Facebook"></a></li>
-                        <li><a href=""><img src="${assets}assets/img/instagram.svg" alt="Instagram logo" title="${_('Share on Instagram')}"></a></li>
-                        <li><a href=""><img src="${assets}assets/img/more-share.svg" alt="Share list" title="${_('Share')}"></a></li>
-                        <li id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="${assets}assets/img/openedx.svg" alt="Powered by OpenEdX" title="${_('Visit OpenEdx webiste')}"></a></li>      
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["twitter"]}"><img src="/static/nau-basic/images/twitter.svg" alt="twitter logo" title="Share on Twitter"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["linkedin"]}"><img src="/static/nau-basic/images/linkedin.svg" alt="Linkedin logo" title="Share on LinkedIn"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["facebook"]}" id="facebook-share-btt" rel="nofollow" target="_blank" title="Share on Facebook" class=""><img src="/static/nau-basic/images/facebook.svg" alt="Facebook logo" title="Share on Facebook"></a></li>
+                        <li><a href="${static.get_value('NAU_SOCIAL_MEDIA')["instagram"]}"><img src="/static/nau-basic/images/instagram.svg" alt="Instagram logo" title="Share on Instagram"></a></li>
+                        <!--- <li><a href=""><img src="/static/nau-basic/images/more-share.svg" alt="Share list" title="${_('Share')}"></a></li> --->
+                        <li id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="/static/nau-basic/images/openedx.svg" alt="Powered by OpenEdX" title="Visit OpenEdx webiste"></a></li>
                     </ul>
                 </li>
             </ul>      
@@ -72,14 +185,21 @@
         </div>
     </section>
     <!-- ends footer links -->   
+  
+% endif    
+
+
+
+    
+    
     <!-- starts corporate entities -->
     <section id="entities-quick-links">        
     <ul class="flex-row">
-    <li><a href="https://nau.edu.pt"><img id="logo-nau" src="${assets}assets/img/nau_sempre_aprender.svg" alt="Logo NAU" title="NAU - Sempre a Aprender"></a>
+    <li><a href="https://nau.edu.pt"><img id="logo-nau" src="/static/nau-basic/images/nau_sempre_aprender.svg" alt="Logo NAU" title="NAU - Sempre a Aprender"></a>
     <span id="copyright" >&copy; 2020 - FCT|FCCN. Todos os direitos reservados.</span>
     </li>
-    <li><a id="logo-compete" href="https://www.fccn.pt/financiamento-projeto-nau/"><img src="${assets}assets/img/co-financed.png" alt="Logos: Compete, Portugal 2020 e União Europeia - Fundo Europeu de Desenvolvimento Regional"  title="Compete 2020, Portugal 2020 e União Europeia - Fundo Europeu de Desenvolvimento Regional"></a></li>
-    <li><a id="logo-incode2030" href="https://www.incode2030.gov.pt/" target="_blank"><img src="${assets}assets/img/incode.png" alt="Portugal - INcode2030" title="Visitar o site INcode.2030"></a></li>  
+    <li><a id="logo-compete" href="https://www.fccn.pt/financiamento-projeto-nau/"><img src="/static/nau-basic/images/co-financed.png" alt="Logos: Compete, Portugal 2020 e União Europeia - Fundo Europeu de Desenvolvimento Regional"  title="Compete 2020, Portugal 2020 e União Europeia - Fundo Europeu de Desenvolvimento Regional"></a></li>
+    <li><a id="logo-incode2030" href="https://www.incode2030.gov.pt/" target="_blank"><img src="/static/nau-basic/images/incode.png" alt="Portugal - INcode2030" title="Visitar o site INcode.2030"></a></li>  
     </ul>
     </section>
     <!-- ends corporate entities --> 
@@ -242,7 +362,7 @@
         </footer>
       </div>
     % endif
-%endif
+% endif
 
 ## Service Desk Widget
 <script data-jsd-embedded data-key="c19e6a24-a1f6-4a84-aa46-89e82b94b809" data-base-url="https://jsd-widget.atlassian.com" src="https://jsd-widget.atlassian.com/assets/embed.js"></script>
