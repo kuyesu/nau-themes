@@ -7,16 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2020-07-30 02:16+0100\n"
-"PO-Revision-Date: 2020-07-30 02:12+0100\n"
+"POT-Creation-Date: 2020-08-04 02:39+0100\n"
+"PO-Revision-Date: 2020-08-04 02:44+0100\n"
 "Last-Translator: \n"
 "Language: pt_PT\n"
 "Language-Team: pt_BR <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"X-Generator: Poedit 2.4\n"
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:1
 msgid "Sign-in"
@@ -31,6 +32,20 @@ msgstr "Entrar"
 #: edx-platform/nau-basic/lms/templates/header/navbar-not-authenticated.html:37
 msgid "Register"
 msgstr "Registar"
+
+#: edx-platform/nau-basic/cms/templates/force-translations.html:3
+msgid ""
+"This account has been temporarily locked due to excessive login failures. Try "
+"again later."
+msgstr ""
+"Esta conta foi temporariamente suspensa devido a tentativa excessiva de "
+"acesso. Aguarde 15 minutos antes de tentar novamente."
+
+#: edx-platform/nau-basic/cms/templates/force-translations.html:4
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:50
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:67
+msgid "Exit"
+msgstr "Sair"
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:19
 msgid "Policies"
@@ -67,8 +82,8 @@ msgid ""
 "EdX, Open edX, Studio, and the edX and Open edX logos are registered "
 "trademarks or trademarks of {link_start}edX Inc.{link_end}"
 msgstr ""
-"EDX, Open EDX, Studio e os logotipos EDX e Open edX são marcas "
-"registradas ou marcas registradas da {link_start} edX Inc. {link_end}"
+"EDX, Open EDX, Studio e os logotipos EDX e Open edX são marcas registradas ou "
+"marcas registradas da {link_start} edX Inc. {link_end}"
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:56
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:57
@@ -195,7 +210,9 @@ msgstr "Escolher Idioma"
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:222
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:235
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:40
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:40
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:37
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:65
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:104
 msgid "Account"
 msgstr "Conta"
 
@@ -215,7 +232,6 @@ msgstr "Ajuda de Contexto"
 #: edx-platform/nau-basic/lms/templates/footer.html:227
 #: edx-platform/nau-basic/lms/templates/footer.html:304
 #: edx-platform/nau-basic/lms/templates/header/base_navbar-authenticated.html:46
-#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:46
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:7
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:12
 msgid "Help"
@@ -264,7 +280,7 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/footer.html:139
 msgid "Quick Links"
-msgstr ""
+msgstr "Links Rápidos"
 
 #: edx-platform/nau-basic/lms/templates/footer.html:158
 #: edx-platform/nau-basic/lms/templates/footer.html:221
@@ -321,7 +337,7 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/login.html:137
 msgid "Please log in"
-msgstr ""
+msgstr "Por favor ente"
 
 #: edx-platform/nau-basic/lms/templates/login.html:138
 msgid "to access your account and courses"
@@ -337,7 +353,7 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/login.html:156
 msgid "Your email or password is incorrect"
-msgstr ""
+msgstr "O seu e-mail ou palavra passe não está correto"
 
 #: edx-platform/nau-basic/lms/templates/login.html:166
 msgid "An error occurred when signing you in to {platform_name}."
@@ -345,9 +361,9 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/login.html:174
 msgid ""
-"Please provide the following information to log into your {platform_name}"
-" account. Required fields are noted by <strong class=\"indicator\">bold "
-"text and an asterisk (*)</strong>."
+"Please provide the following information to log into your {platform_name} "
+"account. Required fields are noted by <strong class=\"indicator\">bold text "
+"and an asterisk (*)</strong>."
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/login.html:178
@@ -356,11 +372,11 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/login.html:182
 msgid "E-mail or username"
-msgstr ""
+msgstr "E-mail ou nome de utilizador"
 
 #: edx-platform/nau-basic/lms/templates/login.html:183
 msgid "example: username@domain.com"
-msgstr ""
+msgstr "exemplo: utilizador@dominio.pt"
 
 #: edx-platform/nau-basic/lms/templates/login.html:184
 msgid "This is the e-mail address you used to register with {platform}"
@@ -368,11 +384,11 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/login.html:187
 msgid "Password"
-msgstr ""
+msgstr "Palavra passe"
 
 #: edx-platform/nau-basic/lms/templates/login.html:190
 msgid "Forgot password?"
-msgstr ""
+msgstr "Esqueceu-se da password?"
 
 #: edx-platform/nau-basic/lms/templates/login.html:197
 msgid "Account Preferences"
@@ -441,8 +457,8 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/_edx-accomplishment-print-help.html:10
 msgid ""
-"For tips and tricks on printing your certificate, view the "
-"{link_start}Web Certificates help documentation{link_end}."
+"For tips and tricks on printing your certificate, view the {link_start}Web "
+"Certificates help documentation{link_end}."
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/invalid.html:9
@@ -451,10 +467,9 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/invalid.html:11
 msgid ""
-"We cannot find a certificate with this URL or ID number. If you are "
-"trying to validate a certificate, make sure that the URL or ID number is "
-"correct. If you are sure that the URL or ID number is correct, contact "
-"support."
+"We cannot find a certificate with this URL or ID number. If you are trying to "
+"validate a certificate, make sure that the URL or ID number is correct. If "
+"you are sure that the URL or ID number is correct, contact support."
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/invalid.html:15
@@ -471,8 +486,8 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/server-error.html:14
 msgid ""
-"To resolve the problem, your partner manager should verify that the "
-"following information is correct."
+"To resolve the problem, your partner manager should verify that the following "
+"information is correct."
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/server-error.html:17
@@ -495,7 +510,7 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/valid.html:12
 msgid "About edX Certificates"
-msgstr ""
+msgstr "Acerca dos Certificados NAU"
 
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:44
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:82
@@ -505,16 +520,15 @@ msgstr "Ocorreu um erro. Por favor tente novamente."
 
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:66
 msgid ""
-"The currently logged-in user account does not have permission to enroll "
-"in this course. You may need to {start_logout_tag}log out{end_tag} then "
-"try the enroll button again. Please visit the {start_help_tag}help "
-"page{end_tag} for a possible solution."
+"The currently logged-in user account does not have permission to enroll in "
+"this course. You may need to {start_logout_tag}log out{end_tag} then try the "
+"enroll button again. Please visit the {start_help_tag}help page{end_tag} for "
+"a possible solution."
 msgstr ""
 "A conta de utilizador utilizada de momento não possui permissão para se "
-"inscrever neste curso. Talvez seja necessário "
-"{start_logout_tag}sair{end_tag} e, em seguida, tentar novamente o botão "
-"de inscrição. Visite a {start_help_tag}página de ajuda{end_tag} para "
-"obter uma possível solução."
+"inscrever neste curso. Talvez seja necessário {start_logout_tag}sair{end_tag} "
+"e, em seguida, tentar novamente o botão de inscrição. Visite a "
+"{start_help_tag}página de ajuda{end_tag} para obter uma possível solução."
 
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:137
 msgid "You are enrolled in this course"
@@ -578,8 +592,8 @@ msgstr "Pré-requisitos"
 
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:299
 msgid ""
-"You must successfully complete {link_start}{prc_display}{link_end} before"
-" you begin this course."
+"You must successfully complete {link_start}{prc_display}{link_end} before you "
+"begin this course."
 msgstr ""
 "Deve concluir com sucesso {link_start}{prc_display}{link_end} antes de "
 "iniciar este curso."
@@ -629,19 +643,23 @@ msgstr "Refinar a sua Pesquisa"
 
 #: edx-platform/nau-basic/lms/templates/header/base_navbar-authenticated.html:33
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:39
-#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:33
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:39
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:29
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:38
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:66
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:103
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:105
 msgid "Profile"
 msgstr "Perfil"
 
 #: edx-platform/nau-basic/lms/templates/header/base_navbar-authenticated.html:41
-#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:41
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:34
 msgid "Shopping Cart"
 msgstr "Carrinho de Compras"
 
 #: edx-platform/nau-basic/lms/templates/header/base_navbar-not-authenticated.html:23
 #: edx-platform/nau-basic/lms/templates/header/base_navbar-not-authenticated.html:53
 #: edx-platform/nau-basic/lms/templates/header/navbar-not-authenticated.html:23
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:27
 msgid "Supplemental Links"
 msgstr ""
 
@@ -655,69 +673,81 @@ msgid "Sign in"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:26
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:26
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:89
 msgid "Dashboard for:"
 msgstr "Painel para:"
 
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:31
-#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:213
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:31
+#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:229
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:95
 msgid "Options Menu"
 msgstr "Menu de opções"
 
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:34
 #: edx-platform/nau-basic/lms/templates/header/header.html:46
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:34
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:98
 msgid "More Options"
 msgstr "Mais Opções"
 
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:36
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:36
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:33
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:62
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:100
 msgid "Resume your last course"
 msgstr "Voltar ao último curso"
 
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:38
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:38
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:36
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:64
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:102
 msgid "Dashboard"
 msgstr "Painel"
 
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:41
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:41
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:80
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:106
 msgid "Sign Out"
 msgstr "Terminar Sessão"
 
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:46
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:46
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:43
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:72
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:111
 msgid "Sysadmin"
 msgstr "Sysadmin"
 
 #: edx-platform/nau-basic/lms/templates/header/header.html:51
 msgid ""
-"{begin_strong}Warning:{end_strong} Your browser is not fully supported. "
-"We strongly recommend using {chrome_link} or {ff_link}."
+"{begin_strong}Warning:{end_strong} Your browser is not fully supported. We "
+"strongly recommend using {chrome_link} or {ff_link}."
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:35
 msgid "{platform_name} Home Page"
 msgstr "{platform_name} Página Inicial"
 
+#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:189
+#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:198
+msgid "Search..."
+msgstr "Procurar..."
+
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:13
 msgid ""
 "NAU - Always Learning is a technical infrastructure which publishes  and "
-"provides support to Massive Open courses aimed at public administration "
-"and Higher Education."
+"provides support to Massive Open courses aimed at public administration and "
+"Higher Education."
 msgstr ""
-"A NAU - Sempre a Aprender é a infraestrutura técnica de publicação e "
-"serviços de acompanhamento de cursos para grandes audiências orientado "
-"para a Administração Pública e Ensino Superior."
+"A NAU - Sempre a Aprender é a infraestrutura técnica de publicação e serviços "
+"de acompanhamento de cursos para grandes audiências orientado para a "
+"Administração Pública e Ensino Superior."
 
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:16
 msgid ""
-"This platform was created within the scope of NAU Project launched in "
-"October 1st 2017 with the following partners:"
+"This platform was created within the scope of NAU Project launched in October "
+"1st 2017 with the following partners:"
 msgstr ""
-"Esta plataforma foi criada no âmbito do Projeto NAU, iniciado em 1 de "
-"Outubro 2017 com os parceiros:"
+"Esta plataforma foi criada no âmbito do Projeto NAU, iniciado em 1 de Outubro "
+"2017 com os parceiros:"
 
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:27
 msgid "NAU Project"
@@ -725,19 +755,18 @@ msgstr "Projeto NAU"
 
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:29
 msgid ""
-"A national iniciative, led by the Foundation for Science and Technology, "
-"to build and operate a technical infrastructure which supports and "
-"operates a platform that publishes content to big audiences, such as MOOC"
-" courses. This initiative, cross-sectional to several ministries and open"
-" to society, will facilitate training to a larger number of civil "
-"servants and citizens."
+"A national iniciative, led by the Foundation for Science and Technology, to "
+"build and operate a technical infrastructure which supports and operates a "
+"platform that publishes content to big audiences, such as MOOC courses. This "
+"initiative, cross-sectional to several ministries and open to society, will "
+"facilitate training to a larger number of civil servants and citizens."
 msgstr ""
-"Iniciativa nacional, liderada pela FCT, para construção e operação de uma"
-" infraestrutura técnica e operacional de suporte à publicação e "
-"dinamização de conteúdos para grandes audiências, nomeadamente, em "
-"formato MOOC. Esta iniciativa, transversal a diversos ministérios e "
-"aberta à sociedade, permitirá desenvolver ações de formação para um maior"
-" número de funcionários e cidadãos."
+"Iniciativa nacional, liderada pela FCT, para construção e operação de uma "
+"infraestrutura técnica e operacional de suporte à publicação e dinamização de "
+"conteúdos para grandes audiências, nomeadamente, em formato MOOC. Esta "
+"iniciativa, transversal a diversos ministérios e aberta à sociedade, "
+"permitirá desenvolver ações de formação para um maior número de funcionários "
+"e cidadãos."
 
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:31
 msgid "Explore the NAU Project at: "
@@ -751,12 +780,12 @@ msgstr "Contacto"
 #: edx-platform/nau-basic/lms/templates/static_templates/contact.html:14
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:14
 msgid ""
-"The NAU team is always available to help you. Search through our "
-"{link_start} knoledge base{link_end} or contact us through:"
+"The NAU team is always available to help you. Search through our {link_start} "
+"knoledge base{link_end} or contact us through:"
 msgstr ""
-"A equipa da Plataforma NAU está sempre disponível para o ajudar. Consulte"
-" a nossa  {link_start}base de conhecimento{link_end}  ou entre em "
-"contacto conosco através dos seguintes contactos:"
+"A equipa da Plataforma NAU está sempre disponível para o ajudar. Consulte a "
+"nossa  {link_start}base de conhecimento{link_end}  ou entre em contacto "
+"conosco através dos seguintes contactos:"
 
 #: edx-platform/nau-basic/lms/templates/static_templates/contact.html:16
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:16
@@ -781,8 +810,8 @@ msgstr "Código de Honra"
 #: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:20
 msgid ""
 "This website uses cookies to ensure you get the best experience on our "
-"website. If you continue browsing this site, we understand that you "
-"accept the use of cookies."
+"website. If you continue browsing this site, we understand that you accept "
+"the use of cookies."
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:21
@@ -791,7 +820,7 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:22
 msgid "Learn more"
-msgstr ""
+msgstr "Saber mais"
 
 #~ msgid "Code of honor"
 #~ msgstr "Código de Honra"
@@ -819,4 +848,3 @@ msgstr ""
 
 #~ msgid "Explore Courses"
 #~ msgstr "Explorar Cursos"
-

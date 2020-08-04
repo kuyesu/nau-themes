@@ -102,16 +102,33 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
 % endif
 
 
+<script>
+// starts menu opening and closing button for menu: cross
+function openNav() {
+  document.getElementById("menu-container").style.cssText = "left:0px;";
+  document.getElementById("open-menu-arrow").style.cssText = "display:none;"; 
+  document.getElementById("close-menu-arrow").style.cssText = "display:block";
+  document.getElementById("menu-overlay").style.cssText = "display:block;background: #000; opacity:0.5;"; 
+}
+function closeNav() {
+  document.getElementById("menu-container").style.cssText = "left:-375px";
+  document.getElementById("open-menu-arrow").style.cssText = "display:block;";
+  document.getElementById("close-menu-arrow").style.cssText = "display:none";  
+  document.getElementById("menu-overlay").style.cssText = "display:none;"; 
+}
+// ends menu opening and closing button for menu: cross
+</script>
+
 <div id="branding-top-nav">
 
-    <a id="open-menu-arrow" href="javascript:void()" onclick="openNav()" title="Abrir">&#9776;</a>  
+    <a id="open-menu-arrow" href="javascript:void(0)" onclick="openNav(0)" title="Abrir">&#9776;</a>  
     <a href="${www_pt}"><img id="logo" src="/static/nau-basic/images/nau_sempre_aprender.svg" alt="NAU logo"></a> 
 
     <!-- starts menu container -->
     <div id="menu-container">
 
       <!-- starts top nav menu -->
-      <a id="close-menu-arrow" href="javascript:void()" onclick="closeNav()" title="Fechar">&#10005;</a>
+      <a id="close-menu-arrow" href="javascript:void(0)" onclick="closeNav(0)" title="Fechar">&#10005;</a>
       <div class="nav-icon"></div>
 
       <ul id="about-categories-entities" class="menu">
@@ -169,7 +186,7 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
   
           <!-- starts top nav search bar -->          
           <form id="search-form" action="${www_pt}" role="search" method="get">
-            <input id="s" name="s" type="search" placeholder="Pesquisar Cursos..." value="">
+            <input id="s" name="s" type="search" placeholder="${_("Search...")}" value="">
             <input name="submit-search" class="nav-search" style="box-shadow: none;" type="submit">
           </form>
           <!-- ends top nav search bar -->
@@ -178,7 +195,7 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
 
           <!-- starts top nav search bar -->          
           <form id="search-form" action="${www_en}" role="search" method="get">
-            <input id="s" name="s" type="search" placeholder="Search Courses..." value="">
+            <input id="s" name="s" type="search" placeholder="${_("Search...")}" value="">
             <input name="submit-search" class="nav-search" style="box-shadow: none;" type="submit">
           </form>
           <!-- ends top nav search bar -->
@@ -230,9 +247,7 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
 
 
 <!-- ends branding container -->
-<div id="menu-overlay" onclick="closeNav()"></div>
-
-
+<div id="menu-overlay" onclick="closeNav(0)"></div>
 
   % if course:
     <div class="course-header">
