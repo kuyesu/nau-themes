@@ -26,12 +26,13 @@ displayname = get_enterprise_learner_generic_name(request) or username
 
       <ul id="menu_login_register" class="login_menu" aria-label=${_("Supplemental Links")}>      
           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-            <a href="${reverse('learner_profile', args=[self.real_user.username])}" class="menu-title">${_("Profile")}
-            <ul class="sub-nav menu-depth-0">
-
+            <a href="${reverse('learner_profile', args=[self.real_user.username])}" class="menu-title">${_("Profile")}</a>
+            <ul class="sub-nav access-menu menu-depth-0">
+            
               % if resume_block:
                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${resume_block}">${_("Resume your last course")}</a></li>
               % endif
+              
               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${reverse('dashboard')}">${_("Dashboard")}</a></li>
               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${reverse('account_settings')}">${_("Account")}</a></li>
               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a class="${'active ' if '/u/' in request.path  else ''}tab-nav-link" href="${reverse('learner_profile', args=[self.real_user.username])}">${_("Profile")}</a></li>
