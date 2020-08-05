@@ -303,8 +303,11 @@ footer {
                     width: auto;
                     margin-left: 50px;
                     margin-top: 10px;
-                    a {
-                        padding: 5px;
+                    li {
+                        padding: 0;                    
+                        a {
+                          padding-right: 10px;
+                        }
                     }
                     #openedx-logo {
                         display: block;
@@ -321,9 +324,9 @@ footer {
                         font-size: 13px;
                         line-height: 1.6em;
                         display: inline;
+                        padding-left: 50px;
                         a {
-                            font: Regular 14px/*24px*/
-                            Roboto;
+                            font: Regular 14px Roboto;
                             letter-spacing: 0;
                             color: #707070;
                             opacity: 1;
@@ -332,7 +335,6 @@ footer {
                             font-weight: normal;
                             padding: 0;
                             margin: 0;
-                            padding-left: 50px;
                         }
                     }
                 }
@@ -1120,7 +1122,7 @@ textarea {
 
 /* --------------- Override HM --------------- */
 
-body.ltr {
+body.ltr, body.view-wiki {
     background: linear-gradient(0, #444 0, #666 100%);
 }
 
@@ -1332,6 +1334,7 @@ button.bookmark-button:hover { text-decoration: none !important; }
 .sequence-bottom button.sequence-nav-button,
 .sequence-nav button.sequence-nav-button { color: #0553ff !important; border-bottom: 3px solid #0553ff !important; }
 #sequence-list li button.seq_video { border-color: #0553ff !important; }
+#sequence-list li button span.seq_other,
 #sequence-list li button.seq_video span.icon { color: #0553ff !important; }
 .wrapper-downloads a { color: #0553ff !important; background-color: transparent !important; font-weight: normal !important; }
 .subtitles li a, .subtitles li span { color: #0553ff !important; }
@@ -1515,7 +1518,7 @@ div#branding-top-nav a#open-menu-arrow {
   }
   #branding-top-nav li {
     list-style-type: none;
-    background: transparent url(../img/arrow-dropdown.svg) no-repeat right center;
+    background: transparent url("/static/nau-basic/images/arrow-dropdown.svg") no-repeat right center;
     background-size: 12px;
     letter-spacing: 0.5px;
     margin-right: 0;
@@ -1696,5 +1699,44 @@ header.page-header h2 {
 
 #entities-quick-links ul {
     padding-left: 0;
+}
+
+:not(.course-header) { box-sizing: unset; }
+footer section#entities-quick-links ul.flex-row { margin-bottom: 0; }
+body.ltr .global-header, body.view-wiki .global-header { overflow: visible; }
+body.ltr #search-form input[name="submit-search"] { top: 0 !important; right: 40px !important; }
+body.view-wiki #search-form input[name="submit-search"],
+body.view-in-course #search-form input[name="submit-search"] { top: -7px !important; right: 40px !important; }
+aside.page-content-secondary a { color: #0553ff; }
+.sequence-list-wrapper #sequence-list li button { height: 53px; border-bottom: 3px solid #0553ff; }
+.sequence-list-wrapper #sequence-list li button:hover,
+.sequence-list-wrapper #sequence-list li button:active { border-bottom-color: #333 !important; padding-top: 0; }
+.sequence-list-wrapper #sequence-list li button:hover span,
+.sequence-list-wrapper #sequence-list li button:active span { color: #333 !important; }
+.sequence-nav button:hover,
+.sequence-nav button:active { padding-top: 0 !important; color: #333 !important; border-bottom-color: #333 !important; }
+.breadcrumbs .nav-item.nav-item-course,
+.breadcrumbs .fa-angle-right { vertical-align: top; }
+.breadcrumbs .fa-angle-right { margin-top: 3px; }
+.wrapper-course-details h3 a { color: #0553ff !important; }
+.wrapper-course-details h3 a:hover,
+.wrapper-course-details h3 a:active { color: #333 !important; }
+.wrapper-course-details .course-actions a { border: 0 !important; font-size: 13px !important; padding: 0.4em 1em !important; margin-bottom: 0.3em; }
+.wrapper-course-details .course-actions a:hover,
+.wrapper-course-details .course-actions a:active { background-color: #333 !important; }
+.wrapper-course-details .course-actions .wrapper-action-more { position: absolute !important; bottom: 0 !important; }
+.wrapper-course-details .course-actions .wrapper-action-more .action-unenroll { background-color: transparent !important; color: #0553ff !important; text-decoration: none; text-align: left !important; }
+.dashboard .main-container .my-courses .course .wrapper-course-image a img { margin: 0 auto !important; }
+
+a.btn.btn-primary.action-resume-course {
+    padding: 12px;
+}
+
+button.btn.btn-outline-primary.search-button {
+    color: white !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    font-size: 12pt;
+    font-weight: bold !important;
 }
 
