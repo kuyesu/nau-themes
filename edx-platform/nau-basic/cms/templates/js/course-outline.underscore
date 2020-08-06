@@ -274,11 +274,10 @@ if (is_proctored_exam) {
                 >
                     <span class="icon fa fa-plus" aria-hidden="true"></span>                    
                     <% if (childCategory == "chapter") { %>
-                    <%- interpolate(gettext('New Chapter'), true) %>
-                      <% } else { %>                              
-                        <%- addChildLabel %>
+                      <%- interpolate(gettext('New Chapter'), true) %>
+                    <% } else { %>                              
+                      <%- addChildLabel %>* (<%- childCategory %>)
                     <% } %>
-                    <%- childCategory %>
                 </a>
             </p>
         </div>
