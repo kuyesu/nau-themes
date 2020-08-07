@@ -1740,3 +1740,30 @@ button.btn.btn-outline-primary.search-button {
     font-weight: bold !important;
 }
 
+
+
+.search-bar .search-field-wrapper {    
+    
+    input#dashboard-search-input.search-field {
+        border: solid 1px gray;
+        border-radius: 50px 0 0 50px;
+        width: 60%;
+    }
+    
+    button.search-button {                
+        border-radius: 0 !important;
+        display: block;
+        width: 20%;
+        margin: 0;
+        margin-right: 20%;
+        border: solid 1px gray;        
+    }
+    
+    button.cancel-button {        
+        border-radius: 0 50px 50px 0;
+        border: solid 1px gray;
+        display: block;
+        width: 20%;        
+        margin: 0;        
+    }
+}
