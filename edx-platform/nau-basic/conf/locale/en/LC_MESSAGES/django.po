@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2020-08-06 12:13+0100\n"
+"POT-Creation-Date: 2020-08-07 16:53+0100\n"
 "PO-Revision-Date: 2020-08-05 17:03+0100\n"
 "Last-Translator: \n"
 "Language: en\n"
@@ -740,6 +740,10 @@ msgstr ""
 #: edx-platform/nau-basic/cms/templates/force-translations.html:11
 msgid "View Archived Course"
 msgstr "View Archive"
+
+#: edx-platform/nau-basic/cms/templates/force-translations.html:12
+msgid "I authorize data processing for this site"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/howitworks.html:11
 msgid "Welcome"
