@@ -452,7 +452,7 @@ textarea {
 }
 
 input[type="email"] {
-    border: 0px;
+    /* border: 0px; */
     border-bottom: solid 1px red;
 }
 
@@ -990,6 +990,8 @@ input[type="password"],
 input[type="email"],
 input[type="text"],
 textarea {
+    font-size: 14px !important;
+
     box-shadow: none;
     border-left: none;
     border-right: none;
@@ -1307,13 +1309,7 @@ input:focus {
     font-weight: bold !important;
 }
 
-input[type="password"],
-input[type="email"],
-input[type="text"],
-textarea {
-    border: 0;
-    font-size: 14px !important;
-}
+
 
 
 form#search-form input[type="submit"] input.nav-search {
