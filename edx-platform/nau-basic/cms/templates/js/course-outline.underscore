@@ -274,7 +274,7 @@ if (is_proctored_exam) {
                 >
                     <span class="icon fa fa-plus" aria-hidden="true"></span>                    
                     <% if (childCategory == "chapter") { %>
-                      <%- interpolate(gettext('New Chapter'), true) %>
+                      <%- gettext('New Chapter') %>
                     <% } else { %>                              
                       <%- addChildLabel %>* (<%- childCategory %>)
                     <% } %>
@@ -300,12 +300,12 @@ if (is_proctored_exam) {
                     >
                         <span class="icon fa fa-plus" aria-hidden="true"></span>
                         <% if (childType == "section") { %>
-                          <%- interpolate(gettext('New Section'), true) %>
+                          <%- gettext('New Section') %>
                         <% } else if (childType == "subsection") { %>
-                          <%- interpolate(gettext('New Subsection'), true) %>
+                          <%- gettext('New Subsection') %>
                         <% } else if (childType == "unit") { %>
-                          <%- interpolate(gettext('New Unit'), true) %>                          
-                        <% } else { %>                                   
+                          <%- gettext('New Unit') %>
+                        <% } else { %>
                           <%- addChildLabel %>*(<%- childType %>)
                         <% } %>
                         
