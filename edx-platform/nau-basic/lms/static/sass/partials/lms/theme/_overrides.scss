@@ -709,7 +709,7 @@ ul#menu_languages span {
 
 ul#menu_login_register span,
 ul#menu_login_register li:first-child a {
-    background: transparent url("/static/nau-basic/images/lang-divider.svg") no-repeat center right;
+    /*background: transparent url("/static/nau-basic/images/lang-divider.svg") no-repeat center right;*/
     padding: 0;
     height: auto;
     padding-right: 5px;
@@ -1429,11 +1429,7 @@ ul#menu_languages li a:hover {
 }
 
 ul#menu_login_register li:first-child a {
-    padding-right: 15px;    
     margin-right: 8px;
-    background-position: right center;
-    background: transparent url(/static/nau-basic/images/arrow-dropdown.svg) no-repeat right 5.5px;
-    background-size: 12px;
 }
 
 ul#menu_login_register li:first-child {
@@ -1445,6 +1441,14 @@ ul#menu_login_register li:first-child {
 
 div#branding-top-nav a#open-menu-arrow {
         display: none !important;
+}
+
+
+ul#menu_login_register li.menu-item-has-children a {
+    padding-right: 15px;  
+    background: transparent url(/static/nau-basic/images/arrow-dropdown.svg) no-repeat right 5.5px;
+    background-position: right center;
+    background-size: 12px;
 }
 
 @media screen and (max-width: 850px) {

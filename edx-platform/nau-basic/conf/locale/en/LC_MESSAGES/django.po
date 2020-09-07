@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2020-08-07 16:53+0100\n"
+"POT-Creation-Date: 2020-08-31 14:56+0000\n"
 "PO-Revision-Date: 2020-08-05 17:03+0100\n"
 "Last-Translator: \n"
 "Language: en\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:1
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:67
@@ -744,6 +744,10 @@ msgstr "View Archive"
 #: edx-platform/nau-basic/cms/templates/force-translations.html:12
 msgid "I authorize data processing for this site"
 msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/force-translations.html:13
+msgid "Search Your Courses"
+msgstr "Search within your courses"
 
 #: edx-platform/nau-basic/cms/templates/howitworks.html:11
 msgid "Welcome"
@@ -1656,8 +1660,8 @@ msgid "LMS"
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:43
-#: edx-platform/nau-basic/lms/templates/footer.html:254
-#: edx-platform/nau-basic/lms/templates/footer.html:331
+#: edx-platform/nau-basic/lms/templates/footer.html:266
+#: edx-platform/nau-basic/lms/templates/footer.html:343
 msgid "Legal"
 msgstr ""
 
@@ -1776,9 +1780,9 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:226
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:242
-#: edx-platform/nau-basic/lms/templates/footer.html:148
-#: edx-platform/nau-basic/lms/templates/footer.html:227
-#: edx-platform/nau-basic/lms/templates/footer.html:304
+#: edx-platform/nau-basic/lms/templates/footer.html:160
+#: edx-platform/nau-basic/lms/templates/footer.html:239
+#: edx-platform/nau-basic/lms/templates/footer.html:316
 #: edx-platform/nau-basic/lms/templates/header/base_navbar-authenticated.html:46
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:7
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:12
@@ -1801,57 +1805,57 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:62
 #: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:64
-#: edx-platform/nau-basic/lms/templates/footer.html:51
-#: edx-platform/nau-basic/lms/templates/footer.html:113
+#: edx-platform/nau-basic/lms/templates/footer.html:55
+#: edx-platform/nau-basic/lms/templates/footer.html:125
 msgid "Share on Twitter"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:52
-#: edx-platform/nau-basic/lms/templates/footer.html:114
+#: edx-platform/nau-basic/lms/templates/footer.html:58
+#: edx-platform/nau-basic/lms/templates/footer.html:126
 msgid "Share on LinkedIn"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:53
-#: edx-platform/nau-basic/lms/templates/footer.html:115
+#: edx-platform/nau-basic/lms/templates/footer.html:61
+#: edx-platform/nau-basic/lms/templates/footer.html:127
 msgid "Share on Facebook"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:54
-#: edx-platform/nau-basic/lms/templates/footer.html:116
+#: edx-platform/nau-basic/lms/templates/footer.html:64
+#: edx-platform/nau-basic/lms/templates/footer.html:128
 msgid "Share on Instagram"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:55
-#: edx-platform/nau-basic/lms/templates/footer.html:117
-#: edx-platform/nau-basic/lms/templates/footer.html:179
+#: edx-platform/nau-basic/lms/templates/footer.html:66
+#: edx-platform/nau-basic/lms/templates/footer.html:129
+#: edx-platform/nau-basic/lms/templates/footer.html:191
 msgid "Share"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:56
-#: edx-platform/nau-basic/lms/templates/footer.html:118
+#: edx-platform/nau-basic/lms/templates/footer.html:67
+#: edx-platform/nau-basic/lms/templates/footer.html:130
 msgid "Visit OpenEdx website"
 msgstr "Visit OpenEdx website"
 
-#: edx-platform/nau-basic/lms/templates/footer.html:139
+#: edx-platform/nau-basic/lms/templates/footer.html:151
 msgid "Quick Links"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:158
-#: edx-platform/nau-basic/lms/templates/footer.html:221
-#: edx-platform/nau-basic/lms/templates/footer.html:224
-#: edx-platform/nau-basic/lms/templates/footer.html:298
-#: edx-platform/nau-basic/lms/templates/footer.html:301
+#: edx-platform/nau-basic/lms/templates/footer.html:170
+#: edx-platform/nau-basic/lms/templates/footer.html:233
+#: edx-platform/nau-basic/lms/templates/footer.html:236
+#: edx-platform/nau-basic/lms/templates/footer.html:310
+#: edx-platform/nau-basic/lms/templates/footer.html:313
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:5
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:10
 msgid "About"
 msgstr "Acerca da NAU"
 
-#: edx-platform/nau-basic/lms/templates/footer.html:173
+#: edx-platform/nau-basic/lms/templates/footer.html:185
 msgid "Social Media"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:252
-#: edx-platform/nau-basic/lms/templates/footer.html:329
+#: edx-platform/nau-basic/lms/templates/footer.html:264
+#: edx-platform/nau-basic/lms/templates/footer.html:341
 msgid "All rights reserved"
 msgstr ""
 
@@ -2180,7 +2184,6 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/header/base_navbar-authenticated.html:33
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:39
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:29
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:38
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:66
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:103
