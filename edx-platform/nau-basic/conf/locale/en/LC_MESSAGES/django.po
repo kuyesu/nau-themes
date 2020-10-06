@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2020-08-31 14:56+0000\n"
+"POT-Creation-Date: 2020-10-02 13:26+0000\n"
 "PO-Revision-Date: 2020-08-05 17:03+0100\n"
 "Last-Translator: \n"
 "Language: en\n"
@@ -748,6 +748,22 @@ msgstr ""
 #: edx-platform/nau-basic/cms/templates/force-translations.html:13
 msgid "Search Your Courses"
 msgstr "Search within your courses"
+
+#: edx-platform/nau-basic/cms/templates/force-translations.html:14
+#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:36
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:33
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:62
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:100
+msgid "Resume your last course"
+msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/force-translations.html:15
+#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:38
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:36
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:64
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:102
+msgid "Dashboard"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/howitworks.html:11
 msgid "Welcome"
@@ -2227,20 +2243,6 @@ msgstr ""
 #: edx-platform/nau-basic/lms/templates/header/header.html:46
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:98
 msgid "More Options"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:36
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:33
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:62
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:100
-msgid "Resume your last course"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:38
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:36
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:64
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:102
-msgid "Dashboard"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:41
