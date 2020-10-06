@@ -1771,3 +1771,8 @@ button.btn.btn-outline-primary.search-button {
 button[aria-selected="true"] { background-color: #d0dfff !important; }
 ul#menu_login_register a[role="menuitem"] { color: #0857ff !important; }
 ul#menu_login_register a[role="menuitem"]:hover, ul#menu_login_register a[role="menuitem"]:active { color: #000 !important; }
+
+h3.course-title span {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
