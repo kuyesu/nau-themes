@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2020-10-02 13:26+0000\n"
+"POT-Creation-Date: 2020-10-13 14:39+0000\n"
 "PO-Revision-Date: 2020-08-07 16:54+0100\n"
 "Last-Translator: \n"
 "Language: pt_PT\n"
@@ -566,28 +566,7 @@ msgid ""
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:147
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:173
-msgid ""
-"Please note: Deletion of your account and personal data is permanent and "
-"cannot be undone. EdX will not be able to recover your account or the "
-"data that is deleted."
-msgstr ""
-"Observe: A exclusão de sua conta e dados pessoais é permanente e não pode"
-" ser revertida. A equipa NAU não será capaz de recuperar sua conta ou os "
-"dados que são excluídos."
-
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:148
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:174
-msgid ""
-"Once your account is deleted, you cannot use it to take courses on the "
-"edX app, edx.org, or any other site hosted by edX. This includes access "
-"to edx.org from your employer’s or university’s system and access to "
-"private sites offered by MIT Open Learning, Wharton Executive Education, "
-"and Harvard Medical School."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:149
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:175
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:171
 msgid ""
 "You have selected “Delete my account.” Deletion of your account and "
 "personal data is permanent and cannot be undone. EdX will not be able to "
@@ -597,8 +576,8 @@ msgstr ""
 "pessoais é permanente e não pode ser desfeita. A equipa de suporte NAU "
 "não será capaz de recuperar sua conta ou os dados que são excluídos."
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:150
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:176
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:148
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:172
 msgid ""
 "If you proceed, you will be unable to use this account to take courses on"
 " the edX app, edx.org, or any other site hosted by edX. This includes "
@@ -607,8 +586,8 @@ msgid ""
 "Education, and Harvard Medical School."
 msgstr "Se você prosseguir, você não poderá usar esta conta NAU. "
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:151
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:177
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:149
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:173
 msgid ""
 "You have been logged out of your edX account. Click Okay to log in again "
 "now. Click Cancel to stay on this page (you must log in again to save "
@@ -618,8 +597,8 @@ msgstr ""
 "novamente agora. Clique em Cancelar para ficar nesta página (você deve "
 "entrar novamente para salvar seu trabalho)."
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:152
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:178
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:150
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:174
 msgid ""
 "This course uses automatic cohorting for verified track learners. You "
 "cannot disable cohorts, and you cannot rename the manual cohort named "
@@ -631,8 +610,8 @@ msgstr ""
 "chamada '{verifiedCohortName}'. Para alterar a configuração para coortes "
 "de faixa verificadas, entre em contato com o suporte NAU."
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:153
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:179
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:151
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:175
 msgid ""
 "Your profile settings are managed by {enterprise_name}. Contact your "
 "administrator or {link_start}edX Support{link_end} for help."
@@ -641,8 +620,8 @@ msgstr ""
 "contato com seu administrador ou {link_start}Suporte NAU{link_end} para "
 "obter ajuda."
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:154
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:180
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:152
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:176
 msgid ""
 "Optionally, link your personal accounts to the social media icons on your"
 " edX profile."
@@ -650,9 +629,9 @@ msgstr ""
 "Opcionalmente, vincule suas contas pessoais nas redes sociais no seu "
 "perfil NAU."
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:155
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:163
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:183
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:153
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:161
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:179
 msgid ""
 "EdX has a timed transcript for this video. If you want to edit this "
 "transcript, you can download, edit, and re-upload the existing "
@@ -664,15 +643,15 @@ msgstr ""
 "transcrição existente. Se você quiser substituir esta transcrição, faça o"
 " upload de um novo arquivo de transcrição. srt."
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:156
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:164
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:184
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:154
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:162
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:180
 msgid "No EdX Timed Transcript"
 msgstr "Nenhuma transcrição disponível na NAU"
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:157
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:165
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:185
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:155
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:163
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:181
 msgid ""
 "EdX doesn't have a timed transcript for this video in Studio, but we "
 "found a transcript on YouTube. You can import the YouTube transcript or "
@@ -682,9 +661,9 @@ msgstr ""
 " encontramos uma transcrição no YouTube. Você pode importar a transcrição"
 " do YouTube ou carregar seu próprio arquivo de transcrição. srt."
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:158
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:166
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:186
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:156
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:164
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:182
 msgid ""
 "EdX doesn't have a timed transcript for this video. Please upload an .srt"
 " file."
@@ -692,9 +671,9 @@ msgstr ""
 "A NAU não tem uma transcrição cronometrada para este vídeo. Por favor, "
 "carregue um arquivo .srt."
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:159
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:167
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:187
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:157
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:165
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:183
 msgid ""
 "The timed transcript for this video on edX is out of date, but YouTube "
 "has a current timed transcript for this video."
@@ -702,21 +681,21 @@ msgstr ""
 "A transcrição programada para este vídeo na NAU está desatualizada, mas o"
 " YouTube tem uma transcrição cronometrada atual para este vídeo."
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:160
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:168
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:188
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:158
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:166
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:184
 msgid "Do you want to replace the edX transcript with the YouTube transcript?"
 msgstr "Deseja substituir a transcrição da NAU pela transcrição do YouTube?"
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:161
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:169
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:189
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:159
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:167
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:185
 msgid "Yes, replace the edX transcript with the YouTube transcript"
 msgstr "Sim, substitua a transcrição NAU pela transcrição do YouTube"
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:162
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:170
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:190
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:160
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:168
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:186
 msgid ""
 "EdX has a timed transcript for this video. If you want to replace this "
 "transcript, upload a new .srt transcript file. If you want to edit this "
@@ -728,13 +707,13 @@ msgstr ""
 "transcrição. srt. Se você quiser editar esta transcrição, você pode "
 "baixar, editar e re-upload da transcrição existente."
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:171
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:181
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:169
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:177
 msgid "Register through edX"
 msgstr "Registre-se através da NAU"
 
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:172
-#: edx-platform/nau-basic/cms/templates/edx-translations.html:182
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:170
+#: edx-platform/nau-basic/cms/templates/edx-translations.html:178
 msgid "You already have an edX account with your {enterprise_name} email address."
 msgstr "Você já tem uma conta NAU com seu endereço de e-mail {enterprise_name}."
 
