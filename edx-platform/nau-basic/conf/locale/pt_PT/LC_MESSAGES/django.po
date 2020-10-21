@@ -694,7 +694,7 @@ msgstr "Continuar curso"
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:64
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:102
 msgid "Dashboard"
-msgstr "Meu cursos"
+msgstr "Meus cursos"
 
 #: edx-platform/nau-basic/cms/templates/howitworks.html:11
 msgid "Welcome"
