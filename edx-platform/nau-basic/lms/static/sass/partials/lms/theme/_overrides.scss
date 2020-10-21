@@ -1776,3 +1776,7 @@ h3.course-title span {
   font-size: inherit !important;
   line-height: inherit !important;
 }
+
+article.course > section.details > div.wrapper-course-details > div.course-info > span.info-date-block-container {
+  display: none !important;
+}
