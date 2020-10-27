@@ -674,7 +674,7 @@ msgstr "Ver Arquivo"
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:12
 msgid "I authorize data processing for this site "
-msgstr "Autorizo que os dados sejam por este site"
+msgstr "Autorizo que os dados sejam processados por este site"
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:13
 msgid "Search Your Courses"
