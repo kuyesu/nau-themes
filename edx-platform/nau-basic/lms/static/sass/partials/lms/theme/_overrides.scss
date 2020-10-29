@@ -1592,10 +1592,6 @@ ul#menu_login_register li.menu-item-has-children a {
 
 
 
-.course-item .course-container {
-    background-color: white !important;
-    border-radius: 10px;    
-}
 
 .dashboard .main-container .my-courses {
     
@@ -1633,7 +1629,6 @@ ul#menu_login_register li.menu-item-has-children a {
           position: relative;
           border: solid 1px white;
           min-height: 250px;
-          padding-left: 10px !important;          
           
           .course-title a {
               width: 100%;              
@@ -1642,27 +1637,33 @@ ul#menu_login_register li.menu-item-has-children a {
               color: black;
           }
           .course-info {
-              position: absolute;
-              top: 120px;
-              margin-left: 0;
               width: 100%;
+          }
+          .course-actions {
+            .action-facebook,
+            .action-twitter {
+                margin-top: 10px;
+            }
           }
       }
         
       .wrapper-course-actions {          
+          flex-grow: 0 !important;
           width: 100%;
-          margin: 0;
+          margin-right: 0px !important;
+
           .wrapper-action-more {              
-              position: absolute;              
+              position: relative !important;
+              float: none !important;
           }
           
           .enter-course.archived,
           .enter-course  {
-             float: right;
-             background-color: #081CFF;
-             color: white;
-             border-radius: 50px;
-              padding: 7px 15px 7px 15px;
+            width: 100%;
+            background-color: #081CFF;
+            color: white;
+            border-radius: 50px;
+            padding: 7px 15px 7px 15px;
           }
       }
     }
@@ -1779,4 +1780,33 @@ h3.course-title span {
 
 article.course > section.details > div.wrapper-course-details > div.course-info > span.info-date-block-container {
   display: none !important;
+}
+
+@media screen and (min-width: 481px) {
+    div.my-courses ul.listing-courses li.course-item {
+        width: 49% !important;
+    }
+}
+@media screen and (max-width: 480px) and (min-width: 0px) {
+    div.my-courses ul.listing-courses li.course-item {
+        width: 100% !important;
+    }
+}
+
+.dashboard .main-container .my-courses .course-container {
+
+}
+.dashboard .main-container .my-courses {
+    .course {
+        .details {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    .course-item {
+        border: 2px solid transparent !important;
+    }
+    .course-item:hover {
+        border: 2px solid #074ce1 !important;
+    }
 }
