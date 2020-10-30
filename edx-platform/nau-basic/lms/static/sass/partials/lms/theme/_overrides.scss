@@ -262,12 +262,11 @@ footer {
         font: inherit;
         vertical-align: baseline;
     }
-    /*background-color: green;
-  border-color: 1px solid red;*/
     ol,
     ul {
         list-style: none;
         float: none;
+        padding-left: 0;
     }
     section#footer-links {
         h5 {
@@ -276,8 +275,13 @@ footer {
             padding-bottom: 4px;
             float: none;
             clear: both;
-            padding-left: 50px;
             color: black;
+            margin-left: 25px;
+            margin-right: 25px;
+            @media screen and (max-width: 400px) {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
         }
         div#quick-links-section {
             padding: 40px 0;
@@ -297,11 +301,18 @@ footer {
                 width: 25%;
                 display: grid;
                 float: left;
+                @media screen and (max-width: 798px) {
+                    list-style-type: none;
+                    width: 50%;
+                    display: grid;
+                    padding-top: 20px;
+                }
                 ul#social-media {
                     display: block;
                     position: relative;
                     width: auto;
-                    margin-left: 50px;
+                    margin-left: 0px;
+                    margin-right: 0px;
                     margin-top: 10px;
                     li {
                         padding: 0;                    
@@ -309,9 +320,14 @@ footer {
                           padding-right: 10px;
                         }
                     }
-                    #openedx-logo {
+                    li#openedx-logo {
                         display: block;
                         margin-top: 20px;
+                        a {
+                            img {
+                                max-width: 100px;
+                            }
+                        }
                     }
                 }
                 ul {
@@ -324,7 +340,12 @@ footer {
                         font-size: 13px;
                         line-height: 1.6em;
                         display: inline;
-                        padding-left: 50px;
+                        margin-left: 25px;
+                        margin-right: 25px;
+                        @media screen and (max-width: 400px) {
+                            margin-left: 5px;
+                            margin-right: 5px;
+                        }
                         a {
                             font: Regular 14px Roboto;
                             letter-spacing: 0;
@@ -342,7 +363,7 @@ footer {
         }
     }
     section#entities-quick-links {
-        ul.flex-row {
+        ul {
             border-radius: 0px 0px 10px 10px;
             background-color: white;
             height: auto;
@@ -354,13 +375,36 @@ footer {
             position: relative;
             background-color: white;
             padding-bottom: 30px;
+
+            @media screen and (max-width: 960px) {
+                background-color: white;
+                padding: 50px 0px 50px 0px;
+                height: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
             li {
                 margin-top: 30px;
                 a {
                     margin-left: 50px;
                     margin-right: 50px;
                 }
-                img {}
+                @media screen and (max-width: 960px) {
+                    a {
+                        margin-left: 0px;
+                        margin-right: 0px;
+                    }
+                }
+                img {
+                    @media (max-width: 576px) {
+                        max-width: 260px;
+                    }
+                }
                 img#logo-nau {}
                 span#copyright {
                     font: Regular;
@@ -371,11 +415,12 @@ footer {
                     margin-left: 50px;
                     display: block;
                 }
-            }
+
+             }
+
         }
     }
 }
-
 
 /**** /FOOTER ****/
 
@@ -401,22 +446,17 @@ main#main {
     .login-register-content {
         max-width: 600px;
         margin: auto auto;
-        padding-top: 100px;
-        padding-bottom: 50px;
-        padding-left: 50px;
-        padding-right: 50px;
         background: #2A2A2A 0% 0% no-repeat padding-box;
-        background-image: url("/static/nau-basic/images/sempre-a-aprender-white.png");
-        background-position: 50% 30px;
-        background-size: 40% auto;
         border: 1px solid #707070;
         border-radius: 5px 5px 20px 20px;
         opacity: 1;
-        div#login-form,
+        
+        padding-left: 0px ;
+        padding-right: 0px;
+        background-color: #fff !important;
+        border: 0;
+
         div#login-and-registration-container {
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            border: 1px solid #707070;
-            border-radius: 3px 3px 20px 20px;
             padding: 50px;
         }
     }
@@ -967,25 +1007,6 @@ body div.window-wrap {
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.15);
 }
 
-#main {
-    /* background-color: green; */
-    #content-container.login-register-content {
-        padding-top: 120px;
-        padding-bottom: 50px;
-        padding-left: 75px;
-        padding-right: 75px;
-        /* background-color: red; */
-        background-color: #EBEBEB;
-        border-color: #CCCCCC;
-        background-image: url("/static/nau-basic/images/nau_sempre_aprender_preto.svg");
-        background-position: 50% 45px;
-        background-size: 37% auto;
-        #login-and-registration-container {
-            border-color: #CCCCCC;
-        }
-    }
-}
-
 input[type="password"],
 input[type="email"],
 input[type="text"],
@@ -1145,11 +1166,6 @@ div#branding-top-nav {
 
 .form-field label {
     color: #333 !important;
-}
-
-#main #content-container.login-register-content {
-    border: 0;
-    background-color: #fff !important;
 }
 
 .course-header span {
