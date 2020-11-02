@@ -201,3 +201,7 @@ body {
     }   
 }
 
+// GN-140 Fix modal drag and drop editor was hidding some last button.
+[class*="view-"] .modal-window .editor-with-buttons {
+    margin-bottom: unset !important;
+}
