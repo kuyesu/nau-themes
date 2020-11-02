@@ -1340,11 +1340,20 @@ button.bookmark-button:hover { text-decoration: none !important; }
 .has-breadcrumbs .breadcrumbs a:active { color: #333 !important; }
 .page-header { border-bottom: 0 !important; margin-bottom: 0 !important; }
 .sequence-nav button.button-next,
-.sequence-bottom button.button-next { border-radius: 0 5em 5em 0 !important }
+.sequence-bottom button.button-next { 
+    border-radius: 0 5em 5em 0 !important; 
+}
+.sequence-bottom button.button-next { 
+    min-width: 40% !important; // increase next button within the course
+}
 .sequence-bottom button.button-previous,
 .sequence-nav button.button-previous { border-radius: 5em 0 0 5em !important }
 .sequence-bottom button.sequence-nav-button,
 .sequence-nav button.sequence-nav-button { color: #0553ff !important; border-bottom: 3px solid #0553ff !important; }
+.sequence-bottom button.sequence-nav-button:hover,
+.sequence-nav button.sequence-nav-button:hover {
+    padding-top: unset !important;
+}
 #sequence-list li button.seq_video { border-color: #0553ff !important; }
 #sequence-list li button span.seq_other,
 #sequence-list li button.seq_video span.icon { color: #0553ff !important; }
