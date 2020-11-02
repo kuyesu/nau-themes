@@ -1826,3 +1826,10 @@ article.course > section.details > div.wrapper-course-details > div.course-info 
         border: 2px solid #074ce1 !important;
     }
 }
+
+// Fix header on mobile devices
+@media (max-width: 991px) {
+    .global-header .main-header {
+        height: unset !important;
+    }
+}
