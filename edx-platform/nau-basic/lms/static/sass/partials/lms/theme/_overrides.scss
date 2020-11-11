@@ -1179,6 +1179,12 @@ button.bookmark-button:hover { text-decoration: none !important; }
 #sequence-list li button.seq_video span.icon { color: #0553ff !important; }
 .wrapper-downloads a { color: #0553ff !important; background-color: transparent !important; font-weight: normal !important; }
 .subtitles li a, .subtitles li span { color: #0553ff !important; }
+.subtitles li.current { 
+    background-color: black; 
+    span {
+        color: yellow !important;;
+    }
+}
 a.action-upgrade {
     border-radius: 5em !important;
     background: #0553ff !important;
