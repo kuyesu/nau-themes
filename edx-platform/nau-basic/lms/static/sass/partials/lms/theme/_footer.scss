@@ -30,10 +30,6 @@ footer {
             color: black;
             margin-left: 25px;
             margin-right: 25px;
-            @media screen and (max-width: 400px) {
-                margin-left: 5px;
-                margin-right: 5px;
-            }
         }
         div#quick-links-section {
             padding: 40px 0;
@@ -63,10 +59,13 @@ footer {
                     display: block;
                     position: relative;
                     width: auto;
-                    margin-left: 0px;
-                    margin-right: 0px;
+                    margin-left: 25px;
+                    margin-right: 25px;
                     li {
                         padding: 0;
+                        margin-left: 0px;
+                        margin-right: 0px;
+                        display: inline;
                         a {
                           padding-right: 10px;
                         }
@@ -95,10 +94,6 @@ footer {
                         line-height: 1.6em;
                         margin-left: 25px;
                         margin-right: 25px;
-                        @media screen and (max-width: 400px) {
-                            margin-left: 5px;
-                            margin-right: 5px;
-                        }
                         a {
                             font: Regular 14px Roboto;
                             letter-spacing: 0;
