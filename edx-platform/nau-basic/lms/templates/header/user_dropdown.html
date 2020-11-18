@@ -22,7 +22,7 @@ displayname = get_enterprise_learner_generic_name(request) or username
 
 
 
-<% header_menu = static.get_value('NAU_HEADER_MENU')["pt-pt"] %>
+<% header_menu = static.get_value('NAU_HEADER_MENU', {}).get("pt-pt", {}) %>
 
       <ul id="menu_login_register" class="login_menu" aria-label=${_("Supplemental Links")}>      
           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">

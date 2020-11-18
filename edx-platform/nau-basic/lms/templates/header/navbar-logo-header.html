@@ -14,14 +14,14 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
 %>
 
 <%
-  www_pt = static.get_value('NAU_MARKETING_BASE_HREF')["pt-pt"]
-  www_en = static.get_value('NAU_MARKETING_BASE_HREF')["en"] 
+  www_pt = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("pt-pt", "")
+  www_en = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("en", "") 
   nau_lang_menu = static.get_value('NAU_NAVBAR_LANGUAGE_SELECTOR')   
  
   if LANGUAGE_CODE == "pt-pt":
-    header_menu = static.get_value('NAU_HEADER_MENU')["pt-pt"]
+    header_menu = static.get_value('NAU_HEADER_MENU', {}).get("pt-pt", {})
   else:
-    header_menu = static.get_value('NAU_HEADER_MENU')["en"]
+    header_menu = static.get_value('NAU_HEADER_MENU', {}).get("en", {})
   endif 
 
  
