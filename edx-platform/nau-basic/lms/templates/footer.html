@@ -52,16 +52,16 @@
                     <ul id="social-media">
                       % if nau_social_media:
                         % if 'twitter' in nau_social_media:
-                          <li><a href="${nau_social_media["twitter"]}"><img src="/static/nau-basic/images/twitter.svg" alt="twitter logo" title="${_('Share on Twitter')}"></a></li>
+                          <li><a href="${nau_social_media["twitter"]}" target="_blank" title="${_('Share on Twitter')}"><img src="/static/nau-basic/images/twitter.svg" alt="twitter logo" title="${_('Share on Twitter')}"></a></li>
                         % endif
                         % if 'linkedin' in nau_social_media:
-                          <li><a href="${nau_social_media["linkedin"]}"><img src="/static/nau-basic/images/linkedin.svg" alt="Linkedin logo" title="${_('Share on LinkedIn')}"></a></li>
+                          <li><a href="${nau_social_media["linkedin"]}" target="_blank" title="${_('Share on LinkedIn')}"><img src="/static/nau-basic/images/linkedin.svg" alt="Linkedin logo" title="${_('Share on LinkedIn')}"></a></li>
                         % endif
                         % if 'facebook' in nau_social_media:
-                          <li><a href="${nau_social_media["facebook"]}" id="facebook-share-btt" rel="nofollow" target="_blank" title="${_('Share on Facebook')}" class=""><img src="/static/nau-basic/images/facebook.svg" alt="Facebook logo" title="Share on Facebook"></a></li>
+                          <li><a href="${nau_social_media["facebook"]}" id="facebook-share-btt" rel="nofollow" target="_blank" title="${_('Share on Facebook')}" class=""><img src="/static/nau-basic/images/facebook.svg" alt="Facebook logo" title="${_('Share on Facebook')}"></a></li>
                         % endif
                         % if 'instagram' in nau_social_media:
-                          <li><a href="${nau_social_media["instagram"]}"><img src="/static/nau-basic/images/instagram.svg" alt="Instagram logo" title="${_('Share on Instagram')}"></a></li>
+                          <li><a href="${nau_social_media["instagram"]}" target="_blank" title="${_('Share on Instagram')}"><img src="/static/nau-basic/images/instagram.svg" alt="Instagram logo" title="${_('Share on Instagram')}"></a></li>
                         % endif
                         <!--- <li><a href=""><img src="/static/nau-basic/images/more-share.svg" alt="Share list" title="${_('Share')}"></a></li> --->
                         <li id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="/static/nau-basic/images/openedx.svg" alt="Powered by OpenEdX" title="${_('Visit OpenEdx website')}"></a></li>
