@@ -7,6 +7,7 @@ This file is a copy from edx-platform and only change the color of progress bar
     import bleach
     import json
     import math
+    import six
     
     from openedx.core.djangolib.js_utils import (
         dump_js_escaped_json, js_escaped_string
@@ -99,12 +100,12 @@ $(function () {
   ## ----------------------------- Grade overview bar ------------------------- ##
   tickIndex += sectionSpacer
   
-  series = categories.values()
+  series = list(categories.values())
   overviewBarX = tickIndex
   extraColorIndex = len(categories) #Keeping track of the next color to use for categories not in categories[]
   
   if show_grade_breakdown:
-    for section in grade_summary['grade_breakdown'].itervalues():
+    for section in six.itervalues(grade_summary['grade_breakdown']):
         if section['percent'] > 0:
             if section['category'] in categories:
                 color = categories[ section['category'] ]['color']
@@ -277,6 +278,7 @@ $(function () {
   };
   
   var $grade_detail_graph = $("#${graph_div_id | n, js_escaped_string}");
+  $grade_detail_graph.width($grade_detail_graph.parent().width()); 
   if ($grade_detail_graph.length > 0) {
     var plot = $.plot($grade_detail_graph, series, options);
     
