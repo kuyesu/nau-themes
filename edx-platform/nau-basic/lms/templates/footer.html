@@ -10,16 +10,16 @@
 <%namespace name='static' file='static_content.html'/>
 
 <%
-    www_pt = static.get_value('NAU_MARKETING_BASE_HREF')["pt-pt"]
-    www_en = static.get_value('NAU_MARKETING_BASE_HREF')["en"]
+    www_pt = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("pt-pt", "")
+    www_en = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("en", "")
 
     if LANGUAGE_CODE == "pt-pt":
-        footer_menu = static.get_value('NAU_FOOTER_MENU')["pt-pt"]
+        footer_menu = static.get_value('NAU_FOOTER_MENU', {}).get("pt-pt", {})
     else:
-        footer_menu = static.get_value('NAU_FOOTER_MENU')["en"]
+        footer_menu = static.get_value('NAU_FOOTER_MENU', {}).get("en", {})
     endif
 
-    nau_social_media = static.get_value('NAU_SOCIAL_MEDIA')
+    nau_social_media = static.get_value('NAU_SOCIAL_MEDIA', {})
 %> 
 
 

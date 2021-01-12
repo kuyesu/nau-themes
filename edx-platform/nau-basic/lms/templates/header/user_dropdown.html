@@ -16,13 +16,13 @@ from openedx.features.enterprise_support.utils import get_enterprise_learner_gen
 self.real_user = getattr(user, 'real_user', user)
 profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
 username = self.real_user.username
-resume_block = retrieve_last_sitewide_block_completed(username)
+resume_block = retrieve_last_sitewide_block_completed(self.real_user)
 displayname = get_enterprise_learner_generic_name(request) or username
 %>
 
 
 
-<% header_menu = static.get_value('NAU_HEADER_MENU')["pt-pt"] %>
+<% header_menu = static.get_value('NAU_HEADER_MENU', {}).get("pt-pt", {}) %>
 
       <ul id="menu_login_register" class="login_menu" aria-label=${_("Supplemental Links")}>      
           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
