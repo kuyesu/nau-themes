@@ -12,3 +12,46 @@ $serif : 'Roboto', sans-serif;
 
 // Initialize the Open edX Bootstrap theme
 @import 'edx-bootstrap/sass/open-edx/theme';
+
+/* Fonts */
+$font-stack: "Roboto", sans-serif;
+$font-size: 13px;
+
+/* Colors */
+$background-color: #eaeaea;
+$text-color: #000000;
+$page-color: #f5f5f5;
+$header-bar-color: #074CE1;
+$vertical-line-color:  #0958FE;
+$gray-bar-color: #cccccc;
+$gray-smalltext-color: #777777;
+$border-color-light: #ffffff;
+$button-visited-color: #607D8B;
+$menu-bg-color: #ffffff;
+$menu-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.15);
+$footer-bg-color: #eeeeee;
+$footer-header-color: #060606;
+$footer-link-color: #707070;
+$footer-copyright-color: #5E5959;
+
+/* breakpoints */
+$breakpoint-small: 539px;  //Mobile phones
+$breakpoint-medium: 768px; //Mobilephones portrait and Tablets
+$breakpoint-large: 992px; //old resolutions and tablets
+$breakpoint-xlarge: 1200px; //PC
+
+$nav-back-color: white;
+
+$popup-video-width: 640px;
+$popup-video-height: 480px;
+
+$left-space: 50px;
+$right-space: 50px;
+
+/* Cards */
+$card-border-radius: 10px;
+$card-height: 160px;
+$card-minimum-size: 210px;
+$entity-radius: 5px;
+$card-content-pad: 0 15px 10px;
+$action-btn-color: #074ce1;

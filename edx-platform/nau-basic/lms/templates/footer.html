@@ -26,30 +26,27 @@
 <footer> 
 
     <!-- starts footer links -->
-    <section id="footer-links">        
+    <section id="footer-nav">        
         <!-- starts quick links -->
 
         <div id="quick-links-section">
-
-            <ul id="footer" class="menu">
                 
                 % for title in footer_menu:
-                <li class='footer-links-structure'>
-                  <h5>${title}</h5>
+                <div class='footer-links'>
+                  <span class="footer-title">${title}</span>
                   <ul>
                     %for label in footer_menu[title]:
                       <% link = footer_menu[title][label] %>
                       <li><a href='${link}'>${label}</a></li>
                     %endfor
                   </ul>
-                </li>
+                </div>
                 % endfor
-
             <!-- starts social media -->
-            <ul>
-                <li class="footer-links-structure">
-                    <h5>Siga-nos</h5>
-                    <ul id="social-media">
+                <div class="footer-social">
+                    <span class="footer-title">Siga-nos</span>
+                    <div id="social-media">
+                    <ul>
                       % if nau_social_media:
                         % if 'twitter' in nau_social_media:
                           <li><a href="${nau_social_media["twitter"]}" target="_blank" title="${_('Share on Twitter')}"><img src="/static/nau-basic/images/twitter.svg" alt="twitter logo" title="${_('Share on Twitter')}"></a></li>
@@ -64,13 +61,14 @@
                           <li><a href="${nau_social_media["instagram"]}" target="_blank" title="${_('Share on Instagram')}"><img src="/static/nau-basic/images/instagram.svg" alt="Instagram logo" title="${_('Share on Instagram')}"></a></li>
                         % endif
                         <!--- <li><a href=""><img src="/static/nau-basic/images/more-share.svg" alt="Share list" title="${_('Share')}"></a></li> --->
-                        <li id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="/static/nau-basic/images/openedx.svg" alt="Powered by OpenEdX" title="${_('Visit OpenEdx website')}"></a></li>
+            
                       % endif
                     </ul>
-                </li>
-            </ul>      
-        <!-- ends social media -->     
-        </div>
+                    </div>
+                    <div id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="/static/nau-basic/images/openedx.svg" alt="Powered by OpenEdX" title="${_('Visit OpenEdx website')}"></a></div>
+                </div>
+
+          </div>
     </section>
     <!-- ends footer links -->  
 

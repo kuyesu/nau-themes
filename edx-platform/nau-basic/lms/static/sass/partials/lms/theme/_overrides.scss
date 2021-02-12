@@ -3,11 +3,6 @@ $white : #FFF;
 $nau_blue : #081CFF;
 
 /* Global */
-
-* {    
-    font-family: Roboto;
-}
-
 *, input, select, textarea, option, button {
     outline: none!important;
 }
@@ -23,6 +18,7 @@ body {
     padding: 0px;
     padding-bottom: 10px;
     line-height: 1.3em;
+    
     div.window-wrap {
         background-color: #F5F5F5;
         width: 100%;
