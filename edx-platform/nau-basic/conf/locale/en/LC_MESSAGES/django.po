@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2020-10-16 11:58+0000\n"
+"POT-Creation-Date: 2021-02-12 16:29+0000\n"
 "PO-Revision-Date: 2020-08-05 17:03+0100\n"
 "Last-Translator: \n"
 "Language: en\n"
@@ -98,7 +98,6 @@ msgid ""
 msgstr "..."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:14
-#: edx-platform/nau-basic/cms/templates/settings.html:284
 msgid "Contact your edX partner manager to update these settings."
 msgstr ""
 
@@ -221,7 +220,6 @@ msgstr ""
 "or trademarks of {link_start}edX Inc.{link_end}"
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:34
-#: edx-platform/nau-basic/cms/templates/widgets/footer.html:48
 msgid ""
 "EdX, Open edX, Studio, and the edX and Open edX logos are registered "
 "trademarks or trademarks of {link_start}edX Inc.{link_end}"
@@ -440,8 +438,8 @@ msgstr ""
 "Inc."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:67
-#: edx-platform/nau-basic/cms/templates/widgets/footer.html:56
-#: edx-platform/nau-basic/cms/templates/widgets/footer.html:57
+#: edx-platform/nau-basic/cms/templates/widgets/footer.html:59
+#: edx-platform/nau-basic/cms/templates/widgets/footer.html:60
 msgid "Powered by Open edX"
 msgstr ""
 
@@ -620,6 +618,8 @@ msgstr "View Archive"
 #: edx-platform/nau-basic/cms/templates/force-translations.html:12
 msgid "I authorize data processing for this site "
 msgstr ""
+"I authorize data to be processed according to terms of service and "
+"privacy policy"
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:13
 msgid "Search Your Courses"
@@ -640,6 +640,14 @@ msgstr ""
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:102
 msgid "Dashboard"
 msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/force-translations.html:16
+msgid "Employment situation"
+msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/force-translations.html:17
+msgid "Allow newsletter"
+msgstr "I agree to receive information regarding the courses offered by NAU, as well as news associated with NAU, through email marketing and newsletter."
 
 #: edx-platform/nau-basic/cms/templates/howitworks.html:11
 msgid "Welcome"
@@ -831,557 +839,6 @@ msgid ""
 "publish it to your students for you."
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/settings.html:4
-msgid "Schedule & Details Settings"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:53
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:84
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:162
-msgid "Settings"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:54
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:90
-msgid "Schedule & Details"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:65
-msgid "Basic Information"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:66
-msgid "The nuts and bolts of your course"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:71
-msgid "Organization"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:72
-#: edx-platform/nau-basic/cms/templates/settings.html:78
-#: edx-platform/nau-basic/cms/templates/settings.html:84
-#: edx-platform/nau-basic/cms/templates/settings.html:149
-#: edx-platform/nau-basic/cms/templates/settings.html:160
-#: edx-platform/nau-basic/cms/templates/settings.html:171
-msgid "This field is disabled: this information cannot be changed."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:77
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:238
-msgid "Course Number"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:83
-msgid "Course Run"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:91
-msgid "Course Summary Page"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:91
-msgid "(for student enrollment and access)"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:102
-msgid "Enroll in {course_display_name}"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:105
-msgid ""
-"The course \"{course_display_name}\", provided by {platform_name}, is "
-"open for enrollment. Please navigate to this course at "
-"{link_for_about_page} to enroll."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:111
-msgid "Send a note to students via email"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:113
-msgid "Invite your students"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:121
-msgid "Promoting Your Course with {platform_name}"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:123
-msgid ""
-"Your course summary page will not be viewable until your course has been "
-"announced. To provide content for the page and preview it, follow the "
-"instructions provided by your Program Manager."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:137
-msgid "Course Credit Requirements"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:138
-msgid "Steps required to earn course credit"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:146
-#: edx-platform/nau-basic/cms/templates/settings.html:148
-msgid "Minimum Grade"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:157
-msgid "Successful Proctored Exam"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:159
-msgid "Proctored Exam {number}"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:168
-msgid "ID Verification"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:170
-msgid "In-Course Reverification {number}"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:188
-msgid "Course Pacing"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:189
-msgid "Set the pacing for this course"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:197
-msgid "Instructor-Paced"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:198
-msgid ""
-"Instructor-paced courses progress at the pace that the course author "
-"sets. You can configure release dates for course content and due dates "
-"for assignments."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:202
-msgid "Self-Paced"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:203
-msgid ""
-"Self-paced courses do not have release dates for course content or due "
-"dates for assignments. Learners can complete course material at any time "
-"before the course end date."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:213
-msgid "Course Schedule"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:214
-msgid "Dates that control when your course can be viewed"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:220
-msgid "Course Start Date"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:222
-msgid "First day the course begins"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:226
-msgid "Course Start Time"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:228
-#: edx-platform/nau-basic/cms/templates/settings.html:242
-#: edx-platform/nau-basic/cms/templates/settings.html:270
-#: edx-platform/nau-basic/cms/templates/settings.html:292
-msgid "(UTC)"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:234
-msgid "Course End Date"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:236
-msgid "Last day your course is active"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:240
-msgid "Course End Time"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:251
-msgid "Certificates Available Date"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:253
-msgid "By default, 48 hours after course end date"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:262
-msgid "Enrollment Start Date"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:264
-msgid "First day students can enroll"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:268
-msgid "Enrollment Start Time"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:279
-msgid "Enrollment End Date"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:282
-msgid "Last day students can enroll."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:290
-msgid "Enrollment End Time"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:301
-msgid "Course Details"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:302
-msgid "Provide useful information about your course"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:306
-msgid "Course Language"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:313
-msgid ""
-"Identify the course language here. This is used to assist users find "
-"courses that are taught in a specific language. It is also used to "
-"localize the 'From:' field in bulk emails."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:322
-msgid "Introducing Your Course"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:323
-msgid "Information for prospective students"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:329
-msgid "Course Title"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:331
-msgid "Displayed as title on the course details page. Limit to 50 characters."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:334
-msgid "Course Subtitle"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:336
-msgid "Displayed as subtitle on the course details page. Limit to 150 characters."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:339
-msgid "Course Duration"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:341
-msgid "Displayed on the course details page. Limit to 50 characters."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:344
-msgid "Course Description"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:346
-msgid "Displayed on the course details page. Limit to 1000 characters."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:352
-msgid "Course Short Description"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:354
-msgid ""
-"Appears on the course catalog page when students roll over the course "
-"name. Limit to ~150 characters"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:360
-msgid "Course Overview"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:363
-msgid "HTML Code Editor"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:366
-msgid ""
-"Introductions, prerequisites, FAQs that are used on {a_link_start}your "
-"course summary page{a_link_end} (formatted in HTML)"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:373
-msgid "Course About Sidebar HTML"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:377
-msgid ""
-"Custom sidebar content for {a_link_start}your course summary "
-"page{a_link_end} (formatted in HTML)"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:386
-#: edx-platform/nau-basic/cms/templates/settings.html:390
-#: edx-platform/nau-basic/cms/templates/settings.html:402
-msgid "Course Card Image"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:394
-#: edx-platform/nau-basic/cms/templates/settings.html:428
-#: edx-platform/nau-basic/cms/templates/settings.html:461
-msgid ""
-"You can manage this image along with all of your other "
-"{a_link_start}files and uploads{a_link_end}"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:404
-msgid ""
-"Your course currently does not have an image. Please upload one (JPEG or "
-"PNG format, and minimum suggested dimensions are 375px wide by 200px "
-"tall)"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:411
-msgid "Your course image URL"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:412
-msgid ""
-"Please provide a valid path and name to your course image (Note: only "
-"JPEG or PNG format supported)"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:414
-msgid "Upload Course Card Image"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:420
-#: edx-platform/nau-basic/cms/templates/settings.html:424
-#: edx-platform/nau-basic/cms/templates/settings.html:436
-msgid "Course Banner Image"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:438
-msgid ""
-"Your course currently does not have an image. Please upload one (JPEG or "
-"PNG format, and minimum suggested dimensions are 1440px wide by 400px "
-"tall)"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:445
-msgid "Your banner image URL"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:446
-msgid ""
-"Please provide a valid path and name to your banner image (Note: only "
-"JPEG or PNG format supported)"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:448
-msgid "Upload Course Banner Image"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:453
-msgid "Course Video Thumbnail Image"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:457
-#: edx-platform/nau-basic/cms/templates/settings.html:469
-msgid "Video Thumbnail Image"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:471
-msgid ""
-"Your course currently does not have a video thumbnail image. Please "
-"upload one (JPEG or PNG format, and minimum suggested dimensions are "
-"375px wide by 200px tall)"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:478
-msgid "Your video thumbnail image URL"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:479
-msgid ""
-"Please provide a valid path and name to your video thumbnail image (Note:"
-" only JPEG or PNG format supported)"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:481
-msgid "Upload Video Thumbnail Image"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:488
-#: edx-platform/nau-basic/cms/templates/settings.html:491
-msgid "Course Introduction Video"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:494
-msgid "Delete Current Video"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:500
-msgid "your YouTube video's ID"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:501
-msgid "Enter your YouTube video's ID (along with any restriction parameters)"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:512
-msgid "Learning Outcomes"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:513
-msgid "Add the learning outcomes for this course"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:520
-msgid "Add Learning Outcome"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:528
-msgid "Instructors"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:529
-msgid "Add details about the instructors for this course"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:536
-msgid "Add Instructor"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:547
-#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:309
-msgid "Requirements"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:548
-msgid "Expectations of the students taking this course"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:554
-msgid "Hours of Effort per Week"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:556
-msgid "Time spent on all course work"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:561
-msgid "Prerequisite Course"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:563
-msgid "None"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:568
-msgid "Course that students must complete before beginning this course"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:569
-msgid "set pre-requisite course"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:574
-msgid "Entrance Exam"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:578
-msgid "Require students to pass an exam before beginning the course."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:582
-msgid ""
-"You can now view and author your course entrance exam from the "
-"{link_start}Course Outline{link_end}."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:586
-msgid "Grade Requirements"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:587
-msgid " %"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:588
-msgid ""
-"The score student must meet in order to successfully complete the "
-"entrance exam. "
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:602
-msgid "Course Content License"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:606
-msgid "Select the default license for course content"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:620
-msgid "How are these settings used?"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:621
-msgid ""
-"Your course's schedule determines when students can enroll in and begin a"
-" course."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:623
-msgid ""
-"Other information from this page appears on the About page for your "
-"course. This information includes the course overview, course image, "
-"introduction video, and estimated time requirements. Students use About "
-"pages to choose new courses to take."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:633
-#: edx-platform/nau-basic/cms/templates/settings.html:634
-msgid "Other Course Settings"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:636
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:93
-msgid "Grading"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:637
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:96
-msgid "Course Team"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:638
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:99
-msgid "Group Configurations"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/settings.html:639
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:102
-msgid "Advanced Settings"
-msgstr ""
-
 #: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:40
 #, python-format
 msgid "Prerequisite: %(prereq_display_name)s"
@@ -1527,130 +984,165 @@ msgstr ""
 msgid "New Unit"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/footer.html:19
+#: edx-platform/nau-basic/cms/templates/widgets/footer.html:22
 msgid "Policies"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/footer.html:23
+#: edx-platform/nau-basic/cms/templates/widgets/footer.html:26
 #: edx-platform/nau-basic/lms/templates/static_templates/tos.html:5
 #: edx-platform/nau-basic/lms/templates/static_templates/tos.html:10
 msgid "Terms of Service"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/footer.html:28
+#: edx-platform/nau-basic/cms/templates/widgets/footer.html:31
 #: edx-platform/nau-basic/lms/templates/static_templates/privacy.html:7
 #: edx-platform/nau-basic/lms/templates/static_templates/privacy.html:12
 msgid "Privacy Policy"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/footer.html:33
+#: edx-platform/nau-basic/cms/templates/widgets/footer.html:36
 msgid "Accessibility Accommodation Request"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/footer.html:37
+#: edx-platform/nau-basic/cms/templates/widgets/footer.html:40
 msgid "LMS"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/footer.html:43
+#: edx-platform/nau-basic/cms/templates/widgets/footer.html:46
 #: edx-platform/nau-basic/lms/templates/footer.html:266
 #: edx-platform/nau-basic/lms/templates/footer.html:343
 msgid "Legal"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:42
+#: edx-platform/nau-basic/cms/templates/widgets/footer.html:51
+msgid ""
+"edX, Open edX, Studio, and the edX and Open edX logos are registered "
+"trademarks or trademarks of {link_start}edX Inc.{link_end}"
+msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:44
 msgid "Current Course:"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:49
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:53
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:84
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:157
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:51
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:55
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:86
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:162
 msgid "Course"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:50
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:158
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:52
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:163
 msgid "Course Navigation"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:53
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:55
 msgid "Content"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:59
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:61
 msgid "Outline"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:62
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:64
 msgid "Updates"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:65
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:67
 msgid "Pages"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:68
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:70
 msgid "Files & Uploads"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:71
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:73
 msgid "Textbooks"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:75
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:77
 msgid "Video Uploads"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:106
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:86
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:167
+msgid "Settings"
+msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:92
+msgid "Schedule & Details"
+msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:95
+msgid "Grading"
+msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:98
+msgid "Course Team"
+msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:101
+msgid "Group Configurations"
+msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:104
+msgid "Advanced Settings"
+msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:108
 msgid "Certificates"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:115
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:174
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:113
+msgid "Publisher"
+msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:122
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:179
 msgid "Tools"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:120
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:180
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:127
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:185
 msgid "Import"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:123
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:183
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:130
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:188
 msgid "Export"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:127
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:134
 msgid "Export to Git"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:132
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:138
 msgid "Checklists"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:150
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:155
 msgid "Current Library:"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:162
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:167
 msgid "Library"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:167
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:172
 msgid "User Access"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:198
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:203
 msgid "Language preference"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:206
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:211
 #: edx-platform/nau-basic/lms/templates/header/header.html:76
 msgid "Choose Language"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:222
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:238
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:227
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:243
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:40
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:37
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:65
@@ -1658,20 +1150,20 @@ msgstr ""
 msgid "Account"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:223
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:239
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:228
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:244
 msgid "Account Navigation"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:226
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:229
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:242
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:245
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:231
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:234
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:247
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:250
 msgid "Contextual Online Help"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:226
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:242
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:231
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:247
 #: edx-platform/nau-basic/lms/templates/footer.html:160
 #: edx-platform/nau-basic/lms/templates/footer.html:239
 #: edx-platform/nau-basic/lms/templates/footer.html:316
@@ -1681,22 +1173,17 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:229
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:245
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:234
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:250
 msgid "Help NAU"
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:250
-msgid "Sign Up"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:254
-#: edx-platform/nau-basic/cms/templates/widgets/header.html:258
+#: edx-platform/nau-basic/cms/templates/widgets/header.html:253
 msgid "Sign In"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:62
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:64
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:68
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:70
 #: edx-platform/nau-basic/lms/templates/footer.html:55
 #: edx-platform/nau-basic/lms/templates/footer.html:125
 msgid "Share on Twitter"
@@ -1856,36 +1343,36 @@ msgstr ""
 msgid "Sign in with {provider_name}"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/main.html:177
+#: edx-platform/nau-basic/lms/templates/main.html:176
 msgid "Skip to main content"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:48
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:54
 msgid "Print or share your certificate:"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:55
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:61
 msgid "Click the link to see my certificate."
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:58
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:64
 msgid "Post on Facebook"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:68
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:73
 msgid "Tweet this Accomplishment. Pop up window."
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:73
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:75
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:78
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:80
 msgid "Add to LinkedIn Profile"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:82
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:88
 msgid "Add to Mozilla Backpack"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:88
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:94
 msgid "Print Certificate"
 msgstr ""
 
@@ -2009,6 +1496,10 @@ msgstr ""
 msgid "View About Page in studio"
 msgstr ""
 
+#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:238
+msgid "Course Number"
+msgstr ""
+
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:245
 msgid "Course Begins"
 msgstr ""
@@ -2033,6 +1524,10 @@ msgstr ""
 msgid ""
 "You must successfully complete {link_start}{prc_display}{link_end} before"
 " you begin this course."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/courseware/course_about.html:309
+msgid "Requirements"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/courseware/course_about.html:326
@@ -2240,6 +1735,420 @@ msgstr ""
 #~ "be able to recover your account or"
 #~ " the data that is deleted."
 
-#~ msgid "I authorize data processing for this site"
+#~ msgid "Schedule & Details Settings"
+#~ msgstr ""
+
+#~ msgid "Basic Information"
+#~ msgstr ""
+
+#~ msgid "The nuts and bolts of your course"
+#~ msgstr ""
+
+#~ msgid "Organization"
+#~ msgstr ""
+
+#~ msgid "This field is disabled: this information cannot be changed."
+#~ msgstr ""
+
+#~ msgid "Course Run"
+#~ msgstr ""
+
+#~ msgid "Course Summary Page"
+#~ msgstr ""
+
+#~ msgid "(for student enrollment and access)"
+#~ msgstr ""
+
+#~ msgid "Enroll in {course_display_name}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The course \"{course_display_name}\", provided "
+#~ "by {platform_name}, is open for "
+#~ "enrollment. Please navigate to this "
+#~ "course at {link_for_about_page} to enroll."
+#~ msgstr ""
+
+#~ msgid "Send a note to students via email"
+#~ msgstr ""
+
+#~ msgid "Invite your students"
+#~ msgstr ""
+
+#~ msgid "Promoting Your Course with {platform_name}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Your course summary page will not "
+#~ "be viewable until your course has "
+#~ "been announced. To provide content for"
+#~ " the page and preview it, follow "
+#~ "the instructions provided by your "
+#~ "Program Manager."
+#~ msgstr ""
+
+#~ msgid "Course Credit Requirements"
+#~ msgstr ""
+
+#~ msgid "Steps required to earn course credit"
+#~ msgstr ""
+
+#~ msgid "Minimum Grade"
+#~ msgstr ""
+
+#~ msgid "Successful Proctored Exam"
+#~ msgstr ""
+
+#~ msgid "Proctored Exam {number}"
+#~ msgstr ""
+
+#~ msgid "ID Verification"
+#~ msgstr ""
+
+#~ msgid "In-Course Reverification {number}"
+#~ msgstr ""
+
+#~ msgid "Course Pacing"
+#~ msgstr ""
+
+#~ msgid "Set the pacing for this course"
+#~ msgstr ""
+
+#~ msgid "Instructor-Paced"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Instructor-paced courses progress at the"
+#~ " pace that the course author sets."
+#~ " You can configure release dates for"
+#~ " course content and due dates for "
+#~ "assignments."
+#~ msgstr ""
+
+#~ msgid "Self-Paced"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Self-paced courses do not have "
+#~ "release dates for course content or "
+#~ "due dates for assignments. Learners can"
+#~ " complete course material at any time"
+#~ " before the course end date."
+#~ msgstr ""
+
+#~ msgid "Course Schedule"
+#~ msgstr ""
+
+#~ msgid "Dates that control when your course can be viewed"
+#~ msgstr ""
+
+#~ msgid "Course Start Date"
+#~ msgstr ""
+
+#~ msgid "First day the course begins"
+#~ msgstr ""
+
+#~ msgid "Course Start Time"
+#~ msgstr ""
+
+#~ msgid "(UTC)"
+#~ msgstr ""
+
+#~ msgid "Course End Date"
+#~ msgstr ""
+
+#~ msgid "Last day your course is active"
+#~ msgstr ""
+
+#~ msgid "Course End Time"
+#~ msgstr ""
+
+#~ msgid "Certificates Available Date"
+#~ msgstr ""
+
+#~ msgid "By default, 48 hours after course end date"
+#~ msgstr ""
+
+#~ msgid "Enrollment Start Date"
+#~ msgstr ""
+
+#~ msgid "First day students can enroll"
+#~ msgstr ""
+
+#~ msgid "Enrollment Start Time"
+#~ msgstr ""
+
+#~ msgid "Enrollment End Date"
+#~ msgstr ""
+
+#~ msgid "Last day students can enroll."
+#~ msgstr ""
+
+#~ msgid "Enrollment End Time"
+#~ msgstr ""
+
+#~ msgid "Course Details"
+#~ msgstr ""
+
+#~ msgid "Provide useful information about your course"
+#~ msgstr ""
+
+#~ msgid "Course Language"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Identify the course language here. This"
+#~ " is used to assist users find "
+#~ "courses that are taught in a "
+#~ "specific language. It is also used "
+#~ "to localize the 'From:' field in "
+#~ "bulk emails."
+#~ msgstr ""
+
+#~ msgid "Introducing Your Course"
+#~ msgstr ""
+
+#~ msgid "Information for prospective students"
+#~ msgstr ""
+
+#~ msgid "Course Title"
+#~ msgstr ""
+
+#~ msgid "Displayed as title on the course details page. Limit to 50 characters."
+#~ msgstr ""
+
+#~ msgid "Course Subtitle"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Displayed as subtitle on the course "
+#~ "details page. Limit to 150 characters."
+#~ msgstr ""
+
+#~ msgid "Course Duration"
+#~ msgstr ""
+
+#~ msgid "Displayed on the course details page. Limit to 50 characters."
+#~ msgstr ""
+
+#~ msgid "Course Description"
+#~ msgstr ""
+
+#~ msgid "Displayed on the course details page. Limit to 1000 characters."
+#~ msgstr ""
+
+#~ msgid "Course Short Description"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Appears on the course catalog page "
+#~ "when students roll over the course "
+#~ "name. Limit to ~150 characters"
+#~ msgstr ""
+
+#~ msgid "Course Overview"
+#~ msgstr ""
+
+#~ msgid "HTML Code Editor"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Introductions, prerequisites, FAQs that are"
+#~ " used on {a_link_start}your course summary"
+#~ " page{a_link_end} (formatted in HTML)"
+#~ msgstr ""
+
+#~ msgid "Course About Sidebar HTML"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Custom sidebar content for {a_link_start}your"
+#~ " course summary page{a_link_end} (formatted "
+#~ "in HTML)"
+#~ msgstr ""
+
+#~ msgid "Course Card Image"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can manage this image along "
+#~ "with all of your other "
+#~ "{a_link_start}files and uploads{a_link_end}"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Your course currently does not have "
+#~ "an image. Please upload one (JPEG "
+#~ "or PNG format, and minimum suggested "
+#~ "dimensions are 375px wide by 200px "
+#~ "tall)"
+#~ msgstr ""
+
+#~ msgid "Your course image URL"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please provide a valid path and "
+#~ "name to your course image (Note: "
+#~ "only JPEG or PNG format supported)"
+#~ msgstr ""
+
+#~ msgid "Upload Course Card Image"
+#~ msgstr ""
+
+#~ msgid "Course Banner Image"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Your course currently does not have "
+#~ "an image. Please upload one (JPEG "
+#~ "or PNG format, and minimum suggested "
+#~ "dimensions are 1440px wide by 400px "
+#~ "tall)"
+#~ msgstr ""
+
+#~ msgid "Your banner image URL"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please provide a valid path and "
+#~ "name to your banner image (Note: "
+#~ "only JPEG or PNG format supported)"
+#~ msgstr ""
+
+#~ msgid "Upload Course Banner Image"
+#~ msgstr ""
+
+#~ msgid "Course Video Thumbnail Image"
+#~ msgstr ""
+
+#~ msgid "Video Thumbnail Image"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Your course currently does not have "
+#~ "a video thumbnail image. Please upload"
+#~ " one (JPEG or PNG format, and "
+#~ "minimum suggested dimensions are 375px "
+#~ "wide by 200px tall)"
+#~ msgstr ""
+
+#~ msgid "Your video thumbnail image URL"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please provide a valid path and "
+#~ "name to your video thumbnail image "
+#~ "(Note: only JPEG or PNG format "
+#~ "supported)"
+#~ msgstr ""
+
+#~ msgid "Upload Video Thumbnail Image"
+#~ msgstr ""
+
+#~ msgid "Course Introduction Video"
+#~ msgstr ""
+
+#~ msgid "Delete Current Video"
+#~ msgstr ""
+
+#~ msgid "your YouTube video's ID"
+#~ msgstr ""
+
+#~ msgid "Enter your YouTube video's ID (along with any restriction parameters)"
+#~ msgstr ""
+
+#~ msgid "Learning Outcomes"
+#~ msgstr ""
+
+#~ msgid "Add the learning outcomes for this course"
+#~ msgstr ""
+
+#~ msgid "Add Learning Outcome"
+#~ msgstr ""
+
+#~ msgid "Instructors"
+#~ msgstr ""
+
+#~ msgid "Add details about the instructors for this course"
+#~ msgstr ""
+
+#~ msgid "Add Instructor"
+#~ msgstr ""
+
+#~ msgid "Expectations of the students taking this course"
+#~ msgstr ""
+
+#~ msgid "Hours of Effort per Week"
+#~ msgstr ""
+
+#~ msgid "Time spent on all course work"
+#~ msgstr ""
+
+#~ msgid "Prerequisite Course"
+#~ msgstr ""
+
+#~ msgid "None"
+#~ msgstr ""
+
+#~ msgid "Course that students must complete before beginning this course"
+#~ msgstr ""
+
+#~ msgid "set pre-requisite course"
+#~ msgstr ""
+
+#~ msgid "Entrance Exam"
+#~ msgstr ""
+
+#~ msgid "Require students to pass an exam before beginning the course."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can now view and author your"
+#~ " course entrance exam from the "
+#~ "{link_start}Course Outline{link_end}."
+#~ msgstr ""
+
+#~ msgid "Grade Requirements"
+#~ msgstr ""
+
+#~ msgid " %"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The score student must meet in "
+#~ "order to successfully complete the "
+#~ "entrance exam. "
+#~ msgstr ""
+
+#~ msgid "Course Content License"
+#~ msgstr ""
+
+#~ msgid "Select the default license for course content"
+#~ msgstr ""
+
+#~ msgid "How are these settings used?"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Your course's schedule determines when "
+#~ "students can enroll in and begin a"
+#~ " course."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Other information from this page appears"
+#~ " on the About page for your "
+#~ "course. This information includes the "
+#~ "course overview, course image, introduction"
+#~ " video, and estimated time requirements."
+#~ " Students use About pages to choose"
+#~ " new courses to take."
+#~ msgstr ""
+
+#~ msgid "Other Course Settings"
+#~ msgstr ""
+
+#~ msgid "Sign Up"
 #~ msgstr ""
 
