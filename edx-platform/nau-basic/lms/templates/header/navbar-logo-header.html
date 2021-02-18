@@ -30,11 +30,9 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
 % if 0:
 
     <h1 class="header-logo">
-      <a href="/">
         <%block name="navigation_logo">
-        <img  class="logo" src="${static.url('images/logo_nau_w600.png')}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+        <a href="/" class="logo"></a>
         </%block>  
-      </a>
       % if course:
         <div class="course-header">
           <span class="provider">${course.display_org_with_default}:</span>
@@ -63,7 +61,7 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
 % endif
 
 
-% if nau_lang_menu:
+% if not nau_lang_menu:
 
     <!-- Prepares Script and hidden form to post language settings -->
 
@@ -122,90 +120,50 @@ function closeNav() {
 <div id="branding-top-nav">
 
     <a id="open-menu-arrow" href="javascript:void(0)" onclick="openNav(0)" title="Abrir">&#9776;</a>  
-    <a href="${www_pt}"><img id="logo" src="/static/nau-basic/images/nau_sempre_aprender.svg" alt="NAU logo"></a> 
+    <a href="${www_pt}" class="logo"></a>
 
     <!-- starts menu container -->
-    <div id="menu-container">
+    <div class="menu-container">
 
       <!-- starts top nav menu -->
       <a id="close-menu-arrow" href="javascript:void(0)" onclick="closeNav(0)" title="Fechar">&#10005;</a>
       <div class="nav-icon"></div>
 
-      <ul id="about-categories-entities" class="menu">
+      <ul id="about-categories-entities" class="main-menu">
         % for title in header_menu:
           <% link = header_menu[title]["link"] %>
-          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+          <li class="menu-item menu-item-type-post_type menu-item-object-page 
+          % if len(header_menu[title]["itens"]):
+            menu-item-has-children
+          % endif
+          ">
             <a href="${link}">${title}</a>
+            % if len(header_menu[title]["itens"]):
             <ul class="sub-nav menu-depth-0">
             % for label in header_menu[title]["itens"]:
               <% link = header_menu[title]["itens"][label] %>
               <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${link}">${label}</a></li>
             %endfor
-            </ul>      
+            </ul>
+            % endif
           </li>
         % endfor
       </ul>
 
-% if 0:      
-      
-      <ul id="about-categories-entities" class="menu">
-        <li id="menu-item-1743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1743">
-            <a href="${www_pt}/sobre/">Sobre</a>
-            <ul class="sub-nav menu-depth-0">
-                <li id="menu-item-1744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1744"><a href="${www_pt}/sobre/plataforma-nau/">Plataforma NAU</a></li>
-                <li id="menu-item-431" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-431"><a href="${www_pt}/entidades/">Entidades Promotoras</a></li>
-                <li id="menu-item-430" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-430"><a href="${www_pt}/sobre/comunidades-nau/">Comunidades NAU</a></li>
-                <li id="menu-item-423" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-423"><a href="${www_pt}/ajuda/">Serviços de Apoio</a></li>
-                <li id="menu-item-429" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-429"><a href="${www_pt}/sobre/material-de-divulgacao/">Material de Divulgação</a></li>
-                <li id="menu-item-424" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-424"><a href="${www_pt}/noticias/">Notícias</a></li>
-            </ul>
-        </li>
-        <li id="menu-item-1070" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1070">
-            <a href="${www_pt}/entidades/">Entidades</a>
-            <ul class="sub-nav menu-depth-0">
-                <li id="menu-item-964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-964"><a href="${www_pt}/entidades/administracao-publica/">Administração Pública</a></li>
-                <li id="menu-item-966" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-966"><a href="${www_pt}/entidades/ensino-superior/">Ensino Superior</a></li>
-                <li id="menu-item-965" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-965"><a href="${www_pt}/entidades/privados/">Privadas</a></li>
-            </ul>
-        </li>
-        <li id="menu-item-1758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1758">
-            <a href="${www_pt}/cursos/">Cursos</a>
-            <ul class="sub-nav menu-depth-0">
-                <li id="menu-item-1071" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1071"><a href="${www_pt}/categorias/">Categorias</a></li>                
-            </ul>
-        </li>
-      </ul>  
-
-% endif
-
       <!-- starts top nav action container -->
       <div id="actions_container"> 
-
-
-% if LANGUAGE_CODE == "pt-pt":
   
           <!-- starts top nav search bar -->          
           <form id="search-form" action="${www_pt}" role="search" method="get">
-            <input id="s" name="s" type="search" placeholder="${_("Search...")}" value="">
-            <input name="submit-search" class="nav-search" style="box-shadow: none;" type="submit">
+            <input id="search-input" name="s" type="search" placeholder="${_("Search courses...")}" value="">
+            <input name="submit-search" type="submit">
           </form>
           <!-- ends top nav search bar -->
-
-% else:
-
-          <!-- starts top nav search bar -->          
-          <form id="search-form" action="${www_en}" role="search" method="get">
-            <input id="s" name="s" type="search" placeholder="${_("Search...")}" value="">
-            <input name="submit-search" class="nav-search" style="box-shadow: none;" type="submit">
-          </form>
-          <!-- ends top nav search bar -->
-
-% endif
 
       
       <!-- starts menu languages --> 
       
-      
+      <%doc>
       % if nau_lang_menu:
          <div id="languages-actions-container">
            <ul id="menu_languages">
@@ -219,6 +177,7 @@ function closeNav() {
            </ul>
          </div>
       % endif
+      </%doc>
       
       % if user.is_authenticated:
             <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>

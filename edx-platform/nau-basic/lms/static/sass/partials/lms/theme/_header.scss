@@ -1,0 +1,742 @@
+.global-header {
+    overflow: inherit;
+    position: relative;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.global-header .nav-links .secondary .dropdown-user-menu {
+    z-index: 100;
+}
+
+/** Top nav menu */
+
+#branding-top-nav {
+    border-top: solid 0.2em #0857ff;
+    background-color: $menu-bg-color;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: $menu-shadow;
+    padding: 20px 50px 20px 0;
+
+    @media screen and (max-width: $breakpoint-medium) {
+        display: block;
+    }
+
+    .logo {
+        display: inline-block;
+        width: 190px;
+        height: 30px;
+        margin-left: 50px;
+        background: url("/static/nau-basic/images/nau_sempre_aprender.svg") no-repeat center center;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            display: inline-block;
+            width: 100px;
+            background: url("/static/nau-basic/images/logo-nau-mobile.svg") no-repeat center center;
+        }
+    }
+
+    li {
+        list-style-type: none;
+        margin-right: 15px;
+    }
+
+    #close-menu-arrow {
+        display: none; /* hide closing menu arrow when in desktop */
+        font-size: 24px;
+    }
+
+    #open-menu-arrow {
+        display: none;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            display: inline-block;
+            font-size: 22px;
+            position: absolute;
+            width: 40px;
+            margin-left: 10px;
+        }
+    }
+
+    #actions_container {
+        display: flex;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            justify-content: center;
+        }
+
+        #search-form {
+            margin-right: 10px;
+            position: relative;
+        }
+
+        #search-input {
+            border-radius: 50px;
+            height: 30px;
+            border: 1px solid $header-bar-color;
+            padding-left: 15px;
+            padding-right: 25px;
+
+            &::placeholder {
+                font-size: .8rem;
+            }
+        }
+
+        input[type="submit"],
+        input[type="button"],
+        button,
+        .button {
+            text-shadow: none;
+            box-shadow: none;
+            position: absolute;
+            z-index: 4;
+            right: 15px;
+            background: transparent url("/static/nau-basic/images/magnifier.svg") no-repeat right center;
+            width: 28px;
+            border: none;
+            outline: none;
+            text-indent: -9999px;
+            background-size: 20px;
+            cursor: pointer;
+            box-shadow: none;
+        }
+    }
+}
+
+.menu-container {
+    display: flex;
+
+    @media screen and (max-width: $breakpoint-medium) {
+        display: none;
+        position: absolute;
+        z-index: 2000 !important;
+        background: white;
+        top: 0;
+        width: calc(100% - 30px);
+        padding: 20px 15px;
+    }
+
+    .main-menu {
+        display: flex;
+        margin: 0;
+        padding-top: 0.5rem;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            display: block;
+        }
+
+        li {
+            list-style-type: none;
+
+            &:not(.menu-item-has-children) > a {
+                padding-right: 5px;
+            }
+
+            &.menu-item-has-children > a {
+                background: url("/static/nau-basic/images/arrow-dropdown.svg") no-repeat right 5.5px;
+                background-size: 12px;
+                padding-right: 20px;
+            }
+
+            &.current-menu-item a {
+                color: $header-bar-color !important;
+            }
+
+            a {
+                font-size: 0.85rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $text-color;
+                display: block;
+
+                @media screen and (max-width: $breakpoint-medium) {
+                    margin-bottom: 20px;
+                }
+
+                &:hover {
+                    color: $header-bar-color;
+                }
+            }
+
+            &:hover .sub-nav {
+                display: block;
+            }
+        }
+
+        li ul li > a {
+            background: none;
+        }
+    }
+
+    .sub-nav {
+        position: absolute;
+        z-index: 200;
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 25px 35px;
+        box-shadow: 0px 21px 18px -5px rgba(0, 0, 0, 0.45);
+        display: none;
+        margin: 0 0 0 -26px;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            display: block;
+            position: relative;
+            margin-left: 0;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0px 10px 20px;
+        }
+
+        li a {
+            line-height: 1.5;
+            margin-top: 8px !important;
+            font-weight: 500 !important;
+            text-transform: initial !important;
+            color: #777 !important;
+
+            &:hover {
+                color: $header-bar-color !important;
+            }
+
+            @media screen and (max-width: $breakpoint-medium) {
+                font-size: 0.85rem;
+            }
+        }
+    }
+
+    .login_menu {
+        display: flex;
+        padding: 0;
+        margin: 0;
+
+        li {
+            &.menu-item-has-children > a {
+                background: url("/static/nau-basic/images/arrow-dropdown.svg") no-repeat right 5.5px;
+                background-size: 12px;
+                padding-right: 20px;
+
+                @media screen and (max-width: $breakpoint-medium) {
+                    background: none;
+                    background-size: inherit;
+                    padding-right: inherit;
+                }
+            }
+
+            &:hover .sub-nav {
+                display: block;
+
+                @media screen and (max-width: $breakpoint-medium) {
+                    display: none;
+                }
+            }
+
+            .sub-nav {
+                @media screen and (max-width: $breakpoint-medium) {
+                    display: none;
+                }
+            }
+
+            ul.sub-nav li:last-child a {
+                background-color: transparent;
+                padding: 0;
+                margin: 0.5rem;
+
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                }
+            }
+
+            a {
+                font-size: 0.85rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $header-bar-color;
+                display: block;
+                margin: 0.5rem;
+
+                &:hover,
+                &:focus {
+                    color: $action-btn-color;
+                }
+            }
+
+            &:last-child {
+                margin: 0;
+
+                a {
+                    color: white;
+                    background-color: $header-bar-color;
+                    border-radius: 25px;
+                    margin: 0;
+                    padding: 0.5rem 1.5rem;
+
+                    &:hover,
+                    &:focus {
+                        background-color: $action-btn-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    z-index: 100;
+}
+
+.enable-overlay {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/*
+#branding-top-nav {
+    border-top: solid 0.3em #0857FF;
+    border-radius: 0.3em 0.3em 0 0;
+    position: relative;
+    top: 0;
+    z-index: 3;
+    margin: 0 auto;
+    width: 100%;
+    height: 37px;
+    padding: 17px 0px 10px 0px;
+    vertical-align: middle;
+    border-bottom: 1px solid grey;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    -webkit-box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.15);
+}
+
+div#branding-top-nav a:nth-child(2) {
+    display: inline-grid;
+    position: absolute;
+    left: 0;
+}
+
+#branding-top-nav img#logo {
+    width: 190px;
+    margin-left: 50px;
+}
+
+#branding-top-nav ul {
+    padding-top: 9px;
+}
+
+#branding-top-nav li {
+    list-style-type: none;
+    margin-right: 25px;
+    background: transparent url("/static/nau-basic/images/arrow-dropdown.svg") no-repeat right 5.5px;
+    background-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.sub-nav {
+    position: absolute !important;
+    z-index: 2 !important;
+    padding-top: 32px !important;
+    background-color: rgba(255, 255, 255, 1) !important;
+    border-radius: 5px !important;
+    margin-top: -4px !important;
+    padding: 30px 20px 37px 30px !important;
+    font-weight: 100 !important;
+    -webkit-box-shadow: 0px 21px 18px -5px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 0px 21px 18px -5px rgba(0, 0, 0, 0.45);
+    box-shadow: 0px 21px 18px -5px rgba(0, 0, 0, 0.45);
+    transition: display 0.5s;
+    text-transform: capitalize !important;
+    display: none;
+}
+
+ul#about-categories-entities li:hover .sub-nav {
+    display: grid;
+}
+
+.sub-nav li {
+    background-image: none !important;
+}
+
+.sub-nav li a {
+    line-height: 0.1em !important;
+    padding-top: 20px !important;
+    background-color: rgba(255, 255, 255, 1) !important;
+    border-radius: 5px !important;
+    margin-top: 8px !important;
+    font-weight: 500 !important;
+    text-transform: capitalize !important;
+    color: #777 !important;
+}
+
+.sub-nav li a:hover {
+    color: black !important;
+}
+
+ul#about-categories-entities li a,
+ul#menu_languages,
+ul#menu_login_register li a {
+    font-family: roboto;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    width: auto;
+    cursor: pointer;
+    font: Bold 11px/19px Roboto;
+    letter-spacing: 0;
+    color: #000000;
+    padding-right: 18px;
+    opacity: 1;
+}
+
+ul#about-categories-entities li ul {
+    width: auto;
+    clear: both;
+}
+
+div#menu-container {
+    height: auto;
+}
+
+div#menu-container a {
+    font-size: 13px !important
+}
+
+div#menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    opacity: 0;
+    transition: 0.5s;
+    display: none;
+    z-index: 2 !important;
+    cursor: w-resize;
+}
+
+div#branding-top-nav a#open-menu-arrow {
+    display: none;
+}
+
+div#menu-container a#close-menu-arrow {
+    display: none;
+}
+
+div#menu-container ul#about-categories-entities {
+    margin-left: 0%;
+    padding: 5px 0 0 0;
+}
+
+div#actions_container {
+    margin-right: 50px;
+}
+
+div#languages-actions-container {
+    width: auto;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+ul#menu_login_register,
+ul#menu_languages {
+    padding-top: 3px;
+    display: flex;
+}
+
+ul#menu_login_register {
+    padding-left: 20px;
+    display: flex;
+}
+
+ul#menu_languages {
+    float: none;
+    clear: none;
+}
+
+ul#menu_login_register li,
+ul#menu_languages li {
+    background-image: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul#menu_login_register li a,
+ul#menu_languages li a {
+    padding-right: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+ul#menu_login_register li a:visited,
+ul#menu_languages li a:visited {
+    color: #000;
+}
+
+ul#menu_login_register span,
+ul#menu_languages span {
+    color: #ccc;
+    display: flex;
+    padding: 0 4px;
+}
+
+ul#menu_login_register span,
+ul#menu_login_register li:first-child a {
+    padding: 0;
+    height: auto;
+    padding-right: 5px;
+    margin-right: 5px;
+    color: #000;
+}
+
+ul#menu_languages li {
+    background: transparent url("/static/nau-basic/images/lang-divider.svg") no-repeat center right;
+    height: auto;
+    padding: 0;
+    padding-right: 5px;
+    margin-right: 5px;
+}
+
+ul#menu_languages li.current_language {
+    color: #CCC;
+    cursor: default !important;
+}
+
+ul#menu_languages li:last-child {
+    background-image: none !important;
+}
+
+ul#menu_languages,
+ul#menu_login_register {
+    padding: 0;
+    height: auto;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+ul#menu_login_register {
+    margin: 0 0 0 17px;
+}
+
+ul#menu_login_register li {
+    text-align: right;
+}
+
+ul#menu_languages li a.differentLang {
+    height: auto;
+}
+
+ul#menu_login_register li:last-child a {
+    padding-right: 30px;
+    padding-left: 0px;
+    background: transparent url(/static/nau-basic/images/login.svg) no-repeat center right;
+    background-size: 23px;
+    color: #000;
+    display: flex;
+    text-align: right
+}
+
+ul#menu_languages li a {
+    display: flex;
+}
+
+ul#menu_actions li:nth-child(1) a {
+    padding-right: 0;
+    margin-left: 13px;
+    display: flex;
+}
+
+form#search-form {
+    width: 100%;
+    position: relative;
+    input[type="search"] {
+        background-color: transparent;
+        border-radius: 50px;
+        height: 33px;
+        text-align: left;
+        padding-left: 15px;
+        border: 1px solid #9E9E9E;
+        outline: none;
+        font-family: 'Roboto', sans-serif;
+        margin-top: -2px;
+        padding-right: 25px;
+        width: 70%;
+        margin: 0 auto;
+        z-index: 2;
+        position: relative;
+    }
+}
+
+div#actions_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    align-content: center;
+    position: relative;
+    top: -2px;
+}
+
+div#branding-top-nav a#open-menu-arrow {
+    font-size: 20px;
+    position: absolute;
+    left: 9px;
+    top: 11px;
+    padding: 10px;
+    background-color: white;
+    z-index: 2;
+    text-decoration: none;
+}
+
+.global-header {
+    border: 0px;
+    padding: 0px;
+    min-height: 0px;
+}
+
+div#branding-top-nav ul,
+div#branding-top-nav li {
+    float: left;
+}
+
+div#banner-search-form-container {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    display: inline;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    top: 417px;
+
+
+    form#banner-search-form {
+        position: relative;
+        width: 100%;
+
+        input[type="submit"] {
+            position: absolute;
+            z-index: 4;
+            top: 7px;
+            right: 15px;
+            background: transparent url(/static/nau-basic/images/magnifier.svg) no-repeat right center;
+            width: 28px;
+            border: none;
+            outline: none;
+            text-indent: -9999px;
+            background-size: 26px;
+            height: 40px;
+            cursor: pointer;
+            box-shadow: none;
+        }
+    
+
+        input[type="search"] {
+    
+            position: relative;
+            text-align: left;
+            padding-left: 24px;
+            border: 1px solid transparent;
+            outline: none;
+            font-family: 'Roboto', sans-serif;
+            margin-top: -2px;
+            padding-right: 36px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 5px;
+            border-radius: 60px;
+            opacity: 0.95;
+            height: 47px;
+            top: 0;
+            background-color: transparent;
+            position: relative;
+            text-align: left;
+            padding-left: 24px;
+            border: 1px solid transparent;
+            outline: none;
+            font-family: 'Roboto', sans-serif;
+            margin-top: -2px;
+            padding-right: 36px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 5px #000000;
+            border-radius: 60px;
+            opacity: 0.95;
+            height: 47px;
+            top: 0;
+            font-size: 1.15em;
+            letter-spacing: 0;
+            color: #6a6969;
+            width: 100%;
+
+            background-color: transparent;
+            position: relative;
+            text-align: left;
+            padding-left: 24px;
+            border: 1px solid transparent;
+            outline: none;
+            font-family: 'Roboto', sans-serif;
+            margin-top: -2px;
+            padding-right: 47px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 3px 5px #000000;
+            border-radius: 60px;
+            opacity: 0.95;
+            height: 58px;
+            top: 0;
+            font-size: 1.15em;
+            letter-spacing: 0;
+            color: #6a6969;
+            width: 100%;
+        }
+    }
+}
+
+form#search-form input[type="submit"] {
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    right: 32px;
+    background: transparent url(/static/nau-basic/images/magnifier.svg) no-repeat right center;
+    width: 25px;
+    border: none;
+    outline: none;
+    text-indent: -9999px;
+    background-size: 16px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 7;
+    box-shadow: none;
+}
+
+form#login-form,
+form#register-form {
+    display: none;
+}
+
+#branding-top-nav #menu-container #search-form input[type="search"] {
+    height: 25px;
+}
+
+ul#about-categories-entities {
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+*/

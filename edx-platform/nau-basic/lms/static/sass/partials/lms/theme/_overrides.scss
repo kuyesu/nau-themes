@@ -7,11 +7,10 @@ $nau_blue : #081CFF;
     outline: none!important;
 }
 
-
 /*** General ***/
 
 body {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     background-color: #EAEAEA;
     text-rendering: optimizeLegibility;
     margin: auto;
@@ -19,7 +18,7 @@ body {
     padding-bottom: 10px;
     line-height: 1.3em;
     
-    div.window-wrap {
+    .window-wrap {
         background-color: #F5F5F5;
         width: 100%;
         max-width: 1280px;
@@ -70,21 +69,11 @@ body {
 
 .window-wrap .global-header .nav-links .main .nav-tab a {
     color: #10297C;
+
     &:hover {
         color: #081C5F;
     }
 }
-
-.global-header {
-    min-height: 70px;
-    overflow: inherit;
-    position: relative;
-}
-
-.global-header .nav-links .secondary .dropdown-user-menu {
-    z-index: 100;
-}
-
 
 /*** Home **/
 
@@ -331,7 +320,7 @@ button[type="submit"] {
     font-size: 1em;
     font-weight: normal !important;
     background: #0553FF 0% 0% no-repeat padding-box !important;
-    border-color: #0553FF !important;
+    border-color: transparent !important;
     box-shadow: none;
     width: 100%;
 }
@@ -353,475 +342,6 @@ main#main .login-register-content .form-field {
 
 
 /* FIM DE FORM */
-
-
-/* NAV */
-
-div#branding-top-nav {
-    position: relative/*fixed*/
-    ;
-    top: 0;
-    z-index: 3;
-    margin: 0 auto;
-    width: 100%;
-    height: 37px; /* 37px? */
-    max-width: 1280px;
-    padding: 17px 0px 10px 0px;
-    vertical-align: middle;
-    border-bottom: 1px solid grey;
-    background-color: white;
-    display: flex;
-    justify-content: flex-end;
-    -webkit-box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.15);
-}
-
-div#branding-top-nav a:nth-child(2) {
-    display: inline-grid;
-    position: absolute;
-    left: 0;
-}
-
-#branding-top-nav img#logo {
-    width: 190px;
-    margin-left: 50px;
-}
-
-#branding-top-nav ul {
-    padding-top: 9px;
-}
-
-#branding-top-nav li {
-    list-style-type: none;
-    margin-right: 25px;
-    background: transparent url("/static/nau-basic/images/arrow-dropdown.svg") no-repeat right 5.5px;
-    background-size: 12px;
-    letter-spacing: 0.5px;
-}
-
-.sub-nav {
-    position: absolute !important;
-    z-index: 2 !important;
-    padding-top: 32px !important;
-    background-color: rgba(255, 255, 255, 1) !important;
-    border-radius: 5px !important;
-    margin-top: -4px !important;
-    padding: 30px 20px 37px 30px !important;
-    font-weight: 100 !important;
-    -webkit-box-shadow: 0px 21px 18px -5px rgba(0, 0, 0, 0.45);
-    -moz-box-shadow: 0px 21px 18px -5px rgba(0, 0, 0, 0.45);
-    box-shadow: 0px 21px 18px -5px rgba(0, 0, 0, 0.45);
-    transition: display 0.5s;
-    text-transform: capitalize !important;
-    display: none;
-}
-
-ul#about-categories-entities li:hover .sub-nav {
-    display: grid;
-}
-
-.sub-nav li {
-    background-image: none !important;
-}
-
-.sub-nav li a {
-    line-height: 0.1em !important;
-    padding-top: 20px !important;
-    background-color: rgba(255, 255, 255, 1) !important;
-    border-radius: 5px !important;
-    margin-top: 8px !important;
-    font-weight: 500 !important;
-    text-transform: capitalize !important;
-    color: #777 !important;
-}
-
-.sub-nav li a:hover {
-    color: black !important;
-}
-
-ul#about-categories-entities li a,
-ul#menu_languages,
-ul#menu_login_register li a {
-    font-family: roboto;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: block;
-    width: auto;
-    cursor: pointer;
-    font: Bold 11px/19px Roboto;
-    letter-spacing: 0;
-    color: #000000;
-    padding-right: 18px;
-    opacity: 1;
-}
-
-ul#about-categories-entities li ul {
-    width: auto;
-    clear: both;
-}
-
-
-/* Menu container */
-
-div#menu-container {
-    height: auto;
-}
-
-div#menu-container a {
-    font-size: 13px !important
-}
-
-
-/* Menu overlay */
-
-div#menu-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    opacity: 0;
-    transition: 0.5s;
-    display: none;
-    z-index: 2 !important;
-    cursor: w-resize;
-}
-
-div#branding-top-nav a#open-menu-arrow {
-    display: none;
-    /* hide closing menu arrow when in desktop */
-}
-
-div#menu-container a#close-menu-arrow {
-    display: none;
-    /* hide closing menu arrow when in desktop */
-}
-
-div#menu-container ul#about-categories-entities {
-    margin-left: 0%;
-    padding: 5px 0 0 0;
-}
-
-div#actions_container {
-    margin-right: 50px;
-}
-
-
-/* Languages and actions container */
-
-div#languages-actions-container {
-    width: auto;
-    padding-left: /*25px*/
-    0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-ul#menu_login_register,
-ul#menu_languages {
-    padding-top: 3px;
-    display: flex;
-}
-
-ul#menu_login_register {
-    padding-left: 20px;
-    display: flex;
-}
-
-ul#menu_languages {
-    float: none;
-    clear: none;
-}
-
-ul#menu_login_register li,
-ul#menu_languages li {
-    background-image: none;
-    padding: 0;
-    margin: 0;
-}
-
-ul#menu_login_register li a,
-ul#menu_languages li a {
-    padding-right: 0;
-    padding-top: 7px;
-    padding-bottom: 7px;
-}
-
-ul#menu_login_register li a:visited,
-ul#menu_languages li a:visited {
-    color: #000;
-}
-
-ul#menu_login_register span,
-ul#menu_languages span {
-    color: #ccc;
-    display: flex;
-    padding: 0 4px;
-}
-
-ul#menu_login_register span,
-ul#menu_login_register li:first-child a {
-    /*background: transparent url("/static/nau-basic/images/lang-divider.svg") no-repeat center right;*/
-    padding: 0;
-    height: auto;
-    padding-right: 5px;
-    margin-right: 5px;
-    color: #000;
-}
-
-ul#menu_languages li {
-    background: transparent url("/static/nau-basic/images/lang-divider.svg") no-repeat center right;
-    height: auto;
-    padding: 0;
-    padding-right: 5px;
-    margin-right: 5px;
-}
-
-ul#menu_languages li.current_language {
-    color: #CCC;
-    cursor: default !important;
-}
-
-ul#menu_languages li:last-child {
-    background-image: none !important;
-}
-
-ul#menu_languages,
-ul#menu_login_register {
-    padding: 0;
-    height: auto;
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
-
-ul#menu_login_register {
-    margin: 0 0 0 17px;
-}
-
-ul#menu_login_register li {
-    text-align: right;
-}
-
-ul#menu_languages li a.differentLang {
-    height: auto;
-    /* padding: 0;*/
-}
-
-ul#menu_login_register li:last-child a {
-    padding-right: 30px;
-    padding-left: 0px;
-    background: transparent url(/static/nau-basic/images/login.svg) no-repeat center right;
-    background-size: 23px;
-    color: #000;
-    display: flex;
-    text-align: right
-}
-
-ul#menu_languages li a {
-    display: flex;
-}
-
-ul#menu_actions li:nth-child(1) a {
-    padding-right: 0;
-    margin-left: 13px;
-    display: flex;
-}
-
-
-/* search form */
-
-form#search-form {
-    width: 100%;
-    position: relative;
-    input[type="search"] {
-        background-color: transparent;
-        border-radius: 50px;
-        height: 33px;
-        text-align: left;
-        padding-left: 15px;
-        border: 1px solid #9E9E9E;
-        outline: none;
-        font-family: 'Roboto', sans-serif;
-        margin-top: -2px;
-        padding-right: 25px;
-        width: 70%;
-        margin: 0 auto;
-        z-index: 2;
-        position: relative;
-    }
-}
-
-div#actions_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-    align-content: center;
-    position: relative;
-    top: -2px;
-}
-
-div#branding-top-nav a#open-menu-arrow {
-    font-size: 20px;
-    position: absolute;
-    left: 9px;
-    top: 11px;
-    padding: 10px;
-    background-color: white;
-    z-index: 2;
-    text-decoration: none;
-    /* show closing menu arrow when in tablet and mobile versions */
-}
-
-.global-header {
-    border: 0px;
-    padding: 0px;
-    min-height: 0px;
-}
-
-div#branding-top-nav ul,
-div#branding-top-nav li {
-    float: left;
-}
-
-div#banner-search-form-container {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-    display: inline;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    top: 417px;
-
-
-    form#banner-search-form {
-        position: relative;
-        width: 100%;
-
-        input[type="submit"] {
-            position: absolute;
-            z-index: 4;
-            top: 7px;
-            right: 15px;
-            background: transparent url(/static/nau-basic/images/magnifier.svg) no-repeat right center;
-            width: 28px;
-            border: none;
-            outline: none;
-            text-indent: -9999px;
-            background-size: 26px;
-            height: 40px;
-            cursor: pointer;
-            border-shadow: none;
-        }
-    
-
-        input[type="search"] {
-    
-            position: relative;
-            text-align: left;
-            padding-left: 24px;
-            border: 1px solid transparent;
-            outline: none;
-            font-family: 'Roboto', sans-serif;
-            margin-top: -2px;
-            padding-right: 36px;
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            box-shadow: 0px 3px 5px; /* #00000059; */
-            border-radius: 60px;
-            opacity: 0.95;
-            height: 47px;
-            top: 0;
-            /* font-size: 1.15em
-            letter-spacing: 0;
-            color: #6a6969;
-            width: 100%*/
-            background-color: transparent;
-            position: relative;
-            text-align: left;
-            padding-left: 24px;
-            border: 1px solid transparent;
-            outline: none;
-            font-family: 'Roboto', sans-serif;
-            margin-top: -2px;
-            padding-right: 36px;
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            box-shadow: 0px 3px 5px #000000;
-            border-radius: 60px;
-            opacity: 0.95;
-            height: 47px;
-            top: 0;
-            font-size: 1.15em;
-            letter-spacing: 0;
-            color: #6a6969;
-            width: 100%;
-
-            background-color: transparent;
-            position: relative;
-            text-align: left;
-            padding-left: 24px;
-            border: 1px solid transparent;
-            outline: none;
-            font-family: 'Roboto', sans-serif;
-            margin-top: -2px;
-            padding-right: 47px;
-            background: #FFFFFF 0% 0% no-repeat padding-box;
-            box-shadow: 0px 3px 5px #000000;
-            border-radius: 60px;
-            opacity: 0.95;
-            height: 58px;
-            top: 0;
-            font-size: 1.15em;
-            letter-spacing: 0;
-            color: #6a6969;
-            width: 100%;
-        }
-    }
-}
-
-form#search-form input[type="submit"] {
-    position: absolute;
-    z-index: 1;
-    top: 2px;
-    right: 32px;
-    background: transparent url(/static/nau-basic/images/magnifier.svg) no-repeat right center;
-    width: 25px;
-    border: none;
-    outline: none;
-    text-indent: -9999px;
-    background-size: 16px;
-    height: 25px;
-    cursor: pointer;
-    z-index: 7;
-    border-shadow: none;
-}
-
-form#login-form,
-form#register-form {
-    display: none;
-}
-
-#branding-top-nav #menu-container #search-form input[type="search"] {
-    height: 25px;
-}
-
-ul#about-categories-entities {
-    height: auto;
-    margin: 0px;
-    padding: 0px;
-}
-
-
-/* NAV */
-
-body div.window-wrap {
-    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.15);
-}
 
 input[type="password"],
 input[type="email"],
@@ -937,17 +457,14 @@ textarea {
 .btn {
     border-radius: 50px;
     background: #0553FF 0% 0% no-repeat padding-box !important;
-    border-color: #0553FF !important;
+    border-color: transparent !important;
     box-shadow: none;
     color: white;
     padding: 10px 20px;
 }
 
-.dashboard {}
-
-.global-header .main-header .course-header {
+.course-header {
     padding-top: 30px;
-    /* padding-bottom: 20px; */
     padding-left: 50px;
     padding-right: 50px;
     background-color: #4B4B4B;
@@ -966,6 +483,7 @@ body.ltr, body.view-wiki {
 }
 
 div.window-wrap {
+    background-color: #F5F5F5;
     border-top: solid #666 0.5em;
     box-shadow: 0 2em 1.5em rgba(0, 0, 0, 0.3) !important;
 }
@@ -974,11 +492,7 @@ div.main-header {
     background-color: #666;
 }
 
-div#branding-top-nav {
-    border-top: solid 0.3em #0857FF;
-    border-radius: 0.3em 0.3em 0 0;
-    border-bottom: 0 !important;
-}
+
 
 .form-field label {
     color: #333 !important;
@@ -1143,11 +657,6 @@ input:focus {
 
 
 
-
-form#search-form input[type="submit"] input.nav-search {
-    border-shadow: none;
-}
-
 button.bookmark-button:active,
 button.bookmark-button:hover { text-decoration: none !important; }
 .has-breadcrumbs .breadcrumbs { margin-left: 1em; }
@@ -1197,105 +706,8 @@ span#upgrade-to-verified { font-weight: normal !important; margin-right: 0; }
 .course-container { border: 0 !important; box-shadow: 0 0.5em 0.75em rgba(0,0,0,0.1) !important; border-radius: 0.25em !important; }
 .course .messages-list { border-radius: 0 0 0.25em 0.25em; }
 
-
-
-
-
-
-#menu-container ul li a:hover {
-    color: #0857FF;
-}
-
 li:hover ul.sub-nav.access-menu {
     display: grid;    
-}
-
-ul#menu_login_register li:hover  {
-
-}
-
-
-#branding-top-nav #menu-container #actions_container ul#menu_login_register li ul.sub-nav.access-menu {
-    margin-top: 0px !important;        
-}
-
-#branding-top-nav #menu-container #actions_container ul#menu_login_register li ul.sub-nav.access-menu {    
-    text-align: left;
-    margin: 0px;
-}
-
-#branding-top-nav li ul.sub-nav.access-menu li a {
-    background-image: none;
-    text-align: left;
-    margin: 0px;
-    line-height: 1.3em !important;
-    padding-top: 0.5em !important;
-}
-
-
-
-
-
-
-#menu-container ul li a:hover {
-    color: #0857FF;
-}
-
-#branding-top-nav #menu-container #actions_container ul#menu_login_register li ul.sub-nav.access-menu {
-    margin-top: 0px !important;        
-}
-
-#branding-top-nav li ul.sub-nav.access-menu li {    
-    text-align: left;
-    margin: 0px;
-}
-
-#branding-top-nav li ul.sub-nav.access-menu li a {
-    background-image: none;
-    text-align: left;
-    margin: 0px;
-    line-height: 1.3em !important;
-    padding-top: 0.5em !important;
-}
-
-
-.main-header div#branding-top-nav #menu-container a#close-menu-arrow {
-  text-decoration: none;
-  color: black;
-  font-size: 20px !important;
-  font-weight: bold;
-}
-
-.main-header div#branding-top-nav #menu-container a#close-menu-arrow:hover {
-  text-decoration: none;
-  color: blue;
-}
-
-ul#menu_languages li a:hover {
-    text-decoration: none;
-}
-
-ul#menu_login_register li:first-child a {
-    margin-right: 8px;
-}
-
-ul#menu_login_register li:first-child {
-    list-style-type: none;
-    margin-right: 8px;
-    padding-right: 0px;
-    background: transparent url(/static/nau-basic/images/lang-divider.svg) no-repeat right 5.5px;                
-}
-
-div#branding-top-nav a#open-menu-arrow {
-        display: none !important;
-}
-
-
-ul#menu_login_register li.menu-item-has-children a {
-    padding-right: 15px;  
-    background: transparent url(/static/nau-basic/images/arrow-dropdown.svg) no-repeat right 5.5px;
-    background-position: right center;
-    background-size: 12px;
 }
 
 @media screen and (max-width: 850px) {
@@ -1323,10 +735,6 @@ ul#menu_login_register li.menu-item-has-children a {
     
     div#menu-container ul, div#menu-container ul li {
       float: none;
-    }
-    
-    div#actions_container ul#menu_login_register.login_menu {
-        margin-left: 0px;
     }
     
     div#menu-container ul.menu > li {
@@ -1363,82 +771,8 @@ ul#menu_login_register li.menu-item-has-children a {
   ul#menu_languages span {
     display: none;
   }
-  #branding-top-nav li {
-    list-style-type: none;
-    background: transparent url("/static/nau-basic/images/arrow-dropdown.svg") no-repeat right center;
-    background-size: 12px;
-    letter-spacing: 0.5px;
-    margin-right: 0;
-  }
-  form {
-    position: relative;
-    z-index: 1;
-    max-width: none;
-  }
-  form#search-form {
-    width: 238px;
-    max-width: none;
-    margin: 30px 0
-  }
-  form#search-form input[type="search"] {
-    width: 238px;
-    max-width: none;
-    margin-bottom: -20px
-  }
-  form#search-form input[type="submit"] {
-    top: 2px;
-    right: 10px;
-  }
-  ul#menu_actions li a#login_image {
-    margin-right: 0px;
-  }
-  ul#menu_actions li:first-child a {
-    margin-left: 0px;
-  }
-  div#languages-actions-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  } 
-  
-  div#languages-actions-container {
-    width: 238px;
-    padding-left: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  ul#menu_languages li {
-    padding-right: 6px !important;
-    border-bottom: none !important;
-  }
-  
-  ul#menu_languages li.current_language {
-    font-size: 13px;
-    padding-top: 18px;
-    padding-bottom: 20px;
-    padding-left: 10px;
-  }
-  
-  ul#menu_login_register span, 
-  ul#menu_languages span {
-    color: #ccc;
-    display: flex;
-    padding: 0 4px;
-  }
     
 }
-
-
-@media screen and (max-width: 1200px) {
-    #search-form {
-        display: none;
-    }
-}
-
-
-
 
 .dashboard .main-container .my-courses {
     
@@ -1516,21 +850,11 @@ ul#menu_login_register li.menu-item-has-children a {
     }
 }
 
-
-
-.global-header {    
-    padding: 0 !important;
-    min-height: 71px;
-}
-
-div#branding-top-nav {
-    max-height: 70px;
-}
-
-.global-header .main-header .course-header {
+.course-header {
     padding-top: 10px;
     padding-bottom: 10px;    
     text-align: right;
+
     span {
       font-size: 14px;
       margin-left: 10px;
@@ -1545,16 +869,8 @@ header.page-header h2 {
     margin-left: 30px;
 }
 
-#entities-quick-links ul {
-    padding-left: 0;
-}
-
 :not(.course-header) { box-sizing: unset; }
 footer section#entities-quick-links ul.flex-row { margin-bottom: 0; }
-body.ltr .global-header, body.view-wiki .global-header { overflow: visible; }
-body.ltr #search-form input[name="submit-search"] { top: 0 !important; right: 40px !important; }
-body.view-wiki #search-form input[name="submit-search"],
-body.view-in-course #search-form input[name="submit-search"] { top: -7px !important; right: 40px !important; }
 aside.page-content-secondary a { color: #0553ff; }
 .sequence-list-wrapper #sequence-list li button { height: 53px; border-bottom: 3px solid #0553ff; }
 .sequence-list-wrapper #sequence-list li button:hover,
@@ -1617,8 +933,6 @@ button.btn.btn-outline-primary.search-button {
 }
 
 button[aria-selected="true"] { background-color: #d0dfff !important; }
-ul#menu_login_register a[role="menuitem"] { color: #0857ff !important; }
-ul#menu_login_register a[role="menuitem"]:hover, ul#menu_login_register a[role="menuitem"]:active { color: #000 !important; }
 
 h3.course-title span {
   font-size: inherit !important;
@@ -1638,10 +952,6 @@ article.course > section.details > div.wrapper-course-details > div.course-info 
     div.my-courses ul.listing-courses li.course-item {
         width: 100% !important;
     }
-}
-
-.dashboard .main-container .my-courses .course-container {
-
 }
 .dashboard .main-container .my-courses {
     .course {
