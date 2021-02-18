@@ -1553,7 +1553,7 @@ header.page-header h2 {
     padding-left: 0;
 }
 
-:not(.course-header) { box-sizing: unset; }
+:not(.course-header):not(.image-explorer-hotspot) { box-sizing: unset; }
 footer section#entities-quick-links ul.flex-row { margin-bottom: 0; }
 body.ltr .global-header, body.view-wiki .global-header { overflow: visible; }
 body.ltr #search-form input[name="submit-search"] { top: 0 !important; right: 40px !important; }
