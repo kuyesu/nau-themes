@@ -32,7 +32,8 @@
         <div id="quick-links-section">
 
             <ul id="footer" class="menu">
-                
+              % if isinstance(header_menu, dict):
+                ## old code  
                 % for title in footer_menu:
                 <li class='footer-links-structure'>
                   <h5>${title}</h5>
@@ -44,7 +45,22 @@
                   </ul>
                 </li>
                 % endfor
-
+              % else:
+                % for footer_menu_item in footer_menu:
+                <% html_link = footer_menu_item["html"] %>
+                <% children = footer_menu_item.get("itens", {}) %>
+                <li class='footer-links-structure'>
+                  <h5>${html_link}</h5>
+                  <ul>
+                    %for sub_item in children:
+                      <% sub_item_link = sub_item.get("link","") %>
+                      <% sub_item_html = sub_item["html"] %>
+                      <li><a href='${sub_item_link}'>${sub_item_html}</a></li>
+                    %endfor
+                  </ul>
+                </li>
+                % endfor
+              % endif
             <!-- starts social media -->
             <ul>
                 <li class="footer-links-structure">

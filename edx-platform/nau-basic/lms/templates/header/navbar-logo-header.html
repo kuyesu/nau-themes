@@ -132,18 +132,40 @@ function closeNav() {
       <div class="nav-icon"></div>
 
       <ul id="about-categories-entities" class="menu">
-        % for title in header_menu:
-          <% link = header_menu[title]["link"] %>
-          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-            <a href="${link}">${title}</a>
-            <ul class="sub-nav menu-depth-0">
-            % for label in header_menu[title]["itens"]:
-              <% link = header_menu[title]["itens"][label] %>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${link}">${label}</a></li>
-            %endfor
-            </ul>      
-          </li>
-        % endfor
+        % if isinstance(header_menu, dict):
+          ## old code
+          % for title in header_menu:
+            <% link = header_menu[title]["link"] %>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+              <a href="${link}">${title}</a>
+              <ul class="sub-nav menu-depth-0">
+              % for label in header_menu[title]["itens"]:
+                <% link = header_menu[title]["itens"][label] %>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${link}">${label}</a></li>
+              %endfor
+              </ul>      
+            </li>
+          % endfor
+        % else:
+          % for parent_header in header_menu:
+            <% item_link = parent_header["link"] %>
+            <% html_link = parent_header["html"] %>
+            <% children = parent_header.get("itens", {}) %>
+            <% has_children = len(children) > 0 %>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page ${'menu-item-has-children' if has_children else ''}">
+              <a href="${item_link}">${html_link}</a>
+              % if has_children:
+                <ul class="sub-nav menu-depth-0">
+                % for sub_item in children:
+                  <% sub_item_link = sub_item["link"] %>
+                  <% sub_item_html = sub_item["html"] %>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${sub_item_link}">${sub_item_html}</a></li>
+                %endfor
+                </ul>
+              % endif
+            </li>
+          % endfor
+        % endif
       </ul>
 
 % if 0:      
