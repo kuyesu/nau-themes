@@ -100,23 +100,6 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
 % endif
 
 
-<script>
-// starts menu opening and closing button for menu: cross
-function openNav() {
-  document.getElementById("menu-container").style.cssText = "left:0px;";
-  document.getElementById("open-menu-arrow").style.cssText = "display:none;"; 
-  document.getElementById("close-menu-arrow").style.cssText = "display:block";
-  document.getElementById("menu-overlay").style.cssText = "display:block;background: #000; opacity:0.5;"; 
-}
-function closeNav() {
-  document.getElementById("menu-container").style.cssText = "left:-375px";
-  document.getElementById("open-menu-arrow").style.cssText = "display:block;";
-  document.getElementById("close-menu-arrow").style.cssText = "display:none";  
-  document.getElementById("menu-overlay").style.cssText = "display:none;"; 
-}
-// ends menu opening and closing button for menu: cross
-</script>
-
 <div id="branding-top-nav">
 
     <a id="open-menu-arrow" href="javascript:void(0)" onclick="openNav(0)" title="Abrir">&#9776;</a>  
@@ -206,7 +189,7 @@ function closeNav() {
 
 
 <!-- ends branding container -->
-<div id="menu-overlay" onclick="closeNav(0)"></div>
+<div class="menu-overlay" onclick="closeNav(0)"></div>
 
   % if course:
     <div class="course-header">
@@ -223,3 +206,26 @@ function closeNav() {
     </div>
   % endif
 
+
+<script>
+// starts menu opening and closing button for menu: cross
+const menuContainer = document.querySelector(".menu-container");
+const bodyOverlay = document.getElementsByTagName("body")[0];
+const openMenu = document.getElementById("open-menu-arrow");
+
+function openNav() {
+  menuContainer.style.cssText = "display: block";
+  openMenu.style.cssText = "display:none;"; 
+  document.getElementById("close-menu-arrow").style.cssText = "display:block";
+  document.querySelector(".menu-overlay").style.cssText = "display:block;"; 
+  bodyOverlay.classList.add("enable-overlay");
+}
+function closeNav() {
+  menuContainer.style.cssText = "display: none";
+  openMenu.style.cssText = "display:block;";
+  document.getElementById("close-menu-arrow").style.cssText = "display:none";  
+  document.querySelector(".menu-overlay").style.cssText = "display:none;";
+  bodyOverlay.classList.add("enable-overlay");
+}
+// ends menu opening and closing button for menu: cross
+</script>

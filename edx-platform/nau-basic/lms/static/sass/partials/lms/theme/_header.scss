@@ -3,6 +3,10 @@
     position: relative;
     border-bottom: none !important;
     padding-bottom: 0 !important;
+
+    @media screen and (max-width: $breakpoint-medium) {
+        overflow: inherit !important;
+    }
 }
 
 .global-header .nav-links .secondary .dropdown-user-menu {
@@ -69,6 +73,10 @@
         #search-form {
             margin-right: 10px;
             position: relative;
+
+            @media screen and (max-width: $breakpoint-medium) {
+                display: none;
+            }
         }
 
         #search-input {

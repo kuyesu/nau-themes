@@ -100,12 +100,7 @@ body {
     }
     
     .footer-content-secondary {
-        margin: 0px 20px 0px 20px;        
-        .footer-about-copyright {            
-        }        
-        .footer-logo-partner {                        
-        }
-
+        margin: 0px 20px 0px 20px;
     }
     
     section#entities-quick-links {
@@ -128,9 +123,6 @@ body {
              li {
                  font-size: 0.65em;
                  float: left;
-                 
-                a {
-                }
              }
         }
 
@@ -186,9 +178,6 @@ body {
           color: $nau_blue;
           border-color: $nau_blue;
           border-width: 1px;
-            
-          &:hover {            
-          }    
         }
 }
 
