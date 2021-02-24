@@ -26,31 +26,31 @@
 <footer> 
 
     <!-- starts footer links -->
-    <section id="footer-links">        
+    <section id="footer-nav">        
         <!-- starts quick links -->
 
         <div id="quick-links-section">
 
-            <ul id="footer" class="menu">
               % if isinstance(footer_menu, dict):
                 ## old code  
                 % for title in footer_menu:
-                <li class='footer-links-structure'>
-                  <h5>${title}</h5>
+                <div class='footer-links'>
+                  <span class="footer-title">${title}</span>
                   <ul>
                     %for label in footer_menu[title]:
                       <% link = footer_menu[title][label] %>
                       <li><a href='${link}'>${label}</a></li>
                     %endfor
                   </ul>
-                </li>
+                </div>
                 % endfor
+
               % else:
                 % for footer_menu_item in footer_menu:
                 <% html_link = footer_menu_item["html"] %>
                 <% children = footer_menu_item.get("itens", {}) %>
-                <li class='footer-links-structure'>
-                  <h5>${html_link}</h5>
+                <div class='footer-links'>
+                  <span class="footer-title">${html_link}</span>
                   <ul>
                     %for sub_item in children:
                       <% sub_item_link = sub_item.get("link","") %>
@@ -58,14 +58,14 @@
                       <li><a href='${sub_item_link}'>${sub_item_html}</a></li>
                     %endfor
                   </ul>
-                </li>
+                </div>
                 % endfor
               % endif
             <!-- starts social media -->
-            <ul>
-                <li class="footer-links-structure">
-                    <h5>Siga-nos</h5>
-                    <ul id="social-media">
+                <div class="footer-social">
+                    <span class="footer-title">Siga-nos</span>
+                    <div id="social-media">
+                    <ul>
                       % if nau_social_media:
                         % if 'twitter' in nau_social_media:
                           <li><a href="${nau_social_media["twitter"]}" target="_blank" title="${_('Share on Twitter')}"><img src="${static.url('images/twitter.svg')}" alt="twitter logo" title="${_('Share on Twitter')}"></a></li>
@@ -79,14 +79,14 @@
                         % if 'instagram' in nau_social_media:
                           <li><a href="${nau_social_media["instagram"]}" target="_blank" title="${_('Share on Instagram')}"><img src="${static.url('images/instagram.svg')}" alt="Instagram logo" title="${_('Share on Instagram')}"></a></li>
                         % endif
-                        <!--- <li><a href=""><img src="${static.url('images/more-share.svg')}" alt="Share list" title="${_('Share')}"></a></li> --->
-                        <li id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="${static.url('images/openedx.svg')}" alt="Powered by OpenEdX" title="${_('Visit OpenEdx website')}"></a></li>
+            
                       % endif
                     </ul>
-                </li>
-            </ul>      
-        <!-- ends social media -->     
-        </div>
+                    </div>
+                    <div id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="${static.url('images/openedx.svg')}" alt="Powered by OpenEdX" title="${_('Visit OpenEdx website')}"></a></div>
+                </div>
+
+          </div>
     </section>
     <!-- ends footer links -->  
 

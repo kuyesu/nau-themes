@@ -1,0 +1,310 @@
+.global-header {
+    overflow: inherit;
+    position: relative;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+
+    @media screen and (max-width: $breakpoint-medium) {
+        overflow: inherit !important;
+    }
+}
+
+.global-header .nav-links .secondary .dropdown-user-menu {
+    z-index: 100;
+}
+
+/** Top nav menu */
+
+#branding-top-nav {
+    border-top: solid 0.2em #0857ff;
+    background-color: $menu-bg-color;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: $menu-shadow;
+    padding: 20px 50px 20px 0;
+
+    @media screen and (max-width: $breakpoint-medium) {
+        display: block;
+    }
+
+    .logo {
+        display: inline-block;
+        width: 190px;
+        height: 30px;
+        margin-left: 50px;
+        background: url("/static/nau-basic/images/nau_sempre_aprender.svg") no-repeat center center;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            display: inline-block;
+            width: 100px;
+            background: url("/static/nau-basic/images/logo-nau-mobile.svg") no-repeat center center;
+        }
+    }
+
+    li {
+        list-style-type: none;
+        margin-right: 15px;
+    }
+
+    #close-menu-arrow {
+        display: none; /* hide closing menu arrow when in desktop */
+        font-size: 24px;
+    }
+
+    #open-menu-arrow {
+        display: none;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            display: inline-block;
+            font-size: 22px;
+            position: absolute;
+            width: 40px;
+            margin-left: 10px;
+        }
+    }
+
+    #actions_container {
+        display: flex;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            justify-content: center;
+        }
+
+        #search-form {
+            margin-right: 10px;
+            position: relative;
+
+            @media screen and (max-width: $breakpoint-medium) {
+                display: none;
+            }
+        }
+
+        #search-input {
+            border-radius: 50px;
+            height: 30px;
+            border: 1px solid $header-bar-color;
+            padding-left: 15px;
+            padding-right: 25px;
+
+            &::placeholder {
+                font-size: .8rem;
+            }
+        }
+
+        input[type="submit"],
+        input[type="button"],
+        button,
+        .button {
+            position: absolute;
+            padding: 0;
+            z-index: 4;
+            top: 4px;
+            right: 15px;
+            background: transparent url("/static/nau-basic/images/magnifier.svg") no-repeat right center;
+            width: 28px;
+            border: none;
+            outline: none;
+            text-indent: -9999px;
+            background-size: 20px;
+            cursor: pointer;
+            box-shadow: none;
+        }
+    }
+}
+
+.menu-container {
+    display: flex;
+
+    @media screen and (max-width: $breakpoint-medium) {
+        display: none;
+        position: absolute;
+        z-index: 2000 !important;
+        background: white;
+        top: 0;
+        width: calc(100% - 30px);
+        padding: 20px 15px;
+    }
+
+    .main-menu {
+        display: flex;
+        margin: 0;
+        padding-top: 0.5rem;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            display: block;
+        }
+
+        li {
+            list-style-type: none;
+
+            &:not(.menu-item-has-children) > a {
+                padding-right: 5px;
+            }
+
+            &.menu-item-has-children > a {
+                background: url("/static/nau-basic/images/arrow-dropdown.svg") no-repeat right 5.5px;
+                background-size: 12px;
+                padding-right: 20px;
+            }
+
+            &.current-menu-item a {
+                color: $header-bar-color !important;
+            }
+
+            a {
+                font-size: 0.80rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $text-color;
+                display: block;
+
+                @media screen and (max-width: $breakpoint-medium) {
+                    margin-bottom: 20px;
+                }
+
+                &:hover {
+                    color: $header-bar-color;
+                }
+            }
+
+            &:hover .sub-nav {
+                display: block;
+            }
+        }
+
+        li ul li > a {
+            background: none;
+        }
+    }
+
+    .sub-nav {
+        position: absolute;
+        z-index: 200;
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 25px 35px;
+        box-shadow: 0px 21px 18px -5px rgba(0, 0, 0, 0.45);
+        display: none;
+        margin: 0 0 0 -26px;
+
+        @media screen and (max-width: $breakpoint-medium) {
+            display: block;
+            position: relative;
+            margin-left: 0;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0px 10px 20px;
+        }
+
+        li a {
+            line-height: 1.5;
+            margin-top: 8px !important;
+            font-weight: 500 !important;
+            text-transform: initial !important;
+            color: #777 !important;
+
+            &:hover {
+                color: $header-bar-color !important;
+            }
+
+            @media screen and (max-width: $breakpoint-medium) {
+                font-size: 0.85rem;
+            }
+        }
+    }
+
+    .login_menu {
+        display: flex;
+        padding: 0;
+        margin: 0;
+
+        li {
+            &.menu-item-has-children > a {
+                background: url("/static/nau-basic/images/arrow-dropdown.svg") no-repeat right 5.5px;
+                background-size: 12px;
+                padding-right: 20px;
+
+                @media screen and (max-width: $breakpoint-medium) {
+                    background: none;
+                    background-size: inherit;
+                    padding-right: inherit;
+                }
+            }
+
+            &:hover .sub-nav {
+                display: block;
+
+                @media screen and (max-width: $breakpoint-medium) {
+                    display: none;
+                }
+            }
+
+            .sub-nav {
+                @media screen and (max-width: $breakpoint-medium) {
+                    display: none;
+                }
+            }
+
+            ul.sub-nav li:last-child a {
+                background-color: transparent;
+                padding: 0;
+                margin: 0.5rem;
+
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                }
+            }
+
+            a {
+                font-size: 0.85rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $header-bar-color;
+                display: block;
+                margin: 0.5rem;
+
+                &:hover,
+                &:focus {
+                    color: $action-btn-color;
+                }
+            }
+
+            &:last-child {
+                margin: 0;
+
+                a {
+                    color: white;
+                    background-color: $header-bar-color;
+                    border-radius: 25px;
+                    margin: 0;
+                    padding: 0.5rem 1.5rem;
+
+                    &:hover,
+                    &:focus {
+                        background-color: $action-btn-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    display: none;
+    z-index: 100;
+}
+
+.enable-overlay {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}

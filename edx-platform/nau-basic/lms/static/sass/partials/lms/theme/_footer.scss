@@ -1,134 +1,94 @@
-
 footer {
-    * {
-        padding-left: 0px;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        padding-inline-start: 0;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-        vertical-align: baseline;
-    }
     ol,
     ul {
         list-style: none;
-        float: none;
-        padding-left: 0;
+        padding: 0;
+        margin: 0;
     }
-    section#footer-links {
-        h5 {
-            font-weight: bold;
-            font-size: 15px;
-            padding-bottom: 4px;
-            float: none;
-            clear: both;
-            color: black;
-            margin-left: 25px;
-            margin-right: 25px;
+
+    #quick-links-section {
+        padding: 40px 50px;
+        background-color: #eeeeee;
+        display: flex;
+
+        div:nth-last-child(2) {
+            max-width: none !important;
         }
-        div#quick-links-section {
-            padding: 40px 0;
-            background-color: #eeeeee;
-            height: auto;
-            float: left;
-            clear: both;
-            width: 100%;
-            ul#footer {
-                margin: 0 0px;
-                height: auto;
-                width: 100%;
-                float: none;
+
+        @media screen and (max-width: 798px) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    .footer-title {
+        font-weight: bold;
+        display: block;
+        font-size: 15px;
+        padding-bottom: 4px;
+        color: $footer-header-color;
+    }
+
+    .footer-links,
+    .footer-social {
+        padding: 0 0.55rem;
+        min-width: 20%;
+        max-width: 25%;
+        flex-grow: 1;
+
+        a, a:visited {
+            color: $footer-link-color;
+            text-transform: inherit;
+            line-height: 1.7em;
+            font-size: 0.81rem;
+
+            &:hover  {
+                color: inherit;
+                text-decoration: underline;
             }
-            li.footer-links-structure {
-                list-style-type: none;
-                width: 25%;
-                display: grid;
-                float: left;
-                @media screen and (max-width: 798px) {
-                    list-style-type: none;
-                    width: 50%;
-                    display: grid;
-                    padding-top: 20px;
-                }
-                ul#social-media {
-                    display: block;
-                    position: relative;
-                    width: auto;
-                    margin-left: 25px;
-                    margin-right: 25px;
-                    li {
-                        padding: 0;
-                        margin-left: 0px;
-                        margin-right: 0px;
-                        display: inline;
-                        a {
-                          padding-right: 10px;
-                        }
-                        h5 {
-                          margin-left: 0;
-                        }
-                    }
-                    li#openedx-logo {
-                        display: block;
-                        margin-top: 20px;
-                        a {
-                            img {
-                                max-width: 100px;
-                            }
-                        }
-                    }
-                }
-                ul {
-                    display: contents;
-                    margin: 0 0px;
-                    height: auto;
-                    width: 100%;
-                    float: none;
-                    li {
-                        font-size: 14px;
-                        line-height: 1.6em;
-                        margin-left: 25px;
-                        margin-right: 25px;
-                        a {
-                            font: Regular 14px Roboto;
-                            letter-spacing: 0;
-                            color: #707070;
-                            opacity: 1;
-                            text-transform: inherit;
-                            line-height: 1.8em;
-                            font-weight: normal;
-                            padding: 0;
-                            margin: 0;
-                        }
-                    }
-                }
+        }
+        
+
+        @media screen and (max-width: $breakpoint-small) {
+            max-width: 50%;
+        }
+    }
+
+    #openedx-logo {
+        display: block;
+        margin-top: 20px;
+        a {
+            img {
+                max-width: 100px;
             }
         }
     }
-    section#entities-quick-links {
+
+    #social-media {
         ul {
-            border-radius: 0px 0px 10px 10px;
-            background-color: white;
-            height: auto;
-            width: 100%;
+            list-style-type: none;
+            display: flex;
+
+            li {
+                padding-right: 0.55rem;
+            }
+        }
+    }
+
+    section#entities-quick-links {
+        border-radius: 0px 0px 10px 10px;
+        background-color: white;
+
+        ul {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            position: relative;
-            background-color: white;
             padding-bottom: 30px;
+            margin: 0;
 
             @media screen and (max-width: 960px) {
-                background-color: white;
                 padding: 50px 0px 50px 0px;
-                height: auto;
-                width: 100%;
                 display: flex;
                 flex-direction: column-reverse;
                 align-items: center;
@@ -153,12 +113,9 @@ footer {
                         max-width: 260px;
                     }
                 }
-                img#logo-nau {}
                 span#copyright {
-                    font: Regular;
-                    letter-spacing: -0.18px;
-                    color: #5E5959;
-                    opacity: 1;
+                    font-weight: normal;
+                    color: $footer-copyright-color;
                     font-size: 0.65em;
                     margin-left: 50px;
                     display: block;
