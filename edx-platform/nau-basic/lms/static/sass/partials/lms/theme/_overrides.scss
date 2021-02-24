@@ -882,6 +882,7 @@ article.course > section.details > div.wrapper-course-details > div.course-info 
         width: 100% !important;
     }
 }
+
 .dashboard .main-container .my-courses {
     .course {
         .details {
@@ -897,8 +898,7 @@ article.course > section.details > div.wrapper-course-details > div.course-info 
     }
 }
 
-// Fix header on mobile devices
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
     .global-header .main-header {
         height: unset !important;
     }
