@@ -27,7 +27,7 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
  
 %> 
 
-% if 0:
+<%doc>
 
     <h1 class="header-logo">
         <%block name="navigation_logo">
@@ -58,7 +58,7 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
       </div>
     % endif
 
-% endif
+</%doc>
 
 
 % if not nau_lang_menu:
@@ -225,7 +225,7 @@ function closeNav() {
   openMenu.style.cssText = "display:block;";
   document.getElementById("close-menu-arrow").style.cssText = "display:none";  
   document.querySelector(".menu-overlay").style.cssText = "display:none;";
-  bodyOverlay.classList.add("enable-overlay");
+  bodyOverlay.classList.remove("enable-overlay");
 }
 // ends menu opening and closing button for menu: cross
 </script>
