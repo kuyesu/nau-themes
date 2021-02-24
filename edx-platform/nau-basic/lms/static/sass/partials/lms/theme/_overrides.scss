@@ -469,7 +469,10 @@ textarea {
 /* --------------- Override HM --------------- */
 
 body.ltr, body.view-wiki {
-    background: linear-gradient(0, #444 0, #666 100%);
+    background: linear-gradient(0, #444 0, #666 100%) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100%;
+    height: auto;
 }
 
 div.window-wrap {
