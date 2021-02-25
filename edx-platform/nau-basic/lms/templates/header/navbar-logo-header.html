@@ -123,12 +123,14 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
             % endif 
             ">
               <a href="${link}">${title}</a>
+              %if len(header_menu[title]["itens"]):
               <ul class="sub-nav menu-depth-0">
               % for label in header_menu[title]["itens"]:
                 <% link = header_menu[title]["itens"][label] %>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${link}">${label}</a></li>
               %endfor
               </ul>      
+              %endif
             </li>
           % endfor
         % else:
