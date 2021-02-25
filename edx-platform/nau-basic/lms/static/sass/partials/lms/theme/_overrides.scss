@@ -662,8 +662,7 @@ button.bookmark-button:hover { text-decoration: none !important; }
     border-radius: 0 5em 5em 0 !important; 
 }
 .sequence-bottom button.button-next { 
-    min-width: 40% !important; // increase next button within the course
-}
+    min-width: 40% !important; }
 .sequence-bottom button.button-previous,
 .sequence-nav button.button-previous { border-radius: 5em 0 0 5em !important }
 .sequence-bottom button.sequence-nav-button,
@@ -698,9 +697,6 @@ span.action-upgrade-icon { display: none !important; }
 span#upgrade-to-verified { font-weight: normal !important; margin-right: 0; }
 .course-container { border: 0 !important; box-shadow: 0 0.5em 0.75em rgba(0,0,0,0.1) !important; border-radius: 0.25em !important; }
 .course .messages-list { border-radius: 0 0 0.25em 0.25em; }
-
-li:hover ul.sub-nav.access-menu {
-    display: grid;    
 
 .dashboard .main-container .my-courses {
     
@@ -835,8 +831,6 @@ button.btn.btn-outline-primary.search-button {
     font-size: 12pt;
     font-weight: bold !important;
 }
-
-
 
 .search-bar .search-field-wrapper {    
     
