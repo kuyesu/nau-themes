@@ -2,6 +2,8 @@
 <%!
 from django.utils.translation import ugettext as _
 from openedx.core.djangolib.js_utils import js_escaped_string
+
+from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 %>
 <%namespace name='static' file='../static_content.html'/>
 <%block name="js_extra">
@@ -26,11 +28,14 @@ from openedx.core.djangolib.js_utils import js_escaped_string
               };
               Logger.log('edx.certificate.shared', data);
               ## var organizationName = encodeURI("${organization_long_name | n, js_escaped_string}".length == 0 ? "${organization_short_name | n, js_escaped_string}" : "${organization_long_name | n, js_escaped_string}");
-              var organizationName = "NAU";
+              <%
+                linkedin_company_id = configuration_helpers.get_value('LINKEDIN_COMPANY_ID')
+                organizationParam = 'organizationName=NAU' if linkedin_company_id is None else 'organizationId='+linkedin_company_id
+              %>
               var year = "${certificate_date_issued | n, js_escaped_string}".match(/\d\d\d\d/g).join('');
               var certificate_url = encodeURI(window.location.href);
               var name = encodeURI("${ accomplishment_copy_course_name | n, js_escaped_string}");
-              var linked_in_url_js = "https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name="+name+"&organizationName="+organizationName+"&issueYear="+year+"&certUrl="+certificate_url+"&certId=${certificate_id_number | n, js_escaped_string}";
+              var linked_in_url_js = "https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name="+name+"&${organizationParam}"+"&issueYear="+year+"&certUrl="+certificate_url+"&certId=${certificate_id_number | n, js_escaped_string}";
               window.open(linked_in_url_js);
           });
       });
