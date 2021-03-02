@@ -2,9 +2,9 @@ $black : #000;
 $white : #FFF;
 $nau_blue : #081CFF;
 
-/* Global */
-*, input, select, textarea, option, button {
-    outline: none!important;
+
+* {
+    outline: #818181 !important;
 }
 
 /*** General ***/
@@ -16,7 +16,6 @@ body {
     margin: auto;
     padding: 0px;
     padding-bottom: 10px;
-    line-height: 1.3em;
     
     .window-wrap {
         background-color: #F5F5F5;
@@ -40,6 +39,7 @@ body {
 .content-wrapper .course-tabs.navbar {
     margin-left: 20px;
     border-bottom: solid 1px #CCC;
+    overflow-x: hidden;
 }
 
 .content-wrapper .course-tabs.navbar .nav-link {
@@ -286,25 +286,6 @@ textarea {
     }
 }
 
-input[type="email"] {
-    /* border: 0px; */
-    border-bottom: solid 1px red;
-}
-
-input[type="password"] {
-    /* border: 0px; */
-    border-bottom: solid 1px red;
-}
-
-input[type="checkbox"] {
-    border: 0px;
-    border-bottom: solid 1px red;
-}
-
-input.action {
-    border: solid 1px red;
-}
-
 button[type="submit"] {
     border-radius: 50px !important;
     font-size: 1em;
@@ -332,23 +313,6 @@ main#main .login-register-content .form-field {
 
 
 /* FIM DE FORM */
-
-input[type="password"],
-input[type="email"],
-input[type="text"],
-textarea {
-    font-size: 14px !important;
-
-    box-shadow: none;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: solid 2px black;
-     :focus {
-        border-top: solid 0px white;
-        border-bottom: solid 2px blue
-    }
-}
 
 .login-register .form-field label.focus-out {
     font-weight: bold;
@@ -613,10 +577,6 @@ button.prerequisite-button .fa {
     border-left-color: #0553ff !important;
 }
 
-input:focus {
-    box-shadow: 0 0 0 !important;
-}
-
 .course-tabs a {
     color: #0553ff !important;
     font-weight: bold !important;
@@ -797,10 +757,10 @@ header.page-header h2 {
     padding-left: 0;
 }
 
-:not(.course-header):not(.image-explorer-hotspot) { box-sizing: unset; }
+/*:not(.course-header):not(.image-explorer-hotspot) { box-sizing: unset; }*/
 footer section#entities-quick-links ul.flex-row { margin-bottom: 0; }
 aside.page-content-secondary a { color: #0553ff; }
-.sequence-list-wrapper #sequence-list li button { height: 53px; border-bottom: 3px solid #0553ff; }
+.sequence-list-wrapper #sequence-list li button { border-bottom: 3px solid #0553ff; }
 .sequence-list-wrapper #sequence-list li button:hover,
 .sequence-list-wrapper #sequence-list li button:active { border-bottom-color: #333 !important; padding-top: 0; }
 .sequence-list-wrapper #sequence-list li button:hover span,
@@ -830,32 +790,6 @@ button.btn.btn-outline-primary.search-button {
     border-bottom-left-radius: 0 !important;
     font-size: 12pt;
     font-weight: bold !important;
-}
-
-.search-bar .search-field-wrapper {    
-    
-    input#dashboard-search-input.search-field {
-        border: solid 1px gray;
-        border-radius: 50px 0 0 50px;
-        width: 60%;
-    }
-    
-    button.search-button {                
-        border-radius: 0 !important;
-        display: block;
-        width: 20%;
-        margin: 0;
-        margin-right: 20%;
-        border: solid 1px gray;        
-    }
-    
-    button.cancel-button {        
-        border-radius: 0 50px 50px 0;
-        border: solid 1px gray;
-        display: block;
-        width: 20%;        
-        margin: 0;        
-    }
 }
 
 button[aria-selected="true"] { background-color: #d0dfff !important; }
@@ -899,4 +833,9 @@ article.course > section.details > div.wrapper-course-details > div.course-info 
     .global-header .main-header {
         height: unset !important;
     }
+}
+
+.xmodule_display.xmodule_ProblemBlock div.problem .choicegroup input[type="radio"], .xmodule_display.xmodule_ProblemBlock div.problem .choicegroup input[type="checkbox"] {
+    left: 0.3625rem !important;
+    top: 0.3625rem !important;
 }
