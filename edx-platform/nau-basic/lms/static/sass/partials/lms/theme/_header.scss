@@ -247,10 +247,6 @@
 
             &:hover .sub-nav {
                 display: block;
-
-                @media screen and (max-width: $breakpoint-medium) {
-                    
-                }
             }
 
             ul.sub-nav li:last-child a {
@@ -280,7 +276,7 @@
             }
 
             &:last-child {
-                margin: 0;
+                margin-right: 0 !important;
 
                 a {
                     color: white;
