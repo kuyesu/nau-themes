@@ -1,0 +1,12 @@
+.dashboard-search-bar {
+    display: flex;
+
+    .search-button {
+        background-color: $header-bar-color !important;
+
+        &>span {
+            text-shadow: none !important;
+        }
+
+    }
+}

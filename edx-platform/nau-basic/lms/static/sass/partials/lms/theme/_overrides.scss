@@ -273,30 +273,6 @@ main#main {
     box-shadow: none;
 }
 
-input[type="text"],
-textarea {
-    box-shadow: none;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: solid 2px black;
-     :focus {
-        border-top: solid 0px white;
-        border-bottom: solid 2px blue
-    }
-}
-
-button[type="submit"] {
-    border-radius: 50px !important;
-    font-size: 1em;
-    font-weight: normal !important;
-    background: #0553FF 0% 0% no-repeat padding-box !important;
-    border-color: transparent !important;
-    box-shadow: none;
-    width: 100%;
-}
-
-
 /* The container must be positioned relative: */
 
 main#main .login-register-content .form-field {

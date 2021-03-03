@@ -32,12 +32,16 @@
         min-width: 190px;
         height: 30px;
         margin-left: 50px;
-        background: url(/static/nau-basic/images/nau_sempre_aprender.svg) no-repeat center center;
+        background-image: $nau-logo-url;
+        background-repeat: no-repeat;
+        background-position: center center;
 
         @media screen and (max-width: $breakpoint-medium) {
             display: inline-block;
             min-width: 100px;
-            background: url(/static/nau-basic/images/logo-nau-mobile.svg) no-repeat center center;
+            background-image: $nau-logo-mobile-url;
+            background-repeat: no-repeat;
+            background-position: center center;
         }
     }
 
@@ -104,7 +108,7 @@
             top: 4px;
             right: 15px;
             background-color: transparent;
-            background-image: url(/static/nau-basic/images/magnifier.svg);
+            background-image: $menu-search-icon;
             background-repeat: no-repeat;
             background-position: right center;
             width: 28px;
@@ -149,7 +153,9 @@
             }
 
             &.menu-item-has-children > a {
-                background: url(/static/nau-basic/images/arrow-dropdown.svg) no-repeat right 5.5px;
+                background: $menu-down-arrow;
+                background-repeat: no-repeat;
+                background-position: right 5.5px;
                 background-size: 12px;
                 padding-right: 20px;
             }
@@ -234,7 +240,9 @@
 
         li {
             &.menu-item-has-children > a {
-                background: url(/static/nau-basic/images/arrow-dropdown.svg) no-repeat right 5.5px;
+                background: $menu-down-arrow;
+                background-repeat: no-repeat;
+                background-position: right 5.5px;
                 background-size: 12px;
                 padding-right: 20px;
 
