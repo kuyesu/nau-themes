@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2021-02-15 16:46+0000\n"
+"POT-Creation-Date: 2021-03-04 11:43+0000\n"
 "PO-Revision-Date: 2020-08-05 17:03+0100\n"
 "Last-Translator: \n"
 "Language: en\n"
@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.9.0\n"
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:1
 msgid "© 2012–{year} edX Inc. "
@@ -995,8 +995,8 @@ msgid "LMS"
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:46
-#: edx-platform/nau-basic/lms/templates/footer.html:266
-#: edx-platform/nau-basic/lms/templates/footer.html:343
+#: edx-platform/nau-basic/lms/templates/footer.html:282
+#: edx-platform/nau-basic/lms/templates/footer.html:359
 msgid "Legal"
 msgstr ""
 
@@ -1150,9 +1150,9 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:231
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:247
-#: edx-platform/nau-basic/lms/templates/footer.html:160
-#: edx-platform/nau-basic/lms/templates/footer.html:239
-#: edx-platform/nau-basic/lms/templates/footer.html:316
+#: edx-platform/nau-basic/lms/templates/footer.html:176
+#: edx-platform/nau-basic/lms/templates/footer.html:255
+#: edx-platform/nau-basic/lms/templates/footer.html:332
 #: edx-platform/nau-basic/lms/templates/header/base_navbar-authenticated.html:46
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:7
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:12
@@ -1168,59 +1168,58 @@ msgstr ""
 msgid "Sign In"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:68
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:70
-#: edx-platform/nau-basic/lms/templates/footer.html:55
-#: edx-platform/nau-basic/lms/templates/footer.html:125
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:73
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:75
+#: edx-platform/nau-basic/lms/templates/footer.html:71
+#: edx-platform/nau-basic/lms/templates/footer.html:141
 msgid "Share on Twitter"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:58
-#: edx-platform/nau-basic/lms/templates/footer.html:126
+#: edx-platform/nau-basic/lms/templates/footer.html:74
+#: edx-platform/nau-basic/lms/templates/footer.html:142
 msgid "Share on LinkedIn"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:61
-#: edx-platform/nau-basic/lms/templates/footer.html:127
+#: edx-platform/nau-basic/lms/templates/footer.html:77
+#: edx-platform/nau-basic/lms/templates/footer.html:143
 msgid "Share on Facebook"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:64
-#: edx-platform/nau-basic/lms/templates/footer.html:128
+#: edx-platform/nau-basic/lms/templates/footer.html:80
+#: edx-platform/nau-basic/lms/templates/footer.html:144
 msgid "Share on Instagram"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:66
-#: edx-platform/nau-basic/lms/templates/footer.html:129
-#: edx-platform/nau-basic/lms/templates/footer.html:191
-msgid "Share"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/footer.html:67
-#: edx-platform/nau-basic/lms/templates/footer.html:130
+#: edx-platform/nau-basic/lms/templates/footer.html:86
+#: edx-platform/nau-basic/lms/templates/footer.html:146
 msgid "Visit OpenEdx website"
 msgstr "Visit OpenEdx website"
 
-#: edx-platform/nau-basic/lms/templates/footer.html:151
+#: edx-platform/nau-basic/lms/templates/footer.html:145
+#: edx-platform/nau-basic/lms/templates/footer.html:207
+msgid "Share"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/footer.html:167
 msgid "Quick Links"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:170
-#: edx-platform/nau-basic/lms/templates/footer.html:233
-#: edx-platform/nau-basic/lms/templates/footer.html:236
-#: edx-platform/nau-basic/lms/templates/footer.html:310
-#: edx-platform/nau-basic/lms/templates/footer.html:313
+#: edx-platform/nau-basic/lms/templates/footer.html:186
+#: edx-platform/nau-basic/lms/templates/footer.html:249
+#: edx-platform/nau-basic/lms/templates/footer.html:252
+#: edx-platform/nau-basic/lms/templates/footer.html:326
+#: edx-platform/nau-basic/lms/templates/footer.html:329
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:5
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:10
 msgid "About"
 msgstr "Acerca da NAU"
 
-#: edx-platform/nau-basic/lms/templates/footer.html:185
+#: edx-platform/nau-basic/lms/templates/footer.html:201
 msgid "Social Media"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:264
-#: edx-platform/nau-basic/lms/templates/footer.html:341
+#: edx-platform/nau-basic/lms/templates/footer.html:280
+#: edx-platform/nau-basic/lms/templates/footer.html:357
 msgid "All rights reserved"
 msgstr ""
 
@@ -1333,32 +1332,32 @@ msgstr ""
 msgid "Skip to main content"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:54
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:59
 msgid "Print or share your certificate:"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:61
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:66
 msgid "Click the link to see my certificate."
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:64
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:69
 msgid "Post on Facebook"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:73
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:78
 msgid "Tweet this Accomplishment. Pop up window."
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:78
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:80
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:83
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:85
 msgid "Add to LinkedIn Profile"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:88
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:93
 msgid "Add to Mozilla Backpack"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:94
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:99
 msgid "Print Certificate"
 msgstr ""
 
@@ -1591,7 +1590,7 @@ msgid "Dashboard for:"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:31
-#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:229
+#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:195
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:95
 msgid "Options Menu"
 msgstr ""
@@ -1621,13 +1620,8 @@ msgid ""
 "We strongly recommend using {chrome_link} or {ff_link}."
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:35
-msgid "{platform_name} Home Page"
-msgstr "Plataforma NAU"
-
-#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:189
-#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:198
-msgid "Search..."
+#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:165
+msgid "Search courses..."
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:13
@@ -1707,3 +1701,10 @@ msgstr ""
 #: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:22
 msgid "Learn more"
 msgstr ""
+
+#~ msgid "{platform_name} Home Page"
+#~ msgstr "Plataforma NAU"
+
+#~ msgid "Search..."
+#~ msgstr ""
+
