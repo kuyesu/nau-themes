@@ -4,9 +4,43 @@
     .search-button {
         background-color: $header-bar-color !important;
 
-        &>span {
+        & > span {
             text-shadow: none !important;
         }
-
     }
+}
+
+.action-primary {
+    font-size: 0.8rem;
+    background-color: $header-bar-color !important;
+    display: block;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem !important;
+    text-transform: uppercase !important;
+    box-shadow: none !important;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+    box-shadow: none !important;
+}
+
+button.btn.btn-outline-primary.search-button,
+.forum-search button, .forum-actions button {
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+}
+
+.form-control {
+    padding: 0 0.5rem !important;
+}
+
+/* Form links */
+.login-register-content a {
+    color: $header-bar-color;
 }

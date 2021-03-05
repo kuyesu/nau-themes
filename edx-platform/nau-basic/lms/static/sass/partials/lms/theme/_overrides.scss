@@ -37,7 +37,6 @@ body {
 }
 
 .content-wrapper .course-tabs.navbar {
-    margin-left: 20px;
     border-bottom: solid 1px #CCC;
     overflow-x: hidden;
 }
@@ -87,12 +86,6 @@ body {
 .course-sidebar .section-handouts .section-title {
     display: none;
 }
-
-/*
-.content-wrapper .course-tabs.navbar,
-.content-wrapper .wrapper-course-material .course-material {
-    overflow: hidden;
-}*/
 
 .content-wrapper .course-tabs .navbar-nav {
     flex-wrap: wrap;
@@ -311,11 +304,6 @@ main#main .login-register-content .form-field {
     color: black;
 }
 
-.login-register .action-primary {
-    padding: 18px;
-    font-size: 1.2em;
-}
-
 .wrapper-preview-menu {
     position: fixed;
     bottom: 0px;
@@ -324,24 +312,8 @@ main#main .login-register-content .form-field {
     opacity: 0.85;
 }
 
-
-.nav-links {
-    margin-left: 0%;
-    padding: 5px 0 0 0;
-    /* border: solid 1px red; */
-    margin: 0;
-    
-    .menu-title {
-      margin: 0;
-      list-style-type: none;      
-      background: transparent url(/static/nau-basic/images/arrow-dropdown.svg) no-repeat right 5.5px;
-      background-size: 12px;
-      letter-spacing: 0.5px;
-    }
-}
-
 .content-wrapper .course-tabs.navbar {
-    margin-left: 30px;
+    margin-left: 0;
     padding-left: 0px;
 }
 
@@ -382,15 +354,6 @@ main#main .login-register-content .form-field {
 
 #expand-collapse-outline-all-button [aria-expanded*="false"] {
     color: green;
-}
-
-.btn {
-    border-radius: 50px;
-    background: #0553FF 0% 0% no-repeat padding-box !important;
-    border-color: transparent !important;
-    box-shadow: none;
-    color: white;
-    padding: 10px 20px;
 }
 
 .course-header {
@@ -459,12 +422,8 @@ div.main-header {
     background-color: transparent !important;
 }
 
-.action-primary {
-    text-transform: uppercase !important;
-}
-
 .action-primary:focus {
-    box-shadow: 0 0 0 !important;
+    box-shadow: none;
 }
 
 #login-form {
@@ -506,35 +465,31 @@ button.prerequisite-button .fa {
 .forum-search button,
 .forum-actions button {
     border-radius: 5em;
-    background: #0553ff 0% 0% no-repeat padding-box !important;
-    border-color: #0553ff !important;
+    background: $header-bar-color !important;
+    border-color: transparent !important;
     box-shadow: none;
     color: white;
     padding: 10px 20px;
     cursor: pointer;
-    text-transform: uppercase !important;
+    font-weight: 400 !important;
 }
 
 .forum-search button {
     border-radius: 0 5em 5em 0 !important;
 }
 
-.forum-search #search {
-    width: 16em !important;
-}
-
 #seq_content button.btn,
 .breadcrumbs-header a.add-article-btn {
     border-radius: 5em !important;
-    background: #0553ff 0% 0% no-repeat padding-box !important;
-    border-color: #0553ff !important;
+    background: $header-bar-color !important;
+    border-color: transparent !important;
     box-shadow: none !important;
     color: white !important;
     padding: 10px 20px !important;
     cursor: pointer;
-    text-transform: uppercase !important;
     text-shadow: 0 0 !important;
-    font-weight: normal !important;
+    font-weight: 400 !important;
+    font-size: 0.85rem;
 }
 
 #seq_content button.btn {
@@ -750,15 +705,9 @@ aside.page-content-secondary a { color: #0553ff; }
 .wrapper-course-details h3 a:hover,
 .wrapper-course-details h3 a:active { color: #333 !important; }
 .wrapper-course-details .course-actions a { border: 0 !important; font-size: 13px !important; padding: 0.4em 1em !important; margin-bottom: 0.3em; }
-.wrapper-course-details .course-actions a:hover,
-.wrapper-course-details .course-actions a:active { background-color: #333 !important; }
 .wrapper-course-details .course-actions .wrapper-action-more { position: absolute !important; bottom: 0 !important; }
 .wrapper-course-details .course-actions .wrapper-action-more .action-unenroll { background-color: transparent !important; color: #0553ff !important; text-decoration: none; text-align: left !important; }
 .dashboard .main-container .my-courses .course .wrapper-course-image a img { margin: 0 auto !important; }
-
-a.btn.btn-primary.action-resume-course {
-    padding: 12px;
-}
 
 button.btn.btn-outline-primary.search-button {
     color: white !important;
@@ -814,4 +763,24 @@ article.course > section.details > div.wrapper-course-details > div.course-info 
 .xmodule_display.xmodule_ProblemBlock div.problem .choicegroup input[type="radio"], .xmodule_display.xmodule_ProblemBlock div.problem .choicegroup input[type="checkbox"] {
     left: 0.3625rem !important;
     top: 0.3625rem !important;
+}
+
+.course-outline .block-tree .outline-button .fa {
+    color: $header-bar-color !important;
+}
+
+.date-summary-container .date-summary .right-column .date-summary-link a {
+    color: $header-bar-color !important;
+}
+
+.enter-course {
+    background-color: $header-bar-color !important;
+
+    &:hover {
+        background-color: $button-hover !important;
+    }
+}
+
+.xmodule_display.xmodule_ProblemBlock div.problem .choicegroup input:focus+label, .xmodule_display.xmodule_ProblemBlock div.problem .choicetextgroup input:focus+label, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_ProblemBlock .choicegroup input:focus+label, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_ProblemBlock .choicetextgroup input:focus+label, .xmodule_display.xmodule_ProblemBlock div.problem .choicegroup input:hover+label, .xmodule_display.xmodule_ProblemBlock div.problem .choicetextgroup input:hover+label, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_ProblemBlock .choicegroup input:hover+label, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_ProblemBlock .choicetextgroup input:hover+label {
+    border: 2px solid $header-bar-color !important;
 }
