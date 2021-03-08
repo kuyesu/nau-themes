@@ -463,7 +463,8 @@ button.prerequisite-button .fa {
 }
 
 .forum-search button,
-.forum-actions button {
+.forum-actions button,
+.search-button, .btn-primary {
     border-radius: 5em;
     background: $header-bar-color !important;
     border-color: transparent !important;

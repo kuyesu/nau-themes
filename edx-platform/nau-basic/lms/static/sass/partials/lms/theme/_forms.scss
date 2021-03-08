@@ -31,9 +31,10 @@ input[type="tel"]:focus {
 }
 
 button.btn.btn-outline-primary.search-button,
-.forum-search button, .forum-actions button {
+.forum-search button, .forum-actions button, .btn-primary {
     font-size: 0.8rem !important;
     font-weight: 500 !important;
+    text-transform: initial !important;
 }
 
 .form-control {
