@@ -2,6 +2,7 @@
 <%page expression_filter="h"/>
 <%!
   from django.urls import reverse
+  from datetime import datetime
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
   from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
@@ -217,18 +218,23 @@
 % endif    
 
 
-
-    
-    
-    <!-- starts corporate entities -->
-    <section id="entities-quick-links">        
-    <ul class="flex-row">
-    <li><a href="https://nau.edu.pt"><img id="logo-nau" src="${static.url('images/nau_sempre_aprender.svg')}" alt="Logo NAU" title="NAU - Sempre a Aprender"></a>
-    <span id="copyright" >&copy; 2020 - FCT|FCCN. Todos os direitos reservados.</span>
-    </li>
-    <li><a id="logo-compete" href="https://www.fccn.pt/financiamento-projeto-nau/"><img src="${static.url('images/co-financed.png')}" alt="Logos: Compete, Portugal 2020 e União Europeia - Fundo Europeu de Desenvolvimento Regional"  title="Compete 2020, Portugal 2020 e União Europeia - Fundo Europeu de Desenvolvimento Regional"></a></li>
-    <li><a id="logo-incode2030" href="https://www.incode2030.gov.pt/" target="_blank"><img src="${static.url('images/incode.png')}" alt="Portugal - INcode2030" title="Visitar o site INcode.2030"></a></li>  
-    </ul>
+<%
+  entities_logos = static.get_value('NAU_ENTITIES_FOOTER', {}).get("itens", {})
+%>
+    <!-- corporate entities logos -->
+    <section id="entities-quick-links">
+      % for entity in entities_logos:
+      <div class="entities-links-logo">
+        <a href="${entity['link']}" class="entity-link" target="_blank" rel="noreferer noopener">
+          <img src="${entity['image']}" alt="">
+        </a>
+      </div>
+      % endfor
+    </section>
+    <section class="site-copyright">
+      <div class="site-copyright--nau">
+        <span>&copy; ${datetime.now().year} - FCT|FCCN<br>${_('All rights reserved.')}</span>
+      </div>
     </section>
     <!-- ends corporate entities --> 
 </footer>
