@@ -226,14 +226,14 @@
       % for entity in entities_logos:
       <div class="entities-links-logo">
         <a href="${entity['link']}" class="entity-link" target="_blank" rel="noreferer noopener">
-          <img src="${entity['image']}" alt="">
+          <img src="${entity['image']}" alt="${entity['alt'] if 'alt' in entity.keys() else ''}">
         </a>
       </div>
       % endfor
     </section>
     <section class="site-copyright">
       <div class="site-copyright--nau">
-        <span>&copy; ${datetime.now().year} - FCT|FCCN<br>${_('All rights reserved.')}</span>
+        <span>&copy; ${datetime.now().year} - FCT|FCCN<br>${_('All rights reserved')}</span>
       </div>
     </section>
     <!-- ends corporate entities --> 
