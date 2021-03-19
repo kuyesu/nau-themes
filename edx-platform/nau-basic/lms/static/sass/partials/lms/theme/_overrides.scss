@@ -1,6 +1,6 @@
 $black : #000;
 $white : #FFF;
-$nau_blue : #081CFF;
+$nau_blue : $header-bar-color;
 
 
 * {
@@ -454,12 +454,12 @@ input[name="honor_mode"] {
 }
 
 .verification-process.step-select-track .register-choice-audit {
-    border-color: #0857ff !important;
+    border-color: $header-bar-color !important;
 }
 
 button.accordion-trigger .fa,
 button.prerequisite-button .fa {
-    color: #0857ff;
+    color: $header-bar-color;
 }
 
 .forum-search button,
@@ -764,10 +764,6 @@ article.course > section.details > div.wrapper-course-details > div.course-info 
 .xmodule_display.xmodule_ProblemBlock div.problem .choicegroup input[type="radio"], .xmodule_display.xmodule_ProblemBlock div.problem .choicegroup input[type="checkbox"] {
     left: 0.3625rem !important;
     top: 0.3625rem !important;
-}
-
-.course-outline .block-tree .outline-button .fa {
-    color: $header-bar-color !important;
 }
 
 .date-summary-container .date-summary .right-column .date-summary-link a {
