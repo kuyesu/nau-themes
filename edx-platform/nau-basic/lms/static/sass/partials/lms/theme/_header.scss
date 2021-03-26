@@ -22,19 +22,15 @@
     justify-content: space-between;
     box-shadow: $menu-shadow;
     padding: 20px 50px 20px 0;
-
-    @media screen and (max-width: $breakpoint-medium) {
-        display: block;
-    }
     
     .logo {
         display: inline-block;
-        min-width: 190px;
+        max-width: 190px;
         height: 30px;
         margin-left: 50px;
         @media screen and (max-width: $breakpoint-medium) {
             display: inline-block;
-            min-width: 100px;
+            max-width: 100px;
         }
     }
 

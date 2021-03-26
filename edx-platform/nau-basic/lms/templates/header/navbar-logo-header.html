@@ -29,9 +29,8 @@ from branding import api as branding_api
   header_menu = static.get_value('NAU_HEADER_MENU', {}).get(LANGUAGE_CODE, {})
 
   logo_image_url = static.get_value('logo_image_url', None)
-  if logo_image_url is None or not (logo_image_url.startswith('http://') or logo_image_url.startswith('https://') or logo_image_url.startswith('//') ):
+  if isinstance(logo_image_url, str) and (logo_image_url is None or not (logo_image_url.startswith('http://') or logo_image_url.startswith('https://') or logo_image_url.startswith('//') ) ):
     logo_image_url = branding_api.get_logo_url(is_secure)
-  
 %> 
 
 <%doc>
@@ -112,16 +111,38 @@ from branding import api as branding_api
 
     <a id="open-menu-arrow" href="javascript:void(0)" onclick="openNav(0)" title="Abrir">&#9776;</a>
     <a href="${nau_marketing_base_href_current_lang}">
-      <img  class="logo" src="${logo_image_url}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+      <picture>
+        % if isinstance(logo_image_url, dict):
+          % for source in logo_image_url.get('sources',[]):
+            <source media="${source.get('media','')}" srcset="${source.get('srcset','')}">
+          % endfor
+        % endif
+        <%
+          logo_image_alt = _("{platform_name} Home Page").format(platform_name=static.get_platform_name())
+          if isinstance(logo_image_url, dict):
+            logo_image_alt = logo_image_url.get('alt', {})
+            if isinstance(logo_image_alt, dict):
+              logo_image_alt = logo_image_alt.get(LANGUAGE_CODE, '')
+        %>
+        <img 
+          class="logo" 
+          src="${logo_image_url.get('src', '') if isinstance(logo_image_url, dict) else logo_image_url}" 
+          alt="${logo_image_alt}"/>
+      </picture>
     </a>
+
+    <% tagline = configuration_helpers.get_value('NAU_HEADER_TAGLINE', None) %>
+    % if tagline:
+      <div class="nau-header-tagline">
+        ${tagline}
+      </div>
+    % endif
 
     <!-- starts menu container -->
     <div class="menu-container">
-
       <!-- starts top nav menu -->
       <a id="close-menu-arrow" href="javascript:void(0)" onclick="closeNav(0)" title="Fechar">&#10005;</a>
       <div class="nav-icon"></div>
-
       <ul id="about-categories-entities" class="main-menu">
         % for parent_header in header_menu:
           <% item_link = parent_header["link"] %>
@@ -142,8 +163,6 @@ from branding import api as branding_api
           </li>
         % endfor
       </ul>
-
-
 
       <!-- starts top nav action container -->
       <div id="actions_container"> 
@@ -191,23 +210,9 @@ from branding import api as branding_api
         <!-- ends login and register -->     
         </div>        
     <!-- ends top nav action container --> 
-    </div>    
-
-    % if enable_enterprise_sidebar:
-      <div class="enterprise-tagline">
-        <% tagline = configuration_helpers.get_value('ENTERPRISE_TAGLINE', settings.ENTERPRISE_TAGLINE) %>
-        % if tagline:
-          ${tagline}
-        % endif
-      </div>
-    % endif
+    </div>
 <!-- ends menu container -->     
 </div>
-
-
-
-
-
 
 
 <!-- ends branding container -->
