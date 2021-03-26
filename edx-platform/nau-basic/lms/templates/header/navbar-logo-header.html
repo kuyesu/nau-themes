@@ -166,7 +166,7 @@ from branding import api as branding_api
 
       <!-- starts top nav action container -->
       <div id="actions_container"> 
-        % if strtobool(static.get_value('NAU_HEADER_SEARCH_COURSES', False)):
+        % if strtobool(static.get_value('NAU_HEADER_SEARCH_COURSES', 'False')):
           <!-- starts top nav search bar -->          
           <form id="search-form" action="${www_pt}" role="search" method="get">
             <input id="search-input" name="s" type="search" placeholder="${_("Search courses...")}" value="">
