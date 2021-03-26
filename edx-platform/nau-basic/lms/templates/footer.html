@@ -9,394 +9,88 @@
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
-
 <%
     www_pt = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("pt-pt", "")
     www_en = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("en", "")
-
-    if LANGUAGE_CODE == "pt-pt":
-        footer_menu = static.get_value('NAU_FOOTER_MENU', {}).get("pt-pt", {})
-    else:
-        footer_menu = static.get_value('NAU_FOOTER_MENU', {}).get("en", {})
-    endif
-
-    nau_social_media = static.get_value('NAU_SOCIAL_MEDIA', {})
-%> 
-
-
-<footer> 
-
-    <!-- starts footer links -->
-    <section id="footer-nav">        
-        <!-- starts quick links -->
-
-        <div id="quick-links-section">
-
-              % if isinstance(footer_menu, dict):
-                ## old code  
-                % for title in footer_menu:
-                <div class='footer-links'>
-                  <span class="footer-title">${title}</span>
-                  <ul>
-                    %for label in footer_menu[title]:
-                      <% link = footer_menu[title][label] %>
-                      <li><a href='${link}'>${label}</a></li>
-                    %endfor
-                  </ul>
-                </div>
-                % endfor
-
-              % else:
-                % for footer_menu_item in footer_menu:
-                <% html_link = footer_menu_item["html"] %>
-                <% children = footer_menu_item.get("itens", {}) %>
-                <div class='footer-links'>
-                  <span class="footer-title">${html_link}</span>
-                  <ul>
-                    %for sub_item in children:
-                      <% sub_item_link = sub_item.get("link","") %>
-                      <% sub_item_html = sub_item["html"] %>
-                      <li><a href='${sub_item_link}'>${sub_item_html}</a></li>
-                    %endfor
-                  </ul>
-                </div>
-                % endfor
-              % endif
-            <!-- starts social media -->
-                <div class="footer-social">
-                    <span class="footer-title">Siga-nos</span>
-                    <div id="social-media">
-                    <ul>
-                      % if nau_social_media:
-                        % if 'twitter' in nau_social_media:
-                          <li><a href="${nau_social_media["twitter"]}" target="_blank" title="${_('Share on Twitter')}"><img src="${static.url('images/twitter.svg')}" alt="twitter logo" title="${_('Share on Twitter')}"></a></li>
-                        % endif
-                        % if 'linkedin' in nau_social_media:
-                          <li><a href="${nau_social_media["linkedin"]}" target="_blank" title="${_('Share on LinkedIn')}"><img src="${static.url('images/linkedin.svg')}" alt="Linkedin logo" title="${_('Share on LinkedIn')}"></a></li>
-                        % endif
-                        % if 'facebook' in nau_social_media:
-                          <li><a href="${nau_social_media["facebook"]}" id="facebook-share-btt" rel="nofollow" target="_blank" title="${_('Share on Facebook')}" class=""><img src="${static.url('images/facebook.svg')}" alt="Facebook logo" title="${_('Share on Facebook')}"></a></li>
-                        % endif
-                        % if 'instagram' in nau_social_media:
-                          <li><a href="${nau_social_media["instagram"]}" target="_blank" title="${_('Share on Instagram')}"><img src="${static.url('images/instagram.svg')}" alt="Instagram logo" title="${_('Share on Instagram')}"></a></li>
-                        % endif
-            
-                      % endif
-                    </ul>
-                    </div>
-                    <div id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="${static.url('images/edx-openedx-logo.png')}" alt="Powered by OpenEdX" title="${_('Visit OpenEdx website')}"></a></div>
-                </div>
-
-          </div>
-    </section>
-    <!-- ends footer links -->  
-
-% if LANGUAGE_CODE == "pt-ptx":
-
-    <!-- starts footer links -->
-    <section id="footer-links">        
-        <!-- starts quick links -->
-
-        <div id="quick-links-section">
-
-            <ul id="footer" class="menu">
-            
-            
-                <li class='footer-links-structure'>
-                    <h5>Ligações Rápidas</h5>
-                    <ul>
-                        <li><a href='${www_pt}/entidades/'>Entidade</a></li>
-                        <li><a href='${www_pt}/categorias/'>Categorias</a></li>
-                        <li><a href='${www_pt}/cursos/'>Cursos</a></li>
-                    </ul>
-                </li>
-
-                <li class='footer-links-structure'>
-                    <h5>Ajuda</h5>
-                    <ul>
-                        <li><a href='${www_pt}/ajuda/'>Serviços de Suporte</a></li>
-                        <li><a href='${www_pt}/ajuda/perguntas-frequentes/'>Perguntas Frequentes</a></li></a></li>
-                        <li><a href='${www_pt}/42-2/formacoes/'>Formação</a></li>
-                        <li><a href='${www_pt}/sobre/comunidades-nau/'>Comunidades NAU</a></li>
-                    </ul>
-                </li>
-
-                <li class='footer-links-structure'>
-                    <h5>Acerca</h5>
-                    <ul>
-                        <li><a href='${www_pt}/sobre/'>Acerca da NAU</a></li>
-                        <li><a href='${www_pt}/noticias/'>Noticias</a></li>
-                        <li><a href='${www_pt}/sobre/material-de-divulgacao/'>Marketing Digital</a></li>
-                        <li><a href='${www_pt}/sobre/contactos/'>Contactos</a></li>
-                        <li><a href='${www_pt}/sobre/politica-de-privacidade/'>Política de Privacidade</a></li>
-                        <li><a href='${www_pt}/sobre/termos-e-condicoes/'>Termos e Condições</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <!-- starts social media -->
-            <ul>
-                <li class="footer-links-structure">
-                    <h5>Siga-nos</h5>
-                    <ul id="social-media">
-                        <li><a href="${nau_social_media["twitter"]}"><img src="${static.url('images/twitter.svg')}" alt="twitter logo" title="${_('Share on Twitter')}"></a></li>
-                        <li><a href="${nau_social_media["linkedin"]}"><img src="${static.url('images/linkedin.svg')}" alt="Linkedin logo" title="${_('Share on LinkedIn')}"></a></li>
-                        <li><a href="${nau_social_media["facebook"]}" id="facebook-share-btt" rel="nofollow" target="_blank" title="${_('Share on Facebook')}" class=""><img src="${static.url('images/facebook.svg')}" alt="Facebook logo" title="Share on Facebook"></a></li>
-                        <li><a href="${nau_social_media["instagram"]}"><img src="${static.url('images/instagram.svg')}" alt="Instagram logo" title="${_('Share on Instagram')}"></a></li>
-                        <!--- <li><a href=""><img src="${static.url('images/more-share.svg')}" alt="Share list" title="${_('Share')}"></a></li> --->
-                        <li id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="${static.url('images/openedx.svg')}" alt="Powered by OpenEdX" title="${_('Visit OpenEdx website')}"></a></li>
-                    </ul>
-                </li>
-            </ul>      
-        <!-- ends social media -->     
-        </div>
-    </section>
-    <!-- ends footer links -->   
-  
-% endif  
-  
-% if LANGUAGE_CODE == "enx":
-
-    <!-- starts footer links -->
-    <section id="footer-links">        
-        <!-- starts quick links -->
-
-        <div id="quick-links-section">
-
-            <ul id="footer" class="menu">
-                <li class='footer-links-structure'>
-                    <h5>${_('Quick Links')}</h5>
-                    <ul>
-                        <li><a href='${www_en}/entidades/'>Entities</a></li>
-                        <li><a href='${www_en}/categorias/'>Categories</a></li>
-                        <li><a href='${www_en}/cursos/'>Courses</a></li>
-                    </ul>
-                </li>
-
-                <li class='footer-links-structure'>
-                    <h5>${_('Help')}</h5>
-                    <ul>
-                        <li><a href='${www_en}/ajuda/'>Support Services</a></li>
-                        <li><a href='${www_en}/ajuda/perguntas-frequentes/'>Frequent Asked Questions</a></li></a></li>
-                        <li><a href='${www_en}/42-2/formacoes/'>Trainning</a></li>
-                        <li><a href='${www_en}/sobre/comunidades-nau/'>NAU Communities</a></li>
-                    </ul>
-                </li>
-
-                <li class='footer-links-structure'>
-                    <h5>${_('About')}</h5>
-                    <ul>
-                        <li><a href='${www_en}/sobre/'>About NAU</a></li>
-                        <li><a href='${www_en}/noticias/'>News</a></li>
-                        <li><a href='${www_en}/sobre/material-de-divulgacao/'>Marketing Materials</a></li>
-                        <li><a href='${www_en}/sobre/contactos/'>Contacts</a></li>
-                        <li><a href='${www_en}/sobre/politica-de-privacidade/'>Privacy Policy</a></li>
-                        <li><a href='${www_en}/sobre/termos-e-condicoes/'>Terms & Conditions</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <!-- starts social media -->
-            <ul>
-                <li class="footer-links-structure">
-                    <h5>${_('Social Media')}</h5>
-                    <ul id="social-media">
-                        <li><a href="${nau_social_media["twitter"]}"><img src="${static.url('images/twitter.svg')}" alt="twitter logo" title="Share on Twitter"></a></li>
-                        <li><a href="${nau_social_media["linkedin"]}"><img src="${static.url('images/linkedin.svg')}" alt="Linkedin logo" title="Share on LinkedIn"></a></li>
-                        <li><a href="${nau_social_media["facebook"]}" id="facebook-share-btt" rel="nofollow" target="_blank" title="Share on Facebook" class=""><img src="${static.url('images/facebook.svg')}" alt="Facebook logo" title="Share on Facebook"></a></li>
-                        <li><a href="${nau_social_media["instagram"]}"><img src="${static.url('images/instagram.svg')}" alt="Instagram logo" title="Share on Instagram"></a></li>
-                        <!--- <li><a href=""><img src="${static.url('images/more-share.svg')}" alt="Share list" title="${_('Share')}"></a></li> --->
-                        <li id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="${static.url('images/openedx.svg')}" alt="Powered by OpenEdX" title="Visit OpenEdx website"></a></li>
-                    </ul>
-                </li>
-            </ul>      
-        <!-- ends social media -->     
-        </div>
-    </section>
-    <!-- ends footer links -->   
-  
-% endif    
-
-
-<%
-  entities_logos = static.get_value('NAU_ENTITIES_FOOTER', {}).get("itens", {})
+    footer_menu = static.get_value('NAU_FOOTER_MENU', {}).get(LANGUAGE_CODE, {})
+    nau_social_media = static.get_value('NAU_SOCIAL_MEDIA', [])
 %>
+<footer> 
+  <section id="footer-nav">      
+    % if len(footer_menu)>0 or len(nau_social_media)>0:
+      <div id="quick-links-section">
+        % if len(footer_menu)>0:
+          % for footer_menu_item in footer_menu:
+            <% html_link = footer_menu_item["html"] %>
+            <% children = footer_menu_item.get("itens", {}) %>
+            <div class='footer-links'>
+              <span class="footer-title">${html_link}</span>
+              <ul>
+                %for sub_item in children:
+                  <% sub_item_link = sub_item.get("link","") %>
+                  <% sub_item_html = sub_item["html"] %>
+                  <li><a href='${sub_item_link}'>${sub_item_html}</a></li>
+                %endfor
+              </ul>
+            </div>
+          % endfor
+        %endif
+        % if isinstance(nau_social_media, list) and len(nau_social_media)>0:
+          <!-- starts social media -->
+          <div class="footer-social">
+              <span class="footer-title">Siga-nos</span>
+              <div id="social-media">
+                <ul>
+                  % for social_media in nau_social_media:
+                    <li>
+                      <a 
+                        href="${social_media.get('url','')}"
+                        target="${social_media.get('target','_blank')}"
+                        class="social-links external"
+                        title="${social_media.get('title', {}).get(LANGUAGE_CODE, '')}"
+                        rel="${social_media.get('url','noreferrer noopener')}">
+                        <span class="icon fa ${social_media.get('icon','')}" aria-hidden="true"></span>
+                        <span class="sr">${social_media.get('action', {}).get(LANGUAGE_CODE, '')}</span>
+                      </a>
+                    </li>
+                  % endfor
+                </ul>
+              </div>
+              <div id="openedx-logo"><a href="https://open.edx.org/" target="_blank"><img src="${static.url('images/edx-openedx-logo.png')}" alt="Powered by OpenEdX" title="${_('Visit OpenEdx website')}"></a></div>
+          </div>
+        %endif
+      </div>
+    %endif
+  </section>
+  <%
+    entities_logos = static.get_value('NAU_ENTITIES_FOOTER', {}).get("itens", {})
+  %>
+  % if len(entities_logos)>0:
     <!-- corporate entities logos -->
     <section id="entities-quick-links">
-      % for entity in entities_logos:
+      % for entity in static.get_value('NAU_ENTITIES_FOOTER', {}).get("itens", {}):
       <div class="entities-links-logo">
-        <a href="${entity['link']}" class="entity-link" target="_blank" rel="noreferer noopener">
-          <img src="${entity['image']}" alt="${entity['alt'] if 'alt' in entity.keys() else ''}">
+        <a href="${entity.get('link','')}" class="entity-link" target="${entity.get('target', '_blank')}" rel="noreferrer noopener">
+          <img
+            loading="lazy"
+            src="${entity.get('image', '')}"
+            alt="${entity.get('alt', '')}"
+            title="${entity.get('title', '')}"
+            width="${entity.get('width', '')}"
+            height="${entity.get('height', '')}"
+          >
         </a>
       </div>
       % endfor
     </section>
-    <section class="site-copyright">
-      <div class="site-copyright--nau">
-        <span>&copy; ${datetime.now().year} - FCT|FCCN<br>${_('All rights reserved')}</span>
-      </div>
-    </section>
-    <!-- ends corporate entities --> 
+    <!-- ends corporate entities -->
+  %endif
+  <section class="site-copyright">
+    <div class="site-copyright--nau">
+      <span>&copy; ${datetime.now().year} - FCT|FCCN<br>${_('All rights reserved')}</span>
+    </div>
+  </section>
 </footer>
-
-
-% if 0:
-    % if uses_bootstrap:
-      <div class="wrapper wrapper-footer">
-        <footer id="footer-openedx" class="grid-container"
-          ## When rendering the footer through the branding API,
-          ## the direction may not be set on the parent element,
-          ## so we set it here.
-          % if bidi:
-            dir=${bidi}
-          % endif
-        >
-          <div class="colophon">
-            <nav class="nav-colophon" aria-label="${_('About')}">
-              <ol>
-                  <li class="nav-colophon-01">
-                    <a id="about" href="/about">${_('About')}</a>
-                  </li>
-                  <li class="nav-colophon-02">
-                    <a id="help" href="/help">${_('Help')}</a>
-                  </li>
-              </ol>
-            </nav>
-
-            % if context.get('include_language_selector', footer_language_selector_is_enabled()):
-                <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
-            % endif
-
-            <div class="wrapper-logo">
-              <p>
-                <a href="/">
-                  ## The default logo is a placeholder.
-                  ## You can either replace this link entirely or update
-                  ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
-                  ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
-                  ## can be included in the footer on other sites
-                  ## (e.g. a blog or marketing front-end) to provide a consistent
-                  ## user experience.  See the branding app for details.
-                  <img alt="organization logo" src="${static.url('images/logo_nau_w220.png')}">
-                </a>
-              </p>
-            </div>
-
-            ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-            <p class="copyright">© 2018 - FCT | FCCN, ${_('All rights reserved')}</p>
-
-            <nav class="nav-legal" aria-label="${_('Legal')}">
-            </nav>
-          </div>
-
-          ## Please leave this link and use one of the logos provided
-          ## The OpenEdX link may be hidden when this view is served
-          ## through an API to partner sites (such as marketing sites or blogs),
-          ## which are not technically powered by OpenEdX.
-          <div class="footer-container-logos">
-            % if not hide_openedx_link:
-            <div class="footer-about-openedx">
-              <p>
-                <a href="${footer['openedx_link']['url']}">
-                  <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
-                </a>
-              </p>
-            </div>
-            % endif
-            <div class="footer-logo-partner">
-              <p>       
-                <a href="http://www.incode2030.gov.pt/">
-                  <img src="${static.url('images/logo_incode2030_v3.png')}">
-                </a>
-              </p>
-              <p>
-                <a href="#">
-                  <img src="${static.url('images/3logos-feder_small.png')}">
-                </a>
-              </p>
-            </div>
-          </div>
-        </footer>
-      </div>
-    % else:
-      <div class="wrapper wrapper-footer">
-        <footer id="footer-openedx" class="grid-container"
-          ## When rendering the footer through the branding API,
-          ## the direction may not be set on the parent element,
-          ## so we set it here.
-          % if bidi:
-            dir=${bidi}
-          % endif
-        >
-          <div class="colophon">
-            <nav class="nav-colophon" aria-label="${_('About')}">
-              <ol>
-                  <li class="nav-colophon-01">
-                    <a id="about" href="/about">${_('About')}</a>
-                  </li>
-                  <li class="nav-colophon-02">
-                    <a id="help" href="/help">${_('Help')}</a>
-                  </li>
-              </ol>
-            </nav>
-
-            % if context.get('include_language_selector', footer_language_selector_is_enabled()):
-                <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
-            % endif
-
-            <div class="wrapper-logo">
-              <p>
-                <a href="/">
-                  ## The default logo is a placeholder.
-                  ## You can either replace this link entirely or update
-                  ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
-                  ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
-                  ## can be included in the footer on other sites
-                  ## (e.g. a blog or marketing front-end) to provide a consistent
-                  ## user experience.  See the branding app for details.
-                  <img alt="organization logo" src="${static.url('images/logo_nau_w220.png')}">
-                </a>
-              </p>
-            </div>
-
-            ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-            <p class="copyright">© 2018 - FCT | FCCN, ${_('All rights reserved')}</p>
-
-            <nav class="nav-legal" aria-label="${_('Legal')}">
-            </nav>
-          </div>
-
-          ## Please leave this link and use one of the logos provided
-          ## The OpenEdX link may be hidden when this view is served
-          ## through an API to partner sites (such as marketing sites or blogs),
-          ## which are not technically powered by OpenEdX.
-          <div class="footer-container-logos">
-            % if not hide_openedx_link:
-            <div class="footer-about-openedx">
-              <p>
-                <a href="${footer['openedx_link']['url']}">
-                  <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
-                </a>
-              </p>
-            </div>
-            % endif
-            <div class="footer-logo-partner">
-              <p>       
-                <a href="http://www.incode2030.gov.pt/">
-                  <img src="${static.url('images/logo_incode2030_v3.png')}">
-                </a>
-              </p>
-              <p>
-                <a href="#">
-                  <img src="${static.url('images/3logos-feder_small.png')}">
-                </a>
-              </p>
-            </div>
-          </div>
-        </footer>
-      </div>
-    % endif
-% endif
 
 ## Service Desk Widget
 <script data-jsd-embedded data-key="c19e6a24-a1f6-4a84-aa46-89e82b94b809" data-base-url="https://jsd-widget.atlassian.com" src="https://jsd-widget.atlassian.com/assets/embed.js"></script>

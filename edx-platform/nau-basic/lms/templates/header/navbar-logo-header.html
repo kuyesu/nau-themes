@@ -5,58 +5,66 @@
 
 <%namespace name='static' file='../static_content.html'/>
 <%!
+from distutils.util import strtobool
 from django.urls import reverse
 from django.utils.translation import ugettext as _
 from lms.djangoapps.ccx.overrides import get_current_ccx
 from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_enabled, released_languages
 
+# App that handles subdomain specific branding
+from branding import api as branding_api
+
 %>
 
 <%
   www_pt = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("pt-pt", "")
   www_en = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("en", "") 
-  nau_lang_menu = static.get_value('NAU_NAVBAR_LANGUAGE_SELECTOR')   
- 
-  if LANGUAGE_CODE == "pt-pt":
-    header_menu = static.get_value('NAU_HEADER_MENU', {}).get("pt-pt", {})
-  else:
-    header_menu = static.get_value('NAU_HEADER_MENU', {}).get("en", {})
-  endif 
+  
+  # in future when using different URLs on marketing per language
+  #nau_marketing_base_href_current_lang = static.get_value('NAU_MARKETING_BASE_HREF', {}).get(LANGUAGE_CODE, "/")
+  nau_marketing_base_href_current_lang = www_pt if www_pt else "/"
 
- 
+  nau_lang_menu = static.get_value('NAU_NAVBAR_LANGUAGE_SELECTOR')
+  header_menu = static.get_value('NAU_HEADER_MENU', {}).get(LANGUAGE_CODE, {})
+
+  logo_image_url = static.get_value('logo_image_url', None)
+  if logo_image_url is None or not (logo_image_url.startswith('http://') or logo_image_url.startswith('https://') or logo_image_url.startswith('//') ):
+    logo_image_url = branding_api.get_logo_url(is_secure)
+  
 %> 
 
 <%doc>
 
-    <h1 class="header-logo">
-        <%block name="navigation_logo">
-        <a href="/" class="logo"></a>
-        </%block>  
-      % if course:
-        <div class="course-header">
-          <span class="provider">${course.display_org_with_default}:</span>
-          <span class="course-number">${course.display_number_with_default}</span>
-          <%
-          display_name = course.display_name_with_default
-          if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
-            ccx = get_current_ccx(course.id)
-            if ccx:
-              display_name = ccx.display_name
-          %>
-          <span class="course-name">${display_name}</span>
-        </div>
-      % endif
-    </h1>
-
-    % if enable_enterprise_sidebar:
-      <div class="enterprise-tagline">
-        <% tagline = configuration_helpers.get_value('ENTERPRISE_TAGLINE', settings.ENTERPRISE_TAGLINE) %>
-        % if tagline:
-          ${tagline}
-        % endif
-      </div>
+<h1 class="header-logo">
+  <a href="${branding_api.get_home_url()}">
+    <%block name="navigation_logo">
+    <img  class="logo" src="${branding_api.get_logo_url(is_secure)}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+    </%block>
+  </a>
+  % if course:
+    <div class="course-header">
+      <span class="provider">${course.display_org_with_default}:</span>
+      <span class="course-number">${course.display_number_with_default}</span>
+      <%
+      display_name = course.display_name_with_default
+      if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
+        ccx = get_current_ccx(course.id)
+        if ccx:
+          display_name = ccx.display_name
+      %>
+      <span class="course-name">${display_name}</span>
+    </div>
+  % endif
+</h1>
+% if enable_enterprise_sidebar:
+  <div class="enterprise-tagline">
+    <% tagline = configuration_helpers.get_value('ENTERPRISE_TAGLINE', settings.ENTERPRISE_TAGLINE) %>
+    % if tagline:
+      ${tagline}
     % endif
+  </div>
+% endif
 
 </%doc>
 
@@ -103,7 +111,9 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
 <div id="branding-top-nav">
 
     <a id="open-menu-arrow" href="javascript:void(0)" onclick="openNav(0)" title="Abrir">&#9776;</a>
-    <a href="${www_pt}" class="logo"></a>
+    <a href="${nau_marketing_base_href_current_lang}">
+      <img  class="logo" src="${logo_image_url}" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+    </a>
 
     <!-- starts menu container -->
     <div class="menu-container">
@@ -113,59 +123,38 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
       <div class="nav-icon"></div>
 
       <ul id="about-categories-entities" class="main-menu">
-        % if isinstance(header_menu, dict):
-          ## old code
-          % for title in header_menu:
-            <% link = header_menu[title]["link"] %>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page 
-            % if len(header_menu[title]["itens"]): 
-              menu-item-has-children 
-            % endif 
-            ">
-              <a href="${link}">${title}</a>
-              %if len(header_menu[title]["itens"]):
+        % for parent_header in header_menu:
+          <% item_link = parent_header["link"] %>
+          <% html_link = parent_header["html"] %>
+          <% children = parent_header.get("itens", {}) %>
+          <% has_children = len(children) > 0 %>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page ${'menu-item-has-children' if has_children else ''}">
+            <a href="${item_link}">${html_link}</a>
+            % if has_children:
               <ul class="sub-nav menu-depth-0">
-              % for label in header_menu[title]["itens"]:
-                <% link = header_menu[title]["itens"][label] %>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${link}">${label}</a></li>
+              % for sub_item in children:
+                <% sub_item_link = sub_item["link"] %>
+                <% sub_item_html = sub_item["html"] %>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${sub_item_link}">${sub_item_html}</a></li>
               %endfor
-              </ul>      
-              %endif
-            </li>
-          % endfor
-        % else:
-          % for parent_header in header_menu:
-            <% item_link = parent_header["link"] %>
-            <% html_link = parent_header["html"] %>
-            <% children = parent_header.get("itens", {}) %>
-            <% has_children = len(children) > 0 %>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page ${'menu-item-has-children' if has_children else ''}">
-              <a href="${item_link}">${html_link}</a>
-              % if has_children:
-                <ul class="sub-nav menu-depth-0">
-                % for sub_item in children:
-                  <% sub_item_link = sub_item["link"] %>
-                  <% sub_item_html = sub_item["html"] %>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${sub_item_link}">${sub_item_html}</a></li>
-                %endfor
-                </ul>
-              % endif
-            </li>
-          % endfor
-        % endif
+              </ul>
+            % endif
+          </li>
+        % endfor
       </ul>
 
 
 
       <!-- starts top nav action container -->
       <div id="actions_container"> 
-  
+        % if strtobool(static.get_value('NAU_HEADER_SEARCH_COURSES', False)):
           <!-- starts top nav search bar -->          
           <form id="search-form" action="${www_pt}" role="search" method="get">
             <input id="search-input" name="s" type="search" placeholder="${_("Search courses...")}" value="">
             <input name="submit-search" type="submit">
           </form>
           <!-- ends top nav search bar -->
+        % endif
 
       
       <!-- starts menu languages --> 
@@ -203,6 +192,15 @@ from openedx.core.djangoapps.lang_pref.api import header_language_selector_is_en
         </div>        
     <!-- ends top nav action container --> 
     </div>    
+
+    % if enable_enterprise_sidebar:
+      <div class="enterprise-tagline">
+        <% tagline = configuration_helpers.get_value('ENTERPRISE_TAGLINE', settings.ENTERPRISE_TAGLINE) %>
+        % if tagline:
+          ${tagline}
+        % endif
+      </div>
+    % endif
 <!-- ends menu container -->     
 </div>
 
