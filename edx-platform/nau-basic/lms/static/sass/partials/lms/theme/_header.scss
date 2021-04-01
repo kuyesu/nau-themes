@@ -21,7 +21,9 @@
     display: flex;
     justify-content: space-between;
     box-shadow: $menu-shadow;
-    padding: 20px 50px 20px 0;
+    padding-right: 50px;
+    align-items: center;
+    height: 79px;
     
     .logo {
         display: inline-block;
@@ -108,6 +110,30 @@
             cursor: pointer;
             box-shadow: none;
             line-height: 1.6rem;
+        }
+    }
+
+    .nau-header-course {
+        max-height: 100%;
+        img {
+            max-height: 76px;
+        }
+        .nau-header-course-information {
+            display: inline;
+            align-items: center;
+            .provider:after{
+                content: ":";
+            }
+            .course-number{
+                display: none;
+            }
+            .course-name {
+                overflow: hidden;
+                white-space:nowrap;
+                text-overflow:ellipsis;
+                width: 250px;
+                height: 20px;                        
+            }
         }
     }
 }

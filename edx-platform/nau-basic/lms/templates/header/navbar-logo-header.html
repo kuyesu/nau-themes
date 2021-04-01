@@ -131,8 +131,29 @@ from branding import api as branding_api
       </picture>
     </a>
 
+    % if course:
+      <% org_logo_dict = static.get_value('NAU_HEADER_ORGANIZATION_LOGOS', {}).get(course.display_org_with_default) %>
+      <div class="nau-header-course">
+        % if org_logo_dict is not None:
+          <img src="${org_logo_dict.get('src','')}" alt="${org_logo_dict.get('alt','')}" title="${org_logo_dict.get('title','')}" />
+        % endif
+        <div class="nau-header-course-information">
+          <span class="provider">${course.display_org_with_default}</span>
+          <span class="course-number">${course.display_number_with_default}</span>
+          <%
+          display_name = course.display_name_with_default
+          if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
+            ccx = get_current_ccx(course.id)
+            if ccx:
+              display_name = ccx.display_name
+          %>
+          <span class="course-name">${display_name}</span>
+        </div>
+      </div>
+    % endif
+
     <% tagline = configuration_helpers.get_value('NAU_HEADER_TAGLINE', None) %>
-    % if tagline:
+    % if tagline and not course:
       <div class="nau-header-tagline">
         ${tagline}
       </div>
@@ -140,33 +161,35 @@ from branding import api as branding_api
 
     <!-- starts menu container -->
     <div class="menu-container">
-      <!-- starts top nav menu -->
-      <a id="close-menu-arrow" href="javascript:void(0)" onclick="closeNav(0)" title="Fechar">&#10005;</a>
-      <div class="nav-icon"></div>
-      <ul id="about-categories-entities" class="main-menu">
-        % for parent_header in header_menu:
-          <% item_link = parent_header["link"] %>
-          <% html_link = parent_header["html"] %>
-          <% children = parent_header.get("itens", {}) %>
-          <% has_children = len(children) > 0 %>
-          <li class="menu-item menu-item-type-post_type menu-item-object-page ${'menu-item-has-children' if has_children else ''}">
-            <a href="${item_link}">${html_link}</a>
-            % if has_children:
-              <ul class="sub-nav menu-depth-0">
-              % for sub_item in children:
-                <% sub_item_link = sub_item["link"] %>
-                <% sub_item_html = sub_item["html"] %>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${sub_item_link}">${sub_item_html}</a></li>
-              %endfor
-              </ul>
-            % endif
-          </li>
-        % endfor
-      </ul>
+      % if not course:
+        <!-- starts top nav menu -->
+        <a id="close-menu-arrow" href="javascript:void(0)" onclick="closeNav(0)" title="Fechar">&#10005;</a>
+        <div class="nav-icon"></div>
+        <ul id="about-categories-entities" class="main-menu">
+          % for parent_header in header_menu:
+            <% item_link = parent_header["link"] %>
+            <% html_link = parent_header["html"] %>
+            <% children = parent_header.get("itens", {}) %>
+            <% has_children = len(children) > 0 %>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page ${'menu-item-has-children' if has_children else ''}">
+              <a href="${item_link}">${html_link}</a>
+              % if has_children:
+                <ul class="sub-nav menu-depth-0">
+                % for sub_item in children:
+                  <% sub_item_link = sub_item["link"] %>
+                  <% sub_item_html = sub_item["html"] %>
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="${sub_item_link}">${sub_item_html}</a></li>
+                %endfor
+                </ul>
+              % endif
+            </li>
+          % endfor
+        </ul>
+      % endif
 
       <!-- starts top nav action container -->
       <div id="actions_container"> 
-        % if strtobool(static.get_value('NAU_HEADER_SEARCH_COURSES', 'False')):
+        % if not course and strtobool(static.get_value('NAU_HEADER_SEARCH_COURSES', 'False')):
           <!-- starts top nav search bar -->          
           <form id="search-form" action="${www_pt}" role="search" method="get">
             <input id="search-input" name="s" type="search" placeholder="${_("Search courses...")}" value="">
@@ -217,21 +240,6 @@ from branding import api as branding_api
 
 <!-- ends branding container -->
 <div class="menu-overlay" onclick="closeNav(0)"></div>
-
-  % if course:
-    <div class="course-header">
-      <span class="provider">${course.display_org_with_default}:</span>
-      <span class="course-number">${course.display_number_with_default}</span>
-      <%
-      display_name = course.display_name_with_default
-      if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
-        ccx = get_current_ccx(course.id)
-        if ccx:
-          display_name = ccx.display_name
-      %>
-      <span class="course-name">${display_name}</span>
-    </div>
-  % endif
 
 
 <script>
