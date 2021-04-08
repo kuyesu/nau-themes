@@ -29,8 +29,7 @@
         height: 30px;
         margin-left: 50px;
         @media screen and (max-width: $breakpoint-medium) {
-            display: inline-block;
-            max-width: 100px;
+            max-width: 300px;
         }
     }
 
