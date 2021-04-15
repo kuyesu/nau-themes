@@ -6,9 +6,13 @@ footer {
         margin: 0;
     }
 
+    #footer-nav {
+        background-color: #eeeeee;
+    }
+
     #quick-links-section {
         padding: 40px 50px 20px 50px;
-        background-color: #eeeeee;
+        max-width: 1920px;
         display: flex;
 
         div:nth-last-child(2) {
@@ -83,6 +87,7 @@ footer {
         display: flex;
         justify-content: space-between;
         padding: 40px 50px;
+        max-width: 1920px;
         flex-wrap: wrap;
 
         @media screen and (max-width: $breakpoint-medium) {

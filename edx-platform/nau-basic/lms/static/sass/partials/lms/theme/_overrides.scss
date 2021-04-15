@@ -11,33 +11,19 @@ $nau_blue : $header-bar-color;
 
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #EAEAEA;
     text-rendering: optimizeLegibility;
     margin: auto;
     padding: 0px;
     padding-bottom: 10px;
     
     .window-wrap {
-        background-color: #F5F5F5;
-        width: 100%;
-        max-width: 1280px;
-        margin: 0 auto 50px auto;
         display: flow-root;
         border-radius: 0px 0px 10px 10px;
     }
 }
 
-
-/*** ***/
-
-.dashboard .main-container .my-courses .listing-courses .course-item .course-container {
-    border: 1px solid gray;
-    border-radius: 5px 5px 20px 20px;
-    background-color: rgb(203, 203, 203);
-}
-
 .content-wrapper .course-tabs.navbar {
-    border-bottom: solid 1px #CCC;
+    border-bottom: solid 1px #e3e3e3;
     overflow-x: hidden;
 }
 
@@ -99,6 +85,10 @@ body {
 
 .course-content .xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-list-wrapper {
     overflow: inherit;
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav {
+    margin: 0 auto 35px !important;
 }
 
 .find-courses {
@@ -224,10 +214,7 @@ article.course {
 }
 
 #content {
-    /* background: #434141 0% 0% no-repeat padding-box; */
-    /* NAO PODE SER PORQUE É GERAL */
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px;
 }
 
 main#main {
@@ -308,7 +295,7 @@ main#main .login-register-content .form-field {
     position: fixed;
     bottom: 0px;
     z-index: 10;
-    width: 1280px;
+    width: 100%;
     opacity: 0.85;
 }
 
@@ -360,28 +347,20 @@ main#main .login-register-content .form-field {
     padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
-    background-color: #4B4B4B;
-    color: white;
+    background-color: #f0f0f0;
+    color: $gray-smalltext-color;
 }
 
 #content {
     padding-top: 0px;
+    background-color: white;
 }
 
 
 /* --------------- Override HM --------------- */
 
-body.ltr, body.view-wiki {
-    background: linear-gradient(0, #444 0, #666 100%) no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100%;
-    height: auto;
-}
-
 div.window-wrap {
-    background-color: #F5F5F5;
-    border-top: solid #666 0.5em;
-    box-shadow: 0 2em 1.5em rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 1.5em 1.5em rgba(0, 0, 0, 0.1) !important;
 }
 
 div.main-header {
@@ -587,7 +566,13 @@ a.action-upgrade {
 }
 span.action-upgrade-icon { display: none !important; }
 span#upgrade-to-verified { font-weight: normal !important; margin-right: 0; }
-.course-container { border: 0 !important; box-shadow: 0 0.5em 0.75em rgba(0,0,0,0.1) !important; border-radius: 0.25em !important; }
+
+.course-container { 
+    border: 0 !important; 
+    box-shadow: 0 0.15em 0.65em rgba(65, 65, 65, 0.25) !important;
+    border-radius: 0.25em !important;
+}
+
 .course .messages-list { border-radius: 0 0 0.25em 0.25em; }
 
 .dashboard .main-container .my-courses {
@@ -780,4 +765,13 @@ article.course > section.details > div.wrapper-course-details > div.course-info 
 
 .xmodule_display.xmodule_ProblemBlock div.problem .choicegroup input:focus+label, .xmodule_display.xmodule_ProblemBlock div.problem .choicetextgroup input:focus+label, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_ProblemBlock .choicegroup input:focus+label, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_ProblemBlock .choicetextgroup input:focus+label, .xmodule_display.xmodule_ProblemBlock div.problem .choicegroup input:hover+label, .xmodule_display.xmodule_ProblemBlock div.problem .choicetextgroup input:hover+label, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_ProblemBlock .choicegroup input:hover+label, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_ProblemBlock .choicetextgroup input:hover+label {
     border: 2px solid $header-bar-color !important;
+}
+
+.view-profile .wrapper-profile {
+    background: none;
+}
+
+.view-profile .profile-self .wrapper-profile-field-account-privacy {
+    border: none;
+    background-color: #e3e3e3;
 }
