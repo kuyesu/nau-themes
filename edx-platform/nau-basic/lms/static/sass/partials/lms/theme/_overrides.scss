@@ -36,6 +36,10 @@ body {
     background-color: rgb(203, 203, 203);
 }
 
+.content-wrapper .course-tabs.navbar {
+    overflow-x: hidden;
+}    
+
 .page-content-container {
     background-color: rgb(250, 250, 250);
     border: 0px;
