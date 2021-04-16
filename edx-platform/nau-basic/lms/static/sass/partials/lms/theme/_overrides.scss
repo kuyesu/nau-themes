@@ -30,6 +30,11 @@ body {
 .page-content-container {
     background-color: rgb(250, 250, 250);
     border: 0px;
+    background-color: transparent;
+}
+
+#discussion-container.page-content-container {
+    border: 0; // remove border on discussion forum
 }
 
 .dashboard .main-container .my-courses .course .details .wrapper-course-image {
@@ -284,10 +289,6 @@ main#main .login-register-content .form-field {
     z-index: 10;
     width: 100%;
     opacity: 0.85;
-}
-
-.page-content-container {
-    background-color: transparent;
 }
 
 .page-header {
