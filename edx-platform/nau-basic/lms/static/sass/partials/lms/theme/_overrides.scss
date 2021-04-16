@@ -22,9 +22,11 @@ body {
     }
 }
 
-.content-wrapper .course-tabs.navbar {
+.content-wrapper .course-tabs.navbar, // course tab and forum tab
+.content-wrapper nav.courseware.wrapper-course-material // course tab within a course
+{
     border-bottom: solid 1px #e3e3e3;
-    overflow-x: hidden;
+    overflow-x: auto;
 }    
 
 .page-content-container {
@@ -63,16 +65,6 @@ body {
 
 .course-sidebar .section-handouts .section-title {
     display: none;
-}
-
-.content-wrapper .course-tabs .navbar-nav {
-    flex-wrap: wrap;
-}
-
-.wrapper-course-material .course-tabs {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .course-content .xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-list-wrapper {
@@ -123,6 +115,15 @@ body {
     }
 }
 
+@media screen and (max-width: 991px) {
+    .wrapper-course-material .course-material {
+        overflow-x: auto !important;
+    }
+}
+
+#content div.container .course-wrapper {
+    border: 0;
+}
 
 /**** Static page ***/
 
@@ -202,11 +203,13 @@ article.course {
 }
 
 .content-wrapper {
-    margin-top: 0px;
+    margin-top: 0px !important; // the discussion forum has custom margin-top
 }
 
-#content {
-    padding: 50px;
+@media only screen and (min-width: 768px) {
+    #content {
+        padding: 50px;
+    }
 }
 
 main#main {
@@ -300,7 +303,7 @@ main#main .login-register-content .form-field {
 }
 
 .page-content {
-    padding: 30px 30px;
+    padding: 30px 0px;
 }
 
 #expand-collapse-outline-all-button {
