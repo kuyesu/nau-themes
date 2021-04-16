@@ -40,18 +40,20 @@
 
     #close-menu-arrow {
         display: none; /* hide closing menu arrow when in desktop */
-        font-size: 24px;
+        font-size: 30px;
+        text-decoration: none;
     }
 
     #open-menu-arrow {
         display: none;
+        text-decoration: none;
 
         @media screen and (max-width: $breakpoint-medium) {
             display: inline-block;
-            font-size: 22px;
+            font-size: 30px;
             position: absolute;
-            width: 40px;
             margin-left: 10px;
+            top: 16px;
         }
     }
 
