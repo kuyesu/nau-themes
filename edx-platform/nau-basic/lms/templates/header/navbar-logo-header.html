@@ -123,11 +123,19 @@ from branding import api as branding_api
             logo_image_alt = logo_image_url.get('alt', {})
             if isinstance(logo_image_alt, dict):
               logo_image_alt = logo_image_alt.get(LANGUAGE_CODE, '')
+            logo_image_title = logo_image_url.get('title', {})
+            if isinstance(logo_image_title, dict):
+              logo_image_title = logo_image_title.get(LANGUAGE_CODE, '')
+            logo_image_width = logo_image_url.get('width', '')
+            logo_image_height = logo_image_url.get('height', '')
         %>
         <img 
           class="logo" 
           src="${logo_image_url.get('src', '') if isinstance(logo_image_url, dict) else logo_image_url}" 
-          alt="${logo_image_alt}"/>
+          alt="${logo_image_alt}"
+          title="${logo_image_title}"
+          width="${logo_image_width}"
+          height="${logo_image_height}"/>
       </picture>
     </a>
     <% tagline = configuration_helpers.get_value('NAU_HEADER_TAGLINE', None) %>
