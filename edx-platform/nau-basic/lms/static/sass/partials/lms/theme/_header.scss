@@ -28,9 +28,7 @@
         display: inline-block;
         max-height: 80px;
         margin-left: 50px;
-        @media screen and (max-width: $breakpoint-medium) {
-            max-width: 300px;
-        }
+        max-width: 100%;
     }
 
     li {
@@ -53,7 +51,9 @@
             font-size: 30px;
             position: absolute;
             margin-left: 10px;
-            top: 5px;
+            top: 50%;
+            -ms-transform: translate(0%, -50%);
+            transform: translate(0,-50%);
         }
     }
 
