@@ -6,9 +6,9 @@ footer {
     }
 
     #quick-links-section {
-        padding-top: 40px;
+        padding-top: 20px;
         padding-right: 50px;
-        padding-bottom: 20px;
+        padding-bottom: 0px;
         padding-left: 50px;
         background-color: $footer-bg-color;
         display: flex;
@@ -17,9 +17,11 @@ footer {
             max-width: none !important;
         }
 
-        @media screen and (max-width: $breakpoint-small) {
+        @media screen and (max-width: $breakpoint-medium) {
             flex-wrap: wrap;
             justify-content: space-between;
+        }
+        @media screen and (max-width: $breakpoint-small) {
             padding-right: 10px;
             padding-left: 10px;
         }
@@ -36,11 +38,8 @@ footer {
     .footer-links,
     .footer-widget,
     .footer-social {
-        padding: 0 0.55rem 20px 0;
-        min-width: 20%;
-        max-width: 25%;
+        padding: 0 0.55rem 10px 0;
         flex-grow: 1;
-        margin-bottom: 1.4rem;
 
         a, a:visited {
             color: $footer-link-color;
@@ -95,13 +94,17 @@ footer {
         background-color: white;
         display: flex;
         justify-content: space-between;
-        padding: 40px 50px;
+        padding-top: 20px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+        padding-left: 50px;
         max-width: 1920px;
         flex-wrap: wrap;
 
         @media screen and (max-width: $breakpoint-medium) {
             flex-direction: column;
-            padding: 40px 0px;
+            padding-right: 0;
+            padding-left: 0;
         }
 
         & > div {
