@@ -22,8 +22,7 @@ from branding import api as branding_api
   www_en = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("en", "") 
   
   # in future when using different URLs on marketing per language
-  #nau_marketing_base_href_current_lang = static.get_value('NAU_MARKETING_BASE_HREF', {}).get(LANGUAGE_CODE, "/")
-  nau_marketing_base_href_current_lang = www_pt if www_pt else "/"
+  nau_marketing_base_href_current_lang = static.get_value('NAU_MARKETING_BASE_HREF', {}).get(LANGUAGE_CODE, "/")
 
   nau_lang_menu = static.get_value('NAU_NAVBAR_LANGUAGE_SELECTOR')
   header_menu = static.get_value('NAU_HEADER_MENU', {}).get(LANGUAGE_CODE, {})
