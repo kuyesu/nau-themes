@@ -28,7 +28,7 @@ from branding import api as branding_api
   nau_lang_menu = static.get_value('NAU_NAVBAR_LANGUAGE_SELECTOR')
   header_menu = static.get_value('NAU_HEADER_MENU', {}).get(LANGUAGE_CODE, {})
 
-  logo_image_url = static.get_value('NAU_LOGO_IMAGE_URL', static.get_value('logo_image_url', None))
+  logo_image_url = static.get_value('NAU_LOGO_IMAGE_URL', static.get_value('logo_image_url', {}))
   if isinstance(logo_image_url, str) and (logo_image_url is None or not (logo_image_url.startswith('http://') or logo_image_url.startswith('https://') or logo_image_url.startswith('//') ) ):
     logo_image_url = branding_api.get_logo_url(is_secure)
 %> 
