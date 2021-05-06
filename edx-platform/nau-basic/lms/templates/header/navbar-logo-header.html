@@ -120,7 +120,11 @@ from branding import api as branding_api
           logo_image_alt = _("{platform_name} Home Page").format(platform_name=static.get_platform_name())
           logo_image_style_value = ''
           logo_image_title = ''
+          logo_image_src = logo_image_url
           if isinstance(logo_image_url, dict):
+            logo_image_src = logo_image_url.get('src', '')
+            if isinstance(logo_image_src, dict):
+              logo_image_src = logo_image_src.get(LANGUAGE_CODE, logo_image_src.get('pt-pt', ''))
             logo_image_alt = logo_image_url.get('alt', {})
             if isinstance(logo_image_alt, dict):
               logo_image_alt = logo_image_alt.get(LANGUAGE_CODE, '')
@@ -133,7 +137,7 @@ from branding import api as branding_api
         %>
         <img 
           class="logo" 
-          src="${logo_image_url.get('src', '') if isinstance(logo_image_url, dict) else logo_image_url}" 
+          src="${logo_image_src}"
           alt="${logo_image_alt}"
           title="${logo_image_title}"
           width="${logo_image_url.get('width', '')}"
