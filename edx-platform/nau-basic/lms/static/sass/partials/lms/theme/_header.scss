@@ -15,7 +15,7 @@
 
 /** Top nav menu */
 
-#branding-top-nav {
+.branding-top-nav {
     border-top: solid 0.2em #0857ff;
     background-color: $menu-bg-color;
     display: flex;
@@ -150,7 +150,7 @@
             &.menu-item-has-children > a {
                 background: $menu-down-arrow;
                 background-repeat: no-repeat;
-                background-position: right 5.5px;
+                background-position: right 50%;
                 background-size: 12px;
                 padding-right: 20px;
             }
