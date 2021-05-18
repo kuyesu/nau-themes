@@ -23,6 +23,7 @@
     box-shadow: $menu-shadow;
     padding: 10px 40px 10px 0;
     align-items: center;
+    min-height: 90px;
     
     .logo {
         display: inline-block;
@@ -72,6 +73,10 @@
             }
 
             @media screen and (max-width: $breakpoint-large) {
+                display: none;
+            }
+
+            label {
                 display: none;
             }
         }
@@ -258,7 +263,7 @@
             &.menu-item-has-children > a {
                 background: $menu-down-arrow;
                 background-repeat: no-repeat;
-                background-position: right 5.5px;
+                background-position: right 50%;
                 background-size: 12px;
                 padding-right: 20px;
 
