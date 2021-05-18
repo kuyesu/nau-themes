@@ -8,8 +8,6 @@ $new_action_color: #080432;
 
 body {
     
-    background: $back_body_color;
-    width: 1280px;
     margin: auto;
 
     .wrapper {
@@ -23,11 +21,8 @@ body {
         }
     
         &.wrapper-view {
-            border-top: solid 5px $nau_blue;
-            margin-top: 10px;
+            border-top: solid 0.2em $nau_blue;
             margin-bottom: 10px;
-            border-radius: 10px;    
-            background: $page_color;
         }
         
         #view-top.wrapper-header.wrapper {
@@ -42,8 +37,7 @@ body {
                 }
             }
             
-            border-bottom: 1px solid gray;
-            box-shadow: 0px 2px 5px;
+            box-shadow: 0 1px 5px 0;
             &wrapper-1 {
                 background: green;
             }
@@ -55,31 +49,8 @@ body {
 }
 
 .wrapper-mast .mast.has-actions .nav-actions {
-    
-    .button {
-        border-radius: 50px;
-        padding: 0.8em 2em 0.8em 2em;    
-        background-color: $nau_blue;
-        border-width: 0;
-        color: white;
-        
-        &:hover {
-          color: $nau_blue;
-          background-color: white;
-        }
-
-        &.button-new, &.new-button {
-            background-color: $new_action_color;
-            border-radius: 50px;
-            padding: 5px 15px 5px 15px;        
-            border-width: 0;
-            
-            &:hover {
-              color: $new_action_color;
-              background-color: white;
-            }
-        }
-    }
+    // GN-390 Fix unable to edit long unit titles
+    width: auto;
 }
 
 
@@ -91,7 +62,6 @@ body {
 .wrapper-footer.wrapper {
     margin: 0px;
     padding: 0px;
-    background: lightgray;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     
@@ -170,6 +140,16 @@ body {
 // GN-140 Fix modal drag and drop editor was hidding some last button.
 [class*="view-"] .modal-window .editor-with-buttons {
     margin-bottom: unset !important;
+}
+
+// Make STUDIO display with full width instead of using a narrow display.
+.inner-wrapper,
+header.mast,
+.wrapper-mast .mast, 
+.wrapper-mast .metadata,
+.wrapper-header header.primary,
+.wrapper-footer footer.primary {
+    max-width: unset !important;
 }
 
 @import "footer"

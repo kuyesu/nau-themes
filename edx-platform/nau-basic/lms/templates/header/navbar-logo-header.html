@@ -22,13 +22,12 @@ from branding import api as branding_api
   www_en = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("en", "") 
   
   # in future when using different URLs on marketing per language
-  #nau_marketing_base_href_current_lang = static.get_value('NAU_MARKETING_BASE_HREF', {}).get(LANGUAGE_CODE, "/")
-  nau_marketing_base_href_current_lang = www_pt if www_pt else "/"
+  nau_marketing_base_href_current_lang = static.get_value('NAU_MARKETING_BASE_HREF', {}).get(LANGUAGE_CODE, "/")
 
   nau_lang_menu = static.get_value('NAU_NAVBAR_LANGUAGE_SELECTOR')
   header_menu = static.get_value('NAU_HEADER_MENU', {}).get(LANGUAGE_CODE, {})
 
-  logo_image_url = static.get_value('logo_image_url', None)
+  logo_image_url = static.get_value('NAU_LOGO_IMAGE_URL', static.get_value('logo_image_url', {}))
   if isinstance(logo_image_url, str) and (logo_image_url is None or not (logo_image_url.startswith('http://') or logo_image_url.startswith('https://') or logo_image_url.startswith('//') ) ):
     logo_image_url = branding_api.get_logo_url(is_secure)
 %> 
@@ -67,47 +66,7 @@ from branding import api as branding_api
 
 </%doc>
 
-
-% if not nau_lang_menu:
-
-    <!-- Prepares Script and hidden form to post language settings -->
-
-    <script>
-    function nau_set_lang(event, language) {
-        url = $('.url-endpoint').val(),
-        is_user_authenticated = JSON.parse($('.url-endpoint').data('user-is-authenticated'));
-        event.preventDefault();
-        
-        Language.submitAjaxRequest(language, url, function() {
-            if (is_user_authenticated) {
-                // User language preference has been set successfully
-                // Now submit the form in success callback.
-                $('#nau-nav-language-settings-form').submit();
-            } else {
-                Language.refresh();
-            }
-        });
-    }
-    </script>
-
-    <% languages = released_languages() %>
-    
-    % if len(languages) > 1:
-        <form action="/i18n/setlang/" method="post" class="settings-language-form" id="nau-nav-language-settings-form">
-            <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
-            % if user.is_authenticated:
-            <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
-            % else:
-            <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
-            % endif            
-            <input type="hidden" id="nau-nav-settings-language-value" name="language">
-        </form>
-    % endif
-    
-% endif
-
-
-<div id="branding-top-nav">
+<div class="branding-top-nav">
 
     <a id="open-menu-arrow" href="javascript:void(0)" onclick="openNav(0)" title="Abrir">&#9776;</a>
     <a href="${nau_marketing_base_href_current_lang}">
@@ -119,15 +78,31 @@ from branding import api as branding_api
         % endif
         <%
           logo_image_alt = _("{platform_name} Home Page").format(platform_name=static.get_platform_name())
+          logo_image_style_value = ''
+          logo_image_title = ''
+          logo_image_src = logo_image_url
           if isinstance(logo_image_url, dict):
+            logo_image_src = logo_image_url.get('src', '')
+            if isinstance(logo_image_src, dict):
+              logo_image_src = logo_image_src.get(LANGUAGE_CODE, logo_image_src.get('pt-pt', ''))
             logo_image_alt = logo_image_url.get('alt', {})
             if isinstance(logo_image_alt, dict):
               logo_image_alt = logo_image_alt.get(LANGUAGE_CODE, '')
+            logo_image_title = logo_image_url.get('title', {})
+            if isinstance(logo_image_title, dict):
+              logo_image_title = logo_image_title.get(LANGUAGE_CODE, '')
+            logo_image_max_width = 'max-width: ' + logo_image_url.get('max-width', '') + '; ' if 'max-width' in logo_image_url else ''
+            logo_image_max_height = 'max-height: ' + logo_image_url.get('max-height', '') + '; ' if 'max-height' in logo_image_url else ''
+            logo_image_style_value = logo_image_max_width + logo_image_max_height
         %>
         <img 
           class="logo" 
-          src="${logo_image_url.get('src', '') if isinstance(logo_image_url, dict) else logo_image_url}" 
-          alt="${logo_image_alt}"/>
+          src="${logo_image_src}"
+          alt="${logo_image_alt}"
+          title="${logo_image_title}"
+          width="${logo_image_url.get('width', '')}"
+          height="${logo_image_url.get('height', '')}"
+          style="${logo_image_style_value}" />
       </picture>
     </a>
 
@@ -198,30 +173,28 @@ from branding import api as branding_api
           <!-- ends top nav search bar -->
         % endif
 
+        <!-- starts menu languages --> 
+        % if nau_lang_menu:
+          <ul class="nau-menu-languages">
+          % if LANGUAGE_CODE == "pt-pt":
+            <li><a hreflang="en" lang="en" onclick="$('#settings-language-value').val('en').trigger('change');">English</a></li>
+          % else:
+            <li><a hreflang="pt" lang="pt" onclick="$('#settings-language-value').val('pt-pt').trigger('change');">Portuguese</a></li>
+          % endif
+          </ul>
+          <style>
+            /* Hide the open edx platform top language switcher form */
+            #language-settings-form {
+              display: none;
+            }
+          </style>
+        % endif
       
-      <!-- starts menu languages --> 
-      
-      <%doc>
-      % if nau_lang_menu:
-         <div id="languages-actions-container">
-           <ul id="menu_languages">
-           % if LANGUAGE_CODE == "pt-pt":
-             <li class="current_language">PT</li>
-             <li><a onclick="nau_set_lang(event, 'en')">EN</a></li>
-           % else:
-             <li><a onclick="nau_set_lang(event, 'pt-pt')">PT</a></li>
-             <li class="current_language">EN</li>
-           % endif
-           </ul>
-         </div>
-      % endif
-      </%doc>
-      
-      % if user.is_authenticated:
-            <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
-      % else:
-            <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
-      % endif
+        % if user.is_authenticated:
+              <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
+        % else:
+              <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
+        % endif
             
         <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
             <span class="line"></span>
@@ -230,8 +203,8 @@ from branding import api as branding_api
             <span class="line"></span>
         </div>        
         
-        <!-- ends login and register -->     
-        </div>        
+      <!-- ends login and register -->     
+      </div>        
     <!-- ends top nav action container --> 
     </div>
 <!-- ends menu container -->     

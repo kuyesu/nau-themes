@@ -1,23 +1,29 @@
 footer {
-    ol,
-    ul {
-        list-style: none;
+    ul,
+    ol {
         padding: 0;
-        margin: 0;
+        list-style: none;
     }
 
     #quick-links-section {
-        padding: 40px 50px;
-        background-color: #eeeeee;
+        padding-top: 20px;
+        padding-right: 50px;
+        padding-bottom: 0px;
+        padding-left: 50px;
+        background-color: $footer-bg-color;
         display: flex;
 
         div:nth-last-child(2) {
             max-width: none !important;
         }
 
-        @media screen and (max-width: 798px) {
+        @media screen and (max-width: $breakpoint-medium) {
             flex-wrap: wrap;
             justify-content: space-between;
+        }
+        @media screen and (max-width: $breakpoint-small) {
+            padding-right: 10px;
+            padding-left: 10px;
         }
     }
 
@@ -30,10 +36,9 @@ footer {
     }
 
     .footer-links,
+    .footer-widget,
     .footer-social {
-        padding: 0 0.55rem;
-        min-width: 20%;
-        max-width: 25%;
+        padding: 0 0.55rem 10px 0;
         flex-grow: 1;
 
         a, a:visited {
@@ -42,20 +47,17 @@ footer {
             line-height: 1.7em;
             font-size: 0.81rem;
 
-            &:hover  {
+            &:hover {
                 color: inherit;
                 text-decoration: underline;
             }
-
             .icon {
                 font-size: 25px;
             }
         }
-        
 
         @media screen and (max-width: $breakpoint-small) {
             max-width: 50%;
-            margin-bottom: 1.4rem;
         }
     }
 
@@ -76,6 +78,14 @@ footer {
 
             li {
                 padding-right: 0.55rem;
+                a {
+                    img {
+                        width: 25px;
+                    }
+                    i.material-icons{
+                        font-size: 30px;
+                    }
+                }
             }
         }
     }
@@ -84,19 +94,28 @@ footer {
         background-color: white;
         display: flex;
         justify-content: space-between;
-        padding: 40px 50px;
+        padding-top: 20px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+        padding-left: 50px;
+        max-width: 1920px;
         flex-wrap: wrap;
 
         @media screen and (max-width: $breakpoint-medium) {
             flex-direction: column;
+            padding-right: 0;
+            padding-left: 0;
         }
 
         & > div {
             text-align: center;
-            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-right: 5px;
+            padding-left: 5px;            
 
             img {
                 max-width: 280px;
+                max-height: 100px;
 
                 @media screen and (max-width: $breakpoint-small) {
                     max-width: 200px;
@@ -117,11 +136,17 @@ footer {
             }
 
             @media screen and (max-width: $breakpoint-medium) {
-                padding: 10px 10px 0 10px;
+                padding-top: 10px;
+                padding-right: 10px;
+                padding-bottom: 0;
+                padding-left: 10px;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             &:first-child {
                 text-align: left;
+                padding-left: 0px;
 
                 @media screen and (max-width: $breakpoint-medium) {
                     text-align: center;
@@ -130,6 +155,7 @@ footer {
 
             &:last-child {
                 text-align: right;
+                padding-right: 0px;
 
                 @media screen and (max-width: $breakpoint-medium) {
                     text-align: center;
@@ -140,7 +166,10 @@ footer {
 
     .site-copyright {
         background-color: white;
-        padding: 0 50px 25px;
+        padding-top: 0px;
+        padding-right: 50px;
+        padding-bottom: 25px;
+        padding-left: 50px;    
         border-radius: 0px 0px 10px 10px;
 
         &--nau {
@@ -160,6 +189,10 @@ footer {
                 display: block;
                 line-height: 1.1;
             }
+        }
+
+        @media screen and (max-width: $breakpoint-small) {
+            padding-left: 10px;    
         }
     }
 }

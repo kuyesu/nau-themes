@@ -11,68 +11,64 @@ $nau_blue : $header-bar-color;
 
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #EAEAEA;
     text-rendering: optimizeLegibility;
     margin: auto;
     padding: 0px;
     padding-bottom: 10px;
     
     .window-wrap {
-        background-color: #F5F5F5;
-        width: 100%;
-        max-width: 1280px;
-        margin: 0 auto 50px auto;
         display: flow-root;
         border-radius: 0px 0px 10px 10px;
     }
 }
 
-
-/*** ***/
-
-.dashboard .main-container .my-courses .listing-courses .course-item .course-container {
-    border: 1px solid gray;
-    border-radius: 5px 5px 20px 20px;
-    background-color: rgb(203, 203, 203);
-}
-
-.content-wrapper .course-tabs.navbar {
-    border-bottom: solid 1px #CCC;
-    overflow-x: hidden;
-}
-
-.content-wrapper .course-tabs.navbar .nav-link {
-    padding: 0px;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    margin-right: 20px;
-    font-weight: bold;
-    color: #081CFF;
-}
-
-.content-wrapper .course-tabs.navbar .nav-link.active {
-    color: black;
-}
+.content-wrapper .course-tabs.navbar, // course tab and forum tab
+.content-wrapper nav.courseware.wrapper-course-material // course tab within a course
+{
+    border-bottom: solid 1px #e3e3e3;
+    overflow-x: auto;
+}    
 
 .page-content-container {
     background-color: rgb(250, 250, 250);
     border: 0px;
+    background-color: transparent;
+}
+
+#discussion-container.page-content-container {
+    border: 0; // remove border on discussion forum
 }
 
 .dashboard .main-container .my-courses .course .details .wrapper-course-image {
     width: 100%;
 }
 
-/*** Home **/
 
-.window-wrap .home>header .title {
-    background: #ffffffc2;
+// Custom homepage for partner site cursos-ssi
+.home {
+    .outer-wrapper .title .course-search {
+        display: none;
+    }
+    &>header {
+        //background-color: none;
+        .outer-wrapper {
+            padding: 0px;
+            max-width: unset;
+            // Remove animation on homepage header
+            animation:unset;
+            animation-fill-mode: none;
+            animation-delay: unset;
+            .title{
+                margin-left: 0;
+                width: 100%;
+                &>.heading-group p{
+                    color: black;
+                    font-style: unset; // Remove italic text
+                }
+            }
+        }
+    }
 }
-
-.home .outer-wrapper {
-    display: none;
-}
-
 
 /**** Register ***/
 
@@ -87,18 +83,12 @@ body {
     display: none;
 }
 
-.content-wrapper .course-tabs .navbar-nav {
-    flex-wrap: wrap;
-}
-
-.wrapper-course-material .course-tabs {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
 .course-content .xmodule_display.xmodule_SequenceModule .sequence-nav .sequence-list-wrapper {
     overflow: inherit;
+}
+
+.xmodule_display.xmodule_SequenceModule .sequence-nav {
+    margin: 0 auto 35px !important;
 }
 
 .find-courses {
@@ -141,6 +131,15 @@ body {
     }
 }
 
+@media screen and (max-width: 991px) {
+    .wrapper-course-material .course-material {
+        overflow-x: auto !important;
+    }
+}
+
+#content div.container .course-wrapper {
+    border: 0;
+}
 
 /**** Static page ***/
 
@@ -220,14 +219,13 @@ article.course {
 }
 
 .content-wrapper {
-    margin-top: 0px;
+    margin-top: 0px !important; // the discussion forum has custom margin-top
 }
 
-#content {
-    /* background: #434141 0% 0% no-repeat padding-box; */
-    /* NAO PODE SER PORQUE É GERAL */
-    padding-top: 50px;
-    padding-bottom: 50px;
+@media only screen and (min-width: 768px) {
+    #content {
+        padding: 50px;
+    }
 }
 
 main#main {
@@ -308,22 +306,8 @@ main#main .login-register-content .form-field {
     position: fixed;
     bottom: 0px;
     z-index: 10;
-    width: 1280px;
+    width: 100%;
     opacity: 0.85;
-}
-
-.content-wrapper .course-tabs.navbar {
-    margin-left: 0;
-    padding-left: 0px;
-}
-
-.content-wrapper .course-tabs.navbar .nav-link {
-    margin-right: 35px;
-    font-size: 1.2em;
-}
-
-.page-content-container {
-    background-color: transparent;
 }
 
 .page-header {
@@ -335,7 +319,7 @@ main#main .login-register-content .form-field {
 }
 
 .page-content {
-    padding: 30px 30px;
+    padding: 30px 0px;
 }
 
 #expand-collapse-outline-all-button {
@@ -360,28 +344,20 @@ main#main .login-register-content .form-field {
     padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
-    background-color: #4B4B4B;
-    color: white;
+    background-color: #f0f0f0;
+    color: $gray-smalltext-color;
 }
 
 #content {
     padding-top: 0px;
+    background-color: white;
 }
 
 
 /* --------------- Override HM --------------- */
 
-body.ltr, body.view-wiki {
-    background: linear-gradient(0, #444 0, #666 100%) no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100%;
-    height: auto;
-}
-
 div.window-wrap {
-    background-color: #F5F5F5;
-    border-top: solid #666 0.5em;
-    box-shadow: 0 2em 1.5em rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 1.5em 1.5em rgba(0, 0, 0, 0.1) !important;
 }
 
 div.main-header {
@@ -587,7 +563,13 @@ a.action-upgrade {
 }
 span.action-upgrade-icon { display: none !important; }
 span#upgrade-to-verified { font-weight: normal !important; margin-right: 0; }
-.course-container { border: 0 !important; box-shadow: 0 0.5em 0.75em rgba(0,0,0,0.1) !important; border-radius: 0.25em !important; }
+
+.course-container { 
+    border: 0 !important; 
+    box-shadow: 0 0.15em 0.65em rgba(65, 65, 65, 0.25) !important;
+    border-radius: 0.25em !important;
+}
+
 .course .messages-list { border-radius: 0 0 0.25em 0.25em; }
 
 .dashboard .main-container .my-courses {
@@ -780,4 +762,13 @@ article.course > section.details > div.wrapper-course-details > div.course-info 
 
 .xmodule_display.xmodule_ProblemBlock div.problem .choicegroup input:focus+label, .xmodule_display.xmodule_ProblemBlock div.problem .choicetextgroup input:focus+label, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_ProblemBlock .choicegroup input:focus+label, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_ProblemBlock .choicetextgroup input:focus+label, .xmodule_display.xmodule_ProblemBlock div.problem .choicegroup input:hover+label, .xmodule_display.xmodule_ProblemBlock div.problem .choicetextgroup input:hover+label, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_ProblemBlock .choicegroup input:hover+label, .xmodule_display.xmodule_ConditionalModule div.problem .xmodule_display.xmodule_ProblemBlock .choicetextgroup input:hover+label {
     border: 2px solid $header-bar-color !important;
+}
+
+.view-profile .wrapper-profile {
+    background: none;
+}
+
+.view-profile .profile-self .wrapper-profile-field-account-privacy {
+    border: none;
+    background-color: #e3e3e3;
 }

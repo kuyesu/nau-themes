@@ -48,7 +48,7 @@
                         target="${social_media.get('target','_blank')}"
                         class="social-links external"
                         title="${social_media.get('title', {}).get(LANGUAGE_CODE, '')}"
-                        rel="${social_media.get('url','noreferrer noopener')}">
+                        rel="${social_media.get('rel','noopener')}">
                         <span class="icon fa ${social_media.get('icon','')}" aria-hidden="true"></span>
                         <span class="sr">${social_media.get('action', {}).get(LANGUAGE_CODE, '')}</span>
                       </a>
@@ -70,15 +70,14 @@
     <section id="entities-quick-links">
       % for entity in static.get_value('NAU_ENTITIES_FOOTER', {}).get("itens", {}):
       <div class="entities-links-logo">
-        <a href="${entity.get('link','')}" class="entity-link" target="${entity.get('target', '_blank')}" rel="noreferrer noopener">
+        <a href="${entity.get('link','')}" class="entity-link" target="${entity.get('target', '_blank')}" rel="noopener">
           <img
             loading="lazy"
             src="${entity.get('image', '')}"
             alt="${entity.get('alt', '')}"
             title="${entity.get('title', '')}"
             width="${entity.get('width', '')}"
-            height="${entity.get('height', '')}"
-          >
+            height="${entity.get('height', '')}" />
         </a>
       </div>
       % endfor
