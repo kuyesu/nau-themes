@@ -66,46 +66,6 @@ from branding import api as branding_api
 
 </%doc>
 
-
-% if not nau_lang_menu:
-
-    <!-- Prepares Script and hidden form to post language settings -->
-
-    <script>
-    function nau_set_lang(event, language) {
-        url = $('.url-endpoint').val(),
-        is_user_authenticated = JSON.parse($('.url-endpoint').data('user-is-authenticated'));
-        event.preventDefault();
-        
-        Language.submitAjaxRequest(language, url, function() {
-            if (is_user_authenticated) {
-                // User language preference has been set successfully
-                // Now submit the form in success callback.
-                $('#nau-nav-language-settings-form').submit();
-            } else {
-                Language.refresh();
-            }
-        });
-    }
-    </script>
-
-    <% languages = released_languages() %>
-    
-    % if len(languages) > 1:
-        <form action="/i18n/setlang/" method="post" class="settings-language-form" id="nau-nav-language-settings-form">
-            <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
-            % if user.is_authenticated:
-            <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
-            % else:
-            <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
-            % endif            
-            <input type="hidden" id="nau-nav-settings-language-value" name="language">
-        </form>
-    % endif
-    
-% endif
-
-
 <div class="branding-top-nav">
 
     <a id="open-menu-arrow" href="javascript:void(0)" onclick="openNav(0)" title="Abrir">&#9776;</a>
@@ -189,30 +149,27 @@ from branding import api as branding_api
           <!-- ends top nav search bar -->
         % endif
 
+        <!-- starts menu languages --> 
+        % if nau_lang_menu:
+          <ul class="nau-menu-languages">
+          % if LANGUAGE_CODE == "pt-pt":
+            <li><a hreflang="en" lang="en" onclick="$('#settings-language-value').val('en').trigger('change');">English</a></li>
+          % else:
+            <li><a hreflang="pt" lang="pt" onclick="$('#settings-language-value').val('pt-pt').trigger('change');">Portuguese</a></li>
+          % endif
+          </ul>
+          <style>
+            #settings-language-value {
+              display: none;
+            }
+          </style>
+        % endif
       
-      <!-- starts menu languages --> 
-      
-      <%doc>
-      % if nau_lang_menu:
-         <div id="languages-actions-container">
-           <ul id="menu_languages">
-           % if LANGUAGE_CODE == "pt-pt":
-             <li class="current_language">PT</li>
-             <li><a onclick="nau_set_lang(event, 'en')">EN</a></li>
-           % else:
-             <li><a onclick="nau_set_lang(event, 'pt-pt')">PT</a></li>
-             <li class="current_language">EN</li>
-           % endif
-           </ul>
-         </div>
-      % endif
-      </%doc>
-      
-      % if user.is_authenticated:
-            <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
-      % else:
-            <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
-      % endif
+        % if user.is_authenticated:
+              <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
+        % else:
+              <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
+        % endif
             
         <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
             <span class="line"></span>
@@ -221,8 +178,8 @@ from branding import api as branding_api
             <span class="line"></span>
         </div>        
         
-        <!-- ends login and register -->     
-        </div>        
+      <!-- ends login and register -->     
+      </div>        
     <!-- ends top nav action container --> 
     </div>
 <!-- ends menu container -->     
