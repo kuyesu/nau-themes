@@ -43,16 +43,32 @@ body {
     width: 100%;
 }
 
-/*** Home **/
 
-.window-wrap .home>header .title {
-    background: #ffffffc2;
+// Custom homepage for partner site cursos-ssi
+.home {
+    .outer-wrapper .title .course-search {
+        display: none;
+    }
+    &>header {
+        //background-color: none;
+        .outer-wrapper {
+            padding: 0px;
+            max-width: unset;
+            // Remove animation on homepage header
+            animation:unset;
+            animation-fill-mode: none;
+            animation-delay: unset;
+            .title{
+                margin-left: 0;
+                width: 100%;
+                &>.heading-group p{
+                    color: black;
+                    font-style: unset; // Remove italic text
+                }
+            }
+        }
+    }
 }
-
-.home .outer-wrapper {
-    display: none;
-}
-
 
 /**** Register ***/
 
