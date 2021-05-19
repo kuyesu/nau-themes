@@ -36,7 +36,11 @@ $gray-smalltext-color: #777777;
 $border-color-light: #ffffff;
 $button-visited-color: #607D8B;
 $menu-bg-color: #ffffff;
-$menu-shadow: 0px 4px 8px 12px rgba(0, 0, 0, 0.01);
+
+// the two shadows configs are different between LMS and WordPress
+$global-header-shadow: 0px 4px 7px 0px rgba(0, 0, 0,  0.1);
+$nau-branding-top-nav-shadow: unset;
+
 $footer-bg-color: #eeeeee;
 $footer-header-color: #060606;
 $footer-link-color: #060606;

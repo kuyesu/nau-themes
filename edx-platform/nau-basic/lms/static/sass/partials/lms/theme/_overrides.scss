@@ -50,7 +50,10 @@ body {
         display: none;
     }
     &>header {
-        //background-color: none;
+        background-color: none;
+        background-image: unset;
+        background-size: unset;
+        box-shadow: unset;
         .outer-wrapper {
             padding: 0px;
             max-width: unset;
@@ -218,16 +221,6 @@ article.course {
     border-radius: 0px 0px 10px 10px !important;
 }
 
-.content-wrapper {
-    margin-top: 0px !important; // the discussion forum has custom margin-top
-}
-
-@media only screen and (min-width: 768px) {
-    #content {
-        padding: 50px;
-    }
-}
-
 main#main {
     .login-register-content {
         max-width: 600px;
@@ -341,18 +334,31 @@ main#main .login-register-content .form-field {
 }
 
 .course-header {
-    padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;    
+    text-align: right;
     background-color: #f0f0f0;
     color: $gray-smalltext-color;
+    // position: absolute;
+    // width: 100%;
+    // bottom: -44px;
+    @media screen and (min-width: $breakpoint-xlarge) {
+        display: none;
+    }
+    @media screen and (max-width: $breakpoint-small) {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    span {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    span.provider {
+        font-weight: bold;   
+    }   
 }
-
-#content {
-    padding-top: 0px;
-    background-color: white;
-}
-
 
 /* --------------- Override HM --------------- */
 
@@ -368,10 +374,6 @@ div.main-header {
 
 .form-field label {
     color: #333 !important;
-}
-
-.course-header span {
-    font-size: 29px;
 }
 
 .btn-primary {
@@ -648,21 +650,6 @@ span#upgrade-to-verified { font-weight: normal !important; margin-right: 0; }
     }
 }
 
-.course-header {
-    padding-top: 10px;
-    padding-bottom: 10px;    
-    text-align: right;
-
-    span {
-      font-size: 14px;
-      margin-left: 10px;
-    }    
-    
-    span.provider {
-         font-weight: bold;   
-    }    
-}
-
 header.page-header h2 {
     margin-left: 30px;
 }
@@ -771,4 +758,9 @@ article.course > section.details > div.wrapper-course-details > div.course-info 
 .view-profile .profile-self .wrapper-profile-field-account-privacy {
     border: none;
     background-color: #e3e3e3;
+}
+
+// fix horizontal scroll on course page
+.course-outline .block-tree .section {
+    margin-right: 0px;
 }

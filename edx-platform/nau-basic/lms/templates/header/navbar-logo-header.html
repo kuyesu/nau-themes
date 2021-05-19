@@ -51,7 +51,7 @@ from branding import api as branding_api
         if ccx:
           display_name = ccx.display_name
       %>
-      <span class="course-name">${display_name}</span>
+      <span class="course-name" title="${display_name}">${display_name}</span>
     </div>
   % endif
 </h1>
@@ -69,7 +69,7 @@ from branding import api as branding_api
 <div class="branding-top-nav">
 
     <a id="open-menu-arrow" href="javascript:void(0)" onclick="openNav(0)" title="Abrir">&#9776;</a>
-    <a href="${nau_marketing_base_href_current_lang}">
+    <a class="nau-header-logo-link" href="${nau_marketing_base_href_current_lang}">
       <picture>
         % if isinstance(logo_image_url, dict):
           % for source in logo_image_url.get('sources',[]):
@@ -110,9 +110,24 @@ from branding import api as branding_api
       <% org_logo_dict = static.get_value('NAU_HEADER_ORGANIZATION_LOGOS', {}).get(course.display_org_with_default) %>
       <div class="nau-header-course">
         % if org_logo_dict is not None:
-          <img src="${org_logo_dict.get('src','')}" alt="${org_logo_dict.get('alt','')}" title="${org_logo_dict.get('title','')}" />
+          <%
+            org_logo_src = org_logo_dict.get('src')
+            org_logo_max_width = 'max-width: ' + org_logo_dict.get('max-width', '') + '; ' if 'max-width' in org_logo_dict else ''
+            org_logo_max_height = 'max-height: ' + org_logo_dict.get('max-height', '') + '; ' if 'max-height' in org_logo_dict else ''
+            org_logo_style_value = org_logo_max_width + org_logo_max_height
+          %>
+          % if org_logo_src is not None:
+            <img 
+              src="${org_logo_src}" 
+              alt="${org_logo_dict.get('alt','')}" 
+              title="${org_logo_dict.get('title','')}" 
+              width="${org_logo_dict.get('width','')}" 
+              height="${org_logo_dict.get('height','')}" 
+              style="${org_logo_style_value}"
+              />  
+          % endif
         % endif
-        <div class="nau-header-course-information">
+        <div class="nau-header-course-information ${'with-image' if org_logo_src is not None else 'without-image'}">
           <span class="provider">${course.display_org_with_default}</span>
           <span class="course-number">${course.display_number_with_default}</span>
           <%
@@ -213,6 +228,21 @@ from branding import api as branding_api
 
 <!-- ends branding container -->
 <div class="menu-overlay" onclick="closeNav(0)"></div>
+
+  % if course:
+    <div class="course-header">
+      <span class="provider">${course.display_org_with_default}:</span>
+      <span class="course-number">${course.display_number_with_default}</span>
+      <%
+      display_name = course.display_name_with_default
+      if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
+        ccx = get_current_ccx(course.id)
+        if ccx:
+          display_name = ccx.display_name
+      %>
+      <span class="course-name">${display_name}</span>
+    </div>
+  % endif
 
 
 <script>
