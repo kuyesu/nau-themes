@@ -154,9 +154,9 @@ from branding import api as branding_api
 
     <!-- starts menu container -->
     <div class="menu-container">
-      % if not course:
         <!-- starts top nav menu -->
         <a id="close-menu-arrow" href="javascript:void(0)" onclick="closeNav(0)" title="Fechar">&#10005;</a>
+      % if not course:
         <div class="nav-icon"></div>
         <ul id="about-categories-entities" class="main-menu">
           % for parent_header in header_menu:
