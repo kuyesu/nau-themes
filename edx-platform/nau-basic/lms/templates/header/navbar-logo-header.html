@@ -154,8 +154,8 @@ from branding import api as branding_api
 
     <!-- starts menu container -->
     <div class="menu-container">
-        <!-- starts top nav menu -->
-        <a id="close-menu-arrow" href="javascript:void(0)" onclick="closeNav(0)" title="Fechar">&#10005;</a>
+      <!-- starts top nav menu -->
+      <a id="close-menu-arrow" href="javascript:void(0)" onclick="closeNav(0)" title="Fechar">&#10005;</a>
       % if not course:
         <div class="nav-icon"></div>
         <ul id="about-categories-entities" class="main-menu">
@@ -201,9 +201,16 @@ from branding import api as branding_api
           % endif
           </ul>
           <style>
-            /* Hide the open edx platform top language switcher form */
-            #language-settings-form {
-              display: none;
+            /* Hide the open edx platform top language switcher form if tablet or PC viewports, $breakpoint-medium breakpoints */
+            @media screen and (min-width: 768px) { 
+              #language-settings-form {
+                display: none;
+              }
+            }
+            @media screen and (max-width: 768px) {
+              .nau-menu-languages {
+                display: none !important;
+              }
             }
           </style>
         % endif
