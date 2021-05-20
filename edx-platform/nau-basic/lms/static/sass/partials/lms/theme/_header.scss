@@ -174,25 +174,27 @@
             max-width: 16rem;
         }
         .nau-header-course-information {
-            display: inline;
+            display: flex;
             align-items: center;
-            margin-left: 1rem;
-
-            .provider:after{
-                content: ":";
+            .provider {
+                font-weight: bold;
+                &:after {
+                    content: ":";
+                }
             }
-            .course-number{
+            &.with-image .course-number
+            &.with-image .provider {
                 display: none;
             }
-            .provider{
-                display: none;
+            .course-name { 
+                max-width: 250px;
             }
-            .course-name {
+            span {
+                margin-left: 1rem;
                 display: inline-block;
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
-                max-width: 250px;
                 font-size: 0.9rem;
             }
             @media screen and (max-width: $breakpoint-xlarge) {
