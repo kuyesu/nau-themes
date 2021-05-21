@@ -182,8 +182,7 @@
                     content: ":";
                 }
             }
-            &.with-image .course-number
-            &.with-image .provider {
+            .course-number {
                 display: none;
             }
             .course-name { 
@@ -196,6 +195,11 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 font-size: 0.9rem;
+            }
+            &.with-image {
+                .provider {
+                    display: none;
+                }
             }
             @media screen and (max-width: $breakpoint-xlarge) {
                 display: none;

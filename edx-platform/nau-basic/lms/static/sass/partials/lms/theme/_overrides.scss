@@ -357,7 +357,10 @@ main#main .login-register-content .form-field {
     }
     span.provider {
         font-weight: bold;   
-    }   
+    }
+    span.course-number {
+        display: none;
+    }
 }
 
 /* --------------- Override HM --------------- */
