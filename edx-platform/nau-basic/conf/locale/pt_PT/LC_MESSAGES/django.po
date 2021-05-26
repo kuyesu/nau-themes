@@ -1766,9 +1766,8 @@ msgid ""
 "If you continue browsing this site, we understand that you accept the use of "
 "cookies."
 msgstr ""
-"Este site usa cookies para garantir que você obtenha a melhor experiência em "
-"nosso site. Se você continuar navegando neste site, depreendemos que você "
-"compreende e aceita o uso de cookies."
+"A NAU utiliza cookies para lhe providenciar uma melhor experiência de navegação. "
+"Para mais informações consulte a nossa política de cookies."
 
 #: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:21
 msgid "Got it!"
