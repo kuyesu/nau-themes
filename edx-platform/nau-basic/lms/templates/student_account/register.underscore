@@ -80,7 +80,7 @@ function NAU_disable_ccmd_third_party_authentication_on_register() {
     moreInfoCCCMD.target="_blank"; 
     moreInfoCCCMD.textContent = "?"; 
     moreInfoCCCMD.style="padding-right: 1rem;"; 
-    el.parentElement.appendChild(moreInfoCCCMD); 
+    el.parentElement.insertBefore(moreInfoCCCMD, el.nextSibling);
     });
 };
 NAU_disable_ccmd_third_party_authentication_on_register();
