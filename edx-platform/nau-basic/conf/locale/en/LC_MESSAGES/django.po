@@ -1,39 +1,39 @@
 # English translations for PROJECT.
-# Copyright (C) 2018 eduNEXT
+# Copyright (C) 2021 FCT-FCCN
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2021-03-12 12:34+0000\n"
-"PO-Revision-Date: 2020-08-05 17:03+0100\n"
-"Last-Translator: \n"
+"Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
+"POT-Creation-Date: 2021-06-02 22:11+0000\n"
+"PO-Revision-Date: 2021-06-02 21:22+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.6.0\n"
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:1
 msgid "© 2012–{year} edX Inc. "
-msgstr "© 2018–{year} NAU"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:2
 msgid "About edX"
-msgstr "About NAU"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:3
 #: edx-platform/nau-basic/lms/templates/certificates/valid.html:12
 msgid "About edX Certificates"
-msgstr "About NAU Certificates"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:4
 msgid "About edX Verified Certificates"
-msgstr "About NAU Verified Certificates"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:5
 msgid ""
@@ -42,10 +42,6 @@ msgid ""
 " running an online course. Additionally, we're always here to help, just "
 "drop us a note."
 msgstr ""
-"Absolutely. We have created an online course, NAU101, that describes some"
-" best practices: from filming video, creating exercises, to the basics of"
-" running an online course. Additionally, we're always here to help, just "
-"drop us a note."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:6
 msgid "Access documentation on http://docs.edx.org"
@@ -95,7 +91,7 @@ msgstr ""
 msgid ""
 "{b_start}Support our Mission: {b_end} EdX, a non-profit, relies on "
 "verified certificates to help fund free education for everyone globally"
-msgstr "..."
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:14
 msgid "Contact your edX partner manager to update these settings."
@@ -111,7 +107,7 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:17
 msgid "Dear edX Learner,"
-msgstr "Dear NAU Learner,"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:18
 msgid "Do you want to replace the edX transcript with the YouTube transcript?"
@@ -145,7 +141,7 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:23
 msgid "edX Email"
-msgstr "NAU Email"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:24
 msgid ""
@@ -153,9 +149,6 @@ msgid ""
 "financial circumstances a chance to earn a Verified Certificate upon "
 "successful completion of an edX course."
 msgstr ""
-"NAU Financial Assistance is a program we created to give learners in all "
-"financial circumstances a chance to earn a Verified Certificate upon "
-"successful completion of an edX course."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:25
 msgid ""
@@ -164,10 +157,6 @@ msgid ""
 "transcript. If you want to replace this transcript, upload a new .srt "
 "transcript file."
 msgstr ""
-"NAU has a timed transcript for this video. If you want to edit this "
-"transcript, you can download, edit, and re-upload the existing "
-"transcript. If you want to replace this transcript, upload a new .srt "
-"transcript file."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:26
 msgid ""
@@ -176,14 +165,10 @@ msgid ""
 "transcript, you can download, edit, and re-upload the existing "
 "transcript."
 msgstr ""
-"NAU has a timed transcript for this video. If you want to replace this "
-"transcript, upload a new .srt transcript file. If you want to edit this "
-"transcript, you can download, edit, and re-upload the existing "
-"transcript."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:27
 msgid "edX Home Page"
-msgstr "NAU Home Page"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:28
 msgid "edX Inc."
@@ -195,41 +180,34 @@ msgid ""
 "courses from leading institutions regardless of your financial situation,"
 " earn a Verified Certificate, and share your success with others."
 msgstr ""
-"NAU is committed to making it possible for you to take high quality "
-"courses from leading institutions regardless of your financial situation,"
-" earn a Verified Certificate, and share your success with others."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:30
 msgid "edX Learner Stories"
-msgstr "NAU Learner Stories"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:31
 msgid "EdxNotes Service is unavailable. Please try again in a few minutes."
-msgstr "EdxNotes Service is unavailable. Please try again in a few minutes."
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:32
 msgid "EdX, Open edX, and MicroMasters are registered trademarks of edX Inc. "
-msgstr "EdX, Open edX, and MicroMasters are registered trademarks of edX Inc. "
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:33
 msgid ""
 "EdX, Open edX, and the edX and Open edX logos are registered trademarks "
 "or trademarks of {link_start}edX Inc.{link_end}"
 msgstr ""
-"EdX, Open edX, and the edX and Open edX logos are registered trademarks "
-"or trademarks of {link_start}edX Inc.{link_end}"
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:34
 msgid ""
 "EdX, Open edX, Studio, and the edX and Open edX logos are registered "
 "trademarks or trademarks of {link_start}edX Inc.{link_end}"
 msgstr ""
-"EdX, Open edX, Studio, and the edX and Open edX logos are registered "
-"trademarks or trademarks of {link_start}edX Inc.{link_end}"
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:35
 msgid "edX Partner Portal"
-msgstr "NAU Partner Portal"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:36
 msgid "edx-video-pipeline API URL."
@@ -237,15 +215,15 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:37
 msgid "Enroll in edX101"
-msgstr "Enroll in edX101"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:38
 msgid "Enroll in edX101: Overview of Creating an edX Course"
-msgstr "Enroll in edX101: Overview of Creating an edX Course"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:39
 msgid "Enroll in StudioX: Creating a Course with edX Studio"
-msgstr "Enroll in NAU Studio: Creating a Course with NAU Studio"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:40
 msgid ""
@@ -263,7 +241,7 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:42
 msgid "Enter the unique identifier for your course's video files provided by edX."
-msgstr "Enter the unique identifier for your course's video files provided by NAU."
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:43
 msgid ""
@@ -298,8 +276,6 @@ msgid ""
 "I allow edX to use the information provided in this application (except "
 "for financial information) for edX marketing purposes."
 msgstr ""
-"I allow NAU to use the information provided in this application (except "
-"for financial information) for NAU marketing purposes."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:48
 msgid ""
@@ -308,10 +284,6 @@ msgid ""
 "sites can link to. URLs must be fully qualified. For example: "
 "http://www.edx.org/course/Introduction-to-MOOCs-ITM001"
 msgstr ""
-"If dashboard social sharing and custom course URLs are enabled, you can "
-"provide a URL (such as the URL to a course About page) that social media "
-"sites can link to. URLs must be fully qualified. For example: "
-"http://www.neu.edu.pt/course/Introduction-to-MOOCs-ITM001"
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:49
 msgid ""
@@ -321,8 +293,6 @@ msgid ""
 "to private sites offered by MIT Open Learning, Wharton Executive "
 "Education, and Harvard Medical School."
 msgstr ""
-"If you proceed, you will be unable to use this account to take courses on"
-" NAU."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:50
 msgid ""
@@ -330,9 +300,6 @@ msgid ""
 "verifying your identity on edx.org so you can start working toward "
 "completing your edX course."
 msgstr ""
-"If your application is approved, we'll give you instructions for "
-"verifying your identity on nau.edu.pt so you can start working toward "
-"completing your edX course."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:51
 msgid ""
@@ -342,11 +309,6 @@ msgid ""
 " were not assigned a Video ID, enter values in those other fields and "
 "ignore this field."
 msgstr ""
-"If you were assigned a Video ID by NAU for the video to play in this "
-"component, enter the ID here. In this case, do not enter values in the "
-"Default Video URL, the Video File URLs, and the YouTube ID fields. If you"
-" were not assigned a Video ID, enter values in those other fields and "
-"ignore this field."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:52
 msgid ""
@@ -363,7 +325,7 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:54
 msgid "{learner_name}, edX Learner"
-msgstr "{learner_name}, NAU Learner"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:55
 msgid ""
@@ -371,15 +333,15 @@ msgid ""
 "from the world's best universities, including MIT, Harvard, Berkeley, "
 "University of Texas, and many others. edX is a non-profit online "
 "initiative created by founding partners Harvard and MIT."
-msgstr "{link_start}NAU{link_end} offers interactive online classes and MOOCs."
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:56
 msgid "No EdX Timed Transcript"
-msgstr "No NAUTimed Transcript"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:57
 msgid "No endpoint was provided for EdxNotes."
-msgstr "No endpoint was provided for EdxNotes."
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:58
 msgid ""
@@ -409,11 +371,11 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:62
 msgid "Open edX"
-msgstr "Open edX"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:63
 msgid "Open edX Portal"
-msgstr "NAU Portal"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:64
 msgid ""
@@ -433,9 +395,6 @@ msgid ""
 " their respective logos are trademarks or registered trademarks of edX "
 "Inc."
 msgstr ""
-"© {org_name}.  All rights reserved except where noted.  EdX, Open edX and"
-" their respective logos are trademarks or registered trademarks of edX "
-"Inc."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:67
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:59
@@ -445,7 +404,7 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:68
 msgid "Register through edX"
-msgstr "Register through NAU"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:69
 #, python-format
@@ -454,9 +413,6 @@ msgid ""
 "edX.org? We do, and we’re glad to have you! Come see what everyone is "
 "learning."
 msgstr ""
-"Remember when you enrolled in %(course_name)s, and other courses on "
-"nau.edu.pt? We do, and we’re glad to have you! Come see what everyone is "
-"learning."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:70
 #, python-format
@@ -464,8 +420,6 @@ msgid ""
 "Remember when you enrolled in %(course_name)s on edX.org? We do, and "
 "we’re glad to have you! Come see what everyone is learning."
 msgstr ""
-"Remember when you enrolled in %(course_name)s on nau.edu.pt? We do, and "
-"we’re glad to have you! Come see what everyone is learning."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:71
 msgid ""
@@ -473,9 +427,6 @@ msgid ""
 "(Example: 'edx')  If no value is provided, tracking codes will not be "
 "sent to LinkedIn."
 msgstr ""
-"Short identifier for the LinkedIn partner used in the tracking code.  "
-"(Example: 'nau')  If no value is provided, tracking codes will not be "
-"sent to LinkedIn."
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:72
 msgid ""
@@ -487,7 +438,7 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:73
 msgid "Take free online courses at edX.org"
-msgstr "Take free online courses at nau.edu.pt"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:74
 msgid ""
@@ -508,12 +459,10 @@ msgid ""
 "This will be used in public discussions with your courses and in our "
 "edX101 support forums"
 msgstr ""
-"This will be used in public discussions with your courses and in our "
-"NAU101 support forums"
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:77
 msgid "Welcome to the Open edX{registered_trademark} platform!"
-msgstr "Welcome to the NAU{registered_trademark} platform!"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/edx-translations.html:78
 msgid "Yes, replace the edX transcript with the YouTube transcript"
@@ -564,10 +513,6 @@ msgid "Sign-in"
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:2
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-not-authenticated.html:26
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-not-authenticated.html:34
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-not-authenticated.html:59
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-not-authenticated.html:67
 #: edx-platform/nau-basic/lms/templates/header/navbar-not-authenticated.html:29
 #: edx-platform/nau-basic/lms/templates/header/navbar-not-authenticated.html:37
 msgid "Register"
@@ -578,14 +523,12 @@ msgid ""
 "This account has been temporarily locked due to excessive login failures."
 " Try again later."
 msgstr ""
-"This account has been temporarily locked due to excessive login failures."
-" Wait 15 minutes before try again."
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:4
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:50
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:67
 msgid "Exit"
-msgstr "Logout"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:5
 msgid "Previous"
@@ -613,14 +556,13 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:11
 msgid "View Archived Course"
-msgstr "View Archive"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:12
 msgid "Search Your Courses"
-msgstr "Search within your courses"
+msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:13
-#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:36
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:33
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:62
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:100
@@ -628,7 +570,6 @@ msgid "Resume your last course"
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/force-translations.html:14
-#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:38
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:36
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:64
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:102
@@ -825,151 +766,6 @@ msgid ""
 "publish it to your students for you."
 msgstr ""
 
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:40
-#, python-format
-msgid "Prerequisite: %(prereq_display_name)s"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:48
-msgid "Contains staff only content"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:54
-msgid "Unpublished changes to live content"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:56
-msgid "Unpublished units will not be released"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:58
-msgid "Unpublished changes to content that will release in the future"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:66
-msgid "Access to this unit is restricted to: {selectedGroupsLabel}"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:75
-msgid ""
-"Access to some content in this unit is restricted to specific groups of "
-"learners"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:80
-msgid "Ungraded"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:89
-msgid "Practice proctored Exam"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:91
-msgid "Proctored Exam"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:95
-msgid "Timed Exam"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:108
-#, python-format
-msgid "Collapse/Expand this %(xblock_type)s"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:120
-msgid "Display Name"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:130
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:132
-msgid "Publish"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:138
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:140
-msgid "Configure"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:146
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:148
-msgid "Duplicate"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:154
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:156
-msgid "Delete"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:162
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:164
-msgid "Drag to reorder"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:182
-msgid "Release Status:"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:187
-msgid "Released:"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:190
-msgid "Scheduled:"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:193
-msgid "Unscheduled"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:208
-msgid "Section Highlights"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:215
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:229
-msgid "Graded as:"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:222
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:233
-msgid "Due:"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:244
-msgid "Subsection is hidden after course end date"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:246
-msgid "Subsection is hidden after due date"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:268
-msgid "You haven't added any content to this course yet."
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:272
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:298
-#, python-format
-msgid "Click to add a new %(xblock_type)s"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:277
-msgid "New Chapter"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:303
-msgid "New Section"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:305
-msgid "New Subsection"
-msgstr ""
-
-#: edx-platform/nau-basic/cms/templates/js/course-outline.underscore:307
-msgid "New Unit"
-msgstr ""
-
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:22
 msgid "Policies"
 msgstr ""
@@ -995,8 +791,6 @@ msgid "LMS"
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:46
-#: edx-platform/nau-basic/lms/templates/footer.html:288
-#: edx-platform/nau-basic/lms/templates/footer.html:365
 msgid "Legal"
 msgstr ""
 
@@ -1004,6 +798,11 @@ msgstr ""
 msgid ""
 "edX, Open edX, Studio, and the edX and Open edX logos are registered "
 "trademarks or trademarks of {link_start}edX Inc.{link_end}"
+msgstr ""
+
+#: edx-platform/nau-basic/cms/templates/widgets/footer.html:91
+#: edx-platform/nau-basic/lms/templates/footer.html:89
+msgid "All rights reserved"
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:44
@@ -1129,7 +928,6 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:227
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:243
-#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:40
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:37
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:65
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:104
@@ -1150,10 +948,6 @@ msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:231
 #: edx-platform/nau-basic/cms/templates/widgets/header.html:247
-#: edx-platform/nau-basic/lms/templates/footer.html:177
-#: edx-platform/nau-basic/lms/templates/footer.html:261
-#: edx-platform/nau-basic/lms/templates/footer.html:338
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-authenticated.html:46
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:7
 #: edx-platform/nau-basic/lms/templates/static_templates/help.html:12
 msgid "Help"
@@ -1168,70 +962,8 @@ msgstr ""
 msgid "Sign In"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:73
-#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:75
-#: edx-platform/nau-basic/lms/templates/footer.html:72
-#: edx-platform/nau-basic/lms/templates/footer.html:142
-msgid "Share on Twitter"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/footer.html:75
-#: edx-platform/nau-basic/lms/templates/footer.html:143
-msgid "Share on LinkedIn"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/footer.html:78
-#: edx-platform/nau-basic/lms/templates/footer.html:144
-msgid "Share on Facebook"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/footer.html:81
-#: edx-platform/nau-basic/lms/templates/footer.html:145
-msgid "Share on Instagram"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/footer.html:87
-#: edx-platform/nau-basic/lms/templates/footer.html:147
+#: edx-platform/nau-basic/lms/templates/footer.html:59
 msgid "Visit OpenEdx website"
-msgstr "Visit OpenEdx website"
-
-#: edx-platform/nau-basic/lms/templates/footer.html:146
-#: edx-platform/nau-basic/lms/templates/footer.html:208
-msgid "Share"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/footer.html:168
-msgid "Quick Links"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/footer.html:187
-#: edx-platform/nau-basic/lms/templates/footer.html:255
-#: edx-platform/nau-basic/lms/templates/footer.html:258
-#: edx-platform/nau-basic/lms/templates/footer.html:332
-#: edx-platform/nau-basic/lms/templates/footer.html:335
-#: edx-platform/nau-basic/lms/templates/static_templates/about.html:5
-#: edx-platform/nau-basic/lms/templates/static_templates/about.html:10
-msgid "About"
-msgstr "Acerca da NAU"
-
-#: edx-platform/nau-basic/lms/templates/footer.html:202
-msgid "Social Media"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/footer.html:236
-#: edx-platform/nau-basic/lms/templates/footer.html:286
-#: edx-platform/nau-basic/lms/templates/footer.html:363
-msgid "All rights reserved"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/index.html:27
-#: edx-platform/nau-basic/lms/templates/index.html:28
-msgid "I want to know more about"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/courseware/courses.html:62
-#: edx-platform/nau-basic/lms/templates/index.html:31
-msgid "Search"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/index_overlay.html:9
@@ -1240,97 +972,6 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/index_overlay.html:11
 msgid "All in Portuguese, Portugal in all languages."
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:11
-msgid "Log into your {platform_name} Account"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:104
-msgid "Log into My {platform_name} Account"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:104
-msgid "Access My Courses"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:110
-msgid "Processing your account information"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:137
-msgid "Please log in"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:138
-msgid "to access your account and courses"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:150
-msgid "We're Sorry, {platform_name} accounts are unavailable currently"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:154
-msgid "We couldn't log you in."
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:156
-msgid "Your email or password is incorrect"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:166
-msgid "An error occurred when signing you in to {platform_name}."
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:174
-msgid ""
-"Please provide the following information to log into your {platform_name}"
-" account. Required fields are noted by <strong class=\"indicator\">bold "
-"text and an asterisk (*)</strong>."
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:178
-msgid "Required Information"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:182
-msgid "E-mail or username"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:183
-msgid "example: username@domain.com"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:184
-msgid "This is the e-mail address you used to register with {platform}"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:187
-msgid "Password"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:190
-msgid "Forgot password?"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:197
-msgid "Account Preferences"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:202
-msgid "Remember me"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:217
-msgid "or"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/login.html:230
-msgid "Sign in with {provider_name}"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/main.html:176
-msgid "Skip to main content"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:59
@@ -1343,6 +984,11 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:69
 msgid "Post on Facebook"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:73
+#: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:75
+msgid "Share on Twitter"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:78
@@ -1547,6 +1193,10 @@ msgstr ""
 msgid "Search for a course"
 msgstr ""
 
+#: edx-platform/nau-basic/lms/templates/courseware/courses.html:62
+msgid "Search"
+msgstr ""
+
 #: edx-platform/nau-basic/lms/templates/courseware/courses.html:67
 msgid "Loading"
 msgstr ""
@@ -1555,64 +1205,9 @@ msgstr ""
 msgid "Refine Your Search"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-authenticated.html:33
-#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:39
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:38
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:66
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:103
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:105
-msgid "Profile"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-authenticated.html:41
-#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:34
-msgid "Shopping Cart"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-not-authenticated.html:23
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-not-authenticated.html:53
-#: edx-platform/nau-basic/lms/templates/header/navbar-not-authenticated.html:23
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:27
-msgid "Supplemental Links"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-not-authenticated.html:29
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-not-authenticated.html:37
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-not-authenticated.html:62
-#: edx-platform/nau-basic/lms/templates/header/base_navbar-not-authenticated.html:71
-#: edx-platform/nau-basic/lms/templates/header/navbar-not-authenticated.html:26
-#: edx-platform/nau-basic/lms/templates/header/navbar-not-authenticated.html:34
-msgid "Sign in"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:26
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:89
-msgid "Dashboard for:"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:31
-#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:195
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:95
-msgid "Options Menu"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:34
 #: edx-platform/nau-basic/lms/templates/header/header.html:46
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:98
 msgid "More Options"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:41
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:80
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:106
-msgid "Sign Out"
-msgstr ""
-
-#: edx-platform/nau-basic/lms/templates/header/base_user_dropdown.html:46
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:43
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:72
-#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:111
-msgid "Sysadmin"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/header/header.html:51
@@ -1621,8 +1216,58 @@ msgid ""
 "We strongly recommend using {chrome_link} or {ff_link}."
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:165
+#: edx-platform/nau-basic/lms/templates/header/navbar-authenticated.html:34
+msgid "Shopping Cart"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:80
+msgid "{platform_name} Home Page"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:188
 msgid "Search courses..."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-logo-header.html:224
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:95
+msgid "Options Menu"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-not-authenticated.html:23
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:27
+msgid "Supplemental Links"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/navbar-not-authenticated.html:26
+#: edx-platform/nau-basic/lms/templates/header/navbar-not-authenticated.html:34
+msgid "Sign in"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:38
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:66
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:103
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:105
+msgid "Profile"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:43
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:72
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:111
+msgid "Sysadmin"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:80
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:106
+msgid "Sign Out"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:89
+msgid "Dashboard for:"
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/static_templates/about.html:5
+#: edx-platform/nau-basic/lms/templates/static_templates/about.html:10
+msgid "About"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/static_templates/about.html:13
@@ -1688,29 +1333,18 @@ msgstr ""
 msgid "Honor Code"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:20
+#: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:24
 msgid ""
 "This website uses cookies to ensure you get the best experience on our "
 "website. If you continue browsing this site, we understand that you "
 "accept the use of cookies."
 msgstr ""
-"NAU uses cookies to provide a better browsing experience. "
-"For more information see our cookie policy."
 
-#: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:21
+#: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:25
 msgid "Got it!"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:22
+#: edx-platform/nau-basic/lms/templates/widgets/cookie-consent.html:26
 msgid "Learn more"
 msgstr ""
-
-#~ msgid "{platform_name} Home Page"
-#~ msgstr "Plataforma NAU"
-
-#~ msgid "Search..."
-#~ msgstr ""
-
-#~ msgid "All rights reserved."
-#~ msgstr ""
 

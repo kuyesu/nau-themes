@@ -230,43 +230,70 @@ main#main {
         border-radius: 5px 5px 20px 20px;
         opacity: 1;
         
-        padding-left: 0px ;
-        padding-right: 0px;
+        // padding-left: 0px ;
+        // padding-right: 0px;
         background-color: #fff !important;
         border: 0;
 
         div#login-and-registration-container {
             padding: 50px;
         }
-    }
-}
+        a {
+            color: $header-bar-color;
+        }
 
-.form-field .error {
-    color: orange !important;
-}
+        h2 {
+            color: black;
+        }
 
-.form-field .error {
-    border-color: orange !important;
-}
+        .login-register {        
+            .form-field {
+                .error {
+                    border-color: orange !important;
+                    color: orange !important;
+                }
+                
+                input {
+                    border-color: blue;
+                    border-left: none;
+                    border-top: none;
+                    border-right: none;
+                    box-shadow: none;
+                }
 
-.form-field input {
-    border-color: blue;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    box-shadow: none;
-}
+                select {
+                    outline: none;
+                    border: none;
+                    border-bottom: solid 1px #0553FF;
+                    box-shadow: none;
+                    :focus {
+                        border-bottom: solid 4px #0553FF;
+                    }
+                }
+                
+                label.focus-out {
+                    font-weight: bold;
+                    font-size: 18px;
+                    padding: 0px;
+                    padding-top: 25px;
+                    padding-bottom: 10px;
+                }
+                
+                label {
+                    color: red;
+                }
+                
+                .form-wrapper {
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                }
 
-/* The container must be positioned relative: */
-
-main#main .login-register-content .form-field {
-    select {
-        outline: none;
-        border: none;
-        border-bottom: solid 2px #0553FF;
-        box-shadow: none;
-         :focus {
-            border-bottom: solid 4px #0553FF;
+                .login-providers {
+                    .register-saml-cccmd {
+                        background-color: grey;
+                    }
+                }
+            }
         }
     }
 }
@@ -274,26 +301,6 @@ main#main .login-register-content .form-field {
 
 /* FIM DE FORM */
 
-.login-register .form-field label.focus-out {
-    font-weight: bold;
-    font-size: 18px;
-    padding: 0px;
-    padding-top: 25px;
-    padding-bottom: 10px;
-}
-
-.login-register .form-field label {
-    color: red;
-}
-
-.login-register .form-wrapper {
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-.login-register-content h2 {
-    color: black;
-}
 
 .wrapper-preview-menu {
     position: fixed;
