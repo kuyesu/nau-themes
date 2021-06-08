@@ -142,17 +142,7 @@ modal_tos_text = options_modal.get('modal_tos_text', "We have updated our terms 
       const removeWord = namePreferenceTos.slice(-10).replaceAll('_', '-') 
       const getDateJoined = new Date(dateJoined);
       const getDateModalTos = new Date(removeWord);
-      
-      function userJoinedAfterTosDate() {
-        const valueCompareDates = getDateJoined.getTime() >= getDateModalTos.getTime();
-        let valueCompare;
-        if (valueCompareDates) {
-            valueCompare = true;
-        } else {
-            valueCompare = false;
-        }
-        return valueCompare;
-      }
+      const userJoinedAfterTosDate = getDateJoined.getTime() >= getDateModalTos.getTime();
 
       function displayModal() {
         $('.modal-container').css('display', 'block');
@@ -173,7 +163,7 @@ modal_tos_text = options_modal.get('modal_tos_text', "We have updated our terms 
       }
       
       function getPreference() {  
-        if (userJoinedAfterTosDate() || valuePreference == 'True'){
+        if (userJoinedAfterTosDate || valuePreference == 'True'){
             hideModal()
         } else {
           displayModal()
@@ -200,4 +190,3 @@ modal_tos_text = options_modal.get('modal_tos_text', "We have updated our terms 
   </script>
   %endif
 %endif
-    
