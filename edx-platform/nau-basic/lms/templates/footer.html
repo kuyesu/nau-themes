@@ -6,17 +6,10 @@
   from django.utils.translation import ugettext as _
   from branding.api import get_footer
   from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled
-  from openedx.core.djangoapps.user_api.preferences.api import get_user_preference
   from openedx.core.djangoapps.site_configuration import helpers as configuration_helpers
 %>
 <% footer = get_footer(is_secure=is_secure) %>
 <%namespace name='static' file='static_content.html'/>
-<%
-options_modal = configuration_helpers.get_value("MODAL_TOS", {})
-modal_force_display = options_modal.get("modal_force_display", False)
-name_preference_tos = options_modal.get("modal_tos_name_preference", "")
-modal_tos_text = options_modal.get('modal_tos_text', "We have updated our terms of service")
-%>
 <%
     www_pt = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("pt-pt", "")
     www_en = static.get_value('NAU_MARKETING_BASE_HREF', {}).get("en", "")
@@ -114,79 +107,5 @@ modal_tos_text = options_modal.get('modal_tos_text', "We have updated our terms 
   % endfor
 % endif
 
-%if modal_force_display:
-## Pop-up tos
-<div class="modal-container">
-  <div class="modal-content">
-    % if modal_tos_text:
-    ${modal_tos_text | n}
-    <script type="text/javascript">
-    
-    </script>
+<%include file="modal-update-terms-of-service.html" />
 
-    % endif
-    <button class="button-modal btn-primary">Accept</button>
-  </div>
-</div>
-
-  %if user.is_authenticated:
-  <% value_preference = get_user_preference(user, name_preference_tos) %>
-
-  <script type="text/javascript">
-
-    const newTosModal = (function () {
-      const valuePreference = '${value_preference}';
-      const urlPreferenceTos = '/api/user/v1/preferences/${user}/${name_preference_tos}';
-      const namePreferenceTos ='${name_preference_tos}';
-      const dateJoined ='${user.date_joined}';
-      const removeWord = namePreferenceTos.slice(-10).replaceAll('_', '-') 
-      const getDateJoined = new Date(dateJoined);
-      const getDateModalTos = new Date(removeWord);
-      const userJoinedAfterTosDate = getDateJoined.getTime() >= getDateModalTos.getTime();
-
-      function displayModal() {
-        $('.modal-container').css('display', 'block');
-      }
-
-      function hideModal() {
-        $('.modal-container').css('display', 'none');
-      }
-
-      function updatePreference() {
-        $.ajax({
-          url: urlPreferenceTos,
-          type: 'PUT',
-          dataType:'json',
-          contentType: "application/json",
-          data:"true"
-        });
-      }
-      
-      function getPreference() {  
-        if (userJoinedAfterTosDate || valuePreference == 'True'){
-            hideModal()
-        } else {
-          displayModal()
-        }   
-        events();
-      }
-
-      function events() {
-        $('.button-modal').on('click', function(){
-          hideModal();
-          updatePreference();
-        });
-      }
-
-      return {
-        getPreference: getPreference
-      }
-    })();
-
-    $(window).load (function (){
-      newTosModal.getPreference();
-    });
-
-  </script>
-  %endif
-%endif

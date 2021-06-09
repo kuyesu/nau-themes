@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2021-06-09 14:18+0000\n"
+"POT-Creation-Date: 2021-06-09 14:23+0000\n"
 "PO-Revision-Date: 2021-03-12 12:49+0000\n"
 "Last-Translator: Sandro Costa <sandro.costa@fccn.pt>\n"
 "Language: pt_PT\n"
@@ -912,7 +912,7 @@ msgid ""
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:91
-#: edx-platform/nau-basic/lms/templates/footer.html:97
+#: edx-platform/nau-basic/lms/templates/footer.html:90
 msgid "All rights reserved"
 msgstr "Todos os direitos reservados"
 
@@ -1073,7 +1073,7 @@ msgstr "Ajuda NAU"
 msgid "Sign In"
 msgstr "Entrar"
 
-#: edx-platform/nau-basic/lms/templates/footer.html:67
+#: edx-platform/nau-basic/lms/templates/footer.html:60
 msgid "Visit OpenEdx website"
 msgstr "Visite o website OpenEDX"
 
@@ -1084,6 +1084,10 @@ msgstr "Plataforma NAU"
 #: edx-platform/nau-basic/lms/templates/index_overlay.html:11
 msgid "All in Portuguese, Portugal in all languages."
 msgstr "Tudo em Português, Portugal em todas as línguas."
+
+#: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:23
+msgid "Accept new terms of service"
+msgstr "Aceito os novos termos de serviço"
 
 #: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:59
 msgid "Print or share your certificate:"

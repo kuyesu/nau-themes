@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2021-06-09 14:18+0000\n"
+"POT-Creation-Date: 2021-06-09 14:23+0000\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -801,7 +801,7 @@ msgid ""
 msgstr ""
 
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:91
-#: edx-platform/nau-basic/lms/templates/footer.html:97
+#: edx-platform/nau-basic/lms/templates/footer.html:90
 msgid "All rights reserved"
 msgstr ""
 
@@ -962,7 +962,7 @@ msgstr ""
 msgid "Sign In"
 msgstr ""
 
-#: edx-platform/nau-basic/lms/templates/footer.html:67
+#: edx-platform/nau-basic/lms/templates/footer.html:60
 msgid "Visit OpenEdx website"
 msgstr ""
 
@@ -972,6 +972,10 @@ msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/index_overlay.html:11
 msgid "All in Portuguese, Portugal in all languages."
+msgstr ""
+
+#: edx-platform/nau-basic/lms/templates/modal-update-terms-of-service.html:23
+msgid "Accept new terms of service"
 msgstr ""
 
 #: edx-platform/nau-basic/lms/templates/certificates/_accomplishment-banner.html:59
