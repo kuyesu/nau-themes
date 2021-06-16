@@ -140,8 +140,17 @@ body {
     }
 }
 
-#content div.container .course-wrapper {
-    border: 0;
+#content {
+    div.container .course-wrapper {
+        border: 0;
+    }
+    #course-container {
+        .search-form {
+            .search-input, .search-button {
+                z-index: unset !important;
+            }
+        }
+    }
 }
 
 /**** Static page ***/
