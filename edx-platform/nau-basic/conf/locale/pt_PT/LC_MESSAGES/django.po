@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: support@edunext.co\n"
-"POT-Creation-Date: 2021-06-09 14:23+0000\n"
+"POT-Creation-Date: 2021-07-07 14:45+0000\n"
 "PO-Revision-Date: 2021-03-12 12:49+0000\n"
 "Last-Translator: Sandro Costa <sandro.costa@fccn.pt>\n"
 "Language: pt_PT\n"
@@ -687,6 +687,18 @@ msgstr "Continuar curso"
 msgid "Dashboard"
 msgstr "Meus cursos"
 
+#. Translators: This was need because the translation pull didn't come with
+#. this translated from transifex!
+#: edx-platform/nau-basic/cms/templates/force-translations.html:17
+msgid "Activate Your Account"
+msgstr "Ativar a sua Conta"
+
+#. Translators: This was need because the translation pull didn't come with
+#. this translated from transifex!
+#: edx-platform/nau-basic/cms/templates/force-translations.html:19
+msgid "Account Activation"
+msgstr "Activação de conta"
+
 #: edx-platform/nau-basic/cms/templates/howitworks.html:11
 msgid "Welcome"
 msgstr "Bem vindo"
@@ -905,6 +917,8 @@ msgstr "LMS"
 msgid "Legal"
 msgstr "Legal"
 
+#. Translators: 'EdX', 'edX', 'Studio', and 'Open edX' are trademarks of 'edX
+#. Inc.'. Please do not translate any of these trademarks and company names.
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:51
 msgid ""
 "edX, Open edX, Studio, and the edX and Open edX logos are registered "
@@ -1077,10 +1091,14 @@ msgstr "Entrar"
 msgid "Visit OpenEdx website"
 msgstr "Visite o website OpenEDX"
 
+#. Translators: 'Open edX' is a registered trademark, please keep this
+#. untranslated. See http://open.edx.org for more information.
 #: edx-platform/nau-basic/lms/templates/index_overlay.html:9
 msgid "Platform NAU"
 msgstr "Plataforma NAU"
 
+#. Translators: 'Open edX' is a registered trademark, please keep this
+#. untranslated. See http://open.edx.org for more information.
 #: edx-platform/nau-basic/lms/templates/index_overlay.html:11
 msgid "All in Portuguese, Portugal in all languages."
 msgstr "Tudo em Português, Portugal em todas as línguas."
@@ -1384,6 +1402,7 @@ msgstr "Entrar"
 msgid "Profile"
 msgstr "Perfil"
 
+#. Translators: This is short for "System administration".
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:43
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:72
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:111

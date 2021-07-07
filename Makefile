@@ -37,8 +37,8 @@ create_translations_catalogs: _venv | extract_translations
     done
 
 extract_translations: _venv
-	. venv/bin/activate && pybabel extract -F $(theme)/conf/locale/babel_mako.cfg -o $(theme)/conf/locale/django.pot --msgid-bugs-address=ajuda@nau.edu.pt --copyright-holder=FCT-FCCN $(theme)/*
-	. venv/bin/activate && pybabel extract -F $(theme)/conf/locale/babel_underscore.cfg -o $(theme)/conf/locale/djangojs.pot --msgid-bugs-address=ajuda@nau.edu.pt --copyright-holder=FCT-FCCN $(theme)/*
+	. venv/bin/activate && pybabel extract -F $(theme)/conf/locale/babel_mako.cfg -o $(theme)/conf/locale/django.pot --msgid-bugs-address=ajuda@nau.edu.pt --copyright-holder=FCT-FCCN -c Translators $(theme)/*
+	. venv/bin/activate && pybabel extract -F $(theme)/conf/locale/babel_underscore.cfg -o $(theme)/conf/locale/djangojs.pot --msgid-bugs-address=ajuda@nau.edu.pt --copyright-holder=FCT-FCCN -c Translators $(theme)/*
 
 update_translations: _venv| extract_translations update_translations_po_files clean_translations_intermediate ## update strings to be translated
 

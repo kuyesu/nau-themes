@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: ajuda@nau.edu.pt\n"
-"POT-Creation-Date: 2021-06-09 14:23+0000\n"
+"POT-Creation-Date: 2021-07-07 14:45+0000\n"
 "PO-Revision-Date: 2021-06-02 21:22+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -576,6 +576,18 @@ msgstr ""
 msgid "Dashboard"
 msgstr ""
 
+#. Translators: This was need because the translation pull didn't come with
+#. this translated from transifex!
+#: edx-platform/nau-basic/cms/templates/force-translations.html:17
+msgid "Activate Your Account"
+msgstr ""
+
+#. Translators: This was need because the translation pull didn't come with
+#. this translated from transifex!
+#: edx-platform/nau-basic/cms/templates/force-translations.html:19
+msgid "Account Activation"
+msgstr ""
+
 #: edx-platform/nau-basic/cms/templates/howitworks.html:11
 msgid "Welcome"
 msgstr ""
@@ -794,6 +806,8 @@ msgstr ""
 msgid "Legal"
 msgstr ""
 
+#. Translators: 'EdX', 'edX', 'Studio', and 'Open edX' are trademarks of 'edX
+#. Inc.'. Please do not translate any of these trademarks and company names.
 #: edx-platform/nau-basic/cms/templates/widgets/footer.html:51
 msgid ""
 "edX, Open edX, Studio, and the edX and Open edX logos are registered "
@@ -966,10 +980,14 @@ msgstr ""
 msgid "Visit OpenEdx website"
 msgstr ""
 
+#. Translators: 'Open edX' is a registered trademark, please keep this
+#. untranslated. See http://open.edx.org for more information.
 #: edx-platform/nau-basic/lms/templates/index_overlay.html:9
 msgid "Platform NAU"
 msgstr ""
 
+#. Translators: 'Open edX' is a registered trademark, please keep this
+#. untranslated. See http://open.edx.org for more information.
 #: edx-platform/nau-basic/lms/templates/index_overlay.html:11
 msgid "All in Portuguese, Portugal in all languages."
 msgstr ""
@@ -1254,6 +1272,7 @@ msgstr ""
 msgid "Profile"
 msgstr ""
 
+#. Translators: This is short for "System administration".
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:43
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:72
 #: edx-platform/nau-basic/lms/templates/header/user_dropdown.html:111
