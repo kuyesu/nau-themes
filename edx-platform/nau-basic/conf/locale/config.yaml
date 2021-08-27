@@ -28,6 +28,7 @@ segment:
     djangojs-partial.po:
         djangojs-studio.po:
             - cms/*
+            # kuyesu/nau-themes/edx-platform/nau-basic
         djangojs-account-settings-view.po:
             - lms/static/js/student_account/views/account_settings_view.js
         # Segregating student account settings view strings, so that beta language message
